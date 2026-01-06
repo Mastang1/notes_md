@@ -19,6 +19,13 @@
       "path": "EB-tresos-generator/6-config-modules/0start-147.md",
       "subpath": "#6.1.1.",
       "title": "schema树作用"
+    },
+    {
+      "type": "file",
+      "ctime": 1767670354836,
+      "path": "EB-tresos-generator/6-config-modules/147-170GUI.md",
+      "subpath": "#6.2.4.6. Lists (列表)",
+      "title": "widget-list"
     }
   ]
 }
