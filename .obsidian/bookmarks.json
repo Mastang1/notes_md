@@ -26,6 +26,13 @@
       "path": "EB-tresos-generator/6-config-modules/147-170GUI.md",
       "subpath": "#6.2.4.6. Lists (列表)",
       "title": "widget-list"
+    },
+    {
+      "type": "file",
+      "ctime": 1767685292836,
+      "path": "EB-tresos-generator/summary.md",
+      "subpath": "#4. XDM schema和data分离的核心概念",
+      "title": "核心概念"
     }
   ]
 }

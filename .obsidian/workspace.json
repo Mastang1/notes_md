@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EB-tresos-generator/6-config-modules/lst-ctl-temple(NB generated).md",
+                "file": "EB-tresos-generator/schema-config-etc（arxml-xdm）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lst-ctl-temple(NB generated)"
+              "title": "schema-config-etc（arxml-xdm）"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "EB-tresos-generator/6-config-modules/lst-ctl-temple(NB generated).md",
+                "file": "EB-tresos-generator/schema-config-etc（arxml-xdm）.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for lst-ctl-temple(NB generated)"
+              "title": "Backlinks for schema-config-etc（arxml-xdm）"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "EB-tresos-generator/6-config-modules/lst-ctl-temple(NB generated).md",
+                "file": "EB-tresos-generator/schema-config-etc（arxml-xdm）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from lst-ctl-temple(NB generated)"
+              "title": "Outgoing links from schema-config-etc（arxml-xdm）"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EB-tresos-generator/6-config-modules/lst-ctl-temple(NB generated).md",
+                "file": "EB-tresos-generator/schema-config-etc（arxml-xdm）.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of lst-ctl-temple(NB generated)"
+              "title": "Outline of schema-config-etc（arxml-xdm）"
             }
           }
         ]
@@ -185,8 +185,11 @@
   },
   "active": "4b5cbf1ec887ce63",
   "lastOpenFiles": [
-    "EB-tresos-generator/6-config-modules/XPath API 6-3.md",
     "EB-tresos-generator/6-config-modules/lst-ctl-temple(NB generated).md",
+    "EB-tresos-generator/schema-config-etc（arxml-xdm）.md",
+    "EB-tresos-generator/summary.md",
+    "().md",
+    "EB-tresos-generator/6-config-modules/XPath API 6-3.md",
     "EB-tresos-generator/GUI widget.md",
     "EB-tresos-generator/dynamic attributes.md",
     "EB-tresos-generator/7-2/XPath_demo.md",
@@ -196,7 +199,6 @@
     "EB-tresos-generator/5-2/5-2-1-81_90.md",
     "EB-tresos-generator/6-config-modules/0start-147.md",
     "EB-tresos-generator/6-config-modules/XPath_generic.md",
-    "EB-tresos-generator/summary.md",
     "EB-tresos-generator/5-3/05.3-start.md",
     "EB-tresos-generator/UUID.md",
     "EB-tresos-generator/5-1/chapter5.md",
@@ -213,7 +215,6 @@
     "EB-tresos-generator/5-1/81-89(ch5-2).md",
     "EB-tresos-generator/5-1/76-81.md",
     "EB-tresos-generator/5-1/66-75.md",
-    "EB-tresos-generator/5-1/56-65.md",
     "Untitled 1.base",
     "Untitled 2.base",
     "Untitled.base"

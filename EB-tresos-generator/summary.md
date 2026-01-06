@@ -193,4 +193,7 @@ EB tresos 启动后主要通过插件目录下的 **`plugin.xml`** 文件获取�
 
 你是否已经准备好尝试在 `plugin.xml` 中修改这些属性，或者需要我解释如何通过 `MANIFEST.MF` 处理插件的依赖关系？,
 
-# 4. todo
+# 4. [XDM schema和data分离的核心概念](obsidian://open?vault=notes_md&file=EB-tresos-generator%2F6-config-modules%2Flst-ctl-temple(NB%20generated))
+- ==**注意：plugin-config文件夹中的xdm文件作为模板使用，节点类型属于schema; 在生成的config_name.xdm文件中，节点类型属于schema；==**
+
+

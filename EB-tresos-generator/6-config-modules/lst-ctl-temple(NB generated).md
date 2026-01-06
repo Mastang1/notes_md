@@ -1,10 +1,11 @@
+- ==**注意：plugin-config文件夹中的xdm文件作为模板使用，节点类型属于schema; 在生成的config_name.xdm文件中，节点类型属于schema；==**
 # 1. list-container generate a table filled some elements
 在 `Lin_43_LLCE.xdm` 片段中（参考 507-522 行及后续内容），`lst`、`container` 与 `variable` 构成了“集合、模板与成员”的层级关系：
 
 ### 1. 节点间的逻辑关系
 
 - **`lst` (列表节点)**：作为包装器，定义了多重性（如 `LinChannel` 列表）。在 Schema 树中，它负责规定该集合可以包含多少个实例（MIN/MAX）。
-- **`container` (容器子节点)**：它是列表中的“行模板”。在 Schema 中，`lst` 下通常只定义一个 `v:ctr`，它规定了列表中每一个条目应该具备的结构。
+- **`container` (容器子节点)**：它是列表中的==“行模板”==。在 Schema 中，`lst` 下通常只定义一个 `v:ctr`，它规定了列表中每一个条目应该具备的结构。
 - **`variable` (变量子节点)**：是容器内的具体配置参数。在 `LinChannel` 容器下，`LinChannelId`、`LinNodeType` 等变量是该通道配置的核心数据单元。
 
 ### 2. 信息如何“插入”到 List 中
@@ -62,6 +63,39 @@
   </v:ctr>
 </v:lst>
 ```
+
+### ==补充说明==
+
+- ==a:v中的属性信息，主要用于错误校验、范围校验等，具体的data value在UI运行generate configuration时候生成，存储到同名的xdm文件中；
+- ==generate code：应用的是生成的configuration文件，调用基于模板的EB生成工具生成配置代码==
+在 `Lin_43_LLCE.xdm` 文件中，针对 `LinChannelId` 节点的配置包含了多种属性和子插件，它们在 EB tresos 中分别承担着定义数据类型、配置元数据、预设值以及动态校验的任务：
+
+### 1. 节点基础属性 (XML Attributes)
+
+- **`name="LinChannelId"`**：定义节点的名称，在 DataModel 中具有唯一性标识作用。
+- **`type="INTEGER"`**：指定该变量的数据类型为 64 位有符号整数，界面将呈现为数字输入框。
+
+### 2. 静态/被动属性 (`a:a` 标签)
+
+- **`DESC`**：提供该参数的详细描述，内容会显示在“Description”视图或悬停提示（Tooltip）中，支持 HTML 格式和链接。
+- **`IMPLEMENTATIONCONFIGCLASS`**：这是一种通用属性（Generic Attribute），用于定义该参数在不同变体（如 `VariantPreCompile` 或 `VariantPostBuild`）下的配置类。
+
+### 3. 动态/自动属性 (`a:da` 标签)
+
+这类属性不存储固定值，而是通过表达式动态计算其在 UI 上的表现：
+
+- **`DEFAULT`**：定义该节点的初始默认值。当用户点击界面上的“Calculate”按钮时，系统会根据此属性重新填充值。
+- **`INVALID (type="XPath")`**：
+    - **作用**：执行实时逻辑校验。
+    - **逻辑**：通过 `node:uniq` 函数检查当前路径下所有通道的 `LinChannelId` 是否唯一。
+    - **UI 影响**：如果检测到重复值，UI 会显示 `false` 属性中定义的错误消息：“Duplicated value...”，并阻止生成过程。
+- **`INVALID (type="Range")`**：
+    - **作用**：执行数值边界校验。
+    - **逻辑**：使用 `Range` 类型确保输入值小于等于 4（硬件限制）。
+    - **UI 影响**：若输入值超出范围，界面会显示对应的报错信息，指导用户修正输入。
+
+这段配置完整展示了 XDM 如何通过 `a:da` 将简单的参数输入框转变为一个具备自动化计算和实时错误拦截功能的智能控件。您是否需要了解如何编写这些 `INVALID` 属性中的具体 XPath 函数？
+
 
 ### 2. XPath 演示：节点定位与数据检索
 
