@@ -30,9 +30,23 @@
     {
       "type": "file",
       "ctime": 1767685292836,
-      "path": "EB-tresos-generator/summary.md",
+      "path": "EB-tresos-generator/0.High-Level Overview.md",
       "subpath": "#4. XDM schema和data分离的核心概念",
       "title": "核心概念"
+    },
+    {
+      "type": "file",
+      "ctime": 1767782479611,
+      "path": "EB-tresos-generator/5-2/90-100(99important).md",
+      "subpath": "#5.2.5. 列表节点 (List-Nodes)",
+      "title": "列表节点，schema一个模板-data多个实例"
+    },
+    {
+      "type": "file",
+      "ctime": 1767783279594,
+      "path": "EB-tresos-generator/5-2/90-100(99important).md",
+      "subpath": "#5.2.5.1. 可选元素 (Optional elements)",
+      "title": "可选元素（UI中默认为灰色）"
     }
   ]
 }
