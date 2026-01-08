@@ -55,16 +55,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EB-tresos-generator/5-2/90-100(99important).md",
+                "file": "EB-tresos-generator/5-1/76-81.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "90-100(99important)"
+              "title": "76-81"
+            }
+          },
+          {
+            "id": "056e9648f8e9ccf2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "EB-tresos-generator/XPath etc.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "XPath etc"
+            }
+          },
+          {
+            "id": "c8f2e329bff34ce8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "About Pre-compile & Post-build.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "About Pre-compile & Post-build"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -117,8 +145,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -138,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "EB-tresos-generator/5-2/90-100(99important).md",
+                "file": "About Pre-compile & Post-build.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +175,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 90-100(99important)"
+              "title": "Backlinks for About Pre-compile & Post-build"
             }
           },
           {
@@ -157,12 +184,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "EB-tresos-generator/5-2/90-100(99important).md",
+                "file": "About Pre-compile & Post-build.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 90-100(99important)"
+              "title": "Outgoing links from About Pre-compile & Post-build"
             }
           },
           {
@@ -200,13 +227,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EB-tresos-generator/5-2/90-100(99important).md",
+                "file": "About Pre-compile & Post-build.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 90-100(99important)"
+              "title": "Outline of About Pre-compile & Post-build"
             }
           }
         ]
@@ -227,18 +254,26 @@
       "bases:Create new base": false
     }
   },
-  "active": "5dc304c35eb52ab0",
+  "active": "c8f2e329bff34ce8",
   "lastOpenFiles": [
+    "EB-tresos-generator/XPath etc.md",
+    "About Pre-compile & Post-build.md",
+    "EB-tresos-generator/7-2/XPath_demo.md",
+    "development-theory/XML(Extensible Markup Language).md",
+    "EB-tresos-generator/5-1/76-81.md",
+    "EB-tresos-generator/5-1/66-75.md",
+    "EB-tresos-generator/5-2/5-2-1-81_90.md",
+    "EB-tresos-generator/5-1/81-89(ch5-2).md",
+    "EB-tresos-generator/5-1/90-96.md",
+    "EB-tresos-generator/5-1/56-65(automatic attributes).md",
+    "EB-tresos-generator/5-2/90-100(99important).md",
     "EB-tresos-generator/xdm_schema_context_ana.md",
     "EB-tresos-generator/xdm_gend_GUI_demo.md",
     "EB-tresos-generator/plugin_xml.md",
     "EB-tresos-generator/schema-config-etc（arxml-xdm）.md",
     "EB-tresos-generator/UUID.md",
-    "EB-tresos-generator/5-2/5-2-1-81_90.md",
-    "EB-tresos-generator/5-2/90-100(99important).md",
     "EB-tresos-generator/5-2/101-112CreateNewModule.md",
     "EB-tresos-generator/5-3/05.3-start.md",
-    "EB-tresos-generator/5-1/76-81.md",
     "EB-tresos-generator/6-config-modules/XPath_expression refer to chapter 6-3.md",
     "EB-tresos-generator/6-config-modules/147-170GUI.md",
     "EB-tresos-generator/attribures_defined_by_EB.md",
@@ -248,16 +283,8 @@
     "EB-tresos-generator/dynamic attributes.md",
     "About-license.md",
     "autosar/AS-toolchains.md",
-    "EB-tresos-generator/6-config-modules/lst-ctl-temple(NB generated).md",
-    "development-theory/MCU-software-layers.md",
-    "development-theory/arm_core&IP.md",
-    "tool_chains/linker.md",
     "development-theory",
-    "tool_chains/makefile.md",
     "tool_chains",
-    "6.2.4.6. Lists (列表).md",
-    "().md",
-    "EB-tresos-generator/GUI widget.md",
     "Pasted image 20260105172155.png",
     "Pasted image 20260105171550.png",
     "Pasted image 20260105171423.png",
