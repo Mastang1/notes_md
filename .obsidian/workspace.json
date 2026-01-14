@@ -53,16 +53,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "autosar/OEM_TIER1_... system_design_flow.md",
+                "file": "EB-tresos-generator/7-2/module_code_generator.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OEM_TIER1_... system_design_flow"
+              "title": "module_code_generator"
+            }
+          },
+          {
+            "id": "2e7717886c81662d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "autosar/cofing_variants.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "cofing_variants"
+            }
+          },
+          {
+            "id": "4662271920d076e0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "desktop_apps/PyQt-NodeGraphQt.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PyQt-NodeGraphQt"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -135,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "autosar/OEM_TIER1_... system_design_flow.md",
+                "file": "EB-tresos-generator/xdm_schema_context_ana.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +173,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for OEM_TIER1_... system_design_flow"
+              "title": "Backlinks for xdm_schema_context_ana"
             }
           },
           {
@@ -154,12 +182,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "autosar/OEM_TIER1_... system_design_flow.md",
+                "file": "EB-tresos-generator/xdm_schema_context_ana.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from OEM_TIER1_... system_design_flow"
+              "title": "Outgoing links from xdm_schema_context_ana"
             }
           },
           {
@@ -197,13 +225,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "autosar/OEM_TIER1_... system_design_flow.md",
+                "file": "EB-tresos-generator/xdm_schema_context_ana.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of OEM_TIER1_... system_design_flow"
+              "title": "Outline of xdm_schema_context_ana"
             }
           }
         ]
@@ -224,17 +252,31 @@
       "bases:Create new base": false
     }
   },
-  "active": "02d2ceee3ab81033",
+  "active": "4662271920d076e0",
   "lastOpenFiles": [
-    "autosar/layers.PNG",
-    "autosar/OEM_TIER1_... system_design_flow.md",
-    "autosar/autosar_ECU_lalyers.md",
+    "autosar/cofing_variants.md",
+    "desktop_apps/PyQt-NodeGraphQt.md",
+    "desktop_apps",
     "autosar/AS-toolchains summary（EB ...）.md",
+    "AI/MCP.md",
+    "EB-tresos-generator/7-2/module_code_generator.md",
+    "AI",
     "EB-tresos-generator/xdm_schema_context_ana.md",
+    "EB-tresos-generator/xdm_gend_GUI_demo.md",
+    "EB-tresos-generator/plugin_xml.md",
+    "EB-tresos-generator/pdf_to_chinese.md",
+    "EB-tresos-generator/GUI widget.md",
+    "EB-tresos-generator/config_schema_xml.md",
+    "EB-tresos-generator/attribures_defined_by_EB.md",
+    "EB-tresos-generator/0.High-Level Overview.md",
+    "development-theory/MCU-software-layers.md",
+    "development-theory/arm_core&IP.md",
+    "autosar/OEM_TIER1_... system_design_flow.md",
+    "autosar/layers.PNG",
+    "autosar/autosar_ECU_lalyers.md",
     "development-theory/XML(Extensible Markup Language).md",
     "Untitled.canvas",
     "EB-tresos-generator/XPath etc.md",
-    "Untitled",
     "About Pre-compile & Post-build.md",
     "EB-tresos-generator/7-2/XPath_demo.md",
     "EB-tresos-generator/5-1/76-81.md",
@@ -242,18 +284,6 @@
     "EB-tresos-generator/5-2/5-2-1-81_90.md",
     "EB-tresos-generator/5-1/81-89(ch5-2).md",
     "EB-tresos-generator/5-1/90-96.md",
-    "EB-tresos-generator/5-1/56-65(automatic attributes).md",
-    "EB-tresos-generator/5-2/90-100(99important).md",
-    "EB-tresos-generator/xdm_gend_GUI_demo.md",
-    "EB-tresos-generator/plugin_xml.md",
-    "EB-tresos-generator/schema-config-etc（arxml-xdm）.md",
-    "EB-tresos-generator/UUID.md",
-    "EB-tresos-generator/5-2/101-112CreateNewModule.md",
-    "EB-tresos-generator/5-3/05.3-start.md",
-    "EB-tresos-generator/6-config-modules/XPath_expression refer to chapter 6-3.md",
-    "EB-tresos-generator/6-config-modules/147-170GUI.md",
-    "EB-tresos-generator/attribures_defined_by_EB.md",
-    "EB-tresos-generator/config_schema_xml.md",
     "Untitled.base",
     "development-theory",
     "tool_chains",
