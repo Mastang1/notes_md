@@ -88,9 +88,23 @@
               "icon": "lucide-file",
               "title": "PyQt-NodeGraphQt"
             }
+          },
+          {
+            "id": "824799632578fb88",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "autosar/VenderAPI-infix.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "VenderAPI-infix"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -252,10 +266,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "4662271920d076e0",
+  "active": "824799632578fb88",
   "lastOpenFiles": [
-    "autosar/cofing_variants.md",
     "desktop_apps/PyQt-NodeGraphQt.md",
+    "autosar/VenderAPI-infix.md",
+    "autosar/cofing_variants.md",
     "desktop_apps",
     "autosar/AS-toolchains summary（EB ...）.md",
     "AI/MCP.md",
@@ -283,7 +298,6 @@
     "EB-tresos-generator/5-1/66-75.md",
     "EB-tresos-generator/5-2/5-2-1-81_90.md",
     "EB-tresos-generator/5-1/81-89(ch5-2).md",
-    "EB-tresos-generator/5-1/90-96.md",
     "Untitled.base",
     "development-theory",
     "tool_chains",
