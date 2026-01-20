@@ -27,7 +27,7 @@ MCP 的解决方案：
 - 任何支持 MCP 的客户端（Claude Desktop, Cursor, VS Code, Zed 等）都可以直接连接这个 Server，即插即用。
     
 
-### 2. MCP 的核心架构
+### ==2. MCP 的核心架构==
 
 MCP 的架构非常简洁，主要由三个部分组成：
 

@@ -213,7 +213,7 @@ Python
         return ret_info
 ```
 
-#### 方案二：修正 DualStdout 类（更安全的防御）
+#### ==方案二：修正 DualStdout 类（更安全的防御）==
 
 为了防止 `DualStdout` 意外包裹自己，建议修改 **图3** 中的 `__init__` 方法，强制它只包裹真正的物理控制台，而不是当前的 `sys.stdout`。
 
@@ -247,4 +247,4 @@ class DualStderr:
 
 推荐操作：
 
-优先实施 方案二（修改 DualStdout 类），将 sys.stdout 改为 sys.__stdout__。这能从根本上杜绝该类发生递归嵌套的可能性，无论外层逻辑如何调用。
+优先实施 方案二（修改 DualStdout 类），将 sys.stdout 改为 sys.____stdout____。这能从根本上杜绝该类发生递归嵌套的可能性，无论外层逻辑如何调用。

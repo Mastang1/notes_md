@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python/bug-recursionerror.md",
-                "mode": "preview",
+                "file": "python/py-template.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "bug-recursionerror"
+              "title": "py-template"
             }
           }
         ],
@@ -198,18 +198,21 @@
   },
   "active": "2dadb910b493776b",
   "lastOpenFiles": [
+    "autosar/AS-toolchains summary（EB ...）.md",
+    "python/py-template.md",
+    "tool_chains/makefile.md",
+    "tool_chains/linker.md",
+    "python/bug-recursionerror.md",
+    "AI/MCP.md",
     "Pasted image 20260115185214.png",
     "0-layers.md",
-    "python/bug-recursionerror.md",
     "python",
     "autosar/layers.PNG",
     "autosar/autosar_ECU_lalyers.md",
-    "autosar/AS-toolchains summary（EB ...）.md",
     "autosar/VenderAPI-infix.md",
     "desktop_apps/PyQt-NodeGraphQt.md",
     "autosar/cofing_variants.md",
     "desktop_apps",
-    "AI/MCP.md",
     "EB-tresos-generator/7-2/module_code_generator.md",
     "AI",
     "EB-tresos-generator/xdm_schema_context_ana.md",
@@ -227,8 +230,6 @@
     "Untitled.canvas",
     "EB-tresos-generator/XPath etc.md",
     "About Pre-compile & Post-build.md",
-    "EB-tresos-generator/7-2/XPath_demo.md",
-    "EB-tresos-generator/5-1/76-81.md",
     "Untitled.base",
     "development-theory",
     "tool_chains",
