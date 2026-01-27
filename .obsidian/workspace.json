@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software Quality Assurance Process/top_steps.md",
-                "mode": "preview",
+                "file": "autosar/lin_etc/SRS&SWS.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "top_steps"
+              "title": "SRS&SWS"
             }
           }
         ]
@@ -199,11 +199,19 @@
   },
   "active": "08b7eeb6b05871c1",
   "lastOpenFiles": [
+    "autosar/lin_etc/质量管理流程图.md",
+    "autosar/lin_etc/SRS&SWS.md",
+    "autosar/mcal_requests.md",
+    "autosar/lin_flow_char.png",
     "autosar/Lin_demo.md",
-    "Software Quality Assurance Process/top_steps.md",
-    "Software Quality Assurance Process",
+    "autosar/layers.PNG",
     "autosar/cofing_variants.md",
     "autosar/autosar_ECU_lalyers.md",
+    "autosar/AS-toolchains summary（EB ...）.md",
+    "development-theory/specification.md",
+    "autosar/lin_etc",
+    "Software Quality Assurance Process/top_steps.md",
+    "Software Quality Assurance Process",
     "EB-tresos-generator/plugins/mcal-driver-update-versions.md",
     "EB-tresos-generator/plugins/module-name.md",
     "AI/MCP.md",
@@ -211,9 +219,7 @@
     "EB-tresos-generator/0EB tresos Post-build Variant.md",
     "EB-tresos-generator/0.High-Level Overview.md",
     "EB-tresos-generator/xdm-configuratio-variant-class.md",
-    "autosar/mcal_requests.md",
     "README.md",
-    "autosar/layers.PNG",
     "Languages/shell/cmd-copy-to-multi.md",
     "Languages/shell",
     "EB-tresos-generator/5-3/05.3-start.md",
@@ -224,20 +230,15 @@
     "Languages/c",
     "Languages/python/py-template.md",
     "Languages",
-    "autosar/AS-toolchains summary（EB ...）.md",
     "tool_chains/makefile.md",
     "tool_chains/linker.md",
     "Languages/python/bug-recursionerror.md",
     "Pasted image 20260115185214.png",
     "0-layers.md",
     "Languages/python",
-    "autosar/VenderAPI-infix.md",
-    "desktop_apps/PyQt-NodeGraphQt.md",
     "desktop_apps",
-    "EB-tresos-generator/7-2/module_code_generator.md",
     "AI",
     "Untitled.canvas",
-    "Untitled.base",
     "Pasted image 20260105172155.png",
     "Pasted image 20260105171550.png",
     "Pasted image 20260105171423.png",
