@@ -1,0 +1,2 @@
+本质是Initialization时候创建多个，然后通过queue等待func_task,节省动态创建线程时间；适合短时、并发任务。
+实例参考pythod_daily_test
