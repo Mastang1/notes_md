@@ -174,4 +174,141 @@ Agent 的本质，就是一个包在 LLM API 外面的 `while` 循环。业界�
 5. **循环往复**：带着最新的执行结果，Agent 再次请求 LLM。LLM 会根据拿到的校验和结果，继续回答用户的问题。如果还需要其他信息，它会继续触发下一个 Skill；如果信息已足够，API 返回 `finish_reason: "stop"`，循环结束。
 
 ---
-## 3. 
+## 3. MCP 协议 原理
+你刚才已经看透了 LLM 的底层交互——无非就是给大模型发送包含 `tools`（工具说明书）和 `messages`（上下文）的 JSON。
+
+**Model Context Protocol (MCP，模型上下文协议)** 正是在这个 JSON 接口的基础之上，诞生的一套“革命性”的架构。
+
+你可以把 MCP 理解为 **AI 领域的“USB Type-C 接口”**。
+
+在解释它之前，我们先回到刚才那个手写的 Python 脚本，看看在没有 MCP 时，我们面临什么痛点。
+
+---
+
+### 一、 痛点：为什么我们需要 MCP？
+
+在我们之前的例子中，你的 Python 脚本（Agent）和你的工具（Skill，比如 `calculate_frame_checksum`）是**紧紧绑死在一起的**。
+
+假设你现在写了 50 个非常棒的自动化测试工具（读日志、查数据库、算校验和）。
+
+* 如果你想在自己写的 Python 脚本里用，你要把这 50 个工具的 JSON Schema 写进代码传给 LLM。
+* 如果你想在 **Roo Code** 里面用这 50 个工具，你得去研究 Roo Code 的插件开发机制，重新写一遍接入逻辑。
+* 如果明天你想换用 **Cursor** 或者 **Claude Desktop**，你还得再写一遍对接代码。
+
+**每次换一个 AI 应用，你的底层工具库就得重新适配一次。这太低效了。**
+
+### 二、 MCP 是什么？它的功能
+
+为了解决这个问题，Anthropic（Claude 的母公司）牵头推出了 MCP。
+**MCP 的核心功能，就是把“AI 应用”和“本地数据/工具”彻底解耦，变成标准的 C/S（客户端/服务端）架构。**
+
+在 MCP 的世界里，存在两个角色：
+
+1. **MCP Host / Client (客户端)**：比如 Roo Code、Cursor、Claude Desktop，甚至是刚才你手写的那个带有 `while` 循环的 Python 主程序。它们负责和 LLM（大模型）对话。
+2. **MCP Server (服务端)**：一个独立运行的轻量级本地服务。**你的所有 Skill（Python 函数）和它们的 JSON Schema（工具说明书），统统放在这里面。**
+
+### 三、 MCP 的运行原理（从 LLM 的 JSON 接口讲起）
+
+加入 MCP 后，我们之前梳理的 `ReAct` 循环发生了极其优雅的变化。你可以把 MCP 想象成一个专门负责“搬运 JSON”的中间件。
+
+以下是完整的交互流程：
+
+#### Step 1: 握手与工具发现 (Discovery)
+
+* **以前**：你自己在 Python 代码里硬编码 `tools = [...]`。
+* **现在 (MCP)**：Roo Code (Client) 启动时，通过本地进程间通信（如 stdio 或 HTTP）连接你的 MCP Server，发送一个指令：`"喂，把你的说明书交出来！"`。
+* MCP Server 把 `calculate_frame_checksum` 的 **JSON Schema** 按照 MCP 协议标准发给 Roo Code。
+* 此时，Roo Code 内部就拿到了这个工具的说明书。
+
+#### Step 2: 组装 JSON 请求大模型
+
+* 用户在 Roo Code 里输入：“帮我算一下这帧数据的校验和”。
+* Roo Code 把用户的话放入 `messages`，把你 MCP Server 提供的 JSON Schema 放入 `tools`。
+* 发起 HTTP 请求（比如调用 OpenAI 或 Ollama 的 `/v1/chat/completions` API）。
+
+#### Step 3: 解析大模型返回的 JSON
+
+* 大模型（LLM）决定调用工具，返回包含 `tool_calls` 的 JSON（指定要调用的函数名和参数）。
+
+#### Step 4: 远程执行工具 (MCP 的核心作用)
+
+* **以前**：你的主程序直接在本地 `if func_name == ...` 然后调用 Python 方法。
+* **现在 (MCP)**：Roo Code 本身没有计算校验和的代码。它通过 MCP 协议，给你的 MCP Server 发送一条指令（类似于 RPC 调用）：
+`"LLM 让我执行 calculate_frame_checksum，参数是 {...}，你跑一下把结果给我。"`
+* 你的 MCP Server 收到后，执行本地真正的 Python 代码，拿到结果字符串，通过 MCP 协议返回给 Roo Code。
+
+#### Step 5: 回传结果给 LLM
+
+* Roo Code 拿到结果，封装成 `role: "tool"` 追加到 `messages` 里，再次请求大模型，完成闭环。
+
+---
+
+### 四、 MCP Server 里到底装了什么？
+
+一个标准的 MCP Server 除了提供 **Tools（工具/也就是我们说的 Skill）** 之外，还可以提供另外两样东西，这构成了它的三大核心能力：
+
+1. **Resources (资源)**：
+提供给大模型的静态数据上下文。类似于系统里的只读文件。比如你可以写一个 MCP Server，专门把本地的 API 文档、数据库 Schema 暴露为 Resource。客户端可以随时读取它们作为 LLM 的背景知识。
+2. **Prompts (提示词模板)**：
+服务端可以预定义好一些复杂的提示词。客户端调用时，直接拉取这些模板。
+3. **Tools (工具)**：
+就是我们讲的核心——允许 LLM 执行动作（读写文件、发请求、跑代码）。也就是暴露函数定义（JSON Schema）和实际的执行逻辑。
+
+### 五、 总结
+
+把 MCP 掰开了揉碎了看：
+**它本质上就是一个标准化的 JSON 搬运工和执行器网关。**
+
+有了 MCP 之后，你只需要用 Python（或者 Node.js）写一个 `My_Hardware_Test_MCP_Server`。在这个 Server 里定义好各种跟底层硬件通信、解析日志的 Skill。
+然后，你可以把这个 Server 直接挂载到 Roo Code 里，你的 Roo Code 瞬间就拥有了调试硬件的能力；明天你想用别的 AI IDE，只要它支持 MCP，一键连接，依然完美运行。
+
+---
+## 4. MCP个人化理解/补充
+这份笔记为你整理好了。采用 Q&A 的形式，将你的核心理解与底层的工程实现细节进行了完美结合，非常适合作为你构建 AI Agent 知识体系的备忘录。
+
+# 学习笔记：MCP (Model Context Protocol) 核心架构与运行机制
+
+### Q1：MCP Server 是不是一个独立运行的 Service？它主要负责向 Client 提供可用的能力列表（如 `tool_schemas`）？
+
+**核心理解：完全正确。**
+MCP 的核心思想就是“解耦”。MCP Server 是一个完全独立的后台服务（就像一个底层的驱动模块）。它的首要任务之一，就是在 Client（如 Roo Code、Cursor 等 AI IDE）连接时，告诉 Client 自己拥有哪些工具（返回 `tool_schemas` 的 JSON 描述）。
+
+**🛠️ 工程补充：三大核心能力 (Primitives)**
+除了提供 Tools（工具/Skill），一个完整的 MCP Server 还可以提供另外两项核心资产：
+
+1. **Resources (资源)**：向 LLM 暴露本地的静态上下文数据（如本地数据库、API 文档、项目架构图等）。Client 可以像读取文件系统一样，通过特定的 URI 读取这些内容。
+2. **Prompts (提示词)**：Server 端可以预设好特定的系统提示词模板，供 Client 直接拉取使用，统一 Agent 的行为规范。
+
+---
+
+### Q2：MCP Server 的执行逻辑，是不是根据 LLM 返回的 JSON 指令（由 Client 转发过来），在本地调用具体的 Skill，然后把结果返回给 Client？
+
+**核心理解：完全正确。**
+MCP Server 扮演的是“纯粹的执行者”角色。它本身不具备智能，只是忠实地接收包含函数名和参数的指令，执行对应的本地 Python/Node.js 方法，然后将执行结果（通常是字符串）通过协议回传。
+
+**🔒 工程补充：Client 是绝对的“主设备” (Master)**
+在安全性设计上，**大模型 (LLM) 绝对不能直接与 MCP Server 通信**。
+所有的控制权都在 Client 手里：
+
+* LLM 生成调用指令后，发给 Client。
+* Client 会进行**安全拦截**（例如弹出窗口，询问用户：“AI 试图运行一段 Python 脚本或执行 SQL，是否允许？”）。
+* 只有用户（或 Client 的自动放行策略）批准后，Client 才会把指令通过 MCP 协议派发给 Server。Server 只干活，不负责审批。
+
+---
+
+### Q3：Client 和 Service 之间的通信遵循 MCP 协议，是不是意味着只要大家都遵循这套标准，底层的工具模块（Skill）就可以跨不同 AI 框架无限复用？
+
+**核心理解：完全正确。**
+这正是 MCP 被称为 AI 领域“USB Type-C 接口”的原因。你只需要用 Python 写一次底层的硬件测试接口、日志分析工具（封装进 MCP Server），就可以零成本地将它们接入 Roo Code、Claude Desktop、Cursor 等任何支持 MCP 的先进前端中。换 AI 工具，再也不需要重写底层代码。
+
+**🔌 工程补充：物理通信层 (Transport) 的两种实现方式**
+既然是 C/S 架构，它们之间是通过什么物理通道传输 JSON 报文的呢？主要有两种：
+
+1. **Stdio (标准输入输出)**：**最常用的本地开发模式。** Client（如 Roo Code）在后台直接拉起你的 Python 脚本进程，然后通过进程间的 `stdin` 和 `stdout` 来进行高速的数据收发。极其轻量，无需占用网络端口。
+2. **SSE (Server-Sent Events over HTTP)**：**适用于远程部署或团队共享。** 如果你的 MCP Server 部署在远端服务器上，或者想让局域网内的多个同事一起使用，就可以采用这种模式，通过标准的 HTTP 网络协议进行通信。
+
+---
+
+通过这三个 Q&A，你已经掌握了构建现代、可扩展 AI 工具链的最核心架构。
+
+**接下来，我们是趁热打铁，直接用 Python 演示如何手写一个极简的（基于 Stdio 通信的）MCP Server 跑起来看看，还是你想先探讨一下在 Agent 开发中如何设计高质量的系统提示词（System Prompt）？**
