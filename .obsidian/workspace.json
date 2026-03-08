@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Languages/python/ctype类型的自动转换pythonic.md",
+                "file": "AI/continue_study/wuenda/lg examples.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ctype类型的自动转换pythonic"
+              "title": "lg examples"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -188,18 +188,22 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "bases:新建数据库": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "bases:Create new base": false
     }
   },
   "active": "b6c9507bbfc83562",
   "lastOpenFiles": [
+    "AI/continue_study/wuenda/Study lessons.md",
+    "AI/continue_study/wuenda/lg examples.md",
+    "AI/continue_study/PLANS/BASE.md",
+    "AI/continue_study/wuenda",
     "Languages/python/ctype类型的自动转换pythonic.md",
     "未命名.base",
     "desktop_apps/PyQt-NodeGraphQt.md",
@@ -232,12 +236,8 @@
     "Languages/python/pathlib & shutil.md",
     "Languages/python/method param star.md",
     "Languages/python/bug-recursionerror.md",
-    "Languages/python/coroutine thread thread-pool process.md",
-    "Languages/python/asyncio--todo.md",
-    "Languages/c/local_variable_memory.md",
     "Languages/shell",
     "Languages/python",
-    "Languages/c",
     "Pasted image 20260115185214.png",
     "Pasted image 20260105172155.png",
     "Pasted image 20260105171550.png",
