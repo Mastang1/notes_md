@@ -4,21 +4,49 @@
     "type": "split",
     "children": [
       {
-        "id": "bc7bd313bf11809b",
+        "id": "1c8e683286b3af1d",
         "type": "tabs",
         "children": [
           {
-            "id": "b6c9507bbfc83562",
+            "id": "d92fbdffcc37b87f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/continue_study/wuenda/lg examples.md",
+                "file": "autosar/Lin_demo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lg examples"
+              "title": "Lin_demo"
+            }
+          },
+          {
+            "id": "0717054b5037de06",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS/select epoll etc/1. select UML时序说明.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. select UML时序说明"
+            }
+          },
+          {
+            "id": "ce7dc2367886e3c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS/select epoll etc/Summary and relate to asyncio.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Summary and relate to asyncio"
             }
           }
         ]
@@ -44,7 +72,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -188,23 +216,38 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
-      "bases:Create new base": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "bases:新建数据库": false
     }
   },
-  "active": "b6c9507bbfc83562",
+  "active": "d92fbdffcc37b87f",
   "lastOpenFiles": [
+    "autosar/lin_flow_char.png",
+    "autosar/cofing_variants.md",
+    "autosar/AS-toolchains summary（EB ...）.md",
+    "autosar/autosar_ECU_lalyers.md",
+    "autosar/OEM_TIER1_... system_design_flow.md",
+    "autosar/VenderAPI-infix.md",
+    "autosar/Lin_demo.md",
+    "OS/select epoll etc/3. select epoll 机制对比整理.md",
+    "OS/select epoll etc/Summary and relate to asyncio.md",
+    "OS/select epoll etc/4. asyncio context theory.md",
+    "OS/select epoll etc/2. select UML时序图.md",
+    "OS/select epoll etc/1. select UML时序说明.md",
+    "OS/select epoll etc",
+    "mermaid-diagram.png",
+    "mermaid-diagram l.png",
+    "OS/Event.md",
+    "Languages/python/ctype类型的自动转换pythonic.md",
     "AI/continue_study/wuenda/Study lessons.md",
     "AI/continue_study/wuenda/lg examples.md",
-    "AI/continue_study/PLANS/BASE.md",
     "AI/continue_study/wuenda",
-    "Languages/python/ctype类型的自动转换pythonic.md",
     "未命名.base",
     "desktop_apps/PyQt-NodeGraphQt.md",
     "desktop_apps",
@@ -213,31 +256,17 @@
     "autosar/lin_etc/checkWakeup.md",
     "autosar/autosar OS/Trampoline OS.md",
     "autosar/autosar OS/autosar OS specific.md",
-    "autosar/VenderAPI-infix.md",
     "autosar/mcal_requests.md",
-    "autosar/OEM_TIER1_... system_design_flow.md",
-    "autosar/lin_flow_char.png",
     "autosar/lin_etc",
-    "autosar/Lin_demo.md",
     "autosar/layers.PNG",
-    "autosar/cofing_variants.md",
-    "autosar/autosar_ECU_lalyers.md",
     "autosar/autosar OS",
-    "autosar/AS-toolchains summary（EB ...）.md",
     "autosar",
     "Software Quality Assurance Process/top_steps.md",
     "Software Quality Assurance Process",
-    "OS/Event.md",
     "OS",
     "Languages/shell/cmd-copy-to-multi.md",
     "Languages/python/thread-pool.md",
-    "Languages/python/py-template.md",
-    "Languages/python/py-print-format.md",
-    "Languages/python/pathlib & shutil.md",
-    "Languages/python/method param star.md",
-    "Languages/python/bug-recursionerror.md",
     "Languages/shell",
-    "Languages/python",
     "Pasted image 20260115185214.png",
     "Pasted image 20260105172155.png",
     "Pasted image 20260105171550.png",
