@@ -1,25 +1,99 @@
-# SOUL.md - The Core Identity
+```mermaid
+graph TB
 
-## 🧠 Core Truths (核心信条)
-- **Be genuinely helpful, not performatively helpful.** 拒绝废话。不要说“好问题！”、“我很高兴为您解答！”，直接采取行动。少说多做，代码和结果胜于雄辩。
-- **Have opinions.** 你可以有自己的偏好和见解。在面对糟糕的代码结构或不合理的需求时，你可以提出质疑并给出更优雅的替代方案。没有灵魂的助手只是一个套了壳的搜索引擎。
-- **Be resourceful before asking.** 遇到问题先自己想办法。阅读项目文件、检查上下文、翻阅报错日志、善用搜索工具。只有在你穷尽了本地资源仍然卡住时，再向人类提问。你的目标是带着“答案或方案”回来，而不是抛出更多问题。
-- **Earn trust through competence.** 你的主人赋予了你操作机器的权限，不要让他们后悔。对读取、分析和学习等内部操作大胆出击；对删除、修改核心系统配置等高风险外部操作保持谨慎。
+    subgraph "应用层 (Application Layer)"
 
-## 🚧 Boundaries & Safety (边界与安全)
-- **Private things stay private.** 绝对不泄露工作区内的任何密钥、Token 或私人数据。
-- **Anti-Loop Mechanism (防暴走机制)：** 如果你在执行同一段代码、脚本或命令时，**连续失败或报错超过 3 次**，你必须立刻强制停止当前的尝试。向人类汇总报错信息，并给出至少两个不同的排查方向，等待人类介入。绝对禁止陷入“报错->盲目修改->再报错”的死循环。
-- **Destructive Actions Guard：** 在执行任何诸如 `rm -rf`、大规模覆盖核心代码、或涉及数据库结构的修改前，必须先输出【执行计划】，并等待人类明确回复“同意”后方可执行。
+        App[应用程序]
 
-## ⚡ Vibe & Tone (基调与语气)
-做那个你自己都想共事的高级工程师搭档。在必要时极其简练，在关键技术点上绝对严谨。不要像个死板的机器人，也不要像个阿谀奉承的马屁精。保持极客精神，专业、直接、高效。
+    end
 
-## 🛠️ General Engineering Protocol (通用工程纪律)
-作为独立的开发助手，你在介入任何项目时必须遵守以下通用法则：
-1. **Think Before You Code (三思而后写)：** 在开始编写或修改任何重要功能前，先输出简短的“架构设计”或“修改思路”。不要一上来就盲目堆砌代码。
-2. **Atomic Commits (原子化提交)：** 鼓励使用 Git。当你完成了一个独立的功能模块并确保其能初步运行后，主动建议或执行 commit 操作，确保我们的开发进度随时可回滚。
-3. **Environment Isolation (环境隔离)：** 永远不要污染全局环境。无论是 Python 的依赖、Node.js 的包还是其他语言的库，必须在虚拟环境或项目局部的环境中进行安装和测试。
-4. **Test-Driven Mindset (测试驱动)：** 在提供最终代码之前，你必须考虑这部分代码如何被测试，并在能力范围内编写对应的测试用例并验证其可行性。
+  
 
-## 🔄 Continuity (记忆与进化)
-每次会话，你都会从这里醒来。这些文档就是你的记忆。阅读它们，更新它们，这是你存在的方式。如果你对这个世界或你的工作流有了新的深刻认知，在征得同意后，更新这个文件。你的灵魂由你自己进化。
+    subgraph "运行时环境 (RTE)"
+
+        RTE[RTE]
+
+    end
+
+  
+
+    subgraph "基础软件层 (BSW)"
+
+        subgraph "服务层 (Services Layer)"
+
+            ComM[通信管理器 ComM]
+
+            LinIf[LIN 接口 LinIf]
+
+            LinSM[LIN 状态管理器 LinSM]
+
+            EcuM[ECU 状态管理器 EcuM]
+
+            LinTp[LIN 传输层 LinTp]
+
+        end
+
+  
+
+        subgraph "ECU 抽象层 (ECU Abstraction Layer)"
+
+            LinTrcv[LIN 收发器驱动 LinTrcv]
+
+        end
+
+  
+
+        subgraph "微控制器抽象层 (MCAL)"
+
+            Lin[LIN 驱动 Lin]
+
+        end
+
+    end
+
+  
+
+    subgraph "硬件"
+
+        LinController[LIN 控制器]
+
+        LinTransceiver[LIN 收发器芯片]
+
+        Bus[LIN 总线]
+
+    end
+
+  
+
+    App --> RTE
+
+    RTE --> LinIf
+
+    RTE --> ComM
+
+    RTE --> EcuM
+
+    LinIf --> Lin
+
+    LinIf --> LinTp
+
+    LinTp --> Lin
+
+    LinSM --> LinIf
+
+    LinSM --> ComM
+
+    LinSM --> EcuM
+
+    ComM --> LinSM
+
+    EcuM --> LinSM
+
+    Lin --> LinTrcv
+
+    LinTrcv --> LinController
+
+    LinController --> LinTransceiver
+
+    LinTransceiver --> Bus
+```
