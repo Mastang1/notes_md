@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "autosar/lin_etc/ISO-17987 & autosar-LIN.md",
+                "file": "autosar/mcal_architecure/my_summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ISO-17987 & autosar-LIN"
+              "title": "my_summary"
             }
           },
           {
@@ -81,7 +81,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#define",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +89,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "搜索"
             }
           },
           {
@@ -136,9 +136,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "autosar/autosar OS/Trampoline OS.md",
+                "file": "autosar/mcal_architecure/my_summary.md",
                 "collapseAll": false,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -146,7 +146,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Trampoline OS"
+              "title": "my_summary 的反向链接列表"
             }
           },
           {
@@ -175,7 +175,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "标签"
             }
           },
           {
@@ -198,21 +198,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EB-tresos-generator/xdm_schema_context_ana.md",
+                "file": "autosar/mcal_architecure/my_summary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of xdm_schema_context_ana"
+              "title": "my_summary 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 374.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -228,8 +228,15 @@
   },
   "active": "d92fbdffcc37b87f",
   "lastOpenFiles": [
-    "autosar/lin_etc/Bus LIN error处理机制的简单总结.md",
+    "autosar/mcal_architecure/arch-ipcs-demo.md",
+    "autosar/mcal_architecure/arch-component_etc###.md",
+    "autosar/mcal_architecure/archi-0_1.md",
+    "autosar/mcal_architecure/component and function description.md",
+    "autosar/mcal_architecure/my_summary.md",
     "autosar/lin_etc/ISO-17987 & autosar-LIN.md",
+    "autosar/mcal_architecure",
+    "autosar/新建文件夹",
+    "autosar/lin_etc/Bus LIN error处理机制的简单总结.md",
     "autosar/lin_etc/质量管理流程图.md",
     "autosar/lin_etc/SRS&SWS.md",
     "autosar/lin_etc/checkWakeup.md",
@@ -254,20 +261,13 @@
     "mermaid-diagram l.png",
     "OS/Event.md",
     "Languages/python/ctype类型的自动转换pythonic.md",
-    "AI/continue_study/wuenda/Study lessons.md",
-    "AI/continue_study/wuenda/lg examples.md",
     "AI/continue_study/wuenda",
     "未命名.base",
-    "desktop_apps/PyQt-NodeGraphQt.md",
     "desktop_apps",
-    "autosar/autosar OS/Trampoline OS.md",
-    "autosar/autosar OS/autosar OS specific.md",
     "autosar/lin_etc",
     "autosar/autosar OS",
     "autosar",
     "Software Quality Assurance Process",
-    "OS",
-    "Languages/shell",
     "Pasted image 20260115185214.png",
     "Pasted image 20260105172155.png",
     "Pasted image 20260105171550.png",
