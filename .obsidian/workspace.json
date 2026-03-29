@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/prompt/human-llm/human_cognitive_science.md",
+                "file": "AI/prompt/human-llm/提升学习and记忆的工程应用.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "human_cognitive_science"
+              "title": "提升学习and记忆的工程应用"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI/prompt/human-llm/human_cognitive_science.md",
+                "file": "AI/prompt/human-llm/提升学习and记忆的工程应用.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "human_cognitive_science 的大纲"
+              "title": "提升学习and记忆的工程应用 的大纲"
             }
           }
         ],
@@ -200,16 +200,20 @@
   },
   "active": "e3dde471957bf470",
   "lastOpenFiles": [
+    "AI/prompt/human-llm/认知过程的有助于提升学习的理论.md",
+    "AI/prompt/human-llm/提升学习and记忆的工程应用.md",
+    "AI/prompt/human-llm/human_cognitive_science.md",
+    "Engineering_Cognitive_Scaffolds.pdf",
+    "如何真正理解任何事.mp4",
+    "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 教学约束片段.md",
+    "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 输入理解约束片段.md",
+    "AI/prompt/Human Learning-Aligned Prompt Library/模板 1：陌生知识教学总模板（通用母版）.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 7：从“完全不懂”到“能上手”的实战教学模板.md",
     "AI/prompt/prompt_engineering/Summary.md",
-    "AI/prompt/human-llm/human_cognitive_science.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 3：新概念／新术语理解模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 输入理解约束片段.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 教学约束片段.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 12：用户输入理解与重构模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 13：系统落地组合版.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 11：短版万能模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 1：陌生知识教学总模板（通用母版）.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 10：将用户原始问题自动优化为“教学型 prompt”的模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 9：纠正错误理解模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 8：交互式导师模板.md",
@@ -227,8 +231,6 @@
     "AI/prompt/prompt_engineering/prompts_char repo.md",
     "autosar/mcal_architecure/component and function description.md",
     "AI/prompt/prompt_engineering",
-    "autosar/mcal_architecure/my_summary.md",
-    "autosar/mcal_architecure/archi-0_1.md",
     "AI/prompt",
     "software_project/some_concepts",
     "software_project",
@@ -236,10 +238,8 @@
     "autosar/新建文件夹",
     "autosar/lin_flow_char.png",
     "autosar/layers.PNG",
-    "OS/select epoll etc",
     "mermaid-diagram.png",
     "mermaid-diagram l.png",
-    "AI/continue_study/wuenda",
     "Pasted image 20260115185214.png",
     "Pasted image 20260105172155.png",
     "Pasted image 20260105171550.png",

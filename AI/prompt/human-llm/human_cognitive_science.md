@@ -7,6 +7,8 @@
 	- *为什么会刻板印象？（图式过度泛化）*
 - 心智模型：👉 “它为什么这样运作”
 ---
+Video lesson![[如何真正理解任何事.mp4]]
+PPT![[Engineering_Cognitive_Scaffolds.pdf]]
 
 
 ## 1. 宏观学科地图：哪些科研领域在研究“人类如何理解新事物”
