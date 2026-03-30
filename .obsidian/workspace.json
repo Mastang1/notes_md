@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a0b40bd095bb0b8c",
+        "id": "f39868ff3321088d",
         "type": "tabs",
         "children": [
           {
-            "id": "e3dde471957bf470",
+            "id": "15d6282faf8f7eee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/prompt/human-llm/human_cognitive_science.md",
+                "file": "software_project/QAC/Helix-Q&A.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "human_cognitive_science"
+              "title": "Helix-Q&A"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI/prompt/human-llm/human_cognitive_science.md",
+                "file": "software_project/QAC/Helix-Q&A.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "human_cognitive_science 的大纲"
+              "title": "Helix-Q&A 的大纲"
             }
           }
         ],
@@ -198,12 +198,14 @@
       "bases:新建数据库": false
     }
   },
-  "active": "e3dde471957bf470",
+  "active": "15d6282faf8f7eee",
   "lastOpenFiles": [
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 7：从“完全不懂”到“能上手”的实战教学模板.md",
-    "AI/prompt/prompt_engineering/Summary.md",
-    "AI/prompt/human-llm/human_cognitive_science.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 3：新概念／新术语理解模板.md",
+    "software_project/QAC/Helix-Q&A.md",
+    "software_project/QAC",
+    "AI/prompt/Human Learning-Aligned Prompt Library/模板 7：从“完全不懂”到“能上手”的实战教学模板.md",
+    "AI/prompt/human-llm/human_cognitive_science.md",
+    "AI/prompt/prompt_engineering/Summary.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 输入理解约束片段.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 教学约束片段.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 12：用户输入理解与重构模板.md",
@@ -228,7 +230,6 @@
     "autosar/mcal_architecure/component and function description.md",
     "AI/prompt/prompt_engineering",
     "autosar/mcal_architecure/my_summary.md",
-    "autosar/mcal_architecure/archi-0_1.md",
     "AI/prompt",
     "software_project/some_concepts",
     "software_project",
@@ -239,7 +240,6 @@
     "OS/select epoll etc",
     "mermaid-diagram.png",
     "mermaid-diagram l.png",
-    "AI/continue_study/wuenda",
     "Pasted image 20260115185214.png",
     "Pasted image 20260105172155.png",
     "Pasted image 20260105171550.png",
