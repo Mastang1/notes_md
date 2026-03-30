@@ -198,8 +198,12 @@
       "bases:新建数据库": false
     }
   },
-  "active": "15d6282faf8f7eee",
+  "active": "51457bd03964d4d1",
   "lastOpenFiles": [
+    "如何真正理解任何事.mp4",
+    "Engineering_Cognitive_Scaffolds.pdf",
+    "AI/prompt/human-llm/认知过程的有助于提升学习的理论.md",
+    "AI/prompt/human-llm/提升学习and记忆的工程应用.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 3：新概念／新术语理解模板.md",
     "software_project/QAC/Helix-Q&A.md",
     "software_project/QAC",
@@ -226,10 +230,7 @@
     "OS/select epoll etc/Summary and relate to asyncio.md",
     "OS/select epoll etc/1. select UML时序说明.md",
     "AI/prompt/prompt_engineering/01-软件架构说明-SAD.md",
-    "AI/prompt/prompt_engineering/prompts_char repo.md",
-    "autosar/mcal_architecure/component and function description.md",
     "AI/prompt/prompt_engineering",
-    "autosar/mcal_architecure/my_summary.md",
     "AI/prompt",
     "software_project/some_concepts",
     "software_project",
@@ -237,7 +238,6 @@
     "autosar/新建文件夹",
     "autosar/lin_flow_char.png",
     "autosar/layers.PNG",
-    "OS/select epoll etc",
     "mermaid-diagram.png",
     "mermaid-diagram l.png",
     "Pasted image 20260115185214.png",
