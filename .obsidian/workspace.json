@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/prompt/human-llm/human_cognitive_science.md",
-                "mode": "preview",
+                "file": "software_project/architecture_etc/architecture_from_gpt.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "human_cognitive_science"
+              "title": "architecture_from_gpt"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI/prompt/human-llm/human_cognitive_science.md",
+                "file": "software_project/architecture_etc/architecture_from_gpt.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "human_cognitive_science 的大纲"
+              "title": "architecture_from_gpt 的大纲"
             }
           },
           {
@@ -211,6 +211,7 @@
   },
   "active": "8593f2a6e21bb198",
   "lastOpenFiles": [
+    "AI/prompt/human-llm/human_cognitive_science.md",
     "AI/prompt/human-llm/提升学习and记忆的工程应用.md",
     "AI/prompt/human-llm/认知过程的有助于提升学习的理论.md",
     "software_project/architecture_etc/architecture_from_gpt.md",
@@ -240,7 +241,6 @@
     "autosar/lin_etc/checkWakeup.md",
     "autosar/lin_etc/Bus LIN error处理机制的简单总结.md",
     "autosar/lin_etc/质量管理流程图.md",
-    "autosar/autosar OS/Trampoline OS.md",
     "如何真正理解任何事.mp4",
     "AI/prompt/Human Learning-Aligned Prompt Library",
     "AI/prompt/human-llm",
