@@ -11,10 +11,14 @@
             "id": "8593f2a6e21bb198",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "software_project/architecture_etc/tmp-arch-ai.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "tmp-arch-ai"
             }
           }
         ]
@@ -166,12 +170,23 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "software_project/architecture_etc/tmp-arch-ai.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "tmp-arch-ai 的大纲"
+            }
+          },
+          {
+            "id": "dd53e0f9378a2409",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -197,6 +212,7 @@
   "active": "8593f2a6e21bb198",
   "lastOpenFiles": [
     "Roadmap/Near-term plans.md",
+    "ARM/interrupt.md",
     "software_project/architecture_etc/tmp-arch-ai.md",
     "temp.md",
     "software_project/QAC/Helix-Q&A.md",
@@ -225,7 +241,6 @@
     "autosar/autosar OS/autosar OS specific.md",
     "desktop_apps/PyQt-NodeGraphQt.md",
     "ethernet/greatwall/flow-char.md",
-    "ethernet/greatwall/basic theory.md",
     "如何真正理解任何事.mp4",
     "AI/prompt/Human Learning-Aligned Prompt Library",
     "AI/prompt/human-llm",
