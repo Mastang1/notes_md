@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "temp.md",
-                "mode": "preview",
+                "file": "coding_notes/Guard clauses and Early Exit.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "temp"
+              "title": "Guard clauses and Early Exit"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "temp.md",
+                "file": "coding_notes/Guard clauses and Early Exit.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "temp 的大纲"
+              "title": "Guard clauses and Early Exit 的大纲"
             }
           }
         ],
@@ -201,8 +201,11 @@
   },
   "active": "15d6282faf8f7eee",
   "lastOpenFiles": [
-    "software_project/architecture_etc/tmp-arch-ai.md",
     "temp.md",
+    "coding_notes/Guard clauses and Early Exit.md",
+    "coding_notes",
+    "software_project/未命名",
+    "software_project/architecture_etc/tmp-arch-ai.md",
     "software_project/architecture_etc/device driver-to-summary.md",
     "software_project/architecture_etc/architecture_from_gpt.md",
     "software_project/QAC/Helix-Q&A.md",
@@ -231,12 +234,9 @@
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 8：交互式导师模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 6：对比辨析模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 5：系统／架构类对象教学模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 4：算法／机制教学模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library",
     "AI/prompt/human-llm",
     "AI/prompt/prompt_engineering",
-    "AI/prompt",
-    "software_project/some_concepts",
     "autosar/lin_flow_char.png",
     "autosar/layers.PNG",
     "mermaid-diagram.png",
