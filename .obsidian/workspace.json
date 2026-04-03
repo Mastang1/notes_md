@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "coding_notes/Guard clauses and Early Exit.md",
+                "file": "temp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Guard clauses and Early Exit"
+              "title": "temp"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "coding_notes/Guard clauses and Early Exit.md",
+                "file": "temp.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Guard clauses and Early Exit 的大纲"
+              "title": "temp 的大纲"
             }
           }
         ],
@@ -201,13 +201,14 @@
   },
   "active": "15d6282faf8f7eee",
   "lastOpenFiles": [
+    "temp2.md",
     "temp.md",
-    "coding_notes/Guard clauses and Early Exit.md",
-    "coding_notes",
-    "software_project/未命名",
     "software_project/architecture_etc/tmp-arch-ai.md",
     "software_project/architecture_etc/device driver-to-summary.md",
     "software_project/architecture_etc/architecture_from_gpt.md",
+    "coding_notes/Guard clauses and Early Exit.md",
+    "coding_notes",
+    "software_project/未命名",
     "software_project/QAC/Helix-Q&A.md",
     "software_project/architecture_etc",
     "Roadmap/Near-term plans.md",
@@ -233,7 +234,6 @@
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 9：纠正错误理解模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 8：交互式导师模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 6：对比辨析模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 5：系统／架构类对象教学模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library",
     "AI/prompt/human-llm",
     "AI/prompt/prompt_engineering",
