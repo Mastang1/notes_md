@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/architecture_etc/tmp-arch-ai.md",
-                "mode": "source",
+                "file": "temp.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tmp-arch-ai"
+              "title": "temp"
             }
           }
         ]
@@ -161,7 +161,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "All properties"
+              "title": "添加笔记属性"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/architecture_etc/tmp-arch-ai.md",
+                "file": "temp.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "tmp-arch-ai 的大纲"
+              "title": "temp 的大纲"
             }
           }
         ],
@@ -201,10 +201,11 @@
   },
   "active": "15d6282faf8f7eee",
   "lastOpenFiles": [
+    "software_project/architecture_etc/tmp-arch-ai.md",
+    "temp.md",
     "software_project/architecture_etc/device driver-to-summary.md",
     "software_project/architecture_etc/architecture_from_gpt.md",
     "software_project/QAC/Helix-Q&A.md",
-    "software_project/architecture_etc/tmp-arch-ai.md",
     "software_project/architecture_etc",
     "Roadmap/Near-term plans.md",
     "Roadmap",
@@ -231,7 +232,6 @@
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 6：对比辨析模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 5：系统／架构类对象教学模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 4：算法／机制教学模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 2：开源库／框架快速理解模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library",
     "AI/prompt/human-llm",
     "AI/prompt/prompt_engineering",
