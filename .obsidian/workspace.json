@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f39868ff3321088d",
+        "id": "fd649c91e07860d7",
         "type": "tabs",
         "children": [
           {
-            "id": "15d6282faf8f7eee",
+            "id": "8593f2a6e21bb198",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "coding_notes/Guard clauses and Early Exit.md",
+                "file": "software_project/architecture_etc/device driver-to-summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Guard clauses and Early Exit"
+              "title": "device driver-to-summary"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "filter",
+                "query": "请按人类学习陌生知识的规律进行讲解，严格遵循以下原则：",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 365.5110321044922
+    "width": 300.5
   },
   "right": {
     "id": "8efccc928838709e",
@@ -161,7 +161,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "添加笔记属性"
+              "title": "All properties"
             }
           },
           {
@@ -170,13 +170,23 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "coding_notes/Guard clauses and Early Exit.md",
+                "file": "software_project/architecture_etc/device driver-to-summary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Guard clauses and Early Exit 的大纲"
+              "title": "device driver-to-summary 的大纲"
+            }
+          },
+          {
+            "id": "dd53e0f9378a2409",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -199,44 +209,44 @@
       "bases:新建数据库": false
     }
   },
-  "active": "15d6282faf8f7eee",
+  "active": "8593f2a6e21bb198",
   "lastOpenFiles": [
-    "temp.md",
     "temp2.md",
-    "software_project/architecture_etc/tmp-arch-ai.md",
-    "software_project/architecture_etc/device driver-to-summary.md",
-    "software_project/architecture_etc/architecture_from_gpt.md",
     "coding_notes/Guard clauses and Early Exit.md",
     "coding_notes",
-    "software_project/未命名",
-    "software_project/QAC/Helix-Q&A.md",
-    "software_project/architecture_etc",
-    "Roadmap/Near-term plans.md",
-    "Roadmap",
-    "AI/prompt/human-llm/Temp.md",
-    "AI/MCP.md",
-    "如何真正理解任何事.mp4",
-    "Engineering_Cognitive_Scaffolds.pdf",
-    "AI/prompt/human-llm/认知过程的有助于提升学习的理论.md",
-    "AI/prompt/human-llm/提升学习and记忆的工程应用.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 3：新概念／新术语理解模板.md",
-    "software_project/QAC",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 7：从“完全不懂”到“能上手”的实战教学模板.md",
+    "software_project/architecture_etc/architecture_from_gpt.md",
+    "software_project/architecture_etc/device driver-to-summary.md",
     "AI/prompt/human-llm/human_cognitive_science.md",
-    "AI/prompt/prompt_engineering/Summary.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 输入理解约束片段.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 教学约束片段.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 12：用户输入理解与重构模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 13：系统落地组合版.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 11：短版万能模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 1：陌生知识教学总模板（通用母版）.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 10：将用户原始问题自动优化为“教学型 prompt”的模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 9：纠正错误理解模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 8：交互式导师模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 6：对比辨析模板.md",
+    "AI/prompt/human-llm/提升学习and记忆的工程应用.md",
+    "AI/prompt/human-llm/认知过程的有助于提升学习的理论.md",
+    "software_project/architecture_etc/tmp-arch-ai.md",
+    "Roadmap/Near-term plans.md",
+    "ARM/interrupt.md",
+    "temp.md",
+    "software_project/QAC/Helix-Q&A.md",
+    "software_project/QAC",
+    "software_project/architecture_etc",
+    "README.md",
+    "Roadmap",
+    "Engineering_Cognitive_Scaffolds.pdf",
+    "EB-tresos-generator.md",
+    "AI/0_top_protocol.md",
+    "AI/MCP.md",
+    "AI/new daily.md",
+    "AI/pdf2zh.md",
+    "AI/continue_study/wuenda/Study lessons.md",
+    "AI/continue_study/wuenda/lg examples.md",
+    "autosar/mcal_architecure/my_summary.md",
+    "autosar/mcal_architecure/archi-0_1.md",
+    "autosar/mcal_architecure/component and function description.md",
+    "autosar/mcal_architecure/arch-component_etc###.md",
+    "autosar/lin_etc/SRS&SWS.md",
+    "autosar/lin_etc/ISO-17987 & autosar-LIN.md",
+    "如何真正理解任何事.mp4",
     "AI/prompt/Human Learning-Aligned Prompt Library",
     "AI/prompt/human-llm",
     "AI/prompt/prompt_engineering",
+    "AI/prompt",
     "autosar/lin_flow_char.png",
     "autosar/layers.PNG",
     "mermaid-diagram.png",
