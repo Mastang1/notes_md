@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "temp.md",
+                "file": "coding_notes/Guard clauses and Early Exit.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "temp"
+              "title": "Guard clauses and Early Exit"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "temp.md",
+                "file": "coding_notes/Guard clauses and Early Exit.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "temp 的大纲"
+              "title": "Guard clauses and Early Exit 的大纲"
             }
           }
         ],
@@ -201,8 +201,8 @@
   },
   "active": "15d6282faf8f7eee",
   "lastOpenFiles": [
-    "temp2.md",
     "temp.md",
+    "temp2.md",
     "software_project/architecture_etc/tmp-arch-ai.md",
     "software_project/architecture_etc/device driver-to-summary.md",
     "software_project/architecture_etc/architecture_from_gpt.md",
