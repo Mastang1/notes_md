@@ -11,10 +11,14 @@
             "id": "c4b5759984caa67b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "design_lesson.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "design_lesson"
             }
           }
         ]
@@ -166,12 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "design_lesson.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "design_lesson 的大纲"
             }
           },
           {
