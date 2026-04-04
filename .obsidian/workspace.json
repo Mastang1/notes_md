@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design_lesson.md",
-                "mode": "preview",
+                "file": "AI/prompt/Human Learning-Aligned Prompt Library/模板 2：开源库／框架快速理解模板.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "design_lesson"
+              "title": "模板 2：开源库／框架快速理解模板"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design_lesson.md",
+                "file": "AI/prompt/Human Learning-Aligned Prompt Library/模板 2：开源库／框架快速理解模板.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "design_lesson 的大纲"
+              "title": "模板 2：开源库／框架快速理解模板 的大纲"
             }
           },
           {
