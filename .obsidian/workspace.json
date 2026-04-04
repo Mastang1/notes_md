@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "fd649c91e07860d7",
+        "id": "935dfb305c7b7873",
         "type": "tabs",
         "children": [
           {
-            "id": "8593f2a6e21bb198",
+            "id": "c4b5759984caa67b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "software_project/architecture_etc/architecture_from_gpt.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "architecture_from_gpt"
+              "title": "新标签页"
             }
           }
         ]
@@ -170,13 +166,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/architecture_etc/architecture_from_gpt.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "architecture_from_gpt 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -209,15 +204,16 @@
       "bases:新建数据库": false
     }
   },
-  "active": "8593f2a6e21bb198",
+  "active": "c4b5759984caa67b",
   "lastOpenFiles": [
+    "design_lesson.md",
+    "software_project/architecture_etc/architecture_from_gpt.md",
     "temp2.md",
     "temp.md",
     "ARM/interrupt.md",
     "software_project/architecture_etc/device driver-to-summary.md",
     "coding_notes/Guard clauses and Early Exit.md",
     "coding_notes",
-    "software_project/architecture_etc/architecture_from_gpt.md",
     "AI/prompt/human-llm/human_cognitive_science.md",
     "AI/prompt/human-llm/提升学习and记忆的工程应用.md",
     "AI/prompt/human-llm/认知过程的有助于提升学习的理论.md",
@@ -241,7 +237,6 @@
     "autosar/mcal_architecure/component and function description.md",
     "autosar/mcal_architecure/arch-component_etc###.md",
     "autosar/lin_etc/SRS&SWS.md",
-    "autosar/lin_etc/ISO-17987 & autosar-LIN.md",
     "如何真正理解任何事.mp4",
     "AI/prompt/Human Learning-Aligned Prompt Library",
     "AI/prompt/human-llm",
