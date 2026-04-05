@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "temp2.md",
-                "mode": "source",
+                "file": "software_project/architecture_etc/BSP HAL OS.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "temp2"
+              "title": "BSP HAL OS"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "temp2.md",
+                "file": "software_project/architecture_etc/BSP HAL OS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "temp2 的大纲"
+              "title": "BSP HAL OS 的大纲"
             }
           },
           {
@@ -211,11 +211,12 @@
   },
   "active": "6e0021b5414d2898",
   "lastOpenFiles": [
+    "temp2.md",
+    "software_project/architecture_etc/BSP HAL OS.md",
     "temp.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 2：开源库／框架快速理解模板.md",
     "design_lesson.md",
     "software_project/architecture_etc/architecture_from_gpt.md",
-    "temp2.md",
     "ARM/interrupt.md",
     "software_project/architecture_etc/device driver-to-summary.md",
     "coding_notes/Guard clauses and Early Exit.md",
@@ -241,7 +242,6 @@
     "autosar/mcal_architecure/my_summary.md",
     "autosar/mcal_architecure/archi-0_1.md",
     "autosar/mcal_architecure/component and function description.md",
-    "autosar/mcal_architecure/arch-component_etc###.md",
     "如何真正理解任何事.mp4",
     "AI/prompt/Human Learning-Aligned Prompt Library",
     "AI/prompt/human-llm",
