@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f39868ff3321088d",
+        "id": "78d77f8b8961b9c8",
         "type": "tabs",
         "children": [
           {
-            "id": "15d6282faf8f7eee",
+            "id": "12be01530431e843",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS/multiple notification methods.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "multiple notification methods"
+              "title": "新标签页"
             }
           }
         ]
@@ -170,13 +166,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/multiple notification methods.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "multiple notification methods 的大纲"
+              "title": "大纲"
             }
           }
         ],
@@ -199,10 +194,11 @@
       "bases:新建数据库": false
     }
   },
-  "active": "15d6282faf8f7eee",
+  "active": "12be01530431e843",
   "lastOpenFiles": [
-    "OS/Event.md",
+    "Languages/c/pointer with const.md",
     "OS/multiple notification methods.md",
+    "OS/Event.md",
     "coding_notes/Guard clauses and Early Exit.md",
     "software_project/architecture_etc/BSP 个人理解笔记.md",
     "design_lesson.md",
@@ -233,7 +229,6 @@
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 12：用户输入理解与重构模板.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 13：系统落地组合版.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 11：短版万能模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 1：陌生知识教学总模板（通用母版）.md",
     "AI/prompt/Human Learning-Aligned Prompt Library",
     "AI/prompt/human-llm",
     "AI/prompt/prompt_engineering",
