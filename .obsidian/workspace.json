@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f49923e6b681f41d",
+        "id": "9c3c2a054851b76e",
         "type": "tabs",
         "children": [
           {
-            "id": "f4c2421e585a1ba6",
+            "id": "2d913eb3879bbc65",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/FreeRTOS/mutex-vs-semaphore.md",
+                "file": "OS/FreeRTOS/global.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mutex-vs-semaphore"
+              "title": "global"
             }
           }
         ]
@@ -199,10 +199,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f4c2421e585a1ba6",
+  "active": "51457bd03964d4d1",
   "lastOpenFiles": [
-    "OS/Event.md",
+    "OS/FreeRTOS/global.md",
     "OS/FreeRTOS/mutex-vs-semaphore.md",
+    "OS/Event.md",
     "OS/multiple events sync.md",
     "OS/FreeRTOS/Notification.md",
     "conflict-files-obsidian-git.md",
@@ -233,7 +234,6 @@
     "tool_chains/linker.md",
     "tool_chains/git-gerrit",
     "tool_chains",
-    "temp2.md",
     "software_project/some_concepts",
     "software_project/Software Quality Assurance Process",
     "software_project/QAC",
