@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8bdfbecdec3badcf",
+        "id": "d8126b7f8c92b86a",
         "type": "tabs",
         "children": [
           {
-            "id": "9149a7db0bd959d8",
+            "id": "eb97ef0a733fd62d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/architecture_etc/QA-bsp and device driver framework.md",
+                "file": "software_project/architecture_etc/ipcs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "QA-bsp and device driver framework"
+              "title": "ipcs"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/architecture_etc/QA-bsp and device driver framework.md",
+                "file": "software_project/architecture_etc/ipcs.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "QA-bsp and device driver framework 的大纲"
+              "title": "ipcs 的大纲"
             }
           }
         ],
@@ -199,11 +199,15 @@
       "bases:新建数据库": false
     }
   },
-  "active": "9149a7db0bd959d8",
+  "active": "eb97ef0a733fd62d",
   "lastOpenFiles": [
-    "software_project/architecture_etc/tmp-arch-ai.md",
+    "OS/FreeRTOS/Notification.md",
+    "software_project/architecture_etc/ipcs.md",
+    "ARM/Hardware Spinlock.md",
+    "OS/FreeRTOS",
+    "ARM/interrupt.md",
     "software_project/architecture_etc/QA-bsp and device driver framework.md",
-    "software_project/architecture_etc/未命名.md",
+    "software_project/architecture_etc/tmp-arch-ai.md",
     "software_project/architecture_etc/device driver-to-summary.md",
     "software_project/architecture_etc/architecture_from_gpt.md",
     "OS/multiple notification methods.md",
@@ -231,12 +235,8 @@
     "software_project/QAC",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 7：从“完全不懂”到“能上手”的实战教学模板.md",
     "AI/prompt/human-llm/human_cognitive_science.md",
-    "AI/prompt/prompt_engineering/Summary.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 输入理解约束片段.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 教学约束片段.md",
     "AI/prompt/Human Learning-Aligned Prompt Library",
     "AI/prompt/human-llm",
-    "AI/prompt/prompt_engineering",
     "autosar/lin_flow_char.png",
     "autosar/layers.PNG",
     "mermaid-diagram.png",
