@@ -1,4 +1,5 @@
 ## me:
 _**我理解：1. stdint.h实现了定宽到原生类型的转换；**_
+
 _**2. stdint.h文件是编译工具链自带的，由编译器开发人员实现了不同类型到原生类型的映射**_
-_**3. 当不用编译器提供的s't'd**_
+_**3. 当不用编译器提供的stdint.h时候：加上 **`-nostdinc`** (No Standard Includes) 或 **`-ffreestanding`** 选项，如何处理：手写吧 fuck**_
