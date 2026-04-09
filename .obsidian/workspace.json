@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/architecture_etc/BSP 个人理解笔记.md",
+                "file": "software_project/architecture_etc/tmp-arch-ai.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BSP 个人理解笔记"
+              "title": "tmp-arch-ai"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/architecture_etc/BSP 个人理解笔记.md",
+                "file": "software_project/architecture_etc/tmp-arch-ai.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "BSP 个人理解笔记 的大纲"
+              "title": "tmp-arch-ai 的大纲"
             }
           }
         ],
@@ -201,17 +201,17 @@
   },
   "active": "12be01530431e843",
   "lastOpenFiles": [
+    "software_project/architecture_etc/architecture_from_gpt.md",
+    "software_project/architecture_etc/BSP 个人理解笔记.md",
     "OS/multiple notification methods.md",
     "OS/Event.md",
     "Languages/c/pointer with const.md",
     "coding_notes/Guard clauses and Early Exit.md",
-    "software_project/architecture_etc/BSP 个人理解笔记.md",
     "design_lesson.md",
     "temp.md",
     "temp2.md",
     "software_project/architecture_etc/tmp-arch-ai.md",
     "software_project/architecture_etc/device driver-to-summary.md",
-    "software_project/architecture_etc/architecture_from_gpt.md",
     "coding_notes",
     "software_project/未命名",
     "software_project/QAC/Helix-Q&A.md",
