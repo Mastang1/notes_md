@@ -11,10 +11,14 @@
             "id": "d0719d390e6e51c1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "conflict-files-obsidian-git"
             }
           }
         ]
@@ -197,6 +201,14 @@
   },
   "active": "d0719d390e6e51c1",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "software_project/architecture_etc/ipcs.md",
+    "software_project/architecture_etc/QA-bsp and device driver framework.md",
+    "OS/multiple notification methods.md",
+    "OS/FreeRTOS/Notification.md",
+    "OS/FreeRTOS",
+    "Languages/c/pointer with const.md",
+    "ARM/Hardware Spinlock.md",
     "Pasted image 20260105171248.png",
     "OS/select epoll etc/Summary and relate to asyncio.md",
     "OS/select epoll etc/4. asyncio context theory.md",
@@ -222,17 +234,10 @@
     "tool_chains",
     "temp2.md",
     "temp.md",
-    "software_project/some_concepts/reentry.md",
-    "software_project/Software Quality Assurance Process/top_steps.md",
-    "software_project/QAC/Helix-Q&A.md",
-    "software_project/architecture_etc/tmp-arch-ai.md",
-    "software_project/architecture_etc/device driver-to-summary.md",
-    "software_project/architecture_etc/BSP 个人理解笔记.md",
     "software_project/some_concepts",
     "software_project/Software Quality Assurance Process",
     "software_project/QAC",
     "software_project/architecture_etc",
-    "software_project",
     "mermaid-diagram.png",
     "mermaid-diagram l.png",
     "autosar/lin_flow_char.png",
@@ -242,7 +247,6 @@
     "Pasted image 20260105171550.png",
     "Pasted image 20260105171423.png",
     "Pasted image 20260307154229.png",
-    "Pasted image 20260307010233.png",
     "未命名.canvas",
     "Untitled.canvas"
   ]
