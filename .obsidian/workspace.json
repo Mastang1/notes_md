@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f39868ff3321088d",
+        "id": "fe1ded4f196f7352",
         "type": "tabs",
         "children": [
           {
-            "id": "15d6282faf8f7eee",
+            "id": "d0719d390e6e51c1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "coding_notes/Guard clauses and Early Exit.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Guard clauses and Early Exit"
+              "title": "新标签页"
             }
           }
         ]
@@ -53,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "filter",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -92,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 365.5110321044922
+    "width": 447.5026054382324
   },
   "right": {
     "id": "8efccc928838709e",
@@ -108,9 +104,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "autosar/mcal_architecure/my_summary.md",
+                "file": "autosar/autosar OS/Trampoline OS.md",
                 "collapseAll": false,
-                "extraContext": true,
+                "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -118,7 +114,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "my_summary 的反向链接列表"
+              "title": "Backlinks for Trampoline OS"
             }
           },
           {
@@ -147,7 +143,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "标签"
+              "title": "Tags"
             }
           },
           {
@@ -161,7 +157,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "添加笔记属性"
+              "title": "All properties"
             }
           },
           {
@@ -170,82 +166,84 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "coding_notes/Guard clauses and Early Exit.md",
+                "file": "EB-tresos-generator/xdm_schema_context_ana.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Guard clauses and Early Exit 的大纲"
+              "title": "Outline of xdm_schema_context_ana"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 374.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "bases:新建数据库": false
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "15d6282faf8f7eee",
+  "active": "d0719d390e6e51c1",
   "lastOpenFiles": [
-    "software_project/architecture_etc/BSP 个人理解笔记.md",
-    "design_lesson.md",
-    "temp.md",
+    "Pasted image 20260105171248.png",
+    "OS/select epoll etc/Summary and relate to asyncio.md",
+    "OS/select epoll etc/4. asyncio context theory.md",
+    "OS/select epoll etc/3. select epoll 机制对比整理.md",
+    "OS/select epoll etc/2. select UML时序图.md",
+    "OS/select epoll etc/1. select UML时序说明.md",
+    "OS/select epoll etc",
+    "OS/Event.md",
+    "OS",
+    "AI/prompt/Human Learning-Aligned Prompt Library/模板 5：系统／架构类对象教学模板.md",
+    "AI/prompt/Human Learning-Aligned Prompt Library/模板 3：新概念／新术语理解模板.md",
+    "AI/prompt/Human Learning-Aligned Prompt Library/模板 2：开源库／框架快速理解模板.md",
+    "AI/prompt/Human Learning-Aligned Prompt Library/模板 7：从“完全不懂”到“能上手”的实战教学模板.md",
+    "AI/prompt/Human Learning-Aligned Prompt Library/模板 4：算法／机制教学模板.md",
+    "如何真正理解任何事.mp4",
+    "tool_chains/git-gerrit/release latest history.md",
+    "tool_chains/git-gerrit/Interactive Rebase.md",
+    "tool_chains/git-gerrit/gerrit-flow.md",
+    "tool_chains/git-gerrit/conflict_process_gerrit_merge.md",
+    "tool_chains/makefile.md",
+    "tool_chains/linker.md",
+    "tool_chains/git-gerrit",
+    "tool_chains",
     "temp2.md",
+    "temp.md",
+    "software_project/some_concepts/reentry.md",
+    "software_project/Software Quality Assurance Process/top_steps.md",
+    "software_project/QAC/Helix-Q&A.md",
     "software_project/architecture_etc/tmp-arch-ai.md",
     "software_project/architecture_etc/device driver-to-summary.md",
-    "software_project/architecture_etc/architecture_from_gpt.md",
-    "coding_notes/Guard clauses and Early Exit.md",
-    "coding_notes",
-    "software_project/未命名",
-    "software_project/QAC/Helix-Q&A.md",
-    "software_project/architecture_etc",
-    "Roadmap/Near-term plans.md",
-    "Roadmap",
-    "AI/prompt/human-llm/Temp.md",
-    "AI/MCP.md",
-    "如何真正理解任何事.mp4",
-    "Engineering_Cognitive_Scaffolds.pdf",
-    "AI/prompt/human-llm/认知过程的有助于提升学习的理论.md",
-    "AI/prompt/human-llm/提升学习and记忆的工程应用.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 3：新概念／新术语理解模板.md",
+    "software_project/architecture_etc/BSP 个人理解笔记.md",
+    "software_project/some_concepts",
+    "software_project/Software Quality Assurance Process",
     "software_project/QAC",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 7：从“完全不懂”到“能上手”的实战教学模板.md",
-    "AI/prompt/human-llm/human_cognitive_science.md",
-    "AI/prompt/prompt_engineering/Summary.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 输入理解约束片段.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 教学约束片段.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 12：用户输入理解与重构模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 13：系统落地组合版.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 11：短版万能模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 1：陌生知识教学总模板（通用母版）.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 10：将用户原始问题自动优化为“教学型 prompt”的模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 9：纠正错误理解模板.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library",
-    "AI/prompt/human-llm",
-    "AI/prompt/prompt_engineering",
-    "autosar/lin_flow_char.png",
-    "autosar/layers.PNG",
+    "software_project/architecture_etc",
+    "software_project",
     "mermaid-diagram.png",
     "mermaid-diagram l.png",
+    "autosar/lin_flow_char.png",
+    "autosar/layers.PNG",
     "Pasted image 20260115185214.png",
     "Pasted image 20260105172155.png",
     "Pasted image 20260105171550.png",
     "Pasted image 20260105171423.png",
-    "Pasted image 20260105171248.png",
+    "Pasted image 20260307154229.png",
+    "Pasted image 20260307010233.png",
+    "未命名.canvas",
     "Untitled.canvas"
   ]
 }
