@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/FreeRTOS/Notification.md",
+                "file": "OS/Event.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Notification"
+              "title": "Event"
             }
           }
         ]
@@ -199,13 +199,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f4c2421e585a1ba6",
+  "active": "51457bd03964d4d1",
   "lastOpenFiles": [
+    "OS/multiple events sync.md",
+    "OS/FreeRTOS/Notification.md",
     "conflict-files-obsidian-git.md",
     "software_project/architecture_etc/ipcs.md",
     "software_project/architecture_etc/QA-bsp and device driver framework.md",
-    "OS/multiple notification methods.md",
-    "OS/FreeRTOS/Notification.md",
     "OS/FreeRTOS",
     "Languages/c/pointer with const.md",
     "ARM/Hardware Spinlock.md",
