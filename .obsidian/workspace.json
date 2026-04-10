@@ -202,8 +202,8 @@
   "active": "001cd392ca3f5b04",
   "lastOpenFiles": [
     "ARM/INTERRUPT_AND_EXCEPTION/2 interrupt-Interrupt_latency_extension.md",
-    "ARM/INTERRUPT_AND_EXCEPTION/arm core - control.md",
     "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
+    "ARM/INTERRUPT_AND_EXCEPTION/arm core - control.md",
     "ARM/INTERRUPT_AND_EXCEPTION/interrupt.md",
     "temp.md",
     "ARM/Hardware Spinlock.md",
