@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/FreeRTOS/mutex-vs-semaphore.md",
+                "file": "ARM/arm中断latency的几个问题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mutex-vs-semaphore"
+              "title": "arm中断latency的几个问题"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/FreeRTOS/mutex-vs-semaphore.md",
+                "file": "ARM/arm中断latency的几个问题.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "mutex-vs-semaphore 的大纲"
+              "title": "arm中断latency的几个问题 的大纲"
             }
           }
         ],
@@ -201,9 +201,10 @@
   },
   "active": "eb97ef0a733fd62d",
   "lastOpenFiles": [
+    "OS/FreeRTOS/mutex-vs-semaphore.md",
+    "ARM/arm中断latency的几个问题.md",
     "OS/FreeRTOS/global.md",
     "temp.md",
-    "OS/FreeRTOS/mutex-vs-semaphore.md",
     "software_project/architecture_etc/ipcs.md",
     "OS/multiple events sync.md",
     "Languages/c/stdint.md",
@@ -233,7 +234,6 @@
     "AI/MCP.md",
     "如何真正理解任何事.mp4",
     "Engineering_Cognitive_Scaffolds.pdf",
-    "AI/prompt/human-llm/认知过程的有助于提升学习的理论.md",
     "software_project/QAC",
     "AI/prompt/Human Learning-Aligned Prompt Library",
     "AI/prompt/human-llm",
