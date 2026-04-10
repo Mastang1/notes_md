@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "temp.md",
-                "mode": "preview",
+                "file": "OS/FreeRTOS/mutex-vs-semaphore.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "temp"
+              "title": "mutex-vs-semaphore"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "temp.md",
+                "file": "OS/FreeRTOS/mutex-vs-semaphore.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "temp 的大纲"
+              "title": "mutex-vs-semaphore 的大纲"
             }
           }
         ],
@@ -202,6 +202,7 @@
   "active": "eb97ef0a733fd62d",
   "lastOpenFiles": [
     "OS/FreeRTOS/global.md",
+    "temp.md",
     "OS/FreeRTOS/mutex-vs-semaphore.md",
     "software_project/architecture_etc/ipcs.md",
     "OS/multiple events sync.md",
@@ -222,7 +223,6 @@
     "Languages/c/pointer with const.md",
     "coding_notes/Guard clauses and Early Exit.md",
     "design_lesson.md",
-    "temp.md",
     "temp2.md",
     "coding_notes",
     "software_project/未命名",
