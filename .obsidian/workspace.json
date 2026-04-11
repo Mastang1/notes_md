@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "temp.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5110321044922,
-    "collapsed": true
+    "width": 214.5110321044922
   },
   "right": {
     "id": "8efccc928838709e",
@@ -202,6 +201,7 @@
   },
   "active": "7576c0d52c76b040",
   "lastOpenFiles": [
+    "Pasted image 20260411235307.png",
     "Pasted image 20260411232345.png",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 2：开源库／框架快速理解模板.md",
     "AI/prompt/open_src_learn_prompts/top.md",
@@ -247,7 +247,6 @@
     "Pasted image 20260105172155.png",
     "Pasted image 20260105171550.png",
     "Pasted image 20260105171423.png",
-    "Pasted image 20260307154229.png",
     "未命名.canvas",
     "Untitled.canvas"
   ]
