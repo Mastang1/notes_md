@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "temp.md",
-                "mode": "preview",
+                "file": "software_project/architecture_etc/device_driver_framework/2framework-core.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "temp"
+              "title": "2framework-core"
             }
           }
         ]
@@ -199,14 +199,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7576c0d52c76b040",
+  "active": "51457bd03964d4d1",
   "lastOpenFiles": [
+    "software_project/architecture_etc/device_driver_framework/1. MR-outline.md",
+    "temp.md",
+    "software_project/architecture_etc/device_driver_framework/2framework-core.md",
+    "Pasted image 20260412003038.png",
+    "software_project/architecture_etc/device_driver_framework/mr-outline.md",
+    "Pasted image 20260412002929.png",
+    "Pasted image 20260412002859.png",
+    "software_project/architecture_etc/device_driver_framework",
     "Pasted image 20260411235307.png",
     "Pasted image 20260411232345.png",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 2：开源库／框架快速理解模板.md",
     "AI/prompt/open_src_learn_prompts/top.md",
     "AI/prompt/open_src_learn_prompts",
-    "temp.md",
     "foreign/methods.md",
     "foreign",
     "ARM/INTERRUPT_AND_EXCEPTION/2 interrupt-Interrupt_latency_extension.md",
@@ -231,22 +238,15 @@
     "OS/select epoll etc/Summary and relate to asyncio.md",
     "OS/select epoll etc/4. asyncio context theory.md",
     "OS/select epoll etc/3. select epoll 机制对比整理.md",
-    "OS/select epoll etc/2. select UML时序图.md",
-    "OS/select epoll etc/1. select UML时序说明.md",
     "OS/select epoll etc",
     "OS",
     "如何真正理解任何事.mp4",
     "tool_chains/git-gerrit",
     "tool_chains",
-    "software_project/some_concepts",
     "mermaid-diagram.png",
     "mermaid-diagram l.png",
     "autosar/lin_flow_char.png",
     "autosar/layers.PNG",
-    "Pasted image 20260115185214.png",
-    "Pasted image 20260105172155.png",
-    "Pasted image 20260105171550.png",
-    "Pasted image 20260105171423.png",
     "未命名.canvas",
     "Untitled.canvas"
   ]
