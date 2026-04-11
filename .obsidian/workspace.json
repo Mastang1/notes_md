@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "foreign/methods.md",
-                "mode": "source",
+                "file": "temp.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "methods"
+              "title": "temp"
             }
           }
         ]
@@ -201,8 +201,8 @@
   },
   "active": "0fc47ed47b25146a",
   "lastOpenFiles": [
-    "temp.md",
     "foreign/methods.md",
+    "temp.md",
     "foreign",
     "ARM/INTERRUPT_AND_EXCEPTION/2 interrupt-Interrupt_latency_extension.md",
     "conflict-files-obsidian-git.md",
