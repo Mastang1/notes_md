@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "temp.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 447.5026054382324
+    "width": 214.5110321044922,
+    "collapsed": true
   },
   "right": {
     "id": "8efccc928838709e",
@@ -201,6 +202,7 @@
   },
   "active": "7576c0d52c76b040",
   "lastOpenFiles": [
+    "Pasted image 20260411232345.png",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 2：开源库／框架快速理解模板.md",
     "AI/prompt/open_src_learn_prompts/top.md",
     "AI/prompt/open_src_learn_prompts",
@@ -233,7 +235,6 @@
     "OS/select epoll etc/1. select UML时序说明.md",
     "OS/select epoll etc",
     "OS",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 5：系统／架构类对象教学模板.md",
     "如何真正理解任何事.mp4",
     "tool_chains/git-gerrit",
     "tool_chains",
