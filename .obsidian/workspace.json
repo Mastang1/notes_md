@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/architecture_etc/device_driver_framework/2framework-core.md",
+                "file": "AI/prompt/human-llm/human_cognitive_science.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2framework-core"
+              "title": "human_cognitive_science"
             }
           }
         ]
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5110321044922
+    "width": 338.5
   },
   "right": {
     "id": "8efccc928838709e",
@@ -201,8 +201,15 @@
   },
   "active": "7576c0d52c76b040",
   "lastOpenFiles": [
-    "software_project/architecture_etc/device_driver_framework/1. MR-outline.md",
+    "AI/prompt/human-llm/提升学习and记忆的工程应用.md",
+    "AI/prompt/human-llm/认知过程的有助于提升学习的理论.md",
+    "AI/prompt/Human Learning-Aligned Prompt Library/模板 8：交互式导师模板.md",
+    "AI/prompt/Human Learning-Aligned Prompt Library/模板 2：开源库／框架快速理解模板.md",
+    "AI/prompt/Human Learning-Aligned Prompt Library/模板 1：陌生知识教学总模板（通用母版）.md",
+    "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 输入理解约束片段.md",
+    "AI/prompt/Human Learning-Aligned Prompt Library/General_Section 教学约束片段.md",
     "software_project/architecture_etc/device_driver_framework/2framework-core.md",
+    "software_project/architecture_etc/device_driver_framework/1. MR-outline.md",
     "temp.md",
     "Pasted image 20260412003038.png",
     "software_project/architecture_etc/device_driver_framework/mr-outline.md",
@@ -211,7 +218,6 @@
     "software_project/architecture_etc/device_driver_framework",
     "Pasted image 20260411235307.png",
     "Pasted image 20260411232345.png",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 2：开源库／框架快速理解模板.md",
     "AI/prompt/open_src_learn_prompts/top.md",
     "AI/prompt/open_src_learn_prompts",
     "foreign/methods.md",
@@ -230,14 +236,8 @@
     "OS/multiple events sync.md",
     "OS/FreeRTOS/Notification.md",
     "software_project/architecture_etc/ipcs.md",
-    "software_project/architecture_etc/QA-bsp and device driver framework.md",
     "OS/FreeRTOS",
-    "Languages/c/pointer with const.md",
-    "ARM/Hardware Spinlock.md",
     "Pasted image 20260105171248.png",
-    "OS/select epoll etc/Summary and relate to asyncio.md",
-    "OS/select epoll etc/4. asyncio context theory.md",
-    "OS/select epoll etc/3. select epoll 机制对比整理.md",
     "OS/select epoll etc",
     "OS",
     "如何真正理解任何事.mp4",
