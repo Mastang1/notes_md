@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
+                "file": "software_project/architecture_etc/ipcs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 interrupt-arm中断latency的几个问题"
+              "title": "ipcs"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
+                "file": "software_project/architecture_etc/ipcs.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1 interrupt-arm中断latency的几个问题 的大纲"
+              "title": "ipcs 的大纲"
             }
           }
         ],
@@ -201,17 +201,22 @@
   },
   "active": "1b35e19ab879118d",
   "lastOpenFiles": [
-    "ARM/INTERRUPT_AND_EXCEPTION/arm core - control.md",
-    "ARM/Hardware Spinlock.md",
     "software_project/architecture_etc/tmp-arch-ai.md",
     "software_project/architecture_etc/QA-bsp and device driver framework.md",
     "software_project/architecture_etc/ipcs.md",
+    "foreign/methods.md",
+    "software_project/QAC/Helix-Q&A.md",
+    "software_project/architecture_etc/architecture_from_gpt.md",
+    "software_project/architecture_etc/device driver-to-summary.md",
+    "software_project/architecture_etc/device_driver_framework/0-Summary.md",
+    "ARM/INTERRUPT_AND_EXCEPTION/arm core - control.md",
+    "ARM/INTERRUPT_AND_EXCEPTION/2 interrupt-Interrupt_latency_extension.md",
+    "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
+    "ARM/Hardware Spinlock.md",
     "software_project/architecture_etc/device_driver_framework/my-idea-for-device_driver_framework.md",
     "software_project/architecture_etc/device_driver_framework/1. MR-outline.md",
-    "software_project/architecture_etc/device_driver_framework/0-Summary.md",
     "software_project/architecture_etc/device_driver_framework/2framework-core.md",
     "software_project/architecture_etc/device_driver_framework",
-    "foreign/methods.md",
     "foreign",
     "Pasted image 20260412003038.png",
     "Pasted image 20260412002929.png",
@@ -220,8 +225,6 @@
     "Pasted image 20260411232345.png",
     "AI/prompt/open_src_learn_prompts/top.md",
     "AI/prompt/open_src_learn_prompts",
-    "ARM/INTERRUPT_AND_EXCEPTION/2 interrupt-Interrupt_latency_extension.md",
-    "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
     "ARM/INTERRUPT_AND_EXCEPTION/interrupt.md",
     "temp.md",
     "ARM/INTERRUPT_AND_EXCEPTION",
@@ -229,13 +232,10 @@
     "OS/FreeRTOS/global.md",
     "OS/multiple events sync.md",
     "Languages/c/stdint.md",
-    "software_project/architecture_etc/architecture_from_gpt.md",
     "OS/FreeRTOS/Notification.md",
     "OS/multiple notification methods.md",
     "OS/Event.md",
     "OS/FreeRTOS",
-    "software_project/architecture_etc/device driver-to-summary.md",
-    "software_project/QAC/Helix-Q&A.md",
     "software_project/Software Quality Assurance Process/top_steps.md",
     "coding_notes",
     "software_project/未命名",

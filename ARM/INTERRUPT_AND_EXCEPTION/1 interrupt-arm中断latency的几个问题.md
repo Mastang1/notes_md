@@ -94,6 +94,8 @@ user function pop stack**_
     
     **程序员的获益：** 当系统负载极高、多个中断扎堆爆发时（如 CAN/LIN 接收、定时器、DMA 中断同时到来），尾链机制大幅度削减了上下文切换的开销，降低了 CPU 占用率。
     
+_**直接执行pending ISR， 而不是pop user function，然后再次push user function，最后执行Jump**_
+
 
 ---
 
