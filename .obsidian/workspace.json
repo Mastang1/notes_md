@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/architecture_etc/device_driver_framework/2framework-core.md",
-                "mode": "preview",
+                "file": "software_project/architecture_etc/device_driver_framework/Summary.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2framework-core"
+              "title": "Summary"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/architecture_etc/device_driver_framework/2framework-core.md",
+                "file": "software_project/architecture_etc/device_driver_framework/Summary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2framework-core 的大纲"
+              "title": "Summary 的大纲"
             }
           }
         ],
@@ -201,8 +201,9 @@
   },
   "active": "7a9841d22b52c324",
   "lastOpenFiles": [
-    "software_project/architecture_etc/device_driver_framework/my-idea-for-device_driver_framework.md",
     "software_project/architecture_etc/device_driver_framework/2framework-core.md",
+    "software_project/architecture_etc/device_driver_framework/Summary.md",
+    "software_project/architecture_etc/device_driver_framework/my-idea-for-device_driver_framework.md",
     "software_project/architecture_etc/device_driver_framework/1. MR-outline.md",
     "software_project/architecture_etc/device_driver_framework",
     "foreign/methods.md",
@@ -236,7 +237,6 @@
     "software_project/architecture_etc/device driver-to-summary.md",
     "software_project/QAC/Helix-Q&A.md",
     "software_project/Software Quality Assurance Process/top_steps.md",
-    "software_project/architecture_etc/BSP 个人理解笔记.md",
     "coding_notes",
     "software_project/未命名",
     "software_project/architecture_etc",
