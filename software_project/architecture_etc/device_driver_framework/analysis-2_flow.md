@@ -2,7 +2,8 @@ _**个人理解:
  1 第一层：固定接口，通过name获取设备指针，进而实现多态；总体就是通过name找到一个结构体变量dd；变量中有初始化时候的一个ops，
 包含定义的一系列接口；TOP有几个固定的接口，接口中通过dd（open动态化了dd）和dd的ops，实现了多态；
 2 只有第一层的问题：该多态只是又mr_dev 扩展到了mr_pin/mr_serial等，跟driver没有关系呢
-3 mr_pin等具体设备的接口中，通过mr_dev指针，调用了注册时候赋值的mr_drv,这货包含了执行体和data两个指针，相当于实现了二次扩展**_
+3 mr_pin等具体设备的接口中，通过mr_dev指针，调用了注册时候赋值的mr_drv,这货包含了执行体和data两个指针，相当于实现了二次扩展
+4 最终的效果就是：不同的设备OPS实现了逻辑服务；然后可以调用drv->ops实现底层硬件的控制**_
 
 ## 1. Base flow REGISTER
 ### 1. 根据实际HAL等，实现driver，进行driver initialization（自动）；
