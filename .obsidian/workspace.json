@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "eaccbb8da5cccde8",
+        "id": "35ccaab1cf44c3b5",
         "type": "tabs",
         "children": [
           {
-            "id": "d93b85971a293ebb",
+            "id": "7b549ac4bc1bfdd5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/architecture_etc/架构设计原则-组件设计原则 最小基础.md",
+                "file": "software_project/architecture_etc/architecture design-ASPICE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "架构设计原则-组件设计原则 最小基础"
+              "title": "architecture design-ASPICE"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/architecture_etc/架构设计原则-组件设计原则 最小基础.md",
+                "file": "software_project/architecture_etc/architecture design-ASPICE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "架构设计原则-组件设计原则 最小基础 的大纲"
+              "title": "architecture design-ASPICE 的大纲"
             }
           }
         ],
@@ -199,22 +199,23 @@
       "bases:新建数据库": false
     }
   },
-  "active": "d93b85971a293ebb",
+  "active": "7b549ac4bc1bfdd5",
   "lastOpenFiles": [
+    "software_project/architecture_etc/architecture_from_gpt.md",
+    "software_project/architecture_etc/architecture design-ASPICE.md",
+    "software_project/architecture_etc/ipcs.md",
+    "software_project/architecture_etc/架构设计原则-组件设计原则 最小基础.md",
     "software_project/architecture_etc/device_driver_framework/analysis-1_Base_type.md",
     "software_project/architecture_etc/device_driver_framework/1. MR-outline.md",
-    "software_project/architecture_etc/架构设计原则-组件设计原则 最小基础.md",
     "software_project/architecture_etc/device_driver_framework/analysis-3_AI summary.md",
     "software_project/architecture_etc/device_driver_framework/analysis-2_flow.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 3：新概念／新术语理解模板.md",
     "temp.md",
     "z-temp2.md",
-    "software_project/architecture_etc/ipcs.md",
     "software_project/architecture_etc/tmp-arch-ai.md",
     "software_project/architecture_etc/QA-bsp and device driver framework.md",
     "foreign/methods.md",
     "software_project/QAC/Helix-Q&A.md",
-    "software_project/architecture_etc/architecture_from_gpt.md",
     "software_project/architecture_etc/device driver-to-summary.md",
     "software_project/architecture_etc/device_driver_framework/0-Summary.md",
     "ARM/INTERRUPT_AND_EXCEPTION/arm core - control.md",
@@ -235,7 +236,6 @@
     "ARM/INTERRUPT_AND_EXCEPTION/interrupt.md",
     "ARM/INTERRUPT_AND_EXCEPTION",
     "OS/FreeRTOS/mutex-vs-semaphore.md",
-    "OS/FreeRTOS/global.md",
     "OS/FreeRTOS",
     "coding_notes",
     "software_project/未命名",
