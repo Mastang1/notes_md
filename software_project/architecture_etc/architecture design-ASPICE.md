@@ -1,199 +1,210 @@
-非常抱歉，上一版中状态机（State Diagram）的语法确实存在一个经典的 Mermaid 嵌套状态跳转错误（外部直接跳转到了内部的 `IDLE` 状态，且使用了包含中文字符的 ID），同时组件图中的 `<br/>` 换行如果没有加引号，在部分 Obsidian 版本中也会导致解析失败。
+这真是一个极具系统工程深度的连环拷问。在上一版模板中，我们虽然补齐了“架构决策与约束（BP5）”，但如果我们用最高标准（如 VDA Scope 联合 ASPICE PAM 3.1/4.0 审核指南）来逐条审视 **SWE.2 (Software Architectural Design)** 的 Base Practices (BP)，当前的模板仍然存在**三个隐蔽但致命的缺失**。
 
-我已经修复了所有底层的 Mermaid 语法严谨性问题，并对标签进行了安全转义。你可以直接点击复制，将以下完整内容作为标准模板粘贴到你的 Obsidian 知识库中。
+### 深入分析：ASPICE SWE.2 的隐形要求与当前模板的 Gap
+
+ASPICE 审核员在检查 SWE.2 时，不仅看图画得漂不漂亮，更看重架构能否在真实的嵌入式物理环境中落地。以下是缺失的三个核心维度：
+
+#### 1. 缺失了“执行视图与任务映射” (对应 SWE.2.BP4 / BP1)
+
+- **Gap 分析**：当前的静态组件图（划分了 Manager、Core、HAL）仅仅是**逻辑视图**。但在 RTOS 环境下，代码是怎么跑起来的？组件是映射到一个 Task、多个 Task，还是在中断上下文（ISR）中运行？
+    
+- **补充策略**：必须增加**执行架构（Execution Architecture）**章节，明确 Task 的优先级、调度策略（抢占/轮转）、周期，以及逻辑组件到 OS 任务的映射关系。
+    
+
+#### 2. 缺失了“全局错误处理与诊断策略” (隐含在 SWE.2 全局架构原则中)
+
+- **Gap 分析**：虽然状态机里画了 `HW_ERROR`，但这远远不够。ASPICE 要求架构设计必须说明：当底层组件发生错误时，是原地死循环、返回错误码，还是上报给 DEM（Diagnostic Event Manager）？
+    
+- **补充策略**：增加**全局策略（Global Strategies）**小节，统一定义错误传播机制、看门狗策略和降级（Degradation）模式。
+    
+
+#### 3. 缺失了“架构沟通与基线状态” (对应 SWE.2.BP8 Communicate agreed software architectural design)
+
+- **Gap 分析**：ASPICE 要求架构不仅要设计出来，还要被所有利益相关者（测试、开发、需求工程师）评审并达成一致。
+    
+- **补充策略**：在文档头部增加严格的**版本与评审控制（Document Control）**，确立基线（Baseline）。
+    
 
 ---
 
-# 📂 模板：ASPICE SWE.2 软件架构设计说明书
+基于以上深入分析，我为你重构了这套符合车规级审查最高标准的 **Ultimate 版 ASPICE SWE.2 架构模板**。你可以直接将其更新到你的 Obsidian 知识库中。
 
-> **文档元数据 (Frontmatter 建议)**
-> 
-> YAML
-> 
-> ```
-> id: SAD_LIN_DRIVER_001
-> version: 1.0.0
-> status: Draft
-> author: [你的名字]
-> parent_req: [[SWE.1_Software_Requirements]]
-> ```
+---
 
-## 1. 系统上下文与范围 (System Context)
+# 📂 模板：ASPICE SWE.2 软件架构设计说明书 (V2.0 终极版)
 
-**🎯 核心目的**：界定架构边界，明确本软件模块“管什么”和“不管什么”，展示其与外部环境的物理/逻辑接口。
+## 0. 文档控制与基线 (Document Control) 🌟[新增: 满足 BP8]
+
+|**属性**|**说明**|
+|---|---|
+|**文档 ID**|`SAD_LIN_DRIVER_001`|
+|**版本/状态**|`V2.0` / `已批准 (Approved Baseline)`|
+|**评审记录**|链接至评审报告：`[[REV_SAD_202604_01]]`|
+|**上游需求**|链接至需求基线：`[[SWE.1_Software_Requirements_Baseline_V1.5]]`|
+
+## 1. 系统上下文与边界 (System Context) 🎯[BP1]
+
+**🎯 编写指导**：界定架构边界，展示其与外部环境的物理/逻辑接口。将待设计的系统作为黑盒。
 
 ### 1.1 系统上下文视图
-
-> **编写指导**：将待设计的系统作为黑盒，仅展示其周边的交互实体。
 
 代码段
 
 ```mermaid
 graph TD
-    %% 外部依赖与调用方
     App["应用层 / COM 通信管理器"]
     Wdg["系统看门狗 / WDG Manager"]
+    Dem["诊断事件管理器 / DEM"]
     
-    %% 目标系统 (黑盒)
     subgraph Target_System ["软件架构范围 (Scope)"]
         Sys("LIN 驱动软件模块")
     end
     
-    %% 外部硬件环境
     HW_Ctrl["SoC LIN 硬件控制器"]
-    HW_Xcvr["外部 LIN 物理收发器"]
 
-    %% 交互链路
-    App -->|"帧发送/接收/唤醒请求 API"| Sys
+    App -->|"API 调用"| Sys
     Sys -.->|"喂狗信号"| Wdg
-    Sys -->|"寄存器读写/DMA 配置"| HW_Ctrl
-    HW_Ctrl -->|"TX/RX 物理电平"| HW_Xcvr
+    Sys -.->|"错误事件上报"| Dem
+    Sys -->|"寄存器操作"| HW_Ctrl
     
     style Sys fill:#e1f5fe,stroke:#039be5,stroke-width:2px
 ```
 
-## 2. 静态架构设计 (Static Architecture Design)
+## 2. 架构约束与全局策略 (Constraints & Global Strategies) 🌟[强化: 满足 BP5]
 
-**🎯 核心目的**：打开黑盒，展示模块内部的子组件划分、层级结构（如服务层/逻辑层/硬件抽象层）以及静态依赖关系。
+**🎯 编写指导**：明确限制条件、设计选择的证明，以及跨组件的通用处理策略。
 
-### 2.1 静态分层与组件视图
+### 2.1 架构级系统约束 (Architecture Constraints)
 
-> **编写指导**：遵循高内聚低耦合原则，明确组件的单向依赖，绝对避免循环依赖。此处分配的 `COMP_ID` 是后续追踪的核心。
+- **硬件约束**：目标 SoC（如 NXP S32G）LIN 控制器的 FIFO 深度最大为 8 Bytes。
+    
+- **操作系统约束**：基于 AutoSAR OS（或 FreeRTOS），禁止动态内存分配。
+    
+- **合规性约束**：MISRA C:2012 覆盖率 100%，支持 ISO 26262 ASIL B。
+    
+
+### 2.2 设计决策与备选评估 (Design Decisions & Alternatives)
+
+- **ASR (关键架构需求)**：中断响应需在 50us 内完成（`ASR-01`）。
+    
+- **方案评估**：对比“轮询模式”与“中断+信号量模式”。因轮询会导致 CPU 负载过高且无法满足 `ASR-01`，最终决策采用**中断驱动+优先级继承 Mutex 保护**机制。
+    
+
+### 2.3 全局错误与诊断策略 (Global Error Handling Strategy) 🌟[新增]
+
+- **局部错误**：如入参越界，由 API 层直接拦截并返回 `E_NOT_OK`，不干扰系统状态。
+    
+- **硬件致命错误**：如 LIN 总线对地短路，底层 HAL 需隔离硬件，将通道状态机置为 `HW_ERROR`，并通过回调异步上报给 DEM 模块，触发系统降级。
+    
+
+## 3. 静态与执行架构设计 (Static & Execution Architecture) 🎯[BP1, BP2]
+
+**🎯 编写指导**：不仅要展示逻辑划分，更要展示组件是如何分配到物理存储和 OS 任务中的。
+
+### 3.1 静态逻辑组件视图
 
 代码段
 
 ```mermaid
 graph TD
-    subgraph Software_Architecture ["LIN 驱动内部组件架构"]
-        
-        %% API 调度层
-        subgraph API_Layer ["接口层"]
-            COMP_01["COMP_LIN_Manager<br/>(生命周期与状态管理)"]
-        end
-        
-        %% 核心逻辑层
-        subgraph Logic_Layer ["协议逻辑层"]
-            COMP_02["COMP_LIN_Core<br/>(报文组装与校验处理)"]
-            COMP_03["COMP_LIN_Wakeup<br/>(唤醒逻辑处理器)"]
-        end
-        
-        %% 硬件抽象层
-        subgraph HAL_Layer ["硬件抽象层"]
-            COMP_04["COMP_LIN_Reg_HAL<br/>(寄存器读写抽象)"]
-            COMP_05["COMP_LIN_ISR<br/>(中断分发器)"]
-        end
+    subgraph Software_Architecture ["LIN 驱动逻辑组件"]
+        COMP_01["COMP_LIN_Manager<br/>(状态管理)"]
+        COMP_02["COMP_LIN_Core<br/>(协议处理)"]
+        COMP_04["COMP_LIN_Reg_HAL<br/>(硬件抽象)"]
+        COMP_05["COMP_LIN_ISR<br/>(中断处理)"]
     end
 
-    %% 静态依赖关系
     COMP_01 --> COMP_02
-    COMP_01 --> COMP_03
     COMP_02 --> COMP_04
-    COMP_03 --> COMP_04
     COMP_05 --> COMP_02
 ```
 
-### 2.2 组件与需求追溯矩阵 (Component-to-Requirement Matrix)
+### 3.2 任务映射与执行视图 (Execution View) 🌟[新增: 满足 RTOS 调度审查]
 
-> **编写指导**：证明架构中划分的每一个组件都有其存在的“合法性”。使用表格直接映射 SWE.1 需求。
+> **编写指导**：说明逻辑组件在哪个 OS 上下文中运行，这是分析 CPU 负载和资源竞争的前提。
 
-|**组件 ID**|**组件名称**|**核心职责描述**|**追溯至软件需求 (SWE.1)**|
+|**组件 ID**|**映射的 OS 上下文 (Task/ISR)**|**优先级 / 触发周期**|**执行域隔离级别**|
 |---|---|---|---|
-|`COMP_02`|`COMP_LIN_Core`|处理 LIN 报文头的发送、响应接收与 Checksum 校验。|`REQ_SW_LIN_05` (PID校验), `REQ_SW_LIN_06` (帧收发)|
-|`COMP_03`|`COMP_LIN_Wakeup`|独立处理控制器级别的唤醒逻辑，隔离物理总线脉冲行为。|`REQ_SW_LIN_12` (内部唤醒), `REQ_SW_LIN_13` (标准唤醒)|
-|`COMP_04`|`COMP_LIN_Reg_HAL`|封装底层硬件地址，提供平台无关的读写内联函数。|`REQ_SW_LIN_01` (硬件解耦), `REQ_SW_LIN_20` (地址保护)|
+|`COMP_01`, `COMP_02`|`Task_COM_Cyclic`|优先级 10 / 5ms 周期调用|特权级 (Privileged)|
+|`COMP_05` (ISR)|`ISR_LIN_RX_TX`|硬件中断级 / 异步事件触发|特权级 (Privileged)|
 
-## 3. 动态行为设计 (Dynamic Behavior Design)
+## 4. 动态行为设计 (Dynamic Behavior Design) 🎯[BP4]
 
-**🎯 核心目的**：描述组件在运行时的交互逻辑、并发处理、状态跃迁，特别是核心业务流和错误恢复机制。
+**🎯 编写指导**：描述组件在运行时的交互逻辑、并发处理、状态跃迁。
 
-### 3.1 核心业务流时序图 (Sequence View)
+### 4.1 核心业务流时序图 (并发与资源竞争场景)
 
-> **编写指导**：重点刻画复杂场景。以 LIN 驱动中易混淆的**唤醒机制**为例，展示组件间的微观交互。
+> **编写指导**：展示高难度交互，如多 Task 竞争同一个硬件通道时的处理。
 
 代码段
 
 ```mermaid
 sequenceDiagram
-    participant App as COM / 应用层
+    participant Task_A as 应用任务 A (高优先级)
+    participant Task_B as 应用任务 B (低优先级)
     participant Mgr as COMP_LIN_Manager
-    participant WH as COMP_LIN_Wakeup
-    participant HAL as COMP_LIN_Reg_HAL
-    participant HW as SoC Hardware
+    participant OS as RTOS Kernel
 
-    Note over App, HW: 场景：执行 Internal Wakeup (触发自唤醒，不发显性脉冲)
+    Note over Task_B, Mgr: 任务 B 先发起发送请求
+    Task_B->>Mgr: LIN_SendFrame(Channel_1)
+    Mgr->>OS: Get_Mutex(LIN_CH1_Lock)
+    OS-->>Mgr: Mutex Acquired
     
-    App->>Mgr: LIN_SetWakeup(INTERNAL)
-    activate Mgr
-    Mgr->>Mgr: 校验当前状态 == SLEEP
-    Mgr->>WH: Process_Internal_Wakeup()
-    activate WH
+    Note over Task_A: 任务 A 抢占 CPU，发起发送请求
+    Task_A->>Mgr: LIN_SendFrame(Channel_1)
+    Mgr->>OS: Get_Mutex(LIN_CH1_Lock)
+    Note over OS: 发生优先级反转防御<br/>临时提升 Task_B 优先级
+    OS-->>Task_A: Task Blocked
     
-    WH->>HAL: Set_Wakeup_Bit(NO_BUS_PULSE_MASK)
-    activate HAL
-    HAL->>HW: 写入 Wakeup 控制寄存器
-    HW-->>HAL: 寄存器写入就绪
-    HAL-->>WH: Return HAL_OK
-    deactivate HAL
-    
-    WH->>WH: 状态机切换为 IDLE
-    WH-->>Mgr: Return E_OK
-    deactivate WH
-    
-    Mgr-->>App: Return E_OK
-    deactivate Mgr
+    Note over Task_B, Mgr: 任务 B 处理完毕释放锁
+    Mgr->>OS: Release_Mutex(LIN_CH1_Lock)
+    OS-->>Task_A: Mutex Acquired (Task A 恢复运行)
 ```
 
-### 3.2 组件内部状态机视图 (State Machine View)
-
-> **编写指导**：对于通信驱动或具有严格生命周期的组件，必须提供状态跃迁图，防范未知状态导致的死锁。必须注意父子状态的明确进入与退出。
+### 4.2 状态机视图 (State Machine)
 
 代码段
 
 ```mermaid
 stateDiagram-v2
-    [*] --> UNINIT : 上电复位
-
-    %% 修复点：外部必须跳转到父状态，由父状态的内部逻辑决定初始子状态
-    UNINIT --> ACTIVE : 调用 LIN_Init()
+    [*] --> UNINIT : 上电
+    UNINIT --> ACTIVE : LIN_Init()
     
-    state "工作状态 (ACTIVE)" as ACTIVE {
+    state "ACTIVE_STATE" as ACTIVE {
         [*] --> IDLE
-        IDLE --> TX_BUSY : 触发帧发送 API
-        TX_BUSY --> IDLE : 收到 TX 完毕中断
-        IDLE --> RX_BUSY : 检测到同步段 (Sync)
-        RX_BUSY --> IDLE : 收到 RX 完毕中断
+        IDLE --> TX_BUSY : 触发发送
+        TX_BUSY --> IDLE : TX 完成
     }
     
-    ACTIVE --> SLEEP : 调用 LIN_GoToSleep() 
-    SLEEP --> ACTIVE : 触发唤醒事件 (Wakeup)
-    
-    ACTIVE --> HW_ERROR : 总线短路 / 校验错
-    HW_ERROR --> UNINIT : 强制复位重载
+    ACTIVE --> HW_ERROR : 总线短路检测
+    HW_ERROR --> UNINIT : 强制复位
 ```
 
-### 3.3 动态视图与需求追溯矩阵 (Dynamic-to-Requirement Matrix)
+## 5. 接口规约与资源评估 (Interfaces & Resources) 🎯[BP3, BP5]
 
-> **编写指导**：证明动态交互逻辑（如时序、状态流转）满足了 SWE.1 中的特定行为约束。
+### 5.1 模块间/对外接口规约 (API Specifications)
 
-|**动态视图标识**|**视图类型**|**描述说明**|**追溯至软件需求 (SWE.1)**|
+|**API 签名**|**前置条件 / 并发安全**|**同步/异步**|**错误返回代码定义**|
 |---|---|---|---|
-|`SEQ_01`|时序图|Internal Wakeup (无总线脉冲唤醒) 交互流转。|`REQ_SW_LIN_12`|
-|`SEQ_02`|时序图|多任务并发访问 LIN 发送接口时的 Mutex 阻塞与优先级继承逻辑。|`REQ_SW_LIN_30` (并发安全)|
-|`STM_01`|状态机|LIN 通道全局状态机跃迁控制，包含错误恢复路径。|`REQ_SW_LIN_45` (状态管理与容错)|
+|`LIN_SendFrame(Ch, PduInfo)`|状态需为 `IDLE` / 受 Mutex 保护|同步写入，异步中断确认|`E_OK`, `E_NOT_OK`, `LIN_E_BUSY`|
 
-## 4. 接口规约与资源消耗 (Interfaces & Resource Assessment)
+### 5.2 资源消耗评估 (Resource Assessment)
 
-### 4.1 核心对外接口规约 (API Specifications)
-
-|**函数名称**|**LIN_SetWakeup**|
-|---|---|
-|**原型**|`Std_ReturnType LIN_SetWakeup(uint8 Channel, WakeupType Type);`|
-|**前置条件**|模块已初始化 (`UNINIT` -> `IDLE`)，且当前处于 `SLEEP` 状态。|
-|**并发安全性**|是 (内部受 Spinlock 保护)。|
-|**返回值**|`E_OK` / `E_NOT_OK` / `LIN_E_STATE_TRANSITION`|
-
-### 4.2 硬件/软件接口约束 (HSI Assumptions)
-
-- **中断优先级**：LIN RX/TX 中断必须配置为系统优先级 `N`，高于普通 OS 滴答定时器，低于致命错误异常（NMI）。
+- **ROM/RAM 预估**：ROM < 8KB；静态分配 RAM < 256 Bytes。
     
-- **内存隔离**：所有硬件寄存器基址需配置在 MPU 的特权访问区域，应用层仅能通过系统调用进入 `Target_System`。
+- **WCET (最坏执行时间)**：`ISR_LIN_RX_TX` 最坏执行时间评估为 12us，满足 `ASR-01`。
+    
+
+## 6. 双向追溯性与一致性 (Traceability & Consistency) 🎯[BP2, BP6, BP7]
+
+**🎯 编写指导**：闭环审计。使用自动生成的工具或手动维护矩阵，确保需求与架构的 N:M 映射。
+
+### 6.1 SWE.1 -> SWE.2 架构元素追溯矩阵
+
+|**软件需求 ID (SWE.1)**|**对应的静态组件 ID**|**对应的动态视图/执行上下文**|**一致性状态**|
+|---|---|---|---|
+|`REQ_SW_LIN_06` (报文发送)|`COMP_01`, `COMP_02`|映射至 `Task_COM_Cyclic`|✅ Validated|
+|`REQ_SW_LIN_30` (并发安全)|`COMP_01` (含 Mutex 逻辑)|动态时序图 `SEQ_01`|✅ Validated|
+|`REQ_SW_LIN_45` (硬件故障隔离)|`COMP_04`, 全局错误策略|状态机 `HW_ERROR` 跃迁|✅ Validated|
+
+> **一致性声明 (SWE.2.BP7)**：本架构设计已覆盖所有划定范围内的 SWE.1 需求，不存在未实现的需求，也不存在未定义需求的冗余架构组件。
