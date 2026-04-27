@@ -1,4 +1,5 @@
 _**个人理解:
+0.通过侵入式链表，将dev variable加入到全局的global_list中；
  1 第一层：固定接口，通过name获取设备指针，进而实现多态；总体就是通过name找到一个结构体变量dd；变量中有初始化时候的一个ops，
 包含定义的一系列接口；TOP有几个固定的接口，接口中通过dd（open动态化了dd）和dd的ops，实现了多态；
 2 只有第一层的问题：该多态只是又mr_dev 扩展到了mr_pin/mr_serial等，跟driver没有关系呢
