@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EB-tresos-generator/xdm-configuratio-variant-class.md",
+                "file": "EB-tresos-generator/5-1/chapter5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "xdm-configuratio-variant-class"
+              "title": "chapter5"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "filter",
+                "query": "ADMIN-DATA\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +88,8 @@
               "title": "cmd-copy-to-multi"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -170,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EB-tresos-generator/xdm-configuratio-variant-class.md",
+                "file": "EB-tresos-generator/5-1/chapter5.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "xdm-configuratio-variant-class 的大纲"
+              "title": "chapter5 的大纲"
             }
           }
         ],
@@ -201,6 +202,8 @@
   },
   "active": "a10ea143cb5ea0b3",
   "lastOpenFiles": [
+    "EB-tresos-generator/5-3/114-124.md",
+    "EB-tresos-generator/xdm-configuratio-variant-class.md",
     "EB-tresos-generator/xdm_schema_context_ana.md",
     "EB-tresos-generator/xdm_gend_GUI_demo.md",
     "EB-tresos-generator/update-config.md",
@@ -225,8 +228,6 @@
     "software_project/architecture_etc/architecture_from_gpt.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 3：新概念／新术语理解模板.md",
     "temp.md",
-    "z-temp2.md",
-    "software_project/architecture_etc/tmp-arch-ai.md",
     "software_project/architecture_etc/device_driver_framework",
     "foreign",
     "Pasted image 20260412003038.png",
