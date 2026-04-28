@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/architecture_etc/device_driver_framework/analysis-2_flow.md",
+                "file": "EB-tresos-generator/xdm-configuratio-variant-class.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "analysis-2_flow"
+              "title": "xdm-configuratio-variant-class"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/architecture_etc/device_driver_framework/analysis-2_flow.md",
+                "file": "EB-tresos-generator/xdm-configuratio-variant-class.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "analysis-2_flow 的大纲"
+              "title": "xdm-configuratio-variant-class 的大纲"
             }
           }
         ],
@@ -201,13 +201,21 @@
   },
   "active": "a10ea143cb5ea0b3",
   "lastOpenFiles": [
-    "software_project/architecture_etc/device_driver_framework/analysis-1_Base_type.md",
-    "software_project/architecture_etc/device_driver_framework/analysis-3_AI summary.md",
-    "software_project/architecture_etc/device_driver_framework/1. MR-outline.md",
+    "EB-tresos-generator/xdm_schema_context_ana.md",
+    "EB-tresos-generator/xdm_gend_GUI_demo.md",
+    "EB-tresos-generator/update-config.md",
+    "EB-tresos-generator/schema-config-etc（arxml-xdm）.md",
+    "EB-tresos-generator/pdf_to_chinese.md",
+    "EB-tresos-generator/GUI widget.md",
+    "EB-tresos-generator/dynamic attributes.md",
+    "EB-tresos-generator/config_schema_xml.md",
     "EB-tresos-generator/attribures_defined_by_EB.md",
     "EB-tresos-generator/0EB tresos Post-build Variant.md",
     "EB-tresos-generator/0.High-Level Overview.md",
     "software_project/architecture_etc/device_driver_framework/analysis-2_flow.md",
+    "software_project/architecture_etc/device_driver_framework/analysis-1_Base_type.md",
+    "software_project/architecture_etc/device_driver_framework/analysis-3_AI summary.md",
+    "software_project/architecture_etc/device_driver_framework/1. MR-outline.md",
     "software_project/architecture_etc/device_driver_framework/2framework-core.md",
     "desktop_apps/PyQt-NodeGraphQt.md",
     "foreign/methods.md",
@@ -219,14 +227,6 @@
     "temp.md",
     "z-temp2.md",
     "software_project/architecture_etc/tmp-arch-ai.md",
-    "software_project/architecture_etc/QA-bsp and device driver framework.md",
-    "software_project/QAC/Helix-Q&A.md",
-    "software_project/architecture_etc/device driver-to-summary.md",
-    "software_project/architecture_etc/device_driver_framework/0-Summary.md",
-    "ARM/INTERRUPT_AND_EXCEPTION/arm core - control.md",
-    "ARM/INTERRUPT_AND_EXCEPTION/2 interrupt-Interrupt_latency_extension.md",
-    "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
-    "ARM/Hardware Spinlock.md",
     "software_project/architecture_etc/device_driver_framework",
     "foreign",
     "Pasted image 20260412003038.png",
