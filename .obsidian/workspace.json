@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EB-tresos-generator/5-1/chapter5.md",
+                "file": "EB-tresos-generator/links.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter5"
+              "title": "links"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EB-tresos-generator/5-1/chapter5.md",
+                "file": "EB-tresos-generator/links.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "chapter5 的大纲"
+              "title": "links 的大纲"
             }
           }
         ],
@@ -199,8 +199,12 @@
       "bases:新建数据库": false
     }
   },
-  "active": "51457bd03964d4d1",
+  "active": "a10ea143cb5ea0b3",
   "lastOpenFiles": [
+    "Pasted image 20260428184000.png",
+    "Pasted image 20260428183921.png",
+    "EB-tresos-generator/5-1/chapter5.md",
+    "EB-tresos-generator/links.md",
     "EB-tresos-generator/5-3/114-124.md",
     "EB-tresos-generator/xdm-configuratio-variant-class.md",
     "EB-tresos-generator/xdm_schema_context_ana.md",
@@ -224,9 +228,6 @@
     "software_project/architecture_etc/架构设计原则-组件设计原则 最小基础.md",
     "software_project/architecture_etc/ipcs.md",
     "software_project/architecture_etc/architecture design-ASPICE.md",
-    "software_project/architecture_etc/architecture_from_gpt.md",
-    "AI/prompt/Human Learning-Aligned Prompt Library/模板 3：新概念／新术语理解模板.md",
-    "temp.md",
     "software_project/architecture_etc/device_driver_framework",
     "foreign",
     "Pasted image 20260412003038.png",
@@ -246,7 +247,6 @@
     "autosar/layers.PNG",
     "mermaid-diagram.png",
     "mermaid-diagram l.png",
-    "Pasted image 20260115185214.png",
     "Untitled.canvas"
   ]
 }
