@@ -88,8 +88,7 @@
               "title": "cmd-copy-to-multi"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -200,7 +199,7 @@
       "bases:新建数据库": false
     }
   },
-  "active": "a10ea143cb5ea0b3",
+  "active": "51457bd03964d4d1",
   "lastOpenFiles": [
     "EB-tresos-generator/5-3/114-124.md",
     "EB-tresos-generator/xdm-configuratio-variant-class.md",
