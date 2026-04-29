@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4e018ef596ab92b8",
+        "id": "a8efa393091d5421",
         "type": "tabs",
         "children": [
           {
-            "id": "a10ea143cb5ea0b3",
+            "id": "56a68f89934c8148",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "software_project/detailed_disign_etc/aspice-sdd-summary.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "aspice-sdd-summary"
             }
           }
         ]
@@ -166,12 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "software_project/detailed_disign_etc/aspice-sdd-summary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "aspice-sdd-summary 的大纲"
             }
           }
         ],
@@ -194,8 +199,18 @@
       "bases:新建数据库": false
     }
   },
-  "active": "a10ea143cb5ea0b3",
+  "active": "56a68f89934c8148",
   "lastOpenFiles": [
+    "software_project/detailed_disign_etc/aspice-sdd-summary.md",
+    "software_project/some_concepts/reentry.md",
+    "software_project/detailed_disign_etc",
+    "software_project/Software Quality Assurance Process/top_steps.md",
+    "software_project/architecture_etc/架构设计原则-组件设计原则 最小基础.md",
+    "software_project/architecture_etc/tmp-arch-ai.md",
+    "software_project/architecture_etc/QA-bsp and device driver framework.md",
+    "software_project/architecture_etc/ipcs.md",
+    "software_project/architecture_etc/architecture_from_gpt.md",
+    "software_project/architecture_etc/architecture design-ASPICE.md",
     "EB-tresos-generator/links.md",
     "Pasted image 20260428184000.png",
     "Pasted image 20260428183921.png",
@@ -215,14 +230,6 @@
     "EB-tresos-generator/0.High-Level Overview.md",
     "software_project/architecture_etc/device_driver_framework/analysis-2_flow.md",
     "software_project/architecture_etc/device_driver_framework/analysis-1_Base_type.md",
-    "software_project/architecture_etc/device_driver_framework/analysis-3_AI summary.md",
-    "software_project/architecture_etc/device_driver_framework/1. MR-outline.md",
-    "software_project/architecture_etc/device_driver_framework/2framework-core.md",
-    "desktop_apps/PyQt-NodeGraphQt.md",
-    "foreign/methods.md",
-    "software_project/architecture_etc/架构设计原则-组件设计原则 最小基础.md",
-    "software_project/architecture_etc/ipcs.md",
-    "software_project/architecture_etc/architecture design-ASPICE.md",
     "software_project/architecture_etc/device_driver_framework",
     "foreign",
     "Pasted image 20260412003038.png",
@@ -234,7 +241,6 @@
     "ARM/INTERRUPT_AND_EXCEPTION",
     "OS/FreeRTOS",
     "coding_notes",
-    "software_project/未命名",
     "software_project/architecture_etc",
     "Roadmap",
     "如何真正理解任何事.mp4",
