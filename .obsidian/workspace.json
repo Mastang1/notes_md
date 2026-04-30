@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Languages/c/产品级结构化数据传输方案-Nanopb库.md",
+                "file": "ARM/嵌入式中的字节对齐场景说明QA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "产品级结构化数据传输方案-Nanopb库"
+              "title": "嵌入式中的字节对齐场景说明QA"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Languages/c/产品级结构化数据传输方案-Nanopb库.md",
+                "file": "ARM/嵌入式中的字节对齐场景说明QA.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "产品级结构化数据传输方案-Nanopb库 的大纲"
+              "title": "嵌入式中的字节对齐场景说明QA 的大纲"
             }
           }
         ],
@@ -201,8 +201,9 @@
   },
   "active": "1541d5634922f8b6",
   "lastOpenFiles": [
-    "OS/select epoll etc/1. select UML时序说明.md",
     "Languages/c/产品级结构化数据传输方案-Nanopb库.md",
+    "ARM/嵌入式中的字节对齐场景说明QA.md",
+    "OS/select epoll etc/1. select UML时序说明.md",
     "Languages/c/local_variable_memory.md",
     "Languages/c/stdint.md",
     "Languages/c/pointer with const.md",
@@ -229,7 +230,6 @@
     "EB-tresos-generator/5-3/114-124.md",
     "EB-tresos-generator/xdm-configuratio-variant-class.md",
     "EB-tresos-generator/xdm_schema_context_ana.md",
-    "EB-tresos-generator/xdm_gend_GUI_demo.md",
     "software_project/architecture_etc/device_driver_framework",
     "foreign",
     "Pasted image 20260412003038.png",
