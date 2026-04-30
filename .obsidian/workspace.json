@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
+                "file": "software_project/architecture_etc/hardware abstract layer的一般分层架构（无逻辑层）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 interrupt-arm中断latency的几个问题"
+              "title": "hardware abstract layer的一般分层架构（无逻辑层）"
             }
           }
         ]
@@ -88,8 +88,7 @@
               "title": "cmd-copy-to-multi"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -171,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
+                "file": "software_project/architecture_etc/hardware abstract layer的一般分层架构（无逻辑层）.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1 interrupt-arm中断latency的几个问题 的大纲"
+              "title": "hardware abstract layer的一般分层架构（无逻辑层） 的大纲"
             }
           }
         ],
@@ -200,12 +199,13 @@
       "bases:新建数据库": false
     }
   },
-  "active": "9bfda3c6cf606100",
+  "active": "1541d5634922f8b6",
   "lastOpenFiles": [
+    "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
+    "software_project/architecture_etc/hardware abstract layer的一般分层架构（无逻辑层）.md",
     "Languages/c/产品级结构化数据传输方案-Nanopb库.md",
     "ARM/INTERRUPT_AND_EXCEPTION/arm core - control.md",
     "ARM/INTERRUPT_AND_EXCEPTION/2 interrupt-Interrupt_latency_extension.md",
-    "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
     "tool_chains/git-gerrit/git代码发布步骤.md",
     "tool_chains/git-gerrit/gerrit-flow.md",
     "tool_chains/未命名.md",
@@ -228,7 +228,6 @@
     "software_project/architecture_etc/架构设计原则-组件设计原则 最小基础.md",
     "software_project/architecture_etc/tmp-arch-ai.md",
     "software_project/architecture_etc/QA-bsp and device driver framework.md",
-    "software_project/architecture_etc/ipcs.md",
     "Pasted image 20260428184000.png",
     "Pasted image 20260428183921.png",
     "software_project/architecture_etc/device_driver_framework",
