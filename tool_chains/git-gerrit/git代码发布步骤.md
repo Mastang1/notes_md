@@ -5,4 +5,8 @@
 # --no-local 是必须的，否则本地克隆会忽略深度限制
 git clone "file://$(pwd)" --depth 6 --no-local ../release_project
 ```
-### 3.  在源码root
+### 3.  在源码root路径执行 
+```
+zip -r version.zip <path>
+```
+
