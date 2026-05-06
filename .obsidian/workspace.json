@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/detailed_disign_etc/aspice-sdd-summary.md",
+                "file": "software_project/Summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aspice-sdd-summary"
+              "title": "Summary"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/detailed_disign_etc/aspice-sdd-summary.md",
+                "file": "software_project/Summary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "aspice-sdd-summary 的大纲"
+              "title": "Summary 的大纲"
             }
           }
         ],
@@ -201,8 +201,9 @@
   },
   "active": "1541d5634922f8b6",
   "lastOpenFiles": [
-    "software_project/detailed_disign_etc/architecture -and- detailed design.md",
     "software_project/detailed_disign_etc/aspice-sdd-summary.md",
+    "software_project/Summary.md",
+    "software_project/detailed_disign_etc/architecture -and- detailed design.md",
     "software_project/architecture_etc-static-and-dynamic/architecture design-ASPICE.md",
     "software_project/architecture_etc-static-and-dynamic/架构设计原则-组件设计原则 最小基础.md",
     "software_project/architecture_etc-static-and-dynamic/device_driver_framework/1. MR-outline.md",
@@ -226,7 +227,6 @@
     "development-theory/specification.md",
     "development-theory/MCU-software-layers.md",
     "development-theory/arm_core&IP.md",
-    "software_project/some_concepts/reentry.md",
     "software_project/detailed_disign_etc",
     "Pasted image 20260428184000.png",
     "Pasted image 20260428183921.png",
