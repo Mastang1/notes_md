@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/Summary.md",
+                "file": "OS/multiple events sync.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Summary"
+              "title": "multiple events sync"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/Summary.md",
+                "file": "OS/multiple events sync.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Summary 的大纲"
+              "title": "multiple events sync 的大纲"
             }
           }
         ],
@@ -201,8 +201,12 @@
   },
   "active": "1541d5634922f8b6",
   "lastOpenFiles": [
-    "software_project/detailed_disign_etc/aspice-sdd-summary.md",
+    "OS/Event.md",
+    "OS/FreeRTOS/Notification.md",
+    "OS/FreeRTOS/mutex-vs-semaphore.md",
+    "OS/FreeRTOS/global.md",
     "software_project/Summary.md",
+    "software_project/detailed_disign_etc/aspice-sdd-summary.md",
     "software_project/detailed_disign_etc/architecture -and- detailed design.md",
     "software_project/architecture_etc-static-and-dynamic/architecture design-ASPICE.md",
     "software_project/architecture_etc-static-and-dynamic/架构设计原则-组件设计原则 最小基础.md",
@@ -223,10 +227,6 @@
     "ARM/嵌入式中的字节对齐场景说明QA.md",
     "OS/select epoll etc/1. select UML时序说明.md",
     "Languages/c/字面量后缀.md",
-    "development-theory/XML(Extensible Markup Language).md",
-    "development-theory/specification.md",
-    "development-theory/MCU-software-layers.md",
-    "development-theory/arm_core&IP.md",
     "software_project/detailed_disign_etc",
     "Pasted image 20260428184000.png",
     "Pasted image 20260428183921.png",
