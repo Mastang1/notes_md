@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/multiple events sync.md",
+                "file": "software_project/architecture_etc-static-and-dynamic/device_driver_framework/analysis-2_flow.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "multiple events sync"
+              "title": "analysis-2_flow"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/multiple events sync.md",
+                "file": "software_project/architecture_etc-static-and-dynamic/device_driver_framework/analysis-2_flow.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "multiple events sync 的大纲"
+              "title": "analysis-2_flow 的大纲"
             }
           }
         ],
@@ -201,6 +201,10 @@
   },
   "active": "1541d5634922f8b6",
   "lastOpenFiles": [
+    "Pasted image 20260506154456.png",
+    "software_project/architecture_etc-static-and-dynamic/device_driver_framework/analysis-1_Base_type.md",
+    "software_project/architecture_etc-static-and-dynamic/device_driver_framework/1. MR-outline.md",
+    "OS/multiple events sync.md",
     "OS/Event.md",
     "OS/FreeRTOS/Notification.md",
     "OS/FreeRTOS/mutex-vs-semaphore.md",
@@ -210,7 +214,6 @@
     "software_project/detailed_disign_etc/architecture -and- detailed design.md",
     "software_project/architecture_etc-static-and-dynamic/architecture design-ASPICE.md",
     "software_project/architecture_etc-static-and-dynamic/架构设计原则-组件设计原则 最小基础.md",
-    "software_project/architecture_etc-static-and-dynamic/device_driver_framework/1. MR-outline.md",
     "Languages/python/asyncio--todo.md",
     "Languages/c/stdint.md",
     "Languages/c/pointer with const   -- 左物右指 --.md",
@@ -224,9 +227,6 @@
     "tool_chains/git-gerrit/gerrit-flow.md",
     "tool_chains/未命名.md",
     "tool_chains/git-gerrit/conflict_process_gerrit_merge.md",
-    "ARM/嵌入式中的字节对齐场景说明QA.md",
-    "OS/select epoll etc/1. select UML时序说明.md",
-    "Languages/c/字面量后缀.md",
     "software_project/detailed_disign_etc",
     "Pasted image 20260428184000.png",
     "Pasted image 20260428183921.png",
