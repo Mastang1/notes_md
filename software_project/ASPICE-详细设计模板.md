@@ -1,4 +1,3 @@
-
 # 软件详细设计说明书 (Software Detailed Design Specification)
 
 ## 1. 软件详细设计描述概述 (Overview of Software Detailed Design)
@@ -90,7 +89,7 @@ typedef struct __attribute__((aligned(64))) { /* 硬件防错：强制 64 字节
 
 _[`ASPICE 4.0 SWE.3 BP2`: Define interfaces of software units]_
 
-> **[审查员视角]**：这正是解答你核心疑问的地方！**绝不重写 API 签名！** 此处专注于规约 API 被调用时的**内存断言、中断锁定、硬件执行边界**等“脏活累活”。
+> **[审查员视角]**：绝不重写 API 签名，专注于规约 API 被调用时的内存断言、中断锁定、硬件执行边界。
 > 
 > **[编制指导]**：针对继承自架构的外部 API，说明其内部物理执行约束。针对单元私有的静态 API，说明其辅助算法规约。
 
@@ -136,7 +135,7 @@ _[`ASPICE 4.0 SWE.3 BP2`: Define interfaces of software units]_
 
 _[`ASPICE 4.0 SWE.3 BP1`: Develop software detailed design (Dynamic)]_
 
-> **[审查员视角]**：拒绝代码级的流水账！仅要求针对系统级状态流转、跨单元微观调度解耦、以及包含底层寄存器屏障操作的高风险区域提供图形化建模。
+> **[审查员视角]**：拒绝代码级的流水账。针对系统级状态流转、跨单元微观调度解耦、以及包含底层寄存器屏障操作的高风险区域提供图形化建模。
 > 
 > **[编制指导]**：强制规定必须具备：状态迁移图（生命周期）、时序图（并发交互解耦）、活动图（防御性底层算法）。
 
@@ -193,7 +192,7 @@ sequenceDiagram
 
 **[IPCF 演练 Demo]**:
 
-针对 `Ipcf_Queue_Push`。通过流程控制图强制定死指令乱序防御（Out-of-Order Execution Defense）的插入点，剥夺程序员随意篡改此底层的权力。
+针对 `Ipcf_Queue_Push`。通过流程控制图强制定死指令乱序防御（Out-of-Order Execution Defense）的插入点。
 
 代码段
 
