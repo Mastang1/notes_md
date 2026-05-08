@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/architecture_etc-static-and-dynamic/device_driver_framework/analysis-2_flow_usage_info_added.md",
+                "file": "software_project/tools/D2 ELK Base.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "analysis-2_flow_usage_info_added"
+              "title": "D2 ELK Base"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/architecture_etc-static-and-dynamic/device_driver_framework/analysis-2_flow_usage_info_added.md",
+                "file": "software_project/tools/D2 ELK Base.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "analysis-2_flow_usage_info_added 的大纲"
+              "title": "D2 ELK Base 的大纲"
             }
           }
         ],
@@ -199,14 +199,22 @@
       "bases:新建数据库": false
     }
   },
-  "active": "51457bd03964d4d1",
+  "active": "1541d5634922f8b6",
   "lastOpenFiles": [
+    "software_project/architecture_etc-static-and-dynamic/architecture design-ASPICE.md",
+    "software_project/tools/D2 ELK Base.md",
+    "software_project/tools",
+    "software_project/architecture_etc-static-and-dynamic/architecture_from_gpt.md",
+    "software_project/architecture_etc-static-and-dynamic/hardware abstract layer的一般分层架构（无逻辑层）.md",
+    "software_project/architecture_etc-static-and-dynamic/ipcs.md",
+    "software_project/architecture_etc-static-and-dynamic/QA-bsp and device driver framework.md",
+    "software_project/tools/flow char auto-generated tool- PlantUML(Graphviz).md",
+    "software_project/architecture_etc-static-and-dynamic/device_driver_framework/analysis-2_flow_usage_info_added.md",
     "software_project/architecture_etc-static-and-dynamic/device_driver_framework/analysis-3_AI summary.md",
     "software_project/architecture_etc-static-and-dynamic/device_driver_framework/my-idea-for-device_driver_framework.md",
     "software_project/architecture_etc-static-and-dynamic/device_driver_framework/analysis-1_Base_type.md",
     "software_project/architecture_etc-static-and-dynamic/device_driver_framework/2framework-core.md",
     "software_project/architecture_etc-static-and-dynamic/device_driver_framework/1. MR-outline.md",
-    "software_project/architecture_etc-static-and-dynamic/device_driver_framework/analysis-2_flow_usage_info_added.md",
     "Pasted image 20260506154456.png",
     "OS/multiple events sync.md",
     "OS/Event.md",
@@ -216,18 +224,11 @@
     "software_project/Summary.md",
     "software_project/detailed_disign_etc/aspice-sdd-summary.md",
     "software_project/detailed_disign_etc/architecture -and- detailed design.md",
-    "software_project/architecture_etc-static-and-dynamic/architecture design-ASPICE.md",
     "software_project/architecture_etc-static-and-dynamic/架构设计原则-组件设计原则 最小基础.md",
     "Languages/python/asyncio--todo.md",
     "Languages/c/stdint.md",
     "Languages/c/pointer with const   -- 左物右指 --.md",
     "Languages/c/local_variable_memory.md",
-    "Languages/c/产品级结构化数据传输方案-Nanopb库.md",
-    "software_project/architecture_etc-static-and-dynamic/hardware abstract layer的一般分层架构（无逻辑层）.md",
-    "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
-    "ARM/INTERRUPT_AND_EXCEPTION/arm core - control.md",
-    "ARM/INTERRUPT_AND_EXCEPTION/2 interrupt-Interrupt_latency_extension.md",
-    "tool_chains/git-gerrit/git代码发布步骤.md",
     "software_project/detailed_disign_etc",
     "Pasted image 20260428184000.png",
     "Pasted image 20260428183921.png",
@@ -244,7 +245,6 @@
     "coding_notes",
     "software_project/architecture_etc-static-and-dynamic",
     "Roadmap",
-    "如何真正理解任何事.mp4",
     "autosar/lin_flow_char.png",
     "autosar/layers.PNG",
     "Untitled.canvas"
