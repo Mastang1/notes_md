@@ -198,18 +198,18 @@ sequenceDiagram
 
 ```
 graph TD
-    A([Enter: Ipcf_Queue_Push]) --> B{Is `head + 1 == tail`?}
+    A([Enter: Ipcf_Queue_Push]) --> B{"Is head + 1 == tail ?"}
     B -- True --> C([Return IPCF_E_QUEUE_FULL])
-    B -- False --> D[Store `dataOffset` to physical RAM]
+    B -- False --> D[Store dataOffset to physical RAM]
     
-    D --> E[<b style="color:red">HW Defense: Invoke __DMB()</b>]
-    style E stroke:#f00,stroke-width:3px
+    D --> E[HW Defense: Invoke __DMB]
+    style E stroke:#f00,stroke-width:3px,color:#f00
     Note right of E: Force Write Buffer drain<br/>Guarantee payload visibility to Remote Core
     
-    E --> F[Update `headIndex` cursor]
+    E --> F[Update headIndex cursor]
     
-    F --> G[<b style="color:red">HW Defense: Invoke __DSB()</b>]
-    style G stroke:#f00,stroke-width:3px
+    F --> G[HW Defense: Invoke __DSB]
+    style G stroke:#f00,stroke-width:3px,color:#f00
     Note right of G: Block instruction pipeline<br/>Ensure pointer is settled before IRQ assertion
     
     G --> H[Trigger MSCM Inter-Core Interrupt]
