@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/ASPICE-架构设计模板.md",
+                "file": "software_project/ASPICE-详细设计模板.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ASPICE-架构设计模板"
+              "title": "ASPICE-详细设计模板"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/ASPICE-架构设计模板.md",
+                "file": "software_project/ASPICE-详细设计模板.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "ASPICE-架构设计模板 的大纲"
+              "title": "ASPICE-详细设计模板 的大纲"
             }
           }
         ],
@@ -201,8 +201,8 @@
   },
   "active": "6699ea17d750413e",
   "lastOpenFiles": [
-    "software_project/ASPICE-详细设计模板.md",
     "software_project/ASPICE-架构设计模板.md",
+    "software_project/ASPICE-详细设计模板.md",
     "software_project/Summary.md",
     "AI/prompt/prompt_engineering/prompts_char repo.md",
     "AI/prompt/prompt_engineering/Summary.md",
