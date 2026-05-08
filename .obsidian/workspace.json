@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/02-详细设计说明-DDS.md",
+                "file": "software_project/ASPICE-架构设计模板.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02-详细设计说明-DDS"
+              "title": "ASPICE-架构设计模板"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/02-详细设计说明-DDS.md",
+                "file": "software_project/ASPICE-架构设计模板.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "02-详细设计说明-DDS 的大纲"
+              "title": "ASPICE-架构设计模板 的大纲"
             }
           }
         ],
@@ -201,9 +201,9 @@
   },
   "active": "6699ea17d750413e",
   "lastOpenFiles": [
-    "software_project/01-软件架构说明-SAD.md",
+    "software_project/ASPICE-详细设计模板.md",
+    "software_project/ASPICE-架构设计模板.md",
     "software_project/Summary.md",
-    "software_project/02-详细设计说明-DDS.md",
     "AI/prompt/prompt_engineering/prompts_char repo.md",
     "AI/prompt/prompt_engineering/Summary.md",
     "software_project/tools/word operation library python-docx.md",
