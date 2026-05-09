@@ -65,7 +65,7 @@ _[`ASPICE 4.0 SWE.3 BP1`: Develop software detailed design (Static)]_
 
 C
 
-```
+```c
 /** 
  * @brief IPC 共享内存通道控制块实体
  * @implements UNIT_IPCF_RINGBUF_STRUCT_01
