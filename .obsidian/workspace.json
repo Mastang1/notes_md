@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/platform-dev-drv register and run operations.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.2 platform-dev-drv register flow.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "platform-dev-drv register and run operations"
+              "title": "1.2 platform-dev-drv register flow"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/platform-dev-drv register and run operations.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.2 platform-dev-drv register flow.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "platform-dev-drv register and run operations 的大纲"
+              "title": "1.2 platform-dev-drv register flow 的大纲"
             }
           }
         ],
@@ -201,8 +201,8 @@
   },
   "active": "54a20eaf69ef7ff0",
   "lastOpenFiles": [
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/platform-dev-drv register flow.md",
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/platform-dev-drv register and run operations.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.1 platform-dev-drv register and run operations.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.2 platform-dev-drv register flow.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes",
     "software_project/ldm-mr-rtt-dev_drv_framework",
     "Roadmap/DIR.md",
