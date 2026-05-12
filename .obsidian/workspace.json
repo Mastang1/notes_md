@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/platform-dev-drv register flow.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/platform-dev-drv register and run operations.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "platform-dev-drv register flow"
+              "title": "platform-dev-drv register and run operations"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/platform-dev-drv register flow.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/platform-dev-drv register and run operations.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "platform-dev-drv register flow 的大纲"
+              "title": "platform-dev-drv register and run operations 的大纲"
             }
           }
         ],
@@ -202,6 +202,7 @@
   "active": "54a20eaf69ef7ff0",
   "lastOpenFiles": [
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/platform-dev-drv register flow.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/platform-dev-drv register and run operations.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes",
     "software_project/ldm-mr-rtt-dev_drv_framework",
     "Roadmap/DIR.md",
@@ -233,7 +234,6 @@
     "software_project/tools",
     "software_project/SAD_etc/architecture_from_gpt.md",
     "software_project/SAD_etc/hardware abstract layer的一般分层架构（无逻辑层）.md",
-    "software_project/SAD_etc/ipcs.md",
     "Pasted image 20260506154456.png",
     "software_project/SDD_etc",
     "Pasted image 20260428184000.png",
