@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "762c9cb3ed88bd60",
+        "id": "66c2dc92d087299d",
         "type": "tabs",
         "children": [
           {
-            "id": "1a8d7da0225cf77a",
+            "id": "54a20eaf69ef7ff0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS/Linux/cursor_response_notes/001_ipc_plt_ldm_entry.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "001_ipc_plt_ldm_entry"
+              "title": "新标签页"
             }
           }
         ]
@@ -170,13 +166,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/Linux/cursor_response_notes/001_ipc_plt_ldm_entry.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "001_ipc_plt_ldm_entry 的大纲"
+              "title": "大纲"
             }
           }
         ],
@@ -199,12 +194,15 @@
       "bases:新建数据库": false
     }
   },
-  "active": "51457bd03964d4d1",
+  "active": "54a20eaf69ef7ff0",
   "lastOpenFiles": [
+    "Roadmap/DIR.md",
+    "Roadmap/未命名",
+    "Roadmap/Near-term plans.md",
+    "OS/Linux/cursor_response_notes/001_ipc_plt_ldm_entry.md",
     "software_project/Summary.md",
     "OS/Linux/cursor_response_notes/003_bus_dev_drv_links.md",
     "OS/Linux/cursor_response_notes/002_ldm_boot_insmod_plt.md",
-    "OS/Linux/cursor_response_notes/001_ipc_plt_ldm_entry.md",
     "OS/Linux/cursor_response_notes",
     "OS/Linux",
     "OS/新建文件夹",
@@ -229,8 +227,6 @@
     "software_project/SAD_etc/hardware abstract layer的一般分层架构（无逻辑层）.md",
     "software_project/SAD_etc/ipcs.md",
     "software_project/SAD_etc/QA-bsp and device driver framework.md",
-    "software_project/SAD_etc/device_driver_framework/analysis-2_flow_usage_info_added.md",
-    "software_project/SAD_etc/device_driver_framework/analysis-3_AI summary.md",
     "Pasted image 20260506154456.png",
     "software_project/SDD_etc",
     "Pasted image 20260428184000.png",
@@ -244,7 +240,6 @@
     "Pasted image 20260411232345.png",
     "AI/prompt/open_src_learn_prompts",
     "ARM/INTERRUPT_AND_EXCEPTION",
-    "OS/FreeRTOS",
     "autosar/lin_flow_char.png",
     "autosar/layers.PNG",
     "Untitled.canvas"
