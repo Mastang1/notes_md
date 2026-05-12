@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "66c2dc92d087299d",
+        "id": "b47f81af441d31e2",
         "type": "tabs",
         "children": [
           {
-            "id": "54a20eaf69ef7ff0",
+            "id": "03f3f7d6ad1bd01e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/未命名.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.5 BUS TYPE and  CLASS(char block net).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "1.5 BUS TYPE and  CLASS(char block net)"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"aliases\"]",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/未命名.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.5 BUS TYPE and  CLASS(char block net).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "1.5 BUS TYPE and  CLASS(char block net) 的大纲"
             }
           }
         ],
@@ -199,12 +199,14 @@
       "bases:新建数据库": false
     }
   },
-  "active": "54a20eaf69ef7ff0",
+  "active": "03f3f7d6ad1bd01e",
   "lastOpenFiles": [
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.3 module_init 机制 build机制(TODO).md",
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/未命名.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.4 Q-bus type VS Driver structure.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.1 platform-dev-drv register.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.5 BUS TYPE and  CLASS(char block net).md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.2 platform-dev-drv register flow.md",
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.1 platform-dev-drv register and run operations.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 5：系统／架构类对象教学模板.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes",
     "software_project/ldm-mr-rtt-dev_drv_framework",
@@ -231,8 +233,6 @@
     "AI/prompt/prompt_engineering/Summary.md",
     "software_project/tools/word operation library python-docx.md",
     "AI/prompt/open_src_learn_prompts/top.md",
-    "AI/prompt/human-llm/提升学习and记忆的工程应用.md",
-    "AI/prompt/human-llm/认知过程的有助于提升学习的理论.md",
     "software_project/tools",
     "Pasted image 20260506154456.png",
     "software_project/SDD_etc",
