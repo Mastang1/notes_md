@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.2 platform-dev-drv register flow.md",
+                "file": "AI/prompt/Human Learning-Aligned Prompt Library/模板 5：系统／架构类对象教学模板.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.2 platform-dev-drv register flow"
+              "title": "模板 5：系统／架构类对象教学模板"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.2 platform-dev-drv register flow.md",
+                "file": "AI/prompt/Human Learning-Aligned Prompt Library/模板 5：系统／架构类对象教学模板.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.2 platform-dev-drv register flow 的大纲"
+              "title": "模板 5：系统／架构类对象教学模板 的大纲"
             }
           }
         ],
@@ -201,8 +201,8 @@
   },
   "active": "54a20eaf69ef7ff0",
   "lastOpenFiles": [
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.1 platform-dev-drv register and run operations.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.2 platform-dev-drv register flow.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.1 platform-dev-drv register and run operations.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes",
     "software_project/ldm-mr-rtt-dev_drv_framework",
     "Roadmap/DIR.md",
