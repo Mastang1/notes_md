@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/2. Summary for DTS - driver Development.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/2.2 DTS theory and layers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. Summary for DTS - driver Development"
+              "title": "2.2 DTS theory and layers"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/2. Summary for DTS - driver Development.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/2.2 DTS theory and layers.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2. Summary for DTS - driver Development 的大纲"
+              "title": "2.2 DTS theory and layers 的大纲"
             }
           }
         ],
@@ -202,6 +202,7 @@
   "active": "03f3f7d6ad1bd01e",
   "lastOpenFiles": [
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/2.1 DTS etc - uart probe demo.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/2.2 DTS theory and layers.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/2. Summary for DTS - driver Development.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.5 BUS TYPE and  CLASS(char block net).md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.3 module_init 机制 build机制(TODO).md",
@@ -233,7 +234,6 @@
     "software_project/ASPICE-架构设计模板.md",
     "AI/prompt/prompt_engineering/prompts_char repo.md",
     "AI/prompt/prompt_engineering/Summary.md",
-    "software_project/tools/word operation library python-docx.md",
     "software_project/tools",
     "Pasted image 20260506154456.png",
     "software_project/SDD_etc",
