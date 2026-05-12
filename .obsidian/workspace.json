@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.5 BUS TYPE and  CLASS(char block net).md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/2.1 DTS etc - uart probe demo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.5 BUS TYPE and  CLASS(char block net)"
+              "title": "2.1 DTS etc - uart probe demo"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.5 BUS TYPE and  CLASS(char block net).md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/2.1 DTS etc - uart probe demo.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.5 BUS TYPE and  CLASS(char block net) 的大纲"
+              "title": "2.1 DTS etc - uart probe demo 的大纲"
             }
           }
         ],
@@ -201,11 +201,12 @@
   },
   "active": "03f3f7d6ad1bd01e",
   "lastOpenFiles": [
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.5 BUS TYPE and  CLASS(char block net).md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/2.1 DTS etc - uart probe demo.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.3 module_init 机制 build机制(TODO).md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.4 Q-bus type VS Driver structure.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.1 platform-dev-drv register.md",
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.5 BUS TYPE and  CLASS(char block net).md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.2 platform-dev-drv register flow.md",
     "AI/prompt/Human Learning-Aligned Prompt Library/模板 5：系统／架构类对象教学模板.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes",
