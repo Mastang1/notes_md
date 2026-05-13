@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.5  双层框架 2 —— “IO” 和 “硬件操作和管理” 的分割.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.1 mr to LDM 初步知识迁移.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.5  双层框架 2 —— “IO” 和 “硬件操作和管理” 的分割"
+              "title": "1.1 mr to LDM 初步知识迁移"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.5  双层框架 2 —— “IO” 和 “硬件操作和管理” 的分割.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.1 mr to LDM 初步知识迁移.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.5  双层框架 2 —— “IO” 和 “硬件操作和管理” 的分割 的大纲"
+              "title": "1.1 mr to LDM 初步知识迁移 的大纲"
             }
           }
         ],
@@ -201,8 +201,8 @@
   },
   "active": "03f3f7d6ad1bd01e",
   "lastOpenFiles": [
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.5  双层框架 1 ——总线类型 和 CLASS(char block net).md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.5  双层框架 2 —— “IO” 和 “硬件操作和管理” 的分割.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.5  双层框架 1 ——总线类型 和 CLASS(char block net).md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.4 Q-bus type VS Driver structure.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.3 module_init 机制 build机制(TODO).md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.2 Bus Type and MATCH (drv-dev握手注册过程).md",
