@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/device abstract layer/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/device abstract layer/io device models/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
                 "mode": "source",
                 "source": false
               },
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/device abstract layer/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/device abstract layer/io device models/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -200,14 +200,15 @@
       "bases:新建数据库": false
     }
   },
-  "active": "4df5cfe9085493bc",
+  "active": "51457bd03964d4d1",
   "lastOpenFiles": [
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/device abstract layer/io device models/INITIAL-IO DEVS：整体认知.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/device abstract layer/io device models/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/device abstract layer/io device models",
     "Pasted image 20260513153654.png",
     "Pasted image 20260513153607.png",
     "Pasted image 20260513153553.png",
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/device abstract layer/INITIAL-IO DEVS：整体认知.md",
     "Pasted image 20260513151057.png",
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/device abstract layer/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/device abstract layer/INITIAL-CLASS的具体结构与创建.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/device abstract layer/INITIAL-子系统.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/device abstract layer/0-TOP-kernel 分层及组件概览——子系统理解.md",
@@ -241,14 +242,12 @@
     "OS/Linux/cursor_response_notes/002_ldm_boot_insmod_plt.md",
     "OS/Linux/cursor_response_notes",
     "OS/Linux",
-    "OS/新建文件夹",
     "software_project/Software Quality Assurance Process/top_steps.md",
     "software_project/some_concepts/reentry.md",
     "Pasted image 20260506154456.png",
     "Pasted image 20260428184000.png",
     "Pasted image 20260428183921.png",
     "Pasted image 20260412003038.png",
-    "Pasted image 20260412002929.png",
     "Untitled.canvas"
   ]
 }
