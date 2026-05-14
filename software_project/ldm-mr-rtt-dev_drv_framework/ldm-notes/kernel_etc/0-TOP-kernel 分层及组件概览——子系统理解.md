@@ -1,6 +1,8 @@
 
 
 ##  系统架构
+_**注意的点：
+ 1 注意POSIX 和 libc的两种接口的区别，posix 在libc之后；区别在于libc有缓存，即加入了线程等逻辑层；posix直接最终操作的的是底层的operations，没有**_
 ![[SWC RTE LINIF Data Pipeline-2026-05-13-021102.png]]
 
 ## 所谓的子系统(属 软件中间件)

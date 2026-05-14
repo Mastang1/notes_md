@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.1 mr to LDM 初步知识迁移.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/0-TOP-kernel 分层及组件概览——子系统理解.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.1 mr to LDM 初步知识迁移"
+              "title": "0-TOP-kernel 分层及组件概览——子系统理解"
             }
           }
         ]
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.1 mr to LDM 初步知识迁移.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/0-TOP-kernel 分层及组件概览——子系统理解.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.1 mr to LDM 初步知识迁移 的大纲"
+              "title": "0-TOP-kernel 分层及组件概览——子系统理解 的大纲"
             }
           }
         ],
@@ -202,10 +202,13 @@
   },
   "active": "4df5cfe9085493bc",
   "lastOpenFiles": [
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/LDM/0LDM-short description todo.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/LDM/0-TOP-kernel 分层及组件概览——子系统理解.md",
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/LDM/io device models/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/LDM/io device models/INITIAL-IO DEVS：整体认知.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/LDM/io device models/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/LDM/0LDM-short description todo.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/0-TOP-kernel 分层及组件概览——子系统理解.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.4 Q-bus type VS Driver structure.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.1 mr to LDM 初步知识迁移.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/LDM/io device models",
     "Pasted image 20260513153654.png",
     "Pasted image 20260513153607.png",
@@ -214,12 +217,10 @@
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/LDM/INITIAL-CLASS的具体结构与创建.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/LDM/INITIAL-子系统.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/LDM",
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/1.4 Q-bus type VS Driver structure.md",
     "SWC RTE LINIF Data Pipeline-2026-05-13-034056.png",
     "SWC RTE LINIF Data Pipeline-2026-05-13-021102.png",
     "temp.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc",
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.1 mr to LDM 初步知识迁移.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.5  双层框架 2 —— “IO” 和 “硬件操作和管理” 的分割.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.5  双层框架 1 ——总线类型 和 CLASS(char block net).md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/Initial Understanding/1.3 module_init 机制 build机制(TODO).md",
@@ -244,7 +245,6 @@
     "OS/Linux/cursor_response_notes",
     "OS/Linux",
     "software_project/Software Quality Assurance Process/top_steps.md",
-    "software_project/some_concepts/reentry.md",
     "Pasted image 20260506154456.png",
     "Pasted image 20260428184000.png",
     "Pasted image 20260428183921.png",
