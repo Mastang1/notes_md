@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/Initial Understanding/1.5  双层框架 2 —— “IO” 和 “硬件操作和管理” 的分割.md",
+                "file": "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/kernel_modules-notes/0-TOP-kernel 分层及组件概览——子系统理解.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.5  双层框架 2 —— “IO” 和 “硬件操作和管理” 的分割"
+              "title": "0-TOP-kernel 分层及组件概览——子系统理解"
             }
           }
         ]
@@ -203,6 +203,12 @@
   },
   "active": "5f2060f6380a546f",
   "lastOpenFiles": [
+    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/1.4 Q-bus type VS Driver structure.md",
+    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes/1.  LDM的动静态图.md",
+    "Pasted image 20260514183255.png",
+    "Pasted image 20260514183025.png",
+    "Pasted image 20260514182950.png",
+    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/Initial Understanding/1.5  双层框架 2 —— “IO” 和 “硬件操作和管理” 的分割.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/Initial Understanding/1.5  双层框架 1 ——总线类型 和 CLASS(char block net).md",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/Initial Understanding/1.1 mr to LDM 初步知识迁移.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/kernel_modules-notes/1：静态结构构成的多视图概览.md",
@@ -219,7 +225,6 @@
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes/io device models/INITIAL-IO DEVS：整体认知.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes/io device models/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes/0LDM-short description todo.md",
-    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/1.4 Q-bus type VS Driver structure.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes/io device models",
     "Pasted image 20260513153654.png",
     "Pasted image 20260513153607.png",
@@ -229,9 +234,7 @@
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes/INITIAL-子系统.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes",
     "SWC RTE LINIF Data Pipeline-2026-05-13-034056.png",
-    "SWC RTE LINIF Data Pipeline-2026-05-13-021102.png",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/kernel_modules-notes",
-    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/Initial Understanding/1.5  双层框架 2 —— “IO” 和 “硬件操作和管理” 的分割.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/Initial Understanding/1.3 module_init 机制 build机制(TODO).md",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/Initial Understanding/1.2 Bus Type and MATCH (drv-dev握手注册过程).md",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes/DTS/2. Summary for DTS - driver Development.md",
@@ -246,9 +249,6 @@
     "software_project/ldm-mr-rtt-dev_drv_framework",
     "Roadmap/DIR.md",
     "Roadmap/未命名",
-    "Roadmap/Near-term plans.md",
-    "Pasted image 20260506154456.png",
-    "Pasted image 20260428184000.png",
     "Untitled.canvas"
   ]
 }
