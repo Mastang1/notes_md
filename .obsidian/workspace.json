@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/prompt/human-llm/human_cognitive_science.md",
+                "file": "temp.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "human_cognitive_science"
+              "title": "temp"
             }
           }
         ]
@@ -197,11 +197,13 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
-      "bases:新建数据库": false
+      "bases:新建数据库": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
   "active": "4df5cfe9085493bc",
   "lastOpenFiles": [
+    "AI/prompt/human-llm/human_cognitive_science.md",
     "AI/prompt/human-llm/提升学习and记忆的工程应用.md",
     "AI/prompt/human-llm/认知过程的有助于提升学习的理论.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/0-TOP-kernel 分层及组件概览——子系统理解.md",
@@ -242,7 +244,6 @@
     "Roadmap/Near-term plans.md",
     "OS/Linux/cursor_response_notes/001_ipc_plt_ldm_entry.md",
     "software_project/Summary.md",
-    "OS/Linux/cursor_response_notes/003_bus_dev_drv_links.md",
     "OS/Linux/cursor_response_notes",
     "OS/Linux",
     "Pasted image 20260506154456.png",
