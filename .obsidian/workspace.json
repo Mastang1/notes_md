@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "OS/Linux/kernel/Linux-kernel/class-dash-board/1. Subsystem：UIO.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -203,6 +203,9 @@
   },
   "active": "9cf1d91f887151ee",
   "lastOpenFiles": [
+    "Pasted image 20260515165322.png",
+    "Pasted image 20260515164632.png",
+    "Pasted image 20260515164411.png",
     "OS/Linux/kernel/Linux-kernel/3. LDM-notes/io device models/INITIAL-IO DEVS：整体认知.md",
     "OS/Linux/kernel/Linux-kernel/class-dash-board/1. Subsystem：UIO.md",
     "OS/Linux/kernel/Linux-kernel/class-dash-board",
@@ -239,10 +242,7 @@
     "AI/prompt/human-llm/认知过程的有助于提升学习的理论.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/LDM/0-TOP-kernel 分层及组件概览——子系统理解.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes/io device models/INITIAL-IO DEVS：整体认知.md",
-    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes/io device models/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes/io device models",
-    "Pasted image 20260513153654.png",
-    "Pasted image 20260513153607.png",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/kernel_modules-notes",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/Initial Understanding",
