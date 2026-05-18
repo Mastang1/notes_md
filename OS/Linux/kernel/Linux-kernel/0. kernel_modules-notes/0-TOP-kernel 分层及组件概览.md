@@ -11,7 +11,8 @@
      _**与子系统的接口：**_在driver的实现中，子系统作为依赖为driver所调用，实现功能模块的集成到driver中；此时一般class等都已被子系统所赋值；
 - 8. 其他 BSP 子系统：IO 、timer、中断等，可以认为和OS一样为内核开发提供了依赖支持；
 _**注意的点：
- 1 注意POSIX 和 libc的两种接口的区别，posix 在libc之后；区别在于libc有缓存，即加入了线程等逻辑层；posix直接最终操作的的是底层的operations，没有缓冲；**_
+ 1 注意POSIX 和 libc的两种接口的区别，posix 在libc之后；区别在于libc有缓存，即加入了线程等逻辑层；posix直接最终操作的的是底层的operations，没有缓冲；
+ 2.注意边界：operations属于VFS底层的一个依赖契约，不应作为LDM的一部分；因为一个驱动可能不用走VFS；或者调用子系统封装后的接口，把operations作为子系统的内部实现；**_
 ![[SWC RTE LINIF Data Pipeline-2026-05-13-021102.png]]
 
 ## 所谓的子系统(属 软件中间件)
