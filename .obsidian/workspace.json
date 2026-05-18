@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/kernel/Linux-kernel/3.class subsystem/poll：A Choice For File.md",
+                "file": "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/0-TOP-kernel 分层及组件概览.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "poll：A Choice For File"
+              "title": "0-TOP-kernel 分层及组件概览"
             }
           }
         ]
@@ -203,6 +203,7 @@
   },
   "active": "9cf1d91f887151ee",
   "lastOpenFiles": [
+    "OS/Linux/kernel/Linux-kernel/3.class subsystem/poll：A Choice For File.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem/1. Subsystem：UIO.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes/INITIAL-CLASS的具体结构与创建.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes/INITIAL-子系统.md",
@@ -226,7 +227,6 @@
     "OS/Linux/kernel/Linux-kernel/5.MM",
     "OS/Linux/kernel/Linux-kernel/4. VFS",
     "OS/Linux/kernel/Linux-kernel/1.4 Q-bus type VS Driver structure.md",
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem/poll：A Choice For File.md",
     "Pasted image 20260515180725.png",
     "Pasted image 20260515180648.png",
     "Pasted image 20260515180548.png",
