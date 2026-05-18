@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5334b16678e915ae",
+        "id": "bac711fa51e30418",
         "type": "tabs",
         "children": [
           {
-            "id": "9cf1d91f887151ee",
+            "id": "333b6d3845611645",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "temp.md",
+                "file": "OS/Linux/kernel/mr-library-notes/2framework-core.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "temp"
+              "title": "2framework-core"
             }
           }
         ]
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 346.5110321044922
+    "width": 338.5
   },
   "right": {
     "id": "8efccc928838709e",
@@ -108,9 +108,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "autosar/mcal_architecure/my_summary.md",
+                "file": "autosar/autosar OS/Trampoline OS.md",
                 "collapseAll": false,
-                "extraContext": true,
+                "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "my_summary 的反向链接列表"
+              "title": "Backlinks for Trampoline OS"
             }
           },
           {
@@ -147,7 +147,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "标签"
+              "title": "Tags"
             }
           },
           {
@@ -161,7 +161,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "添加笔记属性"
+              "title": "All properties"
             }
           },
           {
@@ -170,17 +170,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/kernel_etc/0-TOP-kernel 分层及组件概览——子系统理解.md",
+                "file": "EB-tresos-generator/xdm_schema_context_ana.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "0-TOP-kernel 分层及组件概览——子系统理解 的大纲"
+              "title": "Outline of xdm_schema_context_ana"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -189,67 +188,66 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "bases:新建数据库": false,
-      "mermaid-tools:Open Mermaid Toolbar": false
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9cf1d91f887151ee",
+  "active": "333b6d3845611645",
   "lastOpenFiles": [
-    "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/0-TOP-kernel 分层及组件概览.md",
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem/poll：A Choice For File.md",
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem/1. Subsystem：UIO.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes/INITIAL-CLASS的具体结构与创建.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes/INITIAL-子系统.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes/1.  LDM的动静态图.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes/0LDM-short description todo.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes/io device models/INITIAL-IO DEVS：整体认知.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes/DTS/2.2 DTS theory and layers.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes/DTS/2.1 DTS etc - uart probe demo.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes/DTS/2. Summary for DTS - driver Development.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes/io device models/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
-    "OS/Linux/kernel/Linux-kernel/1. Initial Understanding（reference only）/1.1 mr to LDM 初步知识迁移.md",
-    "OS/Linux/kernel/Linux-kernel/1. Initial Understanding（reference only）/1.5  双层框架 2 —— “IO” 和 “硬件操作和管理” 的分割.md",
-    "OS/Linux/kernel/Linux-kernel/1. Initial Understanding（reference only）/1.5  双层框架 1 ——总线类型 和 CLASS(char block net).md",
-    "OS/Linux/kernel/Linux-kernel/1. Initial Understanding（reference only）/1.3 module_init 机制 build机制(TODO).md",
-    "OS/Linux/kernel/Linux-kernel/1. Initial Understanding（reference only）/1.2 Bus Type and MATCH (drv-dev握手注册过程).md",
-    "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/SCI Interfaces.md",
-    "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/2. 与LDM相关的组件边界界定.md",
-    "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/1：基于kobject的多list视图概览.md",
-    "OS/Linux/kernel/Linux-kernel/6.OS-ana",
-    "OS/Linux/kernel/Linux-kernel/5.MM",
-    "OS/Linux/kernel/Linux-kernel/4. VFS",
-    "OS/Linux/kernel/Linux-kernel/1.4 Q-bus type VS Driver structure.md",
+    "OS/Linux/kernel/mr-library-notes/1. MR-outline.md",
+    "如何真正理解任何事.mp4",
+    "ethernet/greatwall/agent.md",
+    "development-theory/XML(Extensible Markup Language).md",
+    "development-theory/specification.md",
+    "development-theory/MCU-software-layers.md",
+    "development-theory/arm_core&IP.md",
+    "development-theory",
+    "desktop_apps/PyQt-NodeGraphQt.md",
+    "desktop_apps",
+    "design_lesson.md",
+    "coding_notes/Guard clauses and Early Exit.md",
+    "coding_notes",
+    "autosar/mcal_architecure/my_summary.md",
+    "autosar/mcal_architecure/component and function description.md",
+    "autosar/mcal_architecure/archi-0_1.md",
+    "autosar/mcal_architecure/arch-ipcs-demo.md",
+    "autosar/mcal_architecure/arch-component_etc###.md",
+    "autosar/lin_etc/质量管理流程图.md",
+    "autosar/lin_etc/SRS&SWS.md",
+    "autosar/lin_etc/ISO-17987 & autosar-LIN.md",
+    "autosar/lin_etc/checkWakeup.md",
+    "autosar/lin_etc/Bus LIN error处理机制的简单总结.md",
+    "autosar/autosar OS/Trampoline OS.md",
+    "autosar/autosar OS/autosar OS specific.md",
+    "autosar/VenderAPI-infix.md",
+    "autosar/OEM_TIER1_... system_design_flow.md",
+    "autosar/mcal_requests.md",
+    "autosar/mcal_architecure",
+    "autosar/lin_flow_char.png",
+    "autosar/lin_etc",
+    "autosar/Lin_demo.md",
+    "autosar/layers.PNG",
+    "autosar/cofing_variants.md",
+    "autosar/autosar OS",
+    "autosar",
+    "SWC RTE LINIF Data Pipeline-2026-05-13-034056.png",
+    "SWC RTE LINIF Data Pipeline-2026-05-13-021102.png",
+    "Roadmap",
     "Pasted image 20260515180725.png",
     "Pasted image 20260515180648.png",
     "Pasted image 20260515180548.png",
     "Pasted image 20260515180421.png",
     "Pasted image 20260515165322.png",
     "Pasted image 20260515164632.png",
-    "Pasted image 20260515164411.png",
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem",
-    "OS/Linux/cursor_response_notes/002_ldm_boot_insmod_plt.md",
-    "OS/Linux/cursor_response_notes/001_ipc_plt_ldm_entry.md",
-    "software_project/Some Notes About Architecture.md",
-    "software_project/Summary.md",
-    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/Initial Understanding/1.3 module_init 机制 build机制(TODO).md",
-    "Pasted image 20260514185731.png",
-    "Pasted image 20260514184829.png",
-    "Pasted image 20260514184625.png",
-    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/kernel_modules-notes/kernel-notes",
-    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-etc",
-    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes/io device models",
-    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-notes",
-    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/kernel_modules-notes",
-    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/Initial Understanding",
-    "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
+    "OS/Linux/kernel/Linux-kernel/2. LDM-notes/io device models",
+    "未命名.canvas",
     "Untitled.canvas"
   ]
 }
