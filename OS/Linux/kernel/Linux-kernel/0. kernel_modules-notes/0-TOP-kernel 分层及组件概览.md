@@ -1,4 +1,6 @@
-
+## summary
+ - 1. 总体架构，如下 系统架构所示，个人总结的分层视图：user app/libc，posix layers, SCI , VFS, sub-system, LDM(operations), hardware;
+ - 
 
 ##  系统架构
 _**注意的点：
