@@ -6,9 +6,10 @@
  - 5. sub-system/class：目前认为每个子系统都可以在probe流程中在class元素中赋值，以标识不同的 设备类型；class本身只是一个封装了list node的扩展节点，最终会挂载到对应类型的list上；
  - 6. 三个 基础IO设备：char、block：可以认为是子系统的基础，一般被子系统调用；功能是实现kernel module 与user space进行交互；
  - 7. LDM：Linux Device Model，我又称其为 bus-device-driver framework。
+      _**核心思想：**_实现 功能逻辑、底层驱动、配置参数三个部分的解耦合；
      _**功能：**_1. 将设备(具体的data parameter)/驱动(具体的功能逻辑)进行分割；2. 按照bus类型进行分类，但提供共同的设备-驱动匹配、probe、电源管理、设备管理(开闭等)的对外API，不同BUS有不同的内部实现；3. 常见的总线类型有： 片上资源 platform bus、实际总线类有 SPI 、IIC 、CAN等；
-     _**与子系统的接口：**_在driver的实现中，子系统提供上层实现，并提供具体的接口，用于在probe中执行初始化赋值
-##  系统架构
+     _**与子系统的接口：**_在driver的实现中，子系统作为依赖为driver所调用，实现功能模块的集成到driver中；此时一般class等都已被子系统所赋值；
+- 8. 其他 BSP 子系统：IO 、timer、中断等，可以认为和OS一样为内核开发提供了依赖支持；
 _**注意的点：
  1 注意POSIX 和 libc的两种接口的区别，posix 在libc之后；区别在于libc有缓存，即加入了线程等逻辑层；posix直接最终操作的的是底层的operations，没有缓冲；**_
 ![[SWC RTE LINIF Data Pipeline-2026-05-13-021102.png]]
