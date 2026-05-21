@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/0. summary.md",
+                "file": "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/3. class 创建 及 device-class的双向指向.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0. summary"
+              "title": "3. class 创建 及 device-class的双向指向"
             }
           }
         ]
@@ -203,9 +203,11 @@
   },
   "active": "35789be94622fdd7",
   "lastOpenFiles": [
+    "Pasted image 20260521155102.png",
+    "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/0. summary.md",
+    "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/3. class 创建 及 device-class的双向指向.md",
     "Pasted image 20260521151743.png",
     "…….md",
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/0. summary.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/1. 相关的 structures(to add flow) 1.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/2. 相关的 structures LDM & class.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/From CDEV to The Heart.md",
@@ -239,12 +241,10 @@
     "OS/Linux/kernel/Linux-kernel/1. Initial Understanding（reference only）/1.1 mr to LDM 初步知识迁移.md",
     "OS/Linux/kernel/Linux-kernel/1. Initial Understanding（reference only）/1.5  双层框架 2 —— “IO” 和 “硬件操作和管理” 的分割.md",
     "OS/Linux/kernel/Linux-kernel/1. Initial Understanding（reference only）/1.5  双层框架 1 ——总线类型 和 CLASS(char block net).md",
-    "OS/Linux/kernel/Linux-kernel/1. Initial Understanding（reference only）/1.3 module_init 机制 build机制(TODO).md",
     "OS/Linux/kernel/Linux-kernel/6.OS-ana-todo",
     "OS/Linux/kernel/Linux-kernel/5.MM-todo",
     "OS/Linux/kernel/Linux-kernel/4. VFS-todo",
     "Pasted image 20260515180725.png",
-    "Pasted image 20260515180648.png",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/kernel_modules-notes/kernel-notes",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-etc",
