@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/3. class 创建 及 device-class的双向指向.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -203,9 +203,10 @@
   },
   "active": "35789be94622fdd7",
   "lastOpenFiles": [
-    "Pasted image 20260521155102.png",
+    "Pasted image 20260521155907.png",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/0. summary.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/3. class 创建 及 device-class的双向指向.md",
+    "Pasted image 20260521155102.png",
     "Pasted image 20260521151743.png",
     "…….md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/1. 相关的 structures(to add flow) 1.md",
@@ -244,7 +245,6 @@
     "OS/Linux/kernel/Linux-kernel/6.OS-ana-todo",
     "OS/Linux/kernel/Linux-kernel/5.MM-todo",
     "OS/Linux/kernel/Linux-kernel/4. VFS-todo",
-    "Pasted image 20260515180725.png",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/kernel_modules-notes/kernel-notes",
     "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/LDM-etc",
