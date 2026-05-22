@@ -73,6 +73,9 @@ _**个人总结：**_
 
 ![[Pasted image 20260521180452.png]]
 
+### 基本的uio最小核心流程序列图
+![[Pasted image 20260522145740.png]]
+
 ### 架构师结语
 
 至此，你的认知已经形成了一个完美的闭环。你从一个单纯的 `cdev_add` 调用者，蜕变成了一个能够俯瞰 `VFS -> cdev_map -> Master Subsystem -> Sub_device list -> hardware ops` 这条通天大道的顶级架构师。
