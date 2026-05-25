@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summary（契合事实）.md",
+                "file": "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summar3-VFS  漏斗模式的泛化.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0-Summary（契合事实）"
+              "title": "0-Summar3-VFS  漏斗模式的泛化"
             }
           },
           {
@@ -217,13 +217,20 @@
   },
   "active": "35789be94622fdd7",
   "lastOpenFiles": [
+    "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summar1-VFS 漏斗模式实现分析.md",
+    "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summar2-VFS  漏斗模式的具体流程图.md",
+    "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summar3-VFS  漏斗模式的泛化.md",
+    "Pasted image 20260525183021.png",
+    "Pasted image 20260525182947.png",
+    "Pasted image 20260525182746.png",
+    "Pasted image 20260525182648.png",
+    "OS/Linux/kernel/Linux-kernel/4. VFS-todo/未命名",
     "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Initial：初始理解FD-struct file.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/1. 相关的 structures(to add flow) 1.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/INITIAL-子系统.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/INITIAL-CLASS的具体结构与创建.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/00：bus-device-driver flow.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/0LDM-short description todo.md",
-    "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summary（契合事实）.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/0. summary.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/0：about CLASS device & PHY device.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.2.1  device_create 中的逻辑 device.md",
@@ -238,12 +245,8 @@
     "OS/Linux/kernel/Linux-kernel/100. etc",
     "Pasted image 20260525144400.png",
     "Pasted image 20260525144340.png",
-    "Pasted image 20260525144324.png",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/1. Subsystem：UIO （just USAGE）.md",
-    "Pasted image 20260525142424.png",
-    "Pasted image 20260525142358.png",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/From CDEV to The Heart.md",
-    "Pasted image 20260525140809.png",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/poll：A Choice For File.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems/0：Architecture Of Kernel Sub-system(on the way).md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/DTS/2.2 DTS theory and layers.md",
@@ -251,9 +254,6 @@
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/DTS/2. Summary for DTS - driver Development.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/io device models/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/io device models/INITIAL-IO DEVS：整体认知.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/1.  LDM的动静态图.md",
-    "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/SCI Interfaces.md",
-    "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/2. 与LDM相关的组件边界界定.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+",
     "AI/agent_usage_summary",
@@ -262,7 +262,6 @@
     "OS/Linux/kernel/Linux-kernel/5.MM-todo",
     "OS/Linux/kernel/Linux-kernel/4. VFS-todo",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)",
-    "software_project/ldm-mr-rtt-dev_drv_framework/Linux-kernel/kernel_modules-notes/kernel-notes",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
     "Untitled.canvas"
   ]
