@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/0. summary.md",
-                "mode": "source",
+                "file": "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/1：基于kobject的多list视图概览.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0. summary"
+              "title": "1：基于kobject的多list视图概览"
             }
           }
         ]
@@ -203,10 +203,11 @@
   },
   "active": "35789be94622fdd7",
   "lastOpenFiles": [
+    "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/0-TOP-kernel 分层及组件概览.md",
+    "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/0. summary.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem/sub-systems/0：Architecture Of Kernel Sub-system(on the way).md",
     "Pasted image 20260522145740.png",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem/1. Subsystem：UIO （just USAGE）.md",
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem/CDEV+/0. summary.md",
     "Pasted image 20260521180539.png",
     "Pasted image 20260521180452.png",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem/sub-systems",
@@ -230,7 +231,6 @@
     "AI/agent_usage_summary",
     "temp.md",
     "-Beyond Tech",
-    "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/0-TOP-kernel 分层及组件概览.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem/1. Subsystem：UIO.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes/INITIAL-CLASS的具体结构与创建.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes/INITIAL-子系统.md",
