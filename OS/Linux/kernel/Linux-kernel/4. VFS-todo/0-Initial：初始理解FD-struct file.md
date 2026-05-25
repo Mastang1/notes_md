@@ -1,5 +1,7 @@
 
 ### 核心目标 结构体 及其周边扩展（file及其数据下标 FD）
+[[4. Data of CDEV及完整流程]]
+
 
 ---
 ## From AI
@@ -96,7 +98,7 @@ classDiagram
 #### 动态映射流程 (UML 序列图)
 
 请死死盯住图中的 **第 8 步（延迟绑定）** 和 **第 10 步（多态击穿）**！
-
+![[Pasted image 20260525142424.png]]
 ```
 sequenceDiagram
     autonumber
