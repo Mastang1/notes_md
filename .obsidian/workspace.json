@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Initial：初始理解FD-struct file.md",
+                "file": "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0-Initial：初始理解FD-struct file"
+              "title": "0-Summary"
             }
           },
           {
@@ -27,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summary.md",
+                "file": "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/1. 相关的 structures(to add flow) 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0-Summary"
+              "title": "1. 相关的 structures(to add flow) 1"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -216,16 +215,18 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "fec1f423c5cd9c69",
+  "active": "35789be94622fdd7",
   "lastOpenFiles": [
     "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Initial：初始理解FD-struct file.md",
-    "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summary.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/1. 相关的 structures(to add flow) 1.md",
+    "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/INITIAL-子系统.md",
+    "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/INITIAL-CLASS的具体结构与创建.md",
+    "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/00：bus-device-driver flow.md",
+    "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/0LDM-short description todo.md",
+    "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summary.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/0. summary.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/0：about CLASS device & PHY device.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.2.1  device_create 中的逻辑 device.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/00：bus-device-driver flow.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/0LDM-short description todo.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/4. Data of CDEV及完整流程.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.2.2 逻辑device的QA.md",
     "Pasted image 20260525160823.png",
@@ -250,8 +251,6 @@
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/DTS/2. Summary for DTS - driver Development.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/io device models/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/io device models/INITIAL-IO DEVS：整体认知.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/INITIAL-CLASS的具体结构与创建.md",
-    "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/INITIAL-子系统.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/1.  LDM的动静态图.md",
     "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/SCI Interfaces.md",
     "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/2. 与LDM相关的组件边界界定.md",
