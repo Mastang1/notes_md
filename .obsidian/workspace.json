@@ -218,6 +218,7 @@
   "active": "35789be94622fdd7",
   "lastOpenFiles": [
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/0. summary.md",
+    "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/4. Data of CDEV及完整流程.md",
     "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/SCI Interfaces.md",
     "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/0-TOP-kernel 分层及组件概览.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.2.1  device_create 中的逻辑 device.md",
@@ -236,7 +237,6 @@
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/00：bus-device-driver flow.md",
     "OS/Linux/kernel/Linux-kernel/2. LDM-notes(phy-device)/0LDM-short description todo.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/0：about CLASS device & PHY device.md",
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/4. Data of CDEV及完整流程.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.2.2 逻辑device的QA.md",
     "Pasted image 20260525160823.png",
     "Pasted image 20260525160718.png",
