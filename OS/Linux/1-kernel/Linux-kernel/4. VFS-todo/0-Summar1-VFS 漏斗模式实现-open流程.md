@@ -1,10 +1,11 @@
 _**实现漏斗模式的逻辑理解：
-1.user：kernel VFS 这两个映射的调用中的理解。struct file *filp是FD在kernel的一个代理，毕竟不能直接用指针跨空间访问，使用struct file指针的数组的下标很合适。
-2.OPEN的过程理解。
-A> user-open(file-path), SCI，文件系统通过路径获取文件inode(索引节点)；
-B.读取inode中的文件信息（todo）获取设备号信息，根据master device number查找cdev_map获取用户定义的cdev静态变量的指针；并动态创建struct file结构体对象，核心赋值 path、inode=通过VFS获取的inode、f_op=底层cdev的元素operations；，其他元素暂时不理会；
-C.调用driver的open指针函数实现，核心目的是传入一个私有指针，传入user的私有数据，避免open、read、write等接口调用全局或者静态变量；
-D.加入该file指针到数组中，返回给user空间一个数组元素下标FD；
+-1.   user：kernel VFS 这两个映射的调用中的理解。struct file *filp是FD在kernel的一个代理，毕竟不能直接用指针跨空间访问，使用struct file指针的数组的下标很合适。
+-
+-2.  OPEN的过程理解。
+  -A> user-open(file-path), SCI，文件系统通过路径获取文件inode(索引节点)；
+   -B.读取inode中的文件信息（todo）获取设备号信息，根据master device number查找cdev_map获取用户定义的cdev静态变量的指针；并动态创建struct file结构体对象，核心赋值 path、inode=通过VFS获取的inode、f_op=底层cdev的元素operations；，其他元素暂时不理会；
+   -C.调用driver的open指针函数实现，核心目的是传入一个私有指针，传入user的私有数据，避免open、read、write等接口调用全局或者静态变量；
+   -D.加入该file指针到数组中，返回给user空间一个数组元素下标FD；
 3.read/write过程。
 A> userspace携带入参FD、SCI、VFS模块中通过FD获取file指针，通过file中的f_op执行driver的函数体调用**_
 
