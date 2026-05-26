@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "07e8f2f436834818",
+        "id": "342f41981ab0684e",
         "type": "tabs",
         "children": [
           {
-            "id": "35789be94622fdd7",
+            "id": "7f7ef2ca12fcbd5e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summar3-VFS  漏斗模式的泛化.md",
+                "file": "OS/Linux/kernel/Linux-kernel/4. VFS-todo/1-create_device-1 剖析：基本流程+回旋镖.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0-Summar3-VFS  漏斗模式的泛化"
-            }
-          },
-          {
-            "id": "fec1f423c5cd9c69",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/0. summary.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "0. summary"
+              "title": "1-create_device-1 剖析：基本流程+回旋镖"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -216,25 +201,27 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "fec1f423c5cd9c69",
+  "active": "7f7ef2ca12fcbd5e",
   "lastOpenFiles": [
-    "OS/Linux/kernel/Linux-kernel/4. VFS-todo/00-TOP：VFS - 其他文件系统(TODO).md",
     "OS/Linux/kernel/Linux-kernel/4. VFS-todo/1-create_device-2 剖析：为什么 回旋镖.md",
     "OS/Linux/kernel/Linux-kernel/4. VFS-todo/1-create_device-1 剖析：基本流程+回旋镖.md",
+    "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/4. Data of CDEV及完整流程.md",
+    "OS/Linux/kernel/Linux-kernel/4. VFS-todo/00-TOP：VFS - 其他文件系统(TODO).md",
+    "OS/Linux/kernel/Linux-kernel/4..md",
+    "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summar3-VFS  漏斗模式的泛化.md",
+    "().md",
+    "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/0. summary.md",
     "Pasted image 20260526113624.png",
     "Pasted image 20260526113603.png",
     "Pasted image 20260526113432.png",
     "Pasted image 20260526113408.png",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.1 class 创建 及 device-class的双向指向.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.2.1  device_create 中的逻辑 device.md",
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/0. summary.md",
     "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summar1-VFS 漏斗模式实现分析.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/2. 相关的 structures LDM & class.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/1. 相关的 structures(to add flow) 1.md",
-    "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summar3-VFS  漏斗模式的泛化.md",
     "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Initial：初始理解FD-struct file.md",
     "OS/Linux/kernel/Linux-kernel/4. VFS-todo/0-Summar2-VFS  漏斗模式的具体流程图.md",
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/4. Data of CDEV及完整流程.md",
     "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/SCI Interfaces.md",
     "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/0-TOP-kernel 分层及组件概览.md",
     "Pasted image 20260525183021.png",
@@ -254,8 +241,6 @@
     "OS/Linux/kernel/Linux-kernel/100. etc",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/1. Subsystem：UIO （just USAGE）.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/From CDEV to The Heart.md",
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/poll：A Choice For File.md",
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems/0：Architecture Of Kernel Sub-system(on the way).md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+",
     "AI/agent_usage_summary",
