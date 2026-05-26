@@ -217,8 +217,9 @@
   },
   "active": "35789be94622fdd7",
   "lastOpenFiles": [
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/0. summary.md",
+    "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.1 class 创建 及 device-class的双向指向.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/4. Data of CDEV及完整流程.md",
+    "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/0. summary.md",
     "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/SCI Interfaces.md",
     "OS/Linux/kernel/Linux-kernel/0. kernel_modules-notes/0-TOP-kernel 分层及组件概览.md",
     "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.2.1  device_create 中的逻辑 device.md",
@@ -242,7 +243,6 @@
     "Pasted image 20260525160718.png",
     "Pasted image 20260525154939.png",
     "Pasted image 20260525154920.png",
-    "OS/Linux/kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.1 class 创建 及 device-class的双向指向.md",
     "OS/Linux/kernel/Linux-kernel/100. etc/prefix： like ‘i_’.md",
     "OS/Linux/kernel/Linux-kernel/100. etc",
     "Pasted image 20260525144400.png",
