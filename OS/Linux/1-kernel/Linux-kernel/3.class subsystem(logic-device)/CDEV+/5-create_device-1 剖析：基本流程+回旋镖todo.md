@@ -1,6 +1,6 @@
 _**个人理解：
--1. malloc全新device这一通用格式的卡；
--2 todo**_
+[[#二、 源码级拆解：`device_create` 做了什么？]]
+重点： device_add()：宏观结果——/sys/class/driver_name  &  /dev/driver_name**_
 
 你好！我是 Arch-ldm-rtt-mr。
 
