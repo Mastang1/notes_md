@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/1：initial-sysfs（todo）.md",
+                "file": "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/2：devtmpfs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1：initial-sysfs（todo）"
+              "title": "2：devtmpfs"
             }
           }
         ],
@@ -218,8 +218,9 @@
   },
   "active": "80c20931da8b7e25",
   "lastOpenFiles": [
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/1：sysfs-summary.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/1：initial-sysfs（todo）.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/2：devtmpfs.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/1：sysfs-summary.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/未命名",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-interface-implements/1. 分层-核心结构-核心APIs-核心场景流程.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements",
@@ -255,7 +256,6 @@
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/0：about CLASS device & PHY device.md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)",
     "OS/Linux/1-kernel/Linux-kernel/2. LDM-notes(phy-device)/io device models/INITIAL-IO DEVS：整体认知.md",
-    "OS/Linux/1-kernel/Linux-kernel/2. LDM-notes(phy-device)/io device models/INITIAL-IO DEVS：CDEV的具体结构及核心场景.md",
     "OS/Linux/1-kernel/Linux-kernel/2. LDM-notes(phy-device)/io device models",
     "OS/Linux/1-kernel/Linux-kernel/2. LDM-notes(phy-device)/DTS",
     "OS/Linux/1-kernel/Linux-kernel/2. LDM-notes(phy-device)",
