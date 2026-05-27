@@ -1,3 +1,8 @@
+## 0. _**从“一切皆文件”的VFS开始
+ - 1.  
+
+
+---
 
 ## 1. 问题由来
  - 1. device_add()：宏观结果——/sys/class/driver_name  &  /dev/driver_name；分析两个过程细节
