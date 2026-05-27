@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-interface-implements/1. 分层-核心结构-核心APIs-核心场景流程.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -203,6 +203,7 @@
   },
   "active": "8f4dc65090aca30b",
   "lastOpenFiles": [
+    "Pasted image 20260527142943.png",
     "Pasted image 20260527142304.png",
     "Pasted image 20260527142016.png",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-00TOP：VFS(interface) - 其他文件系统(implement).md",
@@ -248,7 +249,6 @@
     "Pasted image 20260526113408.png",
     "Pasted image 20260525183021.png",
     "Pasted image 20260525182947.png",
-    "Pasted image 20260525182746.png",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
     "Untitled.canvas"
   ]
