@@ -1,10 +1,10 @@
 ## 0. _**从“一切皆文件”的VFS开始
  - 1.  [VFS初始化]VFS 实现统一化的*Interface*，其他文件系统(sysfs/ext4/devtmpfs等)mount到VFS，是为*Implements*，其他文件系统实在kernel初始化过程中mount到VFS；
  - 2. [设备注册]其他文件系统，可以添加文件node到所在文件系统。如：
-	 - *devtmpfs:user-space 守护进程调用mknod发送设备号/name等信息，可以创建设备节点到 “/dev/” 路径；
+	 - *devtmpfs:动态创建逻辑device对象，为其赋值设备号/父设备（物理device）等信息，user-space 守护进程调用mknod发送设备号/name等信息，可以创建设备节点到 “/dev/” 路径；
 	 - *sysfs：它是内存结构体对象在文件系统的映像，本质是通过 **对象中的kobject成员(kernfs_node)**_在执行add_device()的子操作中，实现向sysfs中添加node，最终展示在 “/sys/” 路径下；*
- - 3. [Open路由泛化]过程：open(file_path)在user space  -  通过SCI陷入kernel，执行VFS 的sys_open操作，获取inode  -  根据inode->i_mode(模式掩码)，进入到不同的文件系统implement的open流程：
- - 
+ - 3. [Open路由泛化]过程：open(file_path)在user space  -  通过SCI陷入kernel，执行VFS 的sys_open操作，获取inode  -  查找空FD（file指针数组的空索引），动态分配/创建 file，根据inode->i_mode(模式掩码)，进入到不同的文件系统implement的open流程，之心file的赋值，对应底层的operations指针赋值到file->ops,返回FD到user space；
+	 - 具体到cdev设备文件节点的open流程——提取inode中的设备号信息，在cdev_map中获取到cdev指针，最终实现把driver中开发的operations指针赋值给 file->ops；
 
 
 
