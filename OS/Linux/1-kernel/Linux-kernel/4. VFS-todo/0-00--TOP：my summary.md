@@ -15,7 +15,7 @@
    -D.加入该file指针到数组中，返回给user空间一个数组元素下标FD；
 3.read/write过程。
 A> userspace携带入参FD、SCI、VFS模块中通过FD获取file指针，通过file中的f_op执行driver的函数体调用
----
+--- 
 
 ## 1. 问题由来
  - 1. device_add()：宏观结果——/sys/class/driver_name  &  /dev/driver_name；分析两个过程细节
