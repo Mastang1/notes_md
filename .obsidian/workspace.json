@@ -11,12 +11,14 @@
             "id": "a8549c5e1136ac7c",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "z-files/Linux_VFS_Internals.pdf"
+                "file": "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-4：老子悟道中....md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Linux_VFS_Internals"
+              "icon": "lucide-file",
+              "title": "0-4：老子悟道中..."
             }
           },
           {
@@ -65,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "剖析",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -215,23 +217,25 @@
   },
   "active": "a8549c5e1136ac7c",
   "lastOpenFiles": [
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-interface-implements/1. 分层-核心结构-核心APIs-核心场景流程.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-4：老子悟道中....md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Initial：初始理解FD-struct file.md",
+    "OS/Linux/1-kernel/Linux-kernel/4..md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-3：完整介绍(from source code).md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/0. summary.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-2：-Initial：outline.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-1： TOP：my summary.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Summary2-VFS  漏斗模式的具体流程图(续summary1).md",
     "z-files/Linux_VFS_Internals.pdf",
     "Pasted image 20260528232006.png",
     "Pasted image 20260528231938.png",
     "Pasted image 20260528231314.png",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Summary1-VFS 漏斗模式实现-open流程.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-1： TOP：my summary.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-2：完整介绍(from source code).md",
     "Pasted image 20260528224911.png",
     "Pasted image 20260528224412.png",
     "Pasted image 20260528224102.png",
     "Pasted image 20260528222832.png",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-2：-Initial：outline.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Summary3-VFS  漏斗模式的泛化.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Initial：初始理解FD-struct file.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Summary2-VFS  漏斗模式的具体流程图(续summary1).md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-interface-implements/1. 分层-核心结构-核心APIs-核心场景流程.md",
     "z-files",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/2：devtmpfs.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/1：sysfs-summary.md",
@@ -251,7 +255,6 @@
     "software_project/tools/flow char auto-generated tool- PlantUML(Graphviz).md",
     "software_project/tools/D2 ELK Base.md",
     "software_project/some_concepts/reentry.md",
-    "software_project/SDD_etc/aspice-sdd-summary.md",
     "software_project/tools",
     "software_project/some_concepts",
     "software_project/SDD_etc",
