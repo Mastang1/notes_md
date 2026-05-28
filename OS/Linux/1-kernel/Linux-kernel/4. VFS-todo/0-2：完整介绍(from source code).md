@@ -19,30 +19,7 @@
 
 **注册与挂载序列图**：
 
-```
-sequenceDiagram
-    autonumber
-    participant Kernel as 内核初始化 (Init)
-    participant VFS_Reg as VFS 注册表 (fs/filesystems.c)
-    participant VFS_Mount as VFS 挂载核心 (fs/namespace.c)
-    participant FS_Driver as 底层文件系统 (如 ext4/sysfs)
-
-    Note over Kernel, FS_Driver: 阶段 A: 静态注册营业执照
-    Kernel->>VFS_Reg: register_filesystem(&ext4_fs_type)
-    VFS_Reg->>VFS_Reg: 将 fs_type 挂入内核全局 file_systems 链表
-
-    Note over Kernel, FS_Driver: 阶段 B: 动态挂载并生成超级块
-    Kernel->>VFS_Mount: sys_mount("ext4", "/mnt", "ext4", ...)
-    VFS_Mount->>VFS_Reg: get_fs_type("ext4") (查找注册表)
-    VFS_Mount->>FS_Driver: fs_type->mount() 或 init_fs_context()
-
-    FS_Driver->>FS_Driver: 探查块设备/分配内存，解析底层数据
-    FS_Driver->>FS_Driver: 分配并填充 struct super_block
-    FS_Driver->>FS_Driver: 填充根目录 inode 与 dentry
-    FS_Driver-->>VFS_Mount: 返回初始化完成的 super_block 指针
-
-    VFS_Mount->>VFS_Mount: vfs_get_tree(): 将新超级块拼接至 VFS 统一目录树的 "/mnt"
-```
+![[Pasted image 20260528224102.png]]
 
 ---
 
@@ -52,30 +29,7 @@ sequenceDiagram
 
 **双线建档序列图**：
 
-```
-sequenceDiagram
-    autonumber
-    participant Driver as 设备驱动
-    participant LDM as 设备模型 (drivers/base/core.c)
-    participant Sysfs as Sysfs / Kernfs (fs/sysfs)
-    participant Udev as 用户态 (udevd)
-    participant Devtmpfs as Devtmpfs 引擎 (fs/devtmpfs)
-
-    Driver->>LDM: device_create(class, devt, "my_cdev")
-
-    Note over LDM, Sysfs: 路线 1: 挂载到 sysfs (纯内核态目录树操作)
-    LDM->>Sysfs: kobject_init_and_add() -> sysfs_create_dir_ns()
-    Sysfs->>Sysfs: kernfs_create_dir("my_cdev") (生成目录)
-    LDM->>Sysfs: sysfs_create_file() -> kernfs_create_file()
-    Sysfs->>Sysfs: 在目录中生成 Uevent 等属性文件 (S_ISREG)
-
-    Note over LDM, Devtmpfs: 路线 2: 挂载到 devtmpfs (/dev 下的字符节点)
-    LDM->>Udev: kobject_uevent() (通过 Netlink 广播主次设备号 devt)
-    Udev->>Devtmpfs: 解析 Uevent，执行 mknod("/dev/my_cdev", S_IFCHR, devt)
-    Devtmpfs->>Devtmpfs: 在 /dev 挂载点分配新的 struct inode
-    Devtmpfs->>Devtmpfs: inode->i_mode = S_IFCHR (标记为字符设备)
-    Devtmpfs->>Devtmpfs: inode->i_rdev = devt (固化设备号)
-```
+![[Pasted image 20260528224412.png]]
 
 ---
 
@@ -85,37 +39,4 @@ sequenceDiagram
 
 **VFS Open 穿透底层序列图**：
 
-```
-sequenceDiagram
-    autonumber
-    participant App as 应用程序 (User Space)
-    participant SCI as 系统调用层 (fs/open.c)
-    participant Namei as 路径解析 (fs/namei.c)
-    participant VFS as VFS 核心装配
-    participant CdevMap as cdev_map 路由表 (fs/char_dev.c)
-    participant Target as 目标驱动 (cdev->ops)
-
-    App->>SCI: open("/dev/my_cdev", O_RDWR)
-    SCI->>SCI: do_sys_openat2() -> alloc_empty_file() (分配空 file 结构)
-
-    Note over SCI, Namei: 提取底层实体身份 (inode)
-    SCI->>Namei: path_openat("/dev/my_cdev")
-    Namei->>Namei: link_path_walk() (查 dcache 或底层 FS)
-    Namei-->>SCI: 返回解析成功的 dentry 与对应的 inode
-
-    Note over SCI, VFS: 多态分发：VFS 操作函数挂载
-    SCI->>VFS: vfs_open(path, file)
-    VFS->>VFS: file->f_op = inode->i_fop (赋予文件系统默认操作，如 def_chr_fops)
-
-    Note over VFS, Target: S_ISCHR 分支的特殊路由：操作集替换
-    VFS->>CdevMap: file->f_op->open() -> 触发 chrdev_open(inode, file)
-    CdevMap->>CdevMap: 以 inode->i_rdev (设备号) 为 Key 查找 kobj_map
-    CdevMap-->>VFS: 返回匹配的真实 struct cdev * 指针
-
-    VFS->>VFS: replace_fops(file, cdev->ops) (狸猫换太子，替换 f_op)
-    VFS->>Target: file->f_op->open(inode, file) (直接穿透调用目标驱动 open)
-    Target-->>VFS: 驱动硬件初始化完成
-
-    SCI->>SCI: fd_install(fd, file) (将会话装入进程描述符表)
-    SCI-->>App: 返回文件描述符 fd
-```
+![[Pasted image 20260528224911.png]]
