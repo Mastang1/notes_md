@@ -1,3 +1,5 @@
+## 最完整的讲述[[Linux_VFS_Internals.pdf]]
+## todo： 在cdev执行初始化、注册的过程中的阶段涉及的组件划分
 ## 0. _**从“一切皆文件”的VFS开始
  - 1.  [VFS初始化]VFS 实现统一化的*Interface*，其他文件系统(sysfs/ext4/devtmpfs等)mount到VFS，是为*Implements*，其他文件系统实在kernel初始化过程中mount到VFS；
  - 2. [设备注册]其他文件系统，可以添加文件node到所在文件系统。如：
