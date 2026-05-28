@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-interface-implements/0：老子悟道中....md",
+                "file": "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0：老子悟道中....md",
                 "mode": "source",
                 "source": false
               },
@@ -215,10 +215,13 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "51457bd03964d4d1",
+  "active": "a8549c5e1136ac7c",
   "lastOpenFiles": [
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-interface-implements/1. 分层-核心结构-核心APIs-核心场景流程.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-interface-implements/0：老子悟道中....md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0：VFS添加type mount指定文件系统.md",
+    "Pasted image 20260529002416.png",
+    "Pasted image 20260529002341.png",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0：老子悟道中....md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/1. 分层-核心结构-核心APIs-核心场景流程.md",
     "Pasted image 20260529000051.png",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Initial：初始理解FD-struct file.md",
     "OS/Linux/1-kernel/Linux-kernel/4..md",
@@ -254,14 +257,11 @@
     "temp.md",
     "software_project/tools/word operation library python-docx.md",
     "software_project/tools/flow char auto-generated tool- PlantUML(Graphviz).md",
-    "software_project/tools/D2 ELK Base.md",
     "software_project/tools",
     "software_project/some_concepts",
     "software_project/SDD_etc",
     "software_project/SAD_etc",
     "software_project/QAC",
-    "mermaid-diagram.png",
-    "mermaid-diagram l.png",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
     "Untitled.canvas"
   ]
