@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a2fb6ca5add1aa12",
+        "id": "04d780241b15f071",
         "type": "tabs",
         "children": [
           {
-            "id": "efab0281f709c6ad",
+            "id": "4a5c737d67618fc4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/cdev_ana/0：My heart model.md",
+                "file": "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/6. device_add().md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0：My heart model"
+              "title": "6. device_add()"
             }
           }
         ]
@@ -201,9 +201,29 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "efab0281f709c6ad",
+  "active": "4a5c737d67618fc4",
   "lastOpenFiles": [
+    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/5-create_device-2 剖析：为什么 回旋镖todo.md",
+    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/5-create_device-1 剖析：基本流程+回旋镖todo.md",
+    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/4.     Data of CDEV及完整流程.md",
+    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.2.2 逻辑device的QA.md",
+    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.2.1  device_create 中的逻辑 device.md",
+    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/2. 相关的 structures LDM & class.md",
+    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/1. 相关的 structures(to add flow) 1.md",
+    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/0. summary.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-1： TOP：my summary.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-2：-Initial：outline.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-3：完整介绍(from source code).md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Initial：初始理解FD-struct file.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Summary1-VFS 漏斗模式实现-open流程.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Summary2-VFS  漏斗模式的具体流程图(续summary1).md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Summary3-VFS  漏斗模式的泛化.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/02：mknod过程.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/03：inode的兜底operations解密.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/1. 分层-核心结构-核心APIs-核心场景流程.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/01：VFS添加type mount指定文件系统.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0：老子悟道中....md",
+    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/6. device_add().md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/cdev_ana/0：My heart model.md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/cdev_ana",
     "Pasted image 20260529002416.png",
@@ -216,18 +236,7 @@
     "Pasted image 20260528224412.png",
     "Pasted image 20260528224102.png",
     "Pasted image 20260528222832.png",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/1. 分层-核心结构-核心APIs-核心场景流程.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/03：inode的兜底operations解密.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/02：mknod过程.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/01：VFS添加type mount指定文件系统.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Summary3-VFS  漏斗模式的泛化.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Summary2-VFS  漏斗模式的具体流程图(续summary1).md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Summary1-VFS 漏斗模式实现-open流程.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/1-Initial：初始理解FD-struct file.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-3：完整介绍(from source code).md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-2：-Initial：outline.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-1： TOP：my summary.md",
     "z-files/Linux_VFS_Internals.pdf",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-00--TOP：my summary.md",
     "temp.md",
@@ -236,18 +245,9 @@
     "z-files",
     "新建文件夹",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-Summary3-VFS  漏斗模式的泛化.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-Summary2-VFS  漏斗模式的具体流程图(续summary1).md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-Summary1-VFS 漏斗模式实现-open流程.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/2：devtmpfs.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/1：initial-sysfs（todo）.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/1：sysfs-summary.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements/未命名",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-interface-implements/1. 分层-核心结构-核心APIs-核心场景流程.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/implements",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-00TOP：VFS(interface) - 其他文件系统(implement).md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/some_fs",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-interface-implements",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-Summar1-VFS 漏斗模式实现-open流程.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-Initial：初始理解FD-struct file.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
     "Untitled.canvas"

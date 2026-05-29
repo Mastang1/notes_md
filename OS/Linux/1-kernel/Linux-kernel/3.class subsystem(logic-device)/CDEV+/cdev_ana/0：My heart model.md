@@ -15,7 +15,15 @@
  - 5. _**struct device *device_create(const struct class *class, struct device *parent,
                  dev_t devt, void *drvdata, const char *fmt, ...)**_, 目前已知的核心有俩，在sysfs创建dentery(/sys/class/my_first_driver)，在通过user space执行mknod在devtmpfs挂载dentry(/dev/my_first_driver),其中mknod是核心；
 
+补充
+```c
+# hello
 
+
+```
+
+
+---
 ## 2. Open到最终调用driver operations的open指针流程
  - VFS获取到inode，inode在mknode时候赋值了一个i_ops；先调用i_ops->open操作，跟cdev范围打交道，查map，获取到cdev对象，进行赋值，绑定
  - 
