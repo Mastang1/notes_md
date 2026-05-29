@@ -3,5 +3,8 @@
  - 通过kobject的kernfs_node成员作为sysfs生成inode的本体；
  - 通过device中的私有的list_node实现不同的文件层级及同级关联；
 
+![[Pasted image 20260530004159.png]]
+
+
 
 ![[Pasted image 20260530002620.png]]
