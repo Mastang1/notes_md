@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/1-kernel/Linux-kernel/MMU-VM ：Lazy Allocation（极致拖延症）.md",
+                "file": "OS/Linux/1-kernel/ing🗒️.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MMU-VM ：Lazy Allocation（极致拖延症）"
+              "title": "ing🗒️"
             }
           }
         ]
@@ -203,9 +203,9 @@
   },
   "active": "4a5c737d67618fc4",
   "lastOpenFiles": [
+    "OS/Linux/1-kernel/Linux-kernel/MMU-VM ：Lazy Allocation（极致拖延症）.md",
     "Pasted image 20260601164322.png",
     "OS/Linux/1-kernel/mr-library-notes/未命名.md",
-    "OS/Linux/1-kernel/Linux-kernel/MMU-VM ：Lazy Allocation（极致拖延症）.md",
     "OS/Linux/1-kernel/Linux-kernel/未命名",
     "OS/Linux/1-kernel/ing🗒️.md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/cdev_ana/0：My heart model☀️.md",
@@ -240,7 +240,6 @@
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-2：-Initial：outline.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-3：完整介绍(from source code).md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/cdev_ana",
-    "Pasted image 20260529002416.png",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana",
     "z-files/Linux_VFS_Internals.pdf",
     "z-files/未确认 166319.crdownload",
