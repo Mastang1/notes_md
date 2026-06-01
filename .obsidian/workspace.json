@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/1-kernel/Linux-kernel/5.APIs/1. wait_queue.md",
+                "file": "OS/Linux/1-kernel/Linux-kernel/5.APIs/1. wait_queue（todo SELECT POLL  EPOLL☁️）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. wait_queue"
+              "title": "1. wait_queue（todo SELECT POLL  EPOLL☁️）"
             }
           }
         ]
@@ -203,8 +203,9 @@
   },
   "active": "42a85302bcb4790b",
   "lastOpenFiles": [
+    "Pasted image 20260601231733.png",
     "OS/Linux/1-kernel/Linux-kernel/0. kernel_modules-notes/0-TOP-kernel 分层及组件概览.md",
-    "OS/Linux/1-kernel/Linux-kernel/5.APIs/1. wait_queue.md",
+    "OS/Linux/1-kernel/Linux-kernel/5.APIs/1. wait_queue（todo SELECT POLL  EPOLL☁️）.md",
     "OS/Linux/1-kernel/Linux-kernel/5.APIs",
     "OS/Linux/1-kernel/Linux-kernel/0. kernel_modules-notes/1：基于kobject的多list视图概览.md",
     "OS/Linux/1-kernel/Linux-kernel/0. kernel_modules-notes/2. 与LDM相关的组件边界界定.md",
@@ -230,7 +231,6 @@
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/some_fs/FS🗂️(所有文件系统 伪文件系统).md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/1(devtmpfs sysfs) device  AND kobject.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：VFS添加type mount指定文件系统.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/1(devtmpfs sysfs) heart model🚩FS链接 分层.md",
     "Pasted image 20260530010332.png",
     "z-files/Linux_VFS_Internals.pdf",
     "Pasted image 20260530010220.png",
