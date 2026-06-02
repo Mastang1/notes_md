@@ -1,8 +1,13 @@
 ## 1. 个人理解
  - 1.  业务功能：通过UIO子设备延迟绑定实现VFS的 文件接口，核心功能是提供了：基于mmap的user直接内存访问；基于kernel wait_queue实现的中断信号通知到user空间（基于read接口）；
  - 2. VFS接口路由架构：在uio.c这个uio单元中，创建名为uio的cdev的master设备，分配了class、cdev的operations；执行master的open中，进行子设备号的查找、路由，具体参考2.1；
-	 - 2.1 子设备注册：(以cdev的add_device为锚点)
-	 - 2.2 子设备open：
+	 - 2.1 子设备注册： 
+
+**IDR 是啥？** IDR（Integer ID Management）是 Linux 内核里的一种**高效数据结构（基数树 Radix Tree）**。 它的唯一作用就是：**把一个整数（ID）映射到一个指针（内存地址）上**。在 UIO 框架里，它专门用来把 **“次设备号（Minor）”** 映射到 **“子设备对象（****uio_device** **指针）”** 上。
+
+
+
+- 2.2 子设备open：
  - 3.  子设备管理实现(其他子设备管理是否也是相同架构)：
 
 
