@@ -201,8 +201,9 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "42a85302bcb4790b",
+  "active": "51457bd03964d4d1",
   "lastOpenFiles": [
+    "OS/Linux/plan.md",
     "conflict-files-obsidian-git.md",
     "OS/Linux/1-kernel/Linux-kernel/MMU-VM ：Lazy Allocation（极致拖延症）.md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems/UIO.md",
@@ -232,7 +233,6 @@
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/poll：A Choice For File⌛(todo分析不到位).md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/1. Subsystem：UIO⌛(todo：深入分析子设备分配 路由机制).md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/0：about CLASS device & PHY device.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/some_fs/FS🗂️(所有文件系统 伪文件系统).md",
     "Pasted image 20260530010332.png",
     "z-files/Linux_VFS_Internals.pdf",
     "Pasted image 20260530010220.png",
