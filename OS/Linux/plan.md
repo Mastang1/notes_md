@@ -95,17 +95,17 @@ DTS：dtb → device_node → platform_device → devm_* 资源提取
 
 **明确缺口（必须补）**
 
-| 优先级 | 模块 | 面试风险 |
-|--------|------|----------|
-| P0 | DMA + Cache 一致性 | ★★★★★ |
-| P0 | 进程调度 + 内存管理 | ★★★★★ |
-| P0 | SMP 锁 + RCU | ★★★★ |
-| P1 | 中断完整链路（GIC/IRQ domain） | ★★★★ |
-| P1 | select/poll/epoll 深度 | ★★★★ |
-| P1 | 可展示驱动项目 | ★★★★★ |
-| P2 | NAPI / 网络驱动 | ★★★ |
-| P2 | remoteproc / rpmsg | ★★★ |
-| P3 | U-Boot 深度 | ★★ 懂流程即可 |
+| 优先级 | 模块                     | 面试风险     |
+| --- | ---------------------- | -------- |
+| P0  | DMA + Cache 一致性        | ★★★★★    |
+| P0  | 进程调度 + 内存管理            | ★★★★★    |
+| P0  | SMP 锁 + RCU            | ★★★★     |
+| P1  | 中断完整链路（GIC/IRQ domain） | ★★★★     |
+| P1  | select/poll/epoll 深度   | ★★★★     |
+| P1  | 可展示驱动项目                | ★★★★★    |
+| P2  | NAPI / 网络驱动            | ★★★      |
+| P2  | remoteproc / rpmsg     | ★★★      |
+| P3  | U-Boot 深度              | ★★ 懂流程即可 |
 
 ### 1.3 竞争力定位
 
