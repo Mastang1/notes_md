@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems/UIO.md",
+                "file": "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0-4：附加用法的笔记（控制及数据流）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UIO"
+              "title": "0-4：附加用法的笔记（控制及数据流）"
             }
           }
         ]
@@ -203,8 +203,10 @@
   },
   "active": "4a5c737d67618fc4",
   "lastOpenFiles": [
-    "OS/Linux/plan.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-1： TOP：my summary.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0-4：附加用法的笔记（控制及数据流）.md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems/UIO.md",
+    "OS/Linux/plan.md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems/0：Architecture Of Kernel Sub-system(on the way).md",
     "OS/Linux/1-kernel/Linux-kernel/5.APIs/1. wait_queue（todo SELECT POLL  EPOLL☁️）.md",
     "OS/Linux/1-kernel/ing🗒️.md",
@@ -239,8 +241,6 @@
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/4.     Data of CDEV及完整流程.md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.2.2 逻辑device的QA.md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/3.2.1  device_create 中的逻辑 device.md",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/2. 相关的 structures LDM & class.md",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/1. 相关的 structures(to add flow) 1.md",
     "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/cdev_ana",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana",
     "z-files/Linux_VFS_Internals.pdf",
