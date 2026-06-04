@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "87ac6fd65c51937f",
+        "id": "04d780241b15f071",
         "type": "tabs",
         "children": [
           {
-            "id": "42a85302bcb4790b",
+            "id": "4a5c737d67618fc4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/2-u-boot/tmp.md",
+                "file": "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：附加用法的笔记（控制及数据流）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tmp"
+              "title": "0(VFS)：附加用法的笔记（控制及数据流）"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "inode",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,7 +71,7 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "书签"
+              "title": "Bookmarks"
             }
           },
           {
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 435.5
+    "width": 346.5110321044922
   },
   "right": {
     "id": "8efccc928838709e",
@@ -189,6 +189,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -197,58 +198,57 @@
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
       "bases:新建数据库": false,
-      "obsidian-git:Open Git source control": false,
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "42a85302bcb4790b",
+  "active": "4a5c737d67618fc4",
   "lastOpenFiles": [
-    "OS/Linux/plan.md",
-    "OS/Linux/2-u-boot/tmp.md",
-    "OS/Linux/2-u-boot",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems/UIO.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0-4：附加用法的笔记（控制及数据流）.md",
-    "conflict-files-obsidian-git.md",
-    "OS/Linux/1-kernel/Linux-kernel/MMU-VM ：Lazy Allocation（极致拖延症）.md",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems/0：Architecture Of Kernel Sub-system(on the way).md",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems",
-    "OS/Linux/1-kernel/Linux-kernel/5.APIs/1. wait_queue（todo SELECT POLL  EPOLL☁️）.md",
-    "Pasted image 20260601231733.png",
-    "OS/Linux/1-kernel/Linux-kernel/0. kernel_modules-notes/0-TOP-kernel 分层及组件概览.md",
-    "OS/Linux/1-kernel/Linux-kernel/5.APIs",
-    "OS/Linux/1-kernel/Linux-kernel/0. kernel_modules-notes/1：基于kobject的多list视图概览.md",
-    "OS/Linux/1-kernel/Linux-kernel/0. kernel_modules-notes/2. 与LDM相关的组件边界界定.md",
-    "OS/Linux/1-kernel/Linux-kernel/0. kernel_modules-notes/VFS operations.md",
-    "OS/Linux/1-kernel/ing🗒️.md",
-    "Pasted image 20260601164322.png",
-    "OS/Linux/1-kernel/mr-library-notes/未命名.md",
-    "OS/Linux/1-kernel/mr-library-notes/my-idea-for-device_driver_framework.md",
-    "OS/Linux/cursor_response_notes/003_bus_dev_drv_links.md",
-    "OS/Linux/cursor_response_notes/002_ldm_boot_insmod_plt.md",
-    "OS/Linux/cursor_response_notes/001_ipc_plt_ldm_entry.md",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/0. device_add()——核心对象是 device☀️.md",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/cdev_ana/0：My heart model☀️.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：老子悟道中... 🛻VFS-device(全流程逻辑).md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：附加用法的笔记（控制及数据流）.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-3：完整介绍(from source code).md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-2：-Initial：outline.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-1： TOP：my summary.md",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/0. summary☀️.md",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/5-create_device-1 剖析：基本流程+回旋镖todo.md",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/5-create_device-2 剖析：为什么 回旋镖todo.md",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/poll：A Choice For File⌛(todo分析不到位).md",
-    "Pasted image 20260530010332.png",
-    "z-files/Linux_VFS_Internals.pdf",
-    "Pasted image 20260530010220.png",
-    "Pasted image 20260530004159.png",
-    "Pasted image 20260530002620.png",
-    "Pasted image 20260530001951.png",
-    "Pasted image 20260529180104.png",
-    "Pasted image 20260529174703.png",
-    "Pasted image 20260529174117.png",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/some_fs",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/CDEV+/cdev_ana",
-    "z-files",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/03：inode的兜底operations解密.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/02：mknod过程.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：VFS添加type mount指定文件系统.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/some_fs/FS🗂️(所有文件系统 伪文件系统).md",
+    "OS/Linux/1-kernel/Linux-kernel/5.APIs/1. wait_queue（todo SELECT POLL  EPOLL☁️）.md",
+    "OS/Linux/1-kernel/ing🗒️.md",
+    "OS/Linux/2-u-boot/tmp.md",
     "如何真正理解任何事.mp4",
+    "z-files/Linux_VFS_Internals.pdf",
+    "z-files",
+    "tool_chains/git-gerrit/release latest history.md",
+    "tool_chains/git-gerrit/Interactive Rebase.md",
+    "tool_chains/git-gerrit/git代码发布步骤.md",
+    "tool_chains/git-gerrit/gerrit-flow.md",
+    "tool_chains/git-gerrit/conflict_process_gerrit_merge.md",
+    "tool_chains/makefile.md",
+    "tool_chains/linker.md",
     "tool_chains/git-gerrit",
     "tool_chains",
+    "temp.md",
+    "software_project/tools/D2 ELK Base.md",
+    "software_project/tools/word operation library python-docx.md",
+    "software_project/tools/flow char auto-generated tool- PlantUML(Graphviz).md",
+    "software_project/some_concepts/reentry.md",
+    "software_project/SDD_etc/aspice-sdd-summary.md",
+    "software_project/SDD_etc/architecture -and- detailed design.md",
+    "software_project/tools",
+    "software_project/some_concepts",
+    "software_project/SDD_etc",
+    "software_project/SAD_etc",
+    "software_project/QAC",
+    "mermaid-diagram.png",
+    "mermaid-diagram l.png",
+    "autosar/lin_flow_char.png",
+    "autosar/layers.PNG",
+    "SWC RTE LINIF Data Pipeline-2026-05-13-034056.png",
+    "SWC RTE LINIF Data Pipeline-2026-05-13-021102.png",
+    "Pasted image 20260601231733.png",
+    "Pasted image 20260601164322.png",
+    "Pasted image 20260530010332.png",
+    "Pasted image 20260530010220.png",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
     "Untitled.canvas"
   ]
