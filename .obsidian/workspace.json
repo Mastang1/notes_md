@@ -203,6 +203,7 @@
   },
   "active": "87f5f305549fa7ee",
   "lastOpenFiles": [
+    "Pasted image 20260604181603.png",
     "coding_notes/Guard clauses and Early Exit.md",
     "coding_notes/c1-boot 链路总结.md",
     "foreign/methods.md",
@@ -235,7 +236,6 @@
     "tool_chains/git-gerrit/git代码发布步骤.md",
     "tool_chains/git-gerrit/gerrit-flow.md",
     "tool_chains/git-gerrit/conflict_process_gerrit_merge.md",
-    "tool_chains/makefile.md",
     "tool_chains/git-gerrit",
     "tool_chains",
     "software_project/tools",
