@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "blob",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +88,8 @@
               "title": "cmd-copy-to-multi"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -201,7 +202,7 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "882d73700d97586b",
+  "active": "9bfda3c6cf606100",
   "lastOpenFiles": [
     "OS/components/mm-newlib-analysis.md",
     "Pasted image 20260604103404.png",
