@@ -88,8 +88,7 @@
               "title": "cmd-copy-to-multi"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -202,7 +201,7 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "9bfda3c6cf606100",
+  "active": "882d73700d97586b",
   "lastOpenFiles": [
     "OS/components/mm-newlib-analysis.md",
     "Pasted image 20260604103404.png",
