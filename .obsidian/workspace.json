@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ARM/0. cortex-M 架构模板.md",
+                "file": "ARM/0.cortex-A memory架构模板.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0. cortex-M 架构模板"
+              "title": "0.cortex-A memory架构模板"
             }
           }
         ]
@@ -203,10 +203,13 @@
   },
   "active": "87f5f305549fa7ee",
   "lastOpenFiles": [
-    "ARM/Hardware Spinlock.md",
-    "ARM/0. cortex-M 架构模板.md",
-    "ARM/嵌入式中的字节对齐场景说明QA.md",
+    "Pasted image 20260608160304.png",
+    "ARM/0. cortex-M memory架构模板.md",
+    "ARM/0.cortex-A memory架构模板.md",
+    "Pasted image 20260608160142.png",
     "ARM/c1/memory_map.md",
+    "ARM/Hardware Spinlock.md",
+    "ARM/嵌入式中的字节对齐场景说明QA.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/1(devtmpfs sysfs) heart model🚩FS链接 分层.md",
     "ARM/c1",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：VFS添加type mount指定文件系统.md",
@@ -234,8 +237,6 @@
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/02：mknod过程.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/some_fs/FS🗂️(所有文件系统 伪文件系统).md",
     "OS/Linux/1-kernel/Linux-kernel/5.APIs/1. wait_queue（todo SELECT POLL  EPOLL☁️）.md",
-    "OS/Linux/1-kernel/ing🗒️.md",
-    "OS/Linux/2-u-boot/tmp.md",
     "如何真正理解任何事.mp4",
     "z-files/Linux_VFS_Internals.pdf",
     "z-files",
@@ -248,7 +249,6 @@
     "autosar/lin_flow_char.png",
     "autosar/layers.PNG",
     "SWC RTE LINIF Data Pipeline-2026-05-13-034056.png",
-    "SWC RTE LINIF Data Pipeline-2026-05-13-021102.png",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
     "Untitled.canvas"
   ]
