@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/1(devtmpfs sysfs) heart model🚩FS链接 分层.md",
+                "file": "ARM/c1/memory_map.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1(devtmpfs sysfs) heart model🚩FS链接 分层"
+              "title": "memory_map"
             }
           }
         ]
@@ -203,6 +203,9 @@
   },
   "active": "87f5f305549fa7ee",
   "lastOpenFiles": [
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/1(devtmpfs sysfs) heart model🚩FS链接 分层.md",
+    "ARM/c1/memory_map.md",
+    "ARM/c1",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：VFS添加type mount指定文件系统.md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：老子悟道中... 🛻VFS-device(全流程逻辑).md",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：附加用法的笔记（控制及数据流）.md",
@@ -236,13 +239,10 @@
     "tool_chains/git-gerrit/release latest history.md",
     "tool_chains/git-gerrit/Interactive Rebase.md",
     "tool_chains/git-gerrit/git代码发布步骤.md",
-    "tool_chains/git-gerrit/gerrit-flow.md",
-    "tool_chains/git-gerrit/conflict_process_gerrit_merge.md",
     "tool_chains/git-gerrit",
     "tool_chains",
     "software_project/tools",
     "software_project/some_concepts",
-    "software_project/SDD_etc",
     "mermaid-diagram.png",
     "mermaid-diagram l.png",
     "autosar/lin_flow_char.png",
