@@ -4,4 +4,11 @@
  - 3. 串行启动(flashtool show time)：HSE核心启动、接收flash_loader.bin到ram中；BSE core操作启动cm7_0,跳转到flash_loader.bin执行；进入到flash_tool交互模式，通过发送 命令及参数开启文件传输及数据存储(qspi/sd/emmc)；注意：flash_loader在ram中。（一次串行启动完成所有传输）
  - 4. QSPI启动模式启动：HSE启动，执行boot流程，查询IVT，HES core执行HSE firmware，CM7_0执行bootloader代码，bootloader根据固定便宜位置的app地址及跳转地址执行顺序加载多核运行；
 
+
+## boot ROM烧写flash_loader流程
+![[Pasted image 20260608094542.png]]
+
+
+## 链路流程
+
 ![[Pasted image 20260604181603.png]]
