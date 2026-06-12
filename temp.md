@@ -21,4 +21,8 @@ struct kobj_attribute {
              const char *buf, size_t count);
 
 };
+全系统场景ICPS系统测试API开发任务
+   - 1. 完成全系统场景工程基于mk文件的IPCS driver source加入makefile方式；
+     2. 在mcdOs适配层增加mcdOsDelayMs()接口；
+     3. 与系统测试同事沟通
 ```
