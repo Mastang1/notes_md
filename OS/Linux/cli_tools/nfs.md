@@ -1,0 +1,1 @@
+mount -t nfs -o nolock,vers=4 192.168.199.182:/home/niki/linux/nfs /mnt/nfs
