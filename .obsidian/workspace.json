@@ -11,10 +11,14 @@
             "id": "1b0c80b7f7bdbd1e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "ARM/BL/0-pre：完整的startup流程 心智模型.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "0-pre：完整的startup流程 心智模型"
             }
           }
         ]
@@ -199,15 +203,15 @@
   },
   "active": "1b0c80b7f7bdbd1e",
   "lastOpenFiles": [
+    "ARM/c1/memory_map.md",
+    "ARM/BL/0-pre：完整的startup流程 心智模型.md",
     "software_project/QAC/Helix-Q&A.md",
     "autosar/lin_etc/质量管理流程图.md",
     "temp.md",
-    "ARM/BL/0-pre：完整的startup流程 心智模型.md",
     "OS/Linux/3-practice/Build Kernel and Module.md",
     "ARM/BL",
     "OS/Linux/2-u-boot/tmp.md",
     "ARM/0. cortex-M memory架构模板.md",
-    "ARM/c1/memory_map.md",
     "ARM/0.cortex-A memory架构模板.md",
     "OS/Linux/3-practice",
     "Pasted image 20260608160304.png",
