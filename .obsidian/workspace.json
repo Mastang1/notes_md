@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ARM/BL/C1 boot etc.md",
+                "file": "ARM/BL/u-boot ： reference.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C1 boot etc"
+              "title": "u-boot ： reference"
             }
           }
         ]
@@ -203,15 +203,17 @@
   },
   "active": "1b0c80b7f7bdbd1e",
   "lastOpenFiles": [
-    "ARM/BL/0-pre：完整的startup流程 心智模型.md",
+    "OS/Linux/2-u-boot/tmp.md",
+    "ARM/BL/u-boot ： reference.md",
+    "OS/Linux/2-u-boot.md",
     "ARM/BL/C1 boot etc.md",
+    "ARM/BL/0-pre：完整的startup流程 心智模型.md",
     "ARM/c1/memory_map.md",
     "software_project/QAC/Helix-Q&A.md",
     "autosar/lin_etc/质量管理流程图.md",
     "temp.md",
     "OS/Linux/3-practice/Build Kernel and Module.md",
     "ARM/BL",
-    "OS/Linux/2-u-boot/tmp.md",
     "ARM/0. cortex-M memory架构模板.md",
     "ARM/0.cortex-A memory架构模板.md",
     "OS/Linux/3-practice",
@@ -237,9 +239,7 @@
     "OS/components",
     "OS/RTOS/Notification.md",
     "OS/RTOS/mutex-vs-semaphore.md",
-    "OS/RTOS/global.md",
     "OS/RTOS",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-3：完整介绍(from source code).md",
     "如何真正理解任何事.mp4",
     "z-files/Linux_VFS_Internals.pdf",
     "z-files",
