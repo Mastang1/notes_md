@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f43e202b17d7230d",
+        "id": "144d809b5ce17f6d",
         "type": "tabs",
         "children": [
           {
-            "id": "842c0755743c9491",
+            "id": "1a3ea31c0fc16d6f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS/Linux/cli_tools/nfs.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "nfs"
+              "title": "新标签页"
             }
           }
         ]
@@ -53,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "inode",
+                "query": "qac",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,7 +67,7 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "书签"
+              "title": "Bookmarks"
             }
           },
           {
@@ -92,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 435.5
+    "width": 425.5
   },
   "right": {
     "id": "8efccc928838709e",
@@ -189,6 +185,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -197,57 +194,57 @@
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
       "bases:新建数据库": false,
-      "obsidian-git:Open Git source control": false,
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "842c0755743c9491",
+  "active": "1a3ea31c0fc16d6f",
   "lastOpenFiles": [
-    "OS/Linux/2-u-boot/Learning Tasks(TODO).md",
+    "OS/Linux/0-user_space/some_operations/user space init a kernel module.md",
+    "tool_chains/makefile.md",
+    "coding_notes/c1-boot 链路总结.md",
+    "coding_notes/Guard clauses and Early Exit.md",
+    "OS/Linux/3-practice/Build Kernel and Module.md",
+    "OS/Linux/Embedded_Linux_Boot_Blueprint.pdf",
+    "OS/Linux/plan.md",
+    "OS/Linux/2-u-boot/0-Summary.md",
+    "ARM/BL/u-boot ： reference.md",
     "Pasted image 20260615235720.png",
     "Pasted image 20260615235611.png",
-    "OS/Linux/2-u-boot/0-Summary.md",
-    "OS/Linux/cli_tools/nfs.md",
-    "OS/Linux/cli_tools",
     "Pasted image 20260615225216.png",
     "Pasted image 20260615222332.png",
-    "OS/Linux/Embedded_Linux_Boot_Blueprint.pdf",
-    "OS/Linux/1-kernel/Linux-kernel/5.APIs/1. wait_queue（todo SELECT POLL  EPOLL☁️）.md",
-    "OS/Linux/Embedded_Linux_Boot_Blueprint.pdf.crdownload",
-    "OS/Linux/1-kernel/mr-library-notes/1. MR-outline.md",
-    "OS/Linux/1-kernel/mr-library-notes/未命名.md",
-    "OS/Linux/1-kernel/ing🗒️.md",
-    "ARM/BL/u-boot ： reference.md",
+    "OS/Linux/cli_tools/nfs.md",
+    "OS/Linux/cli_tools",
+    "OS/Linux/2-u-boot/Learning Tasks(TODO).md",
+    "OS/Linux/2-u-boot/tmp.md",
+    "OS/Linux/2-u-boot.md",
     "ARM/BL/C1 boot etc.md",
-    "OS/Linux/3-practice/Build Kernel and Module.md",
-    "OS/Linux/3-practice/practice.md",
     "ARM/BL/0-pre：完整的startup流程 心智模型.md",
+    "ARM/c1/memory_map.md",
+    "software_project/QAC/Helix-Q&A.md",
+    "autosar/lin_etc/质量管理流程图.md",
+    "temp.md",
     "ARM/BL",
+    "ARM/0. cortex-M memory架构模板.md",
     "ARM/0.cortex-A memory架构模板.md",
     "OS/Linux/3-practice",
-    "ARM/0. cortex-M memory架构模板.md",
-    "coding_notes/c1-boot 链路总结.md",
     "Pasted image 20260608160304.png",
     "Pasted image 20260608160142.png",
+    "ARM/Hardware Spinlock.md",
+    "ARM/嵌入式中的字节对齐场景说明QA.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/1(devtmpfs sysfs) heart model🚩FS链接 分层.md",
+    "ARM/c1",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：VFS添加type mount指定文件系统.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：老子悟道中... 🛻VFS-device(全流程逻辑).md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：附加用法的笔记（控制及数据流）.md",
     "Pasted image 20260608094542.png",
     "Pasted image 20260604181603.png",
     "Pasted image 20260604103404.png",
     "Pasted image 20260604103343.png",
-    "OS/components/mm-newlib-analysis.md",
     "OS/components",
-    "OS/RTOS/Notification.md",
-    "OS/RTOS/mutex-vs-semaphore.md",
-    "OS/RTOS/global.md",
     "OS/RTOS",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：附加用法的笔记（控制及数据流）.md",
-    "ARM/c1/memory_map.md",
-    "ARM/c1",
-    "-Beyond Tech/Theories.md",
-    "OS/Linux/plan.md",
-    "OS/Linux/2-u-boot",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems/UIO.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0-4：附加用法的笔记（控制及数据流）.md",
-    "OS/Linux/1-kernel/Linux-kernel/3.class subsystem(logic-device)/sub-systems",
+    "如何真正理解任何事.mp4",
+    "z-files/Linux_VFS_Internals.pdf",
+    "z-files",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
     "Untitled.canvas"
   ]
