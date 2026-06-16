@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/2-u-boot/0-Summary.md",
+                "file": "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-1： TOP：my summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0-Summary"
+              "title": "0-1： TOP：my summary"
             }
           }
         ]
@@ -203,6 +203,10 @@
   },
   "active": "1a3ea31c0fc16d6f",
   "lastOpenFiles": [
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/some_fs/FS🗂️(所有文件系统 伪文件系统).md",
+    "OS/Linux/1-kernel/ing🗒️.md",
+    "OS/Linux/2-u-boot/0-Summary.md",
+    "OS/Linux/2-u-boot/Learning Tasks(TODO).md",
     "OS/Linux/3-practice/Build Kernel and Module.md",
     "OS/Linux/1-kernel/Linux-kernel/100. etc/prefix： like ‘i_’.md",
     "Languages/c/产品级结构化数据传输方案-Nanopb库.md",
@@ -212,7 +216,6 @@
     "coding_notes/Guard clauses and Early Exit.md",
     "OS/Linux/Embedded_Linux_Boot_Blueprint.pdf",
     "OS/Linux/plan.md",
-    "OS/Linux/2-u-boot/0-Summary.md",
     "ARM/BL/u-boot ： reference.md",
     "Pasted image 20260615235720.png",
     "Pasted image 20260615235611.png",
@@ -220,7 +223,6 @@
     "Pasted image 20260615222332.png",
     "OS/Linux/cli_tools/nfs.md",
     "OS/Linux/cli_tools",
-    "OS/Linux/2-u-boot/Learning Tasks(TODO).md",
     "OS/Linux/2-u-boot/tmp.md",
     "OS/Linux/2-u-boot.md",
     "ARM/BL/C1 boot etc.md",
@@ -237,9 +239,7 @@
     "Pasted image 20260608160142.png",
     "ARM/Hardware Spinlock.md",
     "ARM/嵌入式中的字节对齐场景说明QA.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/1(devtmpfs sysfs) heart model🚩FS链接 分层.md",
     "ARM/c1",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/vfs-ana/0(VFS)：VFS添加type mount指定文件系统.md",
     "Pasted image 20260608094542.png",
     "Pasted image 20260604181603.png",
     "Pasted image 20260604103404.png",
