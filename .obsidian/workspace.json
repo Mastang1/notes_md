@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test_etc/shared memory test.md",
+                "file": "coding_knowledge/NAPI 中断+软中断（polling）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "shared memory test"
+              "title": "NAPI 中断+软中断（polling）"
             }
           }
         ]
@@ -203,8 +203,10 @@
   },
   "active": "1a3ea31c0fc16d6f",
   "lastOpenFiles": [
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-1： TOP：my summary.md",
+    "Pasted image 20260618162819.png",
     "test_etc/shared memory test.md",
+    "coding_knowledge/NAPI 中断+软中断（polling）.md",
+    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-1： TOP：my summary.md",
     "test_etc",
     "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/some_fs/FS🗂️(所有文件系统 伪文件系统).md",
     "OS/Linux/1-kernel/ing🗒️.md",
@@ -215,8 +217,8 @@
     "Languages/c/产品级结构化数据传输方案-Nanopb库.md",
     "OS/Linux/0-user_space/some_operations/user space init a kernel module.md",
     "tool_chains/makefile.md",
-    "coding_notes/c1-boot 链路总结.md",
-    "coding_notes/Guard clauses and Early Exit.md",
+    "coding_knowledge/c1-boot 链路总结.md",
+    "coding_knowledge/Guard clauses and Early Exit.md",
     "OS/Linux/Embedded_Linux_Boot_Blueprint.pdf",
     "OS/Linux/plan.md",
     "ARM/BL/u-boot ： reference.md",
@@ -235,8 +237,6 @@
     "autosar/lin_etc/质量管理流程图.md",
     "temp.md",
     "ARM/BL",
-    "ARM/0. cortex-M memory架构模板.md",
-    "ARM/0.cortex-A memory架构模板.md",
     "OS/Linux/3-practice",
     "Pasted image 20260608160304.png",
     "Pasted image 20260608160142.png",
