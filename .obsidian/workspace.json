@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0a61dac814da82f4",
+        "id": "5ed98c73c4c686ab",
         "type": "tabs",
         "children": [
           {
-            "id": "b49270df236e675f",
+            "id": "fd2dfe2851168f9c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ARM/INTERRUPT_AND_EXCEPTION/0-Interrupt flow and some features.md",
+                "file": "ARM/INTERRUPT_AND_EXCEPTION/0-mcu总线.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0-Interrupt flow and some features"
+              "title": "0-mcu总线"
             }
           }
         ]
@@ -201,11 +201,12 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "b49270df236e675f",
+  "active": "fd2dfe2851168f9c",
   "lastOpenFiles": [
+    "ARM/INTERRUPT_AND_EXCEPTION/0-mcu总线.md",
     "ARM/INTERRUPT_AND_EXCEPTION/0-中断风暴 总线风暴.md",
-    "Languages/shell/cmd-copy-to-multi.md",
     "ARM/INTERRUPT_AND_EXCEPTION/0-Interrupt flow and some features.md",
+    "Languages/shell/cmd-copy-to-multi.md",
     "ARM/Hardware Spinlock.md",
     "coding_knowledge/T32-add threadx menu.md",
     "Pasted image 20260622111720.png",
@@ -233,7 +234,6 @@
     "coding_knowledge/Guard clauses and Early Exit.md",
     "OS/Linux/Embedded_Linux_Boot_Blueprint.pdf",
     "OS/Linux/plan.md",
-    "ARM/BL/u-boot ： reference.md",
     "Pasted image 20260615235720.png",
     "Pasted image 20260615235611.png",
     "Pasted image 20260615225216.png",
