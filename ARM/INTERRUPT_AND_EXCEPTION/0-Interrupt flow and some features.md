@@ -3,8 +3,9 @@ _**1. 中断抢占时候的 NVIC中的两个中断的状态**_
 
 _**2. 基于arm框架设计的优先级理解 reference[[#4. 主优先级（Preempt Priority）与次优先级（Subpriority）的机制]]**_
 1. 抢占优先级 和 响应优先级：共计8bit，抢占优先级0-15，也就是可以嵌套15层；响应优先级也是16个，按照从小到大顺序进行响应，同抢占优先级同时发生时候，后续的中断会被pending，直到active的执行完成；
-2. 中断流程：状态都在NVIC(中断嵌套控制器)， 中断发生 - NVIC->IABR pending - ARM CORE 压栈 - 更改状态为active - 跳转到isr执行 - 执行完成，clear active状态，执行出栈、跳转到main
-![[Pasted image 20260622105541.png]]
+2. 中断流程：状态都在NVIC(中断嵌套控制器)， 中断发生 - NVIC->IPR挂起状态寄存器 - 开始执行IABR = 1，并且清楚pending状态；（俩货，不是一个）
+3. 实际中，优先级不设置的话，就是同优先级，实际上按照异常号0-N执行；如果设置了中断优先级，则：抢占优先级发生抢占，同抢占优先级同时发生，按照响应优先级排序；最后若响应优先级也相同，按照异常号处理。
+![[Pasted image 20260622111720.png]]
 
 以下基于 **ARMv7-M Architecture Reference Manual** 和 **Cortex-M3/M4 Technical Reference Manual** 的官方规范，逐一解答你的问题：
 
