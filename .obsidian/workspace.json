@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "soft_models/数据流处理etc/0-Interrupt flow and some features.md",
+                "file": "soft_models/数据流处理etc/0base-Interrupt flow and some features.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0-Interrupt flow and some features"
+              "title": "0base-Interrupt flow and some features"
             }
           }
         ]
@@ -201,12 +201,14 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "51457bd03964d4d1",
+  "active": "409643111bd89899",
   "lastOpenFiles": [
+    "soft_models/数据流处理etc/1protocol-结构体对象的收发.md",
+    "soft_models/数据流处理etc/0base-无锁队列model.md",
+    "soft_models/数据流处理etc/0base-Interrupt flow and some features.md",
     "soft_models/公共资源保护(多核-单核)/单核共享资源保护策略（todo： summarize）.md",
     "soft_models/数据流处理etc",
     "soft_models/公共资源保护(多核-单核)",
-    "soft_models/数据流处理etc/0-Interrupt flow and some features.md",
     "ARM/INTERRUPT_AND_EXCEPTION/0-中断风暴 总线风暴.md",
     "test_etc/背压 背压处理.md",
     "soft_models",
@@ -235,7 +237,6 @@
     "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
     "ARM/INTERRUPT_AND_EXCEPTION/2 interrupt-Interrupt_latency_extension.md",
     "ARM/INTERRUPT_AND_EXCEPTION/arm core - control.md",
-    "ARM/INTERRUPT_AND_EXCEPTION/interrupt.md",
     "Pasted image 20260618162819.png",
     "test_etc",
     "OS/Linux/Embedded_Linux_Boot_Blueprint.pdf",
