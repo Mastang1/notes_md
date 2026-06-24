@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5ed98c73c4c686ab",
+        "id": "bd14b326a3477724",
         "type": "tabs",
         "children": [
           {
-            "id": "fd2dfe2851168f9c",
+            "id": "409643111bd89899",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ARM/单核共享资源保护策略（todo： summarize）.md",
+                "file": "soft_models/单核共享资源保护策略（todo： summarize）.md",
                 "mode": "source",
                 "source": false
               },
@@ -201,10 +201,19 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "fd2dfe2851168f9c",
+  "active": "409643111bd89899",
   "lastOpenFiles": [
+    "soft_models",
+    "document_set/Linux_VFS_Internals.pdf",
+    "test_etc/shared memory test.md",
+    "development-theory/XML(Extensible Markup Language).md",
+    "development-theory/specification.md",
+    "development-theory/MCU-software-layers.md",
+    "development-theory/arm_core&IP.md",
+    "soft_models/单核共享资源保护策略（todo： summarize）.md",
+    "ARM/0.cortex-A memory架构模板.md",
+    "ARM/0. cortex-M memory架构模板.md",
     "ARM/嵌入式中的字节对齐场景说明QA.md",
-    "ARM/单核共享资源保护策略（todo： summarize）.md",
     "OS/Linux/3-practice/theories_daily/mm.md",
     "Pasted image 20260623143444.png",
     "OS/Linux/plan.md",
@@ -225,16 +234,8 @@
     "ARM/INTERRUPT_AND_EXCEPTION/arm core - control.md",
     "ARM/INTERRUPT_AND_EXCEPTION/interrupt.md",
     "coding_knowledge/NAPI（NEW API） 及中断 总结.md",
-    "coding_knowledge/NAPI 中断+软中断（polling）to IPCS软中断模型，解决中断风暴.md",
     "Pasted image 20260618162819.png",
-    "test_etc/shared memory test.md",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/0-1： TOP：my summary.md",
     "test_etc",
-    "OS/Linux/1-kernel/Linux-kernel/4. VFS-todo/some_fs/FS🗂️(所有文件系统 伪文件系统).md",
-    "OS/Linux/1-kernel/ing🗒️.md",
-    "OS/Linux/2-u-boot/0-Summary.md",
-    "OS/Linux/2-u-boot/Learning Tasks(TODO).md",
-    "OS/Linux/3-practice/Build Kernel and Module.md",
     "OS/Linux/Embedded_Linux_Boot_Blueprint.pdf",
     "Pasted image 20260615235720.png",
     "Pasted image 20260615235611.png",
@@ -248,7 +249,6 @@
     "ARM/c1",
     "OS/components",
     "OS/RTOS",
-    "如何真正理解任何事.mp4",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
     "Untitled.canvas"
   ]
