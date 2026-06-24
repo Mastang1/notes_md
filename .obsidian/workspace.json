@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "soft_models/in_flash_and_in_ram/in_flash test.md",
+                "file": "soft_models/in_flash_and_in_ram/initial.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "in_flash test"
+              "title": "initial"
             }
           }
         ]
@@ -203,8 +203,9 @@
   },
   "active": "43c2224738e77e92",
   "lastOpenFiles": [
-    "soft_models/in_flash_and_in_ram/in_ram test.md",
     "soft_models/in_flash_and_in_ram/in_flash test.md",
+    "soft_models/in_flash_and_in_ram/initial.md",
+    "soft_models/in_flash_and_in_ram/in_ram test.md",
     "soft_models/数据流处理etc/NAPI 中断+软中断（polling）to IPCS软中断模型，解决中断风暴.md",
     "soft_models/in_flash_and_in_ram",
     "soft_models/数据流处理etc/NAPI（NEW API） 及中断 总结.md",
@@ -235,7 +236,6 @@
     "OS/Linux/3-practice/theories_daily",
     "OS/components/mm-newlib-analysis（todo.md",
     "OS/multiple events sync.md",
-    "OS/Event.md",
     "Pasted image 20260622111720.png",
     "Pasted image 20260622105541.png",
     "Pasted image 20260618162819.png",
