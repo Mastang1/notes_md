@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tool_chains/yocto/recipe development1.md",
+                "file": "tool_chains/yocto/未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "recipe development1"
+              "title": "未命名"
             }
           }
         ]
@@ -203,9 +203,10 @@
   },
   "active": "43c2224738e77e92",
   "lastOpenFiles": [
+    "tool_chains/yocto/recipe development1.md",
+    "tool_chains/yocto/未命名.md",
     "tool_chains/yocto/recipe development4： variables.md",
     "tool_chains/yocto/recipe development7：variables of directories.md",
-    "tool_chains/yocto/recipe development1.md",
     "tool_chains/yocto/recipe development2：inherit operation.md",
     "tool_chains/yocto/devtool-0：基础流程、概念.md",
     "tool_chains/yocto/recipe development9： etc.md",
@@ -234,7 +235,6 @@
     "soft_models/in_flash_and_in_ram",
     "soft_models/数据流处理etc/NAPI（NEW API） 及中断 总结.md",
     "ARM/INTERRUPT_AND_EXCEPTION/2 interrupt-Interrupt_latency_extension.md",
-    "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
     "soft_models/数据流处理etc",
     "soft_models/公共资源保护(多核-单核)",
     "soft_models",
