@@ -6,7 +6,7 @@
 
 ### 1. `make modules_install`：内核专属的全自动搬家
 
-这是 Linux 内核构建系统（Kbuild）提供的一个标准 Makefile 目标（Target）。它**专门且仅用于**处理内核模块（`.ko` 文件）。
+这是 Linux 内核构建系统（Kbuild）提供的一个标准 Makefile 目标（Target）。它 _**专门且仅用于**处理内核模块（`.ko` 文件）。
 
 - **它的内部逻辑：**
     
@@ -29,7 +29,9 @@
 
 ### 2. `install -m ...`：精准的手动搬砖工具
 
-`install` 其实是 Linux 系统（GNU coreutils）自带的一个极其基础的命令行工具。你可以把它理解为 **`mkdir` + `cp` + `chmod` 三合一的威力加强版**。
+`install` 其实是 Linux 系统（GNU coreutils）自带的一个极其基础的命令行工具。你可以把它理解为 
+
+_**`mkdir` + `cp` + `chmod` 三合一的威力加强版**。
 
 - **它的功能：** 极其生硬、精准。你指哪，它就搬到哪，同时赋予指定的读写权限。
     

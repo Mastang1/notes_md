@@ -113,7 +113,7 @@ do_compile() {
 
 代码段
 
-```
+```cmake
 inherit cmake
 
 # 告诉 Yocto：在执行完标准的 cmake 安装步骤后，再执行我追加的这几行

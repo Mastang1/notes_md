@@ -203,10 +203,10 @@
   },
   "active": "43c2224738e77e92",
   "lastOpenFiles": [
-    "tool_chains/yocto/recipe development.md",
-    "tool_chains/yocto/recipe development3：install operation.md",
     "tool_chains/yocto/recipe development2：inherit operation.md",
+    "tool_chains/yocto/recipe development1.md",
     "tool_chains/yocto/devtool-0：基础流程、概念.md",
+    "tool_chains/yocto/recipe development3：install operation.md",
     "soft_models/公共资源保护(多核-单核)/⭐STR LDR命令本质剖析——本质是特么时序电路.md",
     "tool_chains/yocto",
     "soft_models/公共资源保护(多核-单核)/自旋锁与总线嗅探器（todo 个人笔记）.md",
