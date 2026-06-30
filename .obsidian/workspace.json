@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tool_chains/yocto/recipe development3：install operation.md",
+                "file": "tool_chains/yocto/recipe development4： variables.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "recipe development3：install operation"
+              "title": "recipe development4： variables"
             }
           }
         ]
@@ -203,10 +203,11 @@
   },
   "active": "43c2224738e77e92",
   "lastOpenFiles": [
+    "tool_chains/yocto/recipe development3：install operation.md",
+    "tool_chains/yocto/recipe development4： variables.md",
     "tool_chains/yocto/recipe development2：inherit operation.md",
     "tool_chains/yocto/recipe development1.md",
     "tool_chains/yocto/devtool-0：基础流程、概念.md",
-    "tool_chains/yocto/recipe development3：install operation.md",
     "soft_models/公共资源保护(多核-单核)/⭐STR LDR命令本质剖析——本质是特么时序电路.md",
     "tool_chains/yocto",
     "soft_models/公共资源保护(多核-单核)/自旋锁与总线嗅探器（todo 个人笔记）.md",
@@ -236,7 +237,6 @@
     "soft_models/数据流处理etc/0base-无锁队列model.md",
     "soft_models/数据流处理etc",
     "soft_models/公共资源保护(多核-单核)",
-    "test_etc/背压 背压处理.md",
     "soft_models",
     "document_set/Linux_VFS_Internals.pdf",
     "Pasted image 20260623143444.png",
