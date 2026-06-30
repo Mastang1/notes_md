@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tool_chains/yocto/未命名.md",
+                "file": "tool_chains/yocto/recipe development10：modules dependence (sysroot DIR).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "recipe development10：modules dependence (sysroot DIR)"
             }
           }
         ]
@@ -204,7 +204,7 @@
   "active": "43c2224738e77e92",
   "lastOpenFiles": [
     "tool_chains/yocto/recipe development1.md",
-    "tool_chains/yocto/未命名.md",
+    "tool_chains/yocto/recipe development10：modules dependence (sysroot DIR).md",
     "tool_chains/yocto/recipe development4： variables.md",
     "tool_chains/yocto/recipe development7：variables of directories.md",
     "tool_chains/yocto/recipe development2：inherit operation.md",
