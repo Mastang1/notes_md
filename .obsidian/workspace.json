@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "soft_models/公共资源保护(多核-单核)/⭐STR LDR命令本质剖析——本质是特么时序电路.md",
+                "file": "tool_chains/yocto/devtool-0：基础流程、概念.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "⭐STR LDR命令本质剖析——本质是特么时序电路"
+              "title": "devtool-0：基础流程、概念"
             }
           }
         ]
@@ -203,11 +203,13 @@
   },
   "active": "43c2224738e77e92",
   "lastOpenFiles": [
+    "soft_models/公共资源保护(多核-单核)/⭐STR LDR命令本质剖析——本质是特么时序电路.md",
+    "tool_chains/yocto/devtool-0：基础流程、概念.md",
+    "tool_chains/yocto",
     "soft_models/公共资源保护(多核-单核)/自旋锁与总线嗅探器（todo 个人笔记）.md",
     "z-Projects/大神.md",
     "z-Projects",
     "soft_models/公共资源保护(多核-单核)/☀ 0-summary 没总结，没事过一遍.md",
-    "soft_models/公共资源保护(多核-单核)/⭐STR LDR命令本质剖析——本质是特么时序电路.md",
     "soft_models/公共资源保护(多核-单核)/LDREX STREX（todo）.md",
     "Pasted image 20260625225237.png",
     "Pasted image 20260625221316.png",
@@ -237,14 +239,12 @@
     "test_etc/shared memory test.md",
     "development-theory/XML(Extensible Markup Language).md",
     "development-theory/specification.md",
-    "development-theory/MCU-software-layers.md",
     "Pasted image 20260623143444.png",
     "OS/Linux/3-practice/theories_daily",
     "Pasted image 20260622111720.png",
     "Pasted image 20260622105541.png",
     "Pasted image 20260618162819.png",
     "test_etc",
-    "OS/Linux/Embedded_Linux_Boot_Blueprint.pdf",
     "Pasted image 20260615235720.png",
     "Pasted image 20260615235611.png",
     "Pasted image 20260615225216.png",
