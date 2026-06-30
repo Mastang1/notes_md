@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tool_chains/yocto/recipe development7：variables of directories.md",
+                "file": "tool_chains/yocto/recipe development8：打包rpm & 打包到image.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "recipe development7：variables of directories"
+              "title": "recipe development8：打包rpm & 打包到image"
             }
           }
         ]
@@ -203,8 +203,9 @@
   },
   "active": "43c2224738e77e92",
   "lastOpenFiles": [
-    "tool_chains/yocto/recipe development4： variables.md",
     "tool_chains/yocto/recipe development7：variables of directories.md",
+    "tool_chains/yocto/recipe development8：打包rpm & 打包到image.md",
+    "tool_chains/yocto/recipe development4： variables.md",
     "tool_chains/yocto/recipe development6：Is it in rootfs？.md",
     "tool_chains/yocto/recipe development5：autoload module.md",
     "tool_chains/yocto/recipe development3：install operation.md",
@@ -234,7 +235,6 @@
     "ARM/INTERRUPT_AND_EXCEPTION/2 interrupt-Interrupt_latency_extension.md",
     "ARM/INTERRUPT_AND_EXCEPTION/1 interrupt-arm中断latency的几个问题.md",
     "ARM/INTERRUPT_AND_EXCEPTION/0base-Interrupt flow and some features.md",
-    "OS/Linux/1-kernel/Linux-kernel/2. LDM-notes(phy-device)/io device models/INITIAL-IO DEVS：整体认知.md",
     "soft_models/数据流处理etc",
     "soft_models/公共资源保护(多核-单核)",
     "soft_models",
