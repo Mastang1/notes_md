@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "workdir",
+                "query": "includedir",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -203,11 +203,11 @@
   },
   "active": "43c2224738e77e92",
   "lastOpenFiles": [
+    "tool_chains/yocto/recipe development4： variables.md",
+    "tool_chains/yocto/recipe development7：variables of directories.md",
+    "tool_chains/yocto/recipe development1.md",
     "tool_chains/yocto/recipe development2：inherit operation.md",
     "tool_chains/yocto/devtool-0：基础流程、概念.md",
-    "tool_chains/yocto/recipe development1.md",
-    "tool_chains/yocto/recipe development7：variables of directories.md",
-    "tool_chains/yocto/recipe development4： variables.md",
     "tool_chains/yocto/recipe development9： etc.md",
     "tool_chains/yocto/recipe development8：打包rpm & 打包到image.md",
     "tool_chains/yocto/recipe development6：Is it in rootfs？.md",
