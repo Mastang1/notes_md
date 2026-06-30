@@ -203,6 +203,7 @@
   },
   "active": "421e8d46b43811ae",
   "lastOpenFiles": [
+    "Pasted image 20260630231212.png",
     "z-Projects/speech base.md",
     "z-Projects/analysis ....md",
     "Pasted image 20260630224538.png",
@@ -235,7 +236,6 @@
     "tool_chains/yocto/recipe development5：autoload module.md",
     "tool_chains/yocto/recipe development4： variables.md",
     "tool_chains/yocto/recipe development3：install operation.md",
-    "tool_chains/yocto/recipe development2：inherit operation.md",
     "tool_chains/yocto",
     "tool_chains/git-gerrit",
     "tool_chains",
