@@ -7,13 +7,21 @@ oe_runmake clean
 }
 ```
 
-## 2. recipe(本质py脚本) 和 make的shell指令参数  实现kel_ser获取
+## 2. recipe(本质py脚本) 和 make的shell指令参数  实现kel_ver获取
 _**说明如下两行的执行顺序，并说明原因：
 	KNE_VER = "$(cat ${STAGING_KERNEL_BUILDDIR}/include/config/kernel.release)"
 	DRIVER_DIR = "${STAGING_INCDIR}/modules/${KNE_VER}/extra"
 **_
 
-这是一个非常精妙的问题！要彻底搞懂这两行代码的“执行顺序”，我们必须跳出普通编程语言（如 C 或 Python）中“从上到下逐行执行”的线性思维，切换到 **Yocto 的双层解析模型**（BitBake 解析期 vs Bash 执行期）。
+>核心前置知识点
+### 原理解析：BitBake 变量 vs Shell 变量
+
+1. **BitBake 的 `${}` (解析期执行)**： 如果你写 `${@oe.utils.read_file('...')}`，BitBake 在一开始读取 Recipe（解析期）时就会去执行。但那时内核还没开始编译，文件不存在，直接报错退出。
+    
+2. **Shell 的 `$()` (执行期执行)**： BitBake 并不认识 `$()`，它会原封不动地把 `$(cat ...)` 当成纯文本字符串存储起来。 直到 Yocto 开始执行 `do_configure`、`do_compile` 这样的任务时（这些任务本质上是 Bash 脚本），这段带有 `$()` 的字符串被传给 Bash。**Bash 会在执行命令的瞬间去计算它的值**。
+
+
+----
 
 **核心结论：**
 
