@@ -1,3 +1,5 @@
+> STAGING_DIR_TARGET: 各个组件依赖的recipe-sysroot
+
 ## 1. sysroot 机制
 _**1. 一些初步的信息：
  - 1 存在一个集中存储依赖文件的路径 _**build/tmp/sysroot_components**_,当 lib-module 执行完 do_install 后，Yocto 的 *do_populate_sysroot 任务*会被触发。这个任务会把 ${D} 中属于开发类的目录（如 /usr/include, /usr/lib）复制或硬链接到这个中央仓库的对应子目录下。【本质就是一个仓库】；_**亦即：s1: moduled build完成，执行install s2：自动触发do_populate_sysroot()流程，所以前提是s1先拷贝需要的文件到 ${D}**_
@@ -13,5 +15,10 @@ _**1. 一些初步的信息：
 1. 它会去读一个特殊变量：`MODULES_MODULE_SYMVERS_LOCATION`。
     
 2. 如果你在 Recipe 里定义了这个变量（比如你定义了 `.`，代表当前编译根目录），`module.bbclass` 内置的默认 `do_install` 就会在底层替你执行类似下面的操作： `install -m 0644 ${B}/./Module.symvers ${D}/lib/modules/${KERNEL_VERSION}/extra/`
-- 4 app module，
+- 4 app module，如果使用了depends = “lib-module”,会自动从shared sysroot拷贝指定文件到自己的依赖路径，宏named：STAGING_DIR_TARGET
+		构建时候用：
+```shell
+# APP 的 Recipe 中
+EXTRA_OEMAKE += "KBUILD_EXTRA_SYMBOLS=${STAGING_DIR_TARGET}/lib/modules/${KERNEL_VERSION}/extra/Module.symvers"
+```
 
