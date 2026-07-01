@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tool_chains/yocto/devtool-0：基础流程、概念.md",
+                "file": "tool_chains/yocto/recipe development7：variables of directories.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "devtool-0：基础流程、概念"
+              "title": "recipe development7：variables of directories"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "base_libd",
+                "query": "top",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -203,16 +203,16 @@
   },
   "active": "43c2224738e77e92",
   "lastOpenFiles": [
-    "tool_chains/yocto/recipe development4： variables.md",
+    "tool_chains/yocto/recipe development10：(sysroot DIR)modules dependence.md",
     "tool_chains/yocto/recipe development9： etc.md",
+    "tool_chains/yocto/recipe development7：variables of directories.md",
+    "tool_chains/yocto/devtool-0：基础流程、概念.md",
+    "tool_chains/yocto/recipe development4： variables.md",
     "tool_chains/yocto/recipe development1.md",
     "tool_chains/yocto/recipe development3：install operation to ${D}.md",
     "tool_chains/yocto/recipe development2：inherit operation （EXTRA_OE大法）.md",
     "tool_chains/yocto/fuck you.md",
-    "tool_chains/yocto/devtool-0：基础流程、概念.md",
-    "tool_chains/yocto/recipe development10：(sysroot DIR)modules dependence.md",
     "tool_chains/yocto/recipe development8：打包rpm & 打包到image.md",
-    "tool_chains/yocto/recipe development7：variables of directories.md",
     "tool_chains/yocto/recipe development6：Is it in rootfs？.md",
     "tool_chains/yocto/recipe development5：How to autorun.md",
     "z-Projects/1-方案设计分析阶段.md",
