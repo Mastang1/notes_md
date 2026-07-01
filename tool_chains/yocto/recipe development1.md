@@ -13,7 +13,8 @@
 
 ## 所有的琐碎知识 is here
 ### 1.  recipe 和 makefile 解耦思想
-_****解耦 Makefile：** Makefile 保持最简，绝对不写死任何特定环境的路径。由 Yocto Recipe 负责注入环境变量。**_
+_****解耦 Makefile：** Makefile 保持最简，绝对不写死任何特定环境的路径。由 Yocto Recipe 负责注入环境变量。
+亦即：makefile负责实现具体的逻辑；recipe负责给make命令传递环境变量，必要时候可以传递约定的变量**_
 
 ### 2. staging
 预发布、测试环境、模拟生产环境

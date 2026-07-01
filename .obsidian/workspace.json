@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tool_chains/yocto/recipe development10：(sysroot DIR)modules dependence.md",
+                "file": "tool_chains/yocto/recipe development1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "recipe development10：(sysroot DIR)modules dependence"
+              "title": "recipe development1"
             }
           }
         ]
@@ -203,6 +203,8 @@
   },
   "active": "43c2224738e77e92",
   "lastOpenFiles": [
+    "tool_chains/yocto/devtool-0：基础流程、概念.md",
+    "tool_chains/yocto/recipe development10：(sysroot DIR)modules dependence.md",
     "tool_chains/yocto/recipe development9： etc.md",
     "tool_chains/yocto/recipe development8：打包rpm & 打包到image.md",
     "tool_chains/yocto/recipe development7：variables of directories.md",
@@ -212,8 +214,6 @@
     "tool_chains/yocto/recipe development3：install operation to ${D}.md",
     "tool_chains/yocto/recipe development2：inherit operation （EXTRA_OE大法）.md",
     "tool_chains/yocto/recipe development1.md",
-    "tool_chains/yocto/devtool-0：基础流程、概念.md",
-    "tool_chains/yocto/recipe development10：(sysroot DIR)modules dependence.md",
     "z-Projects/1-方案设计分析阶段.md",
     "z-Projects/speech base.md",
     "z-Projects/2-部署shepha-onnx.md",
