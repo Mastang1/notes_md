@@ -4,7 +4,7 @@
     
 - **Topic 2：菜谱的“八股文”骨架** —— 解析 `.bb` 文件的核心区域（变量定义与动作执行）。
     
-- **Topic 3：菜谱的三六九等（Recipe 类型）** —— 为什么有的配方只有 5 行，有的却有 500 行？（揭秘 `inherit` 继承魔法）。[[recipe development2：inherit operation]]
+- **Topic 3：菜谱的三六九等（Recipe 类型）** —— 为什么有的配方只有 5 行，有的却有 500 行？（揭秘 `inherit` 继承魔法）。[[recipe development2：inherit operation （EXTRA_OE大法）]]
     
 - **Topic 4：最折磨人的“空间魔法”** —— `S` 目录、`B` 目录、`D` 目录到底是什么鬼？（彻底搞懂 `do_compile` 和 `do_install` 的本质区别）。
     
@@ -12,7 +12,7 @@
 >##############################################################
 
 ## 所有的琐碎知识 is here
-### 1.  recipe 和 makefle 解耦思想
+### 1.  recipe 和 makefile 解耦思想
 _****解耦 Makefile：** Makefile 保持最简，绝对不写死任何特定环境的路径。由 Yocto Recipe 负责注入环境变量。**_
 
 ### 2. staging
