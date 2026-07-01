@@ -13,4 +13,5 @@ _**1. 一些初步的信息：
 1. 它会去读一个特殊变量：`MODULES_MODULE_SYMVERS_LOCATION`。
     
 2. 如果你在 Recipe 里定义了这个变量（比如你定义了 `.`，代表当前编译根目录），`module.bbclass` 内置的默认 `do_install` 就会在底层替你执行类似下面的操作： `install -m 0644 ${B}/./Module.symvers ${D}/lib/modules/${KERNEL_VERSION}/extra/`
+- 4 app module，
 
