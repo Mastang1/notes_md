@@ -12,9 +12,10 @@ _**
 		obj-$(CONFIG_USB_SERIAL) += usbserial.o
 		```
 	最终控制执行编译和打包到rootfs的流程。
+_**2.由此再联系到makefile中直接定义obj-m += module.o的操作；
+
 ---
 **_
-
 
 ### 一、 关于构建系统的理解补充
 
