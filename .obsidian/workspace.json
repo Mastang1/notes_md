@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "z-Projects/1-方案 continue.md",
+                "file": "asr_project/1-方案 continue.md",
                 "mode": "source",
                 "source": false
               },
@@ -201,17 +201,18 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "421e8d46b43811ae",
+  "active": "51457bd03964d4d1",
   "lastOpenFiles": [
+    "asr_project/knowledge",
     "tool_chains/yocto/detailed_operadions/devtool update configuration.md",
     "tool_chains/yocto/detailed_operadions",
     "tool_chains/buildroot/Initial0🌌-Initialization knowledge√☀🌙.md",
     "tool_chains/buildroot",
-    "z-Projects/1-方案设计分析阶段.md",
-    "z-Projects/1-方案 continue.md",
-    "z-Projects/0-大神.md",
-    "z-Projects/2-部署shepha-onnx.md",
-    "z-Projects/speech base.md",
+    "asr_project/1-方案设计分析阶段.md",
+    "asr_project/1-方案 continue.md",
+    "asr_project/0-大神.md",
+    "asr_project/2-部署shepha-onnx.md",
+    "asr_project/speech base.md",
     "Pasted image 20260630231212.png",
     "Pasted image 20260630224538.png",
     "tool_chains/yocto/recipe development10：modules dependence (sysroot DIR).md",
@@ -234,11 +235,10 @@
     "soft_models/in_flash_and_in_ram",
     "soft_models",
     "如何真正理解任何事.mp4",
-    "z-Projects",
+    "asr_project",
     "tool_chains/yocto/recipe development9： etc.md",
     "tool_chains/yocto/recipe development8：打包rpm & 打包到image.md",
     "tool_chains/yocto/recipe development7：variables of directories.md",
-    "tool_chains/yocto/recipe development6：Is it in rootfs？.md",
     "tool_chains/yocto",
     "tool_chains/git-gerrit",
     "mermaid-diagram.png",
