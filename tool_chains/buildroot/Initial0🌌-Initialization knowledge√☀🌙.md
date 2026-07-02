@@ -4,7 +4,15 @@
 _**
 理解：
 1.refer to [[#二、 内核 `menuconfig` 是如何发现和组织功能模块的？]]
- - 
+ - 各级路径都有kconfig文件形成了子路径深度为1的信息描述；总体形成了树状的组件树结构；
+ - 在执行menuconfig时候，提取树信息到UI，待配置后生成.config;
+ - 然后，核心两个功能：1. 根据.config生成了条件编译宏，可控制代码编译分支；2.makefile会引用.config文件，通过如下方式实现目标的搜集
+		```
+		obj-$(CONFIG_USB)        += usbcore.o
+		obj-$(CONFIG_USB_SERIAL) += usbserial.o
+		```
+	最终控制执行编译和打包到rootfs的流程。
+---
 **_
 
 
