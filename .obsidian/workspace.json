@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tool_chains/buildroot/Initial0🌌-Initialization knowledge√☀🌙.md",
+                "file": "soft_models☀/公共资源保护(多核-单核)/☀ 0-summary 没总结，没事过一遍.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Initial0🌌-Initialization knowledge√☀🌙"
+              "title": "☀ 0-summary 没总结，没事过一遍"
             }
           }
         ]
@@ -203,6 +203,7 @@
   },
   "active": "51457bd03964d4d1",
   "lastOpenFiles": [
+    "tool_chains/buildroot/Initial0🌌-Initialization knowledge√☀🌙.md",
     "OS/RTOS/some general APIs.md",
     "OS/RTOS/Notification.md",
     "OS/RTOS/mutex-vs-semaphore.md",
@@ -217,7 +218,6 @@
     "tool_chains/yocto/recipe development1.md",
     "asr_project/knowledge/Rock Pi S.md",
     "tool_chains/yocto/devtool-0：基础流程、概念.md",
-    "tool_chains/buildroot/Initial0🌌-Initialization knowledge√☀🌙.md",
     "tool_chains/yocto/recipe development9： etc.md",
     "asr_project/knowledge/sherpa-onnx：kws C library.md",
     "Pasted image 20260706003340.png",
