@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "asr_project/knowledge/sherpa-onnx：kws C library.md",
+                "file": "OS/select epoll etc/0-note.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sherpa-onnx：kws C library"
+              "title": "0-note"
             }
           }
         ]
@@ -201,8 +201,10 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "fd6ec95617a04239",
+  "active": "51457bd03964d4d1",
   "lastOpenFiles": [
+    "asr_project/knowledge/sherpa-onnx：kws C library.md",
+    "OS/select epoll etc/0-note.md",
     "asr_project/speech base.md",
     "asr_project/2-部署shepha-onnx.md",
     "asr_project/1-方案设计分析阶段.md",
@@ -213,7 +215,6 @@
     "Pasted image 20260707141055.png",
     "soft_models☀/公共资源保护(多核-单核)/单核共享资源保护策略（todo： summarize）.md",
     "asr_project/knowledge/Rock Pi S.md",
-    "asr_project/knowledge/sherpa-onnx：kws C library.md",
     "soft_models☀/公共资源保护(多核-单核)/☀ 0-summary 没总结，没事过一遍.md",
     "asr_project/000.md",
     "tool_chains/buildroot/Initial0🌌-Initialization knowledge√☀🌙.md",
@@ -230,7 +231,6 @@
     "tool_chains/yocto/recipe development5：How to autorun.md",
     "tool_chains/yocto/recipe development1.md",
     "tool_chains/yocto/devtool-0：基础流程、概念.md",
-    "tool_chains/yocto/recipe development9： etc.md",
     "Pasted image 20260706003340.png",
     "asr_project/knowledge",
     "asr_project",
