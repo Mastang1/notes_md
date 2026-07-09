@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/select epoll etc/0-note  🌌.md",
+                "file": "OS/general_components/0-note  🌌.md",
                 "mode": "source",
                 "source": false
               },
@@ -201,10 +201,10 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "fd6ec95617a04239",
+  "active": "51457bd03964d4d1",
   "lastOpenFiles": [
     "asr_project/knowledge/sherpa-onnx：kws C library.md",
-    "OS/select epoll etc/0-note  🌌.md",
+    "OS/general_components/0-note  🌌.md",
     "asr_project/speech base.md",
     "asr_project/2-部署shepha-onnx.md",
     "asr_project/1-方案设计分析阶段.md",
