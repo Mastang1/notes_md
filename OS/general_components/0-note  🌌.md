@@ -64,7 +64,7 @@ Thread B 被调度运行，它读取 `pos` 的值，得到的是新写入的 `x 
             
         - **事件标志组 (Event Groups / Flags)：** 你的模型中**遗漏的重磅组件**。用于“多条件聚合”。例如：Thread 等待 `(Event A AND Event B) OR Event C` 满足后才执行。它也是状态覆盖的。
             
-        - **任务通知 (Task Notification - Bit Set 模式)：** 现代 RTOS 首选，直接修改目标 TCB 的寄存器，速度极快，开销极低。
+        - ==**任务通知 (Task Notification - Bit Set 模式)：** 现代 RTOS 首选，直接修改目标 TCB 的寄存器，速度极快，开销极低。==
             
 - **场景模式 2：状态存储 / 资源累加 (Resource Accumulation)**
     
