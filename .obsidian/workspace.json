@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "soft_models☀/并发解决方案/kernel work queue.md",
+                "file": "OS/Linux/4-others/Linux Boot 后自动化操作与自启动机制大全.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "kernel work queue"
+              "title": "Linux Boot 后自动化操作与自启动机制大全"
             }
           }
         ]
@@ -203,8 +203,8 @@
   },
   "active": "6cdf42819af11944",
   "lastOpenFiles": [
-    "soft_models☀/并发解决方案/0-user space线程池 VS kernel 线程池.md",
     "soft_models☀/并发解决方案/kernel work queue.md",
+    "soft_models☀/并发解决方案/0-user space线程池 VS kernel 线程池.md",
     "soft_models☀/并发解决方案",
     "soft_models☀/未命名.md",
     "OS/Linux/4-others/Linux kernel 内存映射属性及访问限制.md",
