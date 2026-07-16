@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tool_chains/yocto/0 顶层理解暂存.md",
+                "file": "tool_chains/yocto/recipe development4： variables.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0 顶层理解暂存"
+              "title": "recipe development4： variables"
             }
           }
         ]
@@ -203,9 +203,9 @@
   },
   "active": "5bdf5e87da5ba15b",
   "lastOpenFiles": [
+    "tool_chains/yocto/0 顶层构成、流程心智模型.md",
     "tool_chains/yocto/recipe development7：variables of directories.md",
     "tool_chains/yocto/recipe development4： variables.md",
-    "tool_chains/yocto/0 顶层理解暂存.md",
     "Pasted image 20260715162537.png",
     "tool_chains/yocto/devtool-0：基础流程、概念.md",
     "tool_chains/yocto/recipe development1.md",
