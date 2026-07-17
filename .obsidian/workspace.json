@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tool_chains/yocto/0-kernel recipe VS components recipe.md",
-                "mode": "source",
+                "file": "tool_chains/yocto/0 顶层构成、流程心智模型.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0-kernel recipe VS components recipe"
+              "title": "0 顶层构成、流程心智模型"
             }
           }
         ]
@@ -203,8 +203,8 @@
   },
   "active": "5bdf5e87da5ba15b",
   "lastOpenFiles": [
-    "tool_chains/yocto/recipe development4： variables.md",
     "tool_chains/yocto/0-kernel recipe VS components recipe.md",
+    "tool_chains/yocto/recipe development4： variables.md",
     "tool_chains/yocto/0 顶层构成、流程心智模型.md",
     "tool_chains/yocto/recipe development7：variables of directories.md",
     "Pasted image 20260715162537.png",
