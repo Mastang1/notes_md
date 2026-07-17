@@ -11,14 +11,10 @@
             "id": "636b9d308265dc86",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IPCS 异构多核通信测试操作指南 (CLI版 v3.0).md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "IPCS 异构多核通信测试操作指南 (CLI版 v3.0)"
+              "title": "新标签页"
             }
           }
         ]
@@ -203,8 +199,8 @@
   },
   "active": "636b9d308265dc86",
   "lastOpenFiles": [
-    "tool_chains/yocto/0 顶层构成、流程心智模型.md",
     "IPCS 异构多核通信测试操作指南 (CLI版 v3.0).md",
+    "tool_chains/yocto/0 顶层构成、流程心智模型.md",
     "tool_chains/yocto/0-kernel recipe VS components recipe.md",
     "tool_chains/yocto/recipe development4： variables.md",
     "tool_chains/yocto/recipe development7：variables of directories.md",
