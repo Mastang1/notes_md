@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/0-motion_control/vision and action/3-0vlm 概念边界（对比YOLO）.md",
+                "file": "AI/0-motion_control/vision and action/3-0 视觉模型 and VLM to VLA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3-0vlm 概念边界（对比YOLO）"
+              "title": "3-0 视觉模型 and VLM to VLA"
             }
           }
         ]
@@ -204,7 +204,7 @@
   "active": "636b9d308265dc86",
   "lastOpenFiles": [
     "AI/0-motion_control/vision and action/2-两种行为预测类型.md",
-    "AI/0-motion_control/vision and action/3-0vlm 概念边界（对比YOLO）.md",
+    "AI/0-motion_control/vision and action/3-0 视觉模型 and VLM to VLA.md",
     "Pasted image 20260720115721.png",
     "AI/0-motion_control/vision and action/1-YOLO model.md",
     "AI/0-motion_control/vision and action",
