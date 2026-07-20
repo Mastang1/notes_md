@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/0-motion_control/vision and action/3-0 视觉模型 and VLM to VLA.md",
+                "file": "AI/0-motion_control/vision and action/3-1 VLM VLA职责界定.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3-0 视觉模型 and VLM to VLA"
+              "title": "3-1 VLM VLA职责界定"
             }
           }
         ]
@@ -203,8 +203,9 @@
   },
   "active": "636b9d308265dc86",
   "lastOpenFiles": [
-    "AI/0-motion_control/vision and action/2-两种行为预测类型.md",
     "AI/0-motion_control/vision and action/3-0 视觉模型 and VLM to VLA.md",
+    "AI/0-motion_control/vision and action/3-1 VLM VLA职责界定.md",
+    "AI/0-motion_control/vision and action/2-两种行为预测类型.md",
     "Pasted image 20260720115721.png",
     "AI/0-motion_control/vision and action/1-YOLO model.md",
     "AI/0-motion_control/vision and action",
@@ -233,7 +234,6 @@
     "soft_models☀/并发解决方案",
     "soft_models☀/未命名.md",
     "OS/Linux/4-others/Linux kernel 内存映射属性及访问限制.md",
-    "OS/Linux/4-others/2.md",
     "Pasted image 20260709181139.png",
     "OS/Linux/4-others",
     "Pasted image 20260707141055.png",
