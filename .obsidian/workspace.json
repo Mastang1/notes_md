@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "87e82c52bbf10465",
+        "id": "eae91b7d53e3da4e",
         "type": "tabs",
         "children": [
           {
-            "id": "bc6871432eca75df",
+            "id": "d26feb18a23bdae1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -201,10 +201,11 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "bc6871432eca75df",
+  "active": "d26feb18a23bdae1",
   "lastOpenFiles": [
-    "AI/模型设计及训练的理解/0-第一个稍稍理解的模型训练概念.md",
     "AI/模型设计及训练的理解/0-summary.md",
+    "0000000.md",
+    "AI/模型设计及训练的理解/0-第一个稍稍理解的模型训练概念.md",
     "AI/prompt/0-communication with AI.md",
     "AI/模型设计及训练的理解",
     "soft_models☀/数据流处理etc/FIFO 数据流模型的溢出处理策略（也可以结合硬件总线接口的流控、动态窗口）.md",
@@ -233,7 +234,6 @@
     "tool_chains/yocto/recipe development6：Is it in rootfs？.md",
     "soft_models☀/公共资源保护(多核-单核)/☀ 0-summary 没总结，没事过一遍.md",
     "soft_models☀/公共资源保护(多核-单核)/⭐STR LDR命令本质剖析——本质是特么时序电路.md",
-    "tool_chains/yocto/recipe development9： etc.md",
     "soft_models☀/并发解决方案",
     "Pasted image 20260709181139.png",
     "OS/Linux/4-others",
