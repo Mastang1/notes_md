@@ -205,8 +205,9 @@
   },
   "active": "d26feb18a23bdae1",
   "lastOpenFiles": [
-    "AI/模型设计及训练的理解/0-summary.md",
+    "AI/model-runtime-io/specified model NN.md",
     "AI/model-runtime-io/Some topics.md",
+    "AI/模型设计及训练的理解/0-summary.md",
     "AI/model-runtime-io",
     "AI/模型设计及训练的理解/0-第一个稍稍理解的模型训练概念.md",
     "0000000.md",
@@ -233,7 +234,6 @@
     "AI/0-motion_control-todo/vision and action/1-YOLO model.md",
     "AI/0-motion_control-todo/vision and action/2-两种行为预测类型.md",
     "AI/0-motion_control-todo/vision and action/3-1 VLM VLA职责界定.md",
-    "AI/0-motion_control-todo/vision and action/3-0 视觉模型 and VLM to VLA.md",
     "Pasted image 20260720115721.png",
     "AI/0-motion_control-todo/vision and action",
     "AI/0-motion_control-todo",
