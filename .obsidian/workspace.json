@@ -203,8 +203,10 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "d26feb18a23bdae1",
+  "active": "51457bd03964d4d1",
   "lastOpenFiles": [
+    "OS/Linux/5-driver大统一场理论/2-pci总线/xilinx_pcie_hw_map.md",
+    "OS/Linux/5-driver大统一场理论/2-pci总线/pcie_hardware_model.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/0-summary_rc_to_pci_core.md",
     "OS/Linux/5-driver大统一场理论/platform_bus_analysis.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/0-RC 驱动 → PCI Core 心智模型.md",
@@ -233,9 +235,7 @@
     "tool_chains/yocto/日常debug/1-关于config.md",
     "tool_chains/yocto/append：Yocto Meta-Layer 分支与发布机制.md",
     "tool_chains/yocto/日常debug",
-    "AI/prompt/0-communication with AI.md",
     "AI/模型设计及训练的理解",
-    "soft_models☀/数据流处理etc/FIFO 数据流模型的溢出处理策略（也可以结合硬件总线接口的流控、动态窗口）.md",
     "Pasted image 20260720115721.png",
     "AI/0-motion_control-todo/vision and action",
     "AI/0-motion_control-todo",
