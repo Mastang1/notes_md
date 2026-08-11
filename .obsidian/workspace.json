@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/model-runtime-io/Some topics.md",
-                "mode": "source",
+                "file": "OS/Linux/5-driver大统一场理论/2-pci总线/0-summary_rc_to_pci_core.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Some topics"
+              "title": "0-summary_rc_to_pci_core"
             }
           }
         ]
@@ -205,8 +205,15 @@
   },
   "active": "d26feb18a23bdae1",
   "lastOpenFiles": [
-    "AI/model-runtime-io/specified model NN.md",
+    "OS/Linux/5-driver大统一场理论/2-pci总线/0-RC 驱动 → PCI Core 心智模型.md",
+    "OS/Linux/5-driver大统一场理论/2-pci总线/0-summary_rc_to_pci_core.md",
+    "OS/Linux/5-driver大统一场理论/1- platform bus（dts）.md",
+    "OS/Linux/5-driver大统一场理论/2-pci总线",
+    "OS/Linux/5-driver大统一场理论/未命名.md",
+    "OS/Linux/5-driver大统一场理论/0-top 从bus type切入.md",
     "AI/model-runtime-io/Some topics.md",
+    "OS/Linux/5-driver大统一场理论",
+    "AI/model-runtime-io/specified model NN.md",
     "AI/模型设计及训练的理解/0-summary.md",
     "AI/model-runtime-io",
     "AI/模型设计及训练的理解/0-第一个稍稍理解的模型训练概念.md",
@@ -229,11 +236,6 @@
     "AI/模型设计及训练的理解",
     "soft_models☀/数据流处理etc/FIFO 数据流模型的溢出处理策略（也可以结合硬件总线接口的流控、动态窗口）.md",
     "soft_models☀/数据流处理etc/NAPI 中断+软中断（polling）to IPCS软中断模型，解决中断风暴.md",
-    "soft_models☀/数据流处理etc/1protocol-结构体对象的收发.md",
-    "soft_models☀/数据流处理etc/0base-无锁队列model.md",
-    "AI/0-motion_control-todo/vision and action/1-YOLO model.md",
-    "AI/0-motion_control-todo/vision and action/2-两种行为预测类型.md",
-    "AI/0-motion_control-todo/vision and action/3-1 VLM VLA职责界定.md",
     "Pasted image 20260720115721.png",
     "AI/0-motion_control-todo/vision and action",
     "AI/0-motion_control-todo",
@@ -244,8 +246,6 @@
     "Pasted image 20260707141055.png",
     "document_set/Linux_VFS_Internals.pdf",
     "Pasted image 20260706003340.png",
-    "asr_project/knowledge",
-    "asr_project",
     "Pasted image 20260630231212.png",
     "Pasted image 20260630224538.png",
     "Pasted image 20260625225237.png",
