@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/5-driver大统一场理论/platform_bus_analysis.md",
+                "file": "OS/Linux/5-driver大统一场理论/2-pci总线/pcie_hardware_model.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "platform_bus_analysis"
+              "title": "pcie_hardware_model"
             }
           }
         ]
@@ -203,12 +203,12 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "51457bd03964d4d1",
+  "active": "d26feb18a23bdae1",
   "lastOpenFiles": [
+    "OS/Linux/5-driver大统一场理论/platform_bus_analysis.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/xilinx_pcie_hw_map.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/pcie_hardware_model.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/0-summary_rc_to_pci_core.md",
-    "OS/Linux/5-driver大统一场理论/platform_bus_analysis.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/0-RC 驱动 → PCI Core 心智模型.md",
     "OS/Linux/5-driver大统一场理论/1- platform bus（dts）.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线",
