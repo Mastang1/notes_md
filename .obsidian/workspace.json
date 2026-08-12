@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "68099e2e9ae56bd3",
+        "id": "35b788e2f776cbe2",
         "type": "tabs",
         "children": [
           {
-            "id": "16def9fc0335663d",
+            "id": "36e2858cb89454df",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "-Beyond Tech/idea.md",
+                "file": "OS/Linux/5-driver大统一场理论/2-pci总线/1-pcie_hardware_model.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "idea"
+              "title": "1-pcie_hardware_model"
             }
           }
         ]
@@ -203,21 +203,21 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "16def9fc0335663d",
+  "active": "36e2858cb89454df",
   "lastOpenFiles": [
+    "OS/Linux/5-driver大统一场理论/2-pci总线/xilinx_pcie_hw_map.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/0-summary_rc_to_pci_core.md",
-    "-Beyond Tech/idea.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/pci_driver_binding_analysis.md",
+    "-Beyond Tech/idea.md",
     "-Beyond Tech/~~$大模型落地浪潮下，嵌入式软硬件工程师的机会地图：从职业升级到独立创业.pdf",
     "-Beyond Tech/大模型落地浪潮下，嵌入式软硬件工程师的机会地图：从职业升级到独立创业.pdf",
     "-Beyond Tech/deep-research-report.md",
     "-Beyond Tech/Theories.md",
     "-Beyond Tech/未确认 434727.crdownload",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/pcie_hardware_model.md",
+    "OS/Linux/5-driver大统一场理论/2-pci总线/1-pcie_hardware_model.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/pci_resource_analysis.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/pci_scan_analysis.md",
     "OS/Linux/5-driver大统一场理论/platform_bus_analysis.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/xilinx_pcie_hw_map.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/0-RC 驱动 → PCI Core 心智模型.md",
     "OS/Linux/5-driver大统一场理论/1- platform bus（dts）.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线",
