@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/5-driver大统一场理论/2-pci总线/01-硬件拓扑及理解.md",
+                "file": "OS/Linux/5-driver大统一场理论/2-pci总线/01-rc-ep-thories.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-硬件拓扑及理解"
+              "title": "01-rc-ep-thories"
             }
           }
         ]
@@ -203,6 +203,7 @@
   },
   "active": "79b869a154477bc6",
   "lastOpenFiles": [
+    "OS/Linux/5-driver大统一场理论/2-pci总线/01-硬件拓扑及理解.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/00-summary_rc_to_pci_core.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/01-rc-ep-thories.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/11-pcie_hardware_model.md",
@@ -219,7 +220,6 @@
     "OS/Linux/5-driver大统一场理论/2-pci总线/xilinx_pcie_hw_map.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/pci_scan_analysis.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/pci_resource_analysis.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/01-硬件拓扑及理解.md",
     "OS/Linux/5-driver大统一场理论/platform_bus_analysis.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线",
     "OS/Linux/5-driver大统一场理论/1- platform bus（dts）.md",
