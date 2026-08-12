@@ -70,7 +70,7 @@ struct pci_host_bridge {
 ```
 
 **它是"桥"的三层含义**：
-1. **层级之桥**：`bridge->dev.parent = platform_device`，同时 `bus->bridge = &bridge->dev`——它把 platform 世界（父）和 PCI 世界（子）在 sysfs 树里焊在一起；
+1. **层级之桥**：`bridge->dev.parent = platform_device`，同时 `bus->bridge = &bridge->dev`——_**它把 platform 世界（父）和 PCI 世界（子）在 sysfs 树里焊在一起；
 2. **接口之桥（Adapter）**：一端是 vendor 私有 API（`xilinx_pcie_ops`、irq_domain、reg_base），另一端是 PCI Core 认识的统一接口（`pci_ops` 三函数）——它把"私有方言"翻译成"通用普通话"；
 3. **指针路由之桥**：`ops`（函数指针）和 `sysdata`（数据指针）这两个字段，正是您说的"把 API 路由到 vendor 私有实现"的物理载体。
 
