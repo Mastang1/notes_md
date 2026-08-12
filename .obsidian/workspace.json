@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "eae91b7d53e3da4e",
+        "id": "68099e2e9ae56bd3",
         "type": "tabs",
         "children": [
           {
-            "id": "d26feb18a23bdae1",
+            "id": "16def9fc0335663d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "-Beyond Tech/deep-research-report.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "deep-research-report"
+              "title": "新标签页"
             }
           }
         ]
@@ -203,11 +199,13 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "d26feb18a23bdae1",
+  "active": "16def9fc0335663d",
   "lastOpenFiles": [
+    "-Beyond Tech/~~$大模型落地浪潮下，嵌入式软硬件工程师的机会地图：从职业升级到独立创业.pdf",
+    "-Beyond Tech/大模型落地浪潮下，嵌入式软硬件工程师的机会地图：从职业升级到独立创业.pdf",
+    "-Beyond Tech/deep-research-report.md",
     "-Beyond Tech/Theories.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/0-summary_rc_to_pci_core.md",
-    "-Beyond Tech/deep-research-report.md",
     "-Beyond Tech/未确认 434727.crdownload",
     "OS/Linux/5-driver大统一场理论/2-pci总线/pcie_hardware_model.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/pci_driver_binding_analysis.md",
@@ -234,7 +232,6 @@
     "OS/Linux/1-kernel/Linux-kernel/2. LDM-notes(phy-device)/1.  LDM的动静态图.md",
     "OS/Linux/1-kernel/Linux-kernel/2. LDM-notes(phy-device)/0LDM-short description todo.md",
     "OS/Linux/1-kernel/Linux-kernel/2. LDM-notes(phy-device)/00：bus-device-driver flow.md",
-    "OS/Linux/1-kernel/Linux-kernel/0. kernel_modules-notes/VFS operations.md",
     "tool_chains/yocto/日常debug",
     "AI/模型设计及训练的理解",
     "Pasted image 20260720115721.png",
@@ -243,7 +240,6 @@
     "Pasted image 20260715162537.png",
     "soft_models☀/并发解决方案",
     "Pasted image 20260709181139.png",
-    "OS/Linux/4-others",
     "Pasted image 20260707141055.png",
     "Pasted image 20260706003340.png",
     "Pasted image 20260630231212.png",
