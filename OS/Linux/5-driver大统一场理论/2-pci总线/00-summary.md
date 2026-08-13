@@ -1,6 +1,10 @@
 
 ## 总体思路模型
-1. 定义诸如配置space结构等规范，实现RC初始化，枚举BDF并读取配置和业务的交互空间，提供ECMA功能；然后基于LDM提供基于VID：DID与driver match的规范；
+_**持续补充：
+1.EP的bar区域实际是暴露给CPU的业务外设的寄存器、buffer、fifo等空间的base address。所以：PCIe总线的本质是扩展了SOC总线，让CPU可以用IOmap方式继续控制
+扩展外设；**_
+
+2. 定义诸如配置space结构等规范，实现RC初始化，枚举BDF并读取配置和业务的交互空间，提供ECMA功能；然后基于LDM提供基于VID：DID与driver match的规范；
 	总体即：通过约定和RP递归读取EP信息实现枚举和配置获取，并提供了configuration space、business data space的访问机制，剩余任务就交给了EP driver，该driver
 	 访问配置和数据域，加上dma，共同完成了业务功能。
 
