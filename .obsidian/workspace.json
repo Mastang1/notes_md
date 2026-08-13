@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/5-driver大统一场理论/2-pci总线/01-BAR in EP.md",
+                "file": "OS/Linux/5-driver大统一场理论/2-pci总线/00-summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-BAR in EP"
+              "title": "00-summary"
             }
           }
         ]
@@ -205,9 +205,9 @@
   },
   "active": "83459c2e7cd98d62",
   "lastOpenFiles": [
+    "OS/Linux/5-driver大统一场理论/2-pci总线/01-BAR in EP.md",
     "Pasted image 20260813161613.png",
     "OS/Linux/5-driver大统一场理论/2-pci总线/00-summary.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/01-BAR in EP.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/00-summary_rc_to_pci_core.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/01-PCIe总线拓扑-bus：slot：function划分逻辑.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/01-rc-ep-thories(Long to analyze).md",
@@ -250,7 +250,6 @@
     "Pasted image 20260630231212.png",
     "Pasted image 20260630224538.png",
     "Pasted image 20260625225237.png",
-    "Pasted image 20260625221316.png",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
     "Untitled.canvas"
   ]
