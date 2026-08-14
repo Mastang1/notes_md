@@ -11,6 +11,10 @@
 > - **Container**：本质是共享 Linux Kernel、但在进程/文件系统/网络等方面被隔离的一组进程。
 >     
 
+> [!abstract] 个人补充
+>	1.  WSL2部署和Docker Desktop独立部署。
+>	2. WSL2部署后包含VM layer、kernel、release version
+>	3. Docker Desktop部署会在WSL2中加入backend，包含了docker enginer，可以支持加入containers
 ---
 ![[Pasted image 20260814163534.png]]
 
