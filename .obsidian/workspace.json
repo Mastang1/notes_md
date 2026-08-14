@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Linux/5-driver大统一场理论/2-pci总线/z-failed.md",
+                "file": "tool_chains/WSL2 and docker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "z-failed"
+              "title": "WSL2 and docker"
             }
           }
         ]
@@ -205,8 +205,9 @@
   },
   "active": "83459c2e7cd98d62",
   "lastOpenFiles": [
-    "OS/Linux/5-driver大统一场理论/2-pci总线/00-summary.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/z-failed.md",
+    "tool_chains/WSL2 and docker.md",
+    "OS/Linux/5-driver大统一场理论/2-pci总线/00-summary.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/01-BAR in EP.md",
     "Pasted image 20260813161613.png",
     "OS/Linux/5-driver大统一场理论/2-pci总线/00-summary_rc_to_pci_core.md",
@@ -239,7 +240,6 @@
     "AI/模型设计及训练的理解/0-summary.md",
     "AI/model-runtime-io",
     "AI/模型设计及训练的理解/0-第一个稍稍理解的模型训练概念.md",
-    "0000000.md",
     "tool_chains/yocto/日常debug",
     "AI/模型设计及训练的理解",
     "Pasted image 20260720115721.png",
