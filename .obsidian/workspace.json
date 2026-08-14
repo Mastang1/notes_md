@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "tool_chains/WSL2 and docker.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -205,6 +205,9 @@
   },
   "active": "83459c2e7cd98d62",
   "lastOpenFiles": [
+    "Pasted image 20260814163534.png",
+    "Pasted image 20260814163515.png",
+    "Pasted image 20260814163104.png",
     "OS/Linux/5-driver大统一场理论/2-pci总线/z-failed.md",
     "tool_chains/WSL2 and docker.md",
     "OS/Linux/5-driver大统一场理论/2-pci总线/00-summary.md",
@@ -239,7 +242,6 @@
     "AI/model-runtime-io/specified model NN.md",
     "AI/模型设计及训练的理解/0-summary.md",
     "AI/model-runtime-io",
-    "AI/模型设计及训练的理解/0-第一个稍稍理解的模型训练概念.md",
     "tool_chains/yocto/日常debug",
     "AI/模型设计及训练的理解",
     "Pasted image 20260720115721.png",
@@ -249,8 +251,6 @@
     "Pasted image 20260707141055.png",
     "Pasted image 20260706003340.png",
     "Pasted image 20260630231212.png",
-    "Pasted image 20260630224538.png",
-    "Pasted image 20260625225237.png",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
     "Untitled.canvas"
   ]

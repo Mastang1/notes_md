@@ -12,6 +12,10 @@
 >     
 
 ---
+![[Pasted image 20260814163534.png]]
+
+![[Pasted image 20260814163104.png]]
+---
 
 # 1. WSL2 是什么？
 
@@ -846,7 +850,7 @@ Docker Container
 
 # 13. Image → Container → Kernel 的关系
 
-```
+```mermaid
 flowchart TB
 
     IMAGE["Docker Image<br/>只读应用模板"]
@@ -884,7 +888,7 @@ Container里的程序
 
 只记下面这一张：
 
-```
+```mermaid
 flowchart TB
 
     H["硬件"]
