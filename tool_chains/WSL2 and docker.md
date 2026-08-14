@@ -17,6 +17,27 @@
 >	3. Docker Desktop部署会在WSL2中加入backend，包含了docker enginer，可以支持加入containers
 >	4. WSLg这货接管了所有渲染工作，也就是托管了WSL中的图形用户界面的渲染；WSLg = Linux GUI 协议（Wayland/X11）和 Windows Desktop 之间的桥。
 		你的 Linux Qt 程序仍然使用 Linux Qt + Linux 图形协议；WSLg 负责把它的窗口“远程组合/集成”到 Windows 桌面，并把 Windows 的键鼠输入再送回 Linux。
+		_**核心认知：1. 多个dis如ubuntu，共享同一个kernel，如下两图所示；2. docker的backend，本质是为kernel添加了一个用户空间进程——docker engine
+		和 image运行时的container；
+		2. qemu作为一个设备模拟层，本质是Linux下的一个或者一组进程，可以通过Linux直接部署；也可以通过docker进行部署；但是在实际运行时候都是同一个kernel下的一个或者一组进程，只是后者在docker engine管理之下。**_
+		所以，根据`核心认知`，有如下图.
+		
+		```
+		            Windows
+                       │
+                    WSL2
+                       │
+                Linux Kernel
+                  /         \
+                 /           \
+        Ubuntu发行版       docker-desktop
+            │                  │
+           QEMU           Docker Engine
+                               │
+                           Container
+                               │
+                              QEMU
+		```
 
 ---
 ![[Pasted image 20260814163534.png]]
