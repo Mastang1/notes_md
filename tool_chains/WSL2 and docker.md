@@ -15,6 +15,9 @@
 >	1.  WSL2部署和Docker Desktop独立部署。
 >	2. WSL2部署后包含VM layer、kernel、release version
 >	3. Docker Desktop部署会在WSL2中加入backend，包含了docker enginer，可以支持加入containers
+>	4. WSLg这货接管了所有渲染工作，也就是托管了WSL中的图形用户界面的渲染；WSLg = Linux GUI 协议（Wayland/X11）和 Windows Desktop 之间的桥。
+		你的 Linux Qt 程序仍然使用 Linux Qt + Linux 图形协议；WSLg 负责把它的窗口“远程组合/集成”到 Windows 桌面，并把 Windows 的键鼠输入再送回 Linux。
+
 ---
 ![[Pasted image 20260814163534.png]]
 
