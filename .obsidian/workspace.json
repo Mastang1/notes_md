@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "135c322179e2f73d",
+        "id": "12633d63db5a7cc3",
         "type": "tabs",
         "children": [
           {
-            "id": "83459c2e7cd98d62",
+            "id": "ec33b97289f77a4b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "tool_chains/WSL2 and docker.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "WSL2 and docker"
+              "title": "新标签页"
             }
           }
         ]
@@ -41,9 +37,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -55,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:Linux/System",
+                "query": "mount -t nfs -o nolock,vers=4 192.168.199.182:/home/niki/linux/nfs /mnt/",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 395.8999938964844
+    "width": 425.5
   },
   "right": {
     "id": "8efccc928838709e",
@@ -203,54 +197,54 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "83459c2e7cd98d62",
+  "active": "ec33b97289f77a4b",
   "lastOpenFiles": [
+    "如何真正理解任何事.mp4",
+    "tool_chains/yocto/detailed_operadions/devtool update configuration.md",
+    "tool_chains/yocto/recipe development9： etc.md",
+    "tool_chains/yocto/recipe development8：打包rpm & 打包到image.md",
+    "tool_chains/yocto/recipe development7：variables of directories.md",
+    "tool_chains/yocto/recipe development6：Is it in rootfs？.md",
+    "tool_chains/yocto/recipe development5：How to autorun.md",
+    "tool_chains/yocto/recipe development4： variables.md",
+    "tool_chains/yocto/recipe development3：install operation to ${D}.md",
+    "tool_chains/yocto/recipe development2：inherit operation （EXTRA_OE大法）.md",
+    "tool_chains/yocto/recipe development10：(sysroot DIR)modules dependence.md",
+    "tool_chains/yocto/recipe development1.md",
+    "tool_chains/yocto/fuck you.md",
+    "tool_chains/yocto/devtool-0：基础流程、概念.md",
+    "tool_chains/yocto/detailed_operadions",
+    "tool_chains/yocto/0-kernel recipe VS components recipe.md",
+    "tool_chains/yocto/0 顶层构成、流程心智模型.md",
+    "tool_chains/git-gerrit/release latest history.md",
+    "tool_chains/git-gerrit/Interactive Rebase.md",
+    "tool_chains/git-gerrit/git代码发布步骤.md",
+    "tool_chains/git-gerrit/gerrit-flow.md",
+    "tool_chains/git-gerrit/conflict_process_gerrit_merge.md",
+    "tool_chains/buildroot/Initial0🌌-Initialization knowledge√☀🌙.md",
+    "tool_chains/yocto",
+    "tool_chains/WSL2 and docker.md",
+    "tool_chains/makefile.md",
+    "tool_chains/linker.md",
+    "tool_chains/git-gerrit",
+    "tool_chains/C工程基于编译器的配置宏插入方法.md",
+    "tool_chains/buildroot",
+    "tool_chains",
+    "test_etc",
+    "software_project/tools",
+    "software_project/some_concepts",
+    "software_project/SDD_etc",
+    "software_project/SAD_etc",
+    "mermaid-diagram.png",
+    "mermaid-diagram l.png",
+    "autosar/lin_flow_char.png",
+    "autosar/layers.PNG",
+    "SWC RTE LINIF Data Pipeline-2026-05-13-034056.png",
+    "SWC RTE LINIF Data Pipeline-2026-05-13-021102.png",
     "Pasted image 20260814163534.png",
     "Pasted image 20260814163515.png",
     "Pasted image 20260814163104.png",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/z-failed.md",
-    "tool_chains/WSL2 and docker.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/00-summary.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/01-BAR in EP.md",
     "Pasted image 20260813161613.png",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/00-summary_rc_to_pci_core.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/01-PCIe总线拓扑-bus：slot：function划分逻辑.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/01-rc-ep-thories(Long to analyze).md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/01-硬件拓扑及理解.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/11-pcie_hardware_model.md",
-    "OS/Linux/5-driver大统一场理论/未命名",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/rc-ep-thories.md",
-    "Pasted image 20260812150055.png",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/pci_driver_binding_analysis.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/pci_resource_analysis.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/pci_scan_analysis.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/xilinx_pcie_hw_map.md",
-    "-Beyond Tech/idea.md",
-    "-Beyond Tech/~~$大模型落地浪潮下，嵌入式软硬件工程师的机会地图：从职业升级到独立创业.pdf",
-    "-Beyond Tech/大模型落地浪潮下，嵌入式软硬件工程师的机会地图：从职业升级到独立创业.pdf",
-    "-Beyond Tech/deep-research-report.md",
-    "-Beyond Tech/Theories.md",
-    "-Beyond Tech/未确认 434727.crdownload",
-    "OS/Linux/5-driver大统一场理论/platform_bus_analysis.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线/0-RC 驱动 → PCI Core 心智模型.md",
-    "OS/Linux/5-driver大统一场理论/1- platform bus（dts）.md",
-    "OS/Linux/5-driver大统一场理论/2-pci总线",
-    "OS/Linux/5-driver大统一场理论/未命名.md",
-    "OS/Linux/5-driver大统一场理论/0-top 从bus type切入.md",
-    "AI/model-runtime-io/Some topics.md",
-    "OS/Linux/5-driver大统一场理论",
-    "AI/model-runtime-io/specified model NN.md",
-    "AI/模型设计及训练的理解/0-summary.md",
-    "AI/model-runtime-io",
-    "tool_chains/yocto/日常debug",
-    "AI/模型设计及训练的理解",
-    "Pasted image 20260720115721.png",
-    "AI/0-motion_control-todo/vision and action",
-    "Pasted image 20260715162537.png",
-    "Pasted image 20260709181139.png",
-    "Pasted image 20260707141055.png",
-    "Pasted image 20260706003340.png",
-    "Pasted image 20260630231212.png",
     "software_project/ldm-mr-rtt-dev_drv_framework/ldm-notes/TOP.canvas",
     "Untitled.canvas"
   ]
