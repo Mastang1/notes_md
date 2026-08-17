@@ -1,5 +1,10 @@
 [
   "obsidian-git",
   "mehrmaid",
-  "mermaid-tools"
+  "mermaid-tools",
+  "dataview",
+  "templater-obsidian",
+  "obsidian-style-settings",
+  "obsidian-tasks-plugin",
+  "obsidian-spaced-repetition"
 ]

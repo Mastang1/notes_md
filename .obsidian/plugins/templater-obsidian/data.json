@@ -1,0 +1,10 @@
+{
+  "templates_folder": "_templates",
+  "templates_prompt_on_open": false,
+  "new_file_location": "folder",
+  "new_file_folder_path": "_templates",
+  "open_new_file_template": true,
+  "syntax_highlighting": true,
+  "enable_system_commands": false,
+  "command_timeout": 5
+}

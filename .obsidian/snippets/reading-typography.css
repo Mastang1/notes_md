@@ -1,0 +1,40 @@
+/* ===== 中文阅读体验优化（全局，温和适配 Blue Topaz） ===== */
+
+/* 正文：更宽松的行高、字距，两端对齐（中文阅读习惯） */
+.markdown-reading-view .markdown-preview-view p,
+.markdown-source-view.mod-cm6 .cm-line {
+  line-height: 1.85;
+  letter-spacing: 0.015em;
+}
+
+.markdown-reading-view .markdown-preview-view p {
+  text-align: justify;
+}
+
+/* 列表更透气 */
+.markdown-reading-view .markdown-preview-view li {
+  line-height: 1.8;
+  margin-bottom: 0.2em;
+}
+
+/* 代码块：稍小字号，减少滚动负担 */
+.markdown-reading-view .markdown-preview-view pre {
+  font-size: 0.88em;
+  line-height: 1.6;
+}
+
+/* 引用块更柔和 */
+.markdown-reading-view .markdown-preview-view blockquote {
+  background: var(--background-secondary, rgba(128, 128, 128, 0.05));
+  border-left: 3px solid var(--interactive-accent, #7c3aed);
+  border-radius: 0 6px 6px 0;
+  padding: 0.6em 1em;
+  margin: 1em 0;
+}
+
+/* Mermaid 图居中留白 */
+.markdown-reading-view .markdown-preview-view pre.mermaid {
+  background: transparent;
+  text-align: center;
+  margin: 1.2em 0;
+}

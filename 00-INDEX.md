@@ -1,6 +1,7 @@
 # 📇 知识库索引
 
-> 本库按领域组织；每个领域有 `_MOC.md` 作为入口。安装 **Dataview** 插件后，MOC 与 TODO 页自动更新。
+> 入口总览：**[[00-DASHBOARD|🗺️ Dashboard（推荐首页）]]** · [[00-TODO|✅ 待办]] · 本页为完整索引。
+> 本库按领域组织；每个领域有 `_MOC.md` 作为入口。Dataview 插件已安装，MOC/TODO/Dashboard 页自动更新。
 
 ## 🗂 领域
 

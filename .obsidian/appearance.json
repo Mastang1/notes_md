@@ -1,5 +1,9 @@
 {
   "cssTheme": "Blue Topaz",
   "accentColor": "",
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "dashboard",
+    "reading-typography"
+  ]
 }
