@@ -9,10 +9,10 @@ cssclasses:
 
 ## 📊 库总览
 
-- **笔记总数**：`$= dv.pages('""').length` 篇
+- **笔记总数**：`$= dv.pages().length` 篇
 - **归档区**：`$= dv.pages('"99-archive"').length` 篇（只归档不删除）
-- **附件**：`$= dv.pages('"90-attachments"').length` 个（图片/PDF/视频）
-- **含待办标记**：`$= dv.pages('""').where(p => /todo|⌛/i.test(p.file.name)).length` 篇
+- **附件文件**：`$= app.vault.getFiles().filter(f => f.path.startsWith('90-attachments/')).length` 个（图片/PDF/视频）
+- **含待办标记**：`$= dv.pages().where(p => /todo|⌛/i.test(p.file.name)).length` 篇
 
 ## 🗂️ 各领域笔记分布
 
