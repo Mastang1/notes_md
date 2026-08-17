@@ -1,0 +1,17 @@
+# ARM · MOC
+
+> 领域：ARM 架构：Cortex-M/A 内存模型、中断异常、启动流程、核间同步
+
+> 本页由结构整理生成，内容自动跟随文件变动（需安装 Dataview 插件后自动渲染）。
+
+```dataview
+TABLE file.mtime AS "修改时间"
+FROM "ARM"
+WHERE file.name != this.file.name
+SORT file.name ASC
+```
+
+### ⭐ 入口笔记
+
+- [[0-mcu总线]]
+- [[0-中断风暴 总线风暴]]

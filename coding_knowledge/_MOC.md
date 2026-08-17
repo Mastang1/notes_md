@@ -1,0 +1,12 @@
+# coding_knowledge · MOC
+
+> 领域：编码规范与经验：Guard Clauses、线程菜单等
+
+> 本页由结构整理生成，内容自动跟随文件变动（需安装 Dataview 插件后自动渲染）。
+
+```dataview
+TABLE file.mtime AS "修改时间"
+FROM "coding_knowledge"
+WHERE file.name != this.file.name
+SORT file.name ASC
+```
