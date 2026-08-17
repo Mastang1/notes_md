@@ -16,7 +16,11 @@ WHERE file.name != this.file.name
 SORT file.name ASC
 ```
 
-### ⭐ 入口笔记
+### ⭐ 入口笔记（自动更新）
 
-- [[0 顶层构成、流程心智模型]]
-- [[0-kernel recipe VS components recipe]]
+```dataview
+LIST
+FROM "tool_chains"
+WHERE file.name != this.file.name AND regexmatch("^(0[- ]|top|summary|index|outline|dir|base|目录|总|入口|moc)", lowercase(file.name))
+SORT file.name ASC
+```

@@ -16,14 +16,11 @@ WHERE file.name != this.file.name
 SORT file.name ASC
 ```
 
-### ⭐ 入口笔记
+### ⭐ 入口笔记（自动更新）
 
-- [[0-My heart model]]
-- [[0-Architecture Of Kernel Sub-system(on the way)]]
-- [[0-TOP-kernel 分层及组件概览]]
-- [[0-1-TOP-my summary]]
-- [[0-2-Initial-outline]]
-- [[0-3-完整介绍(from source code)]]
-- [[0-Summary]]
-- [[0-note]]
-- [[Summary and relate to asyncio]]
+```dataview
+LIST
+FROM "OS"
+WHERE file.name != this.file.name AND regexmatch("^(0[- ]|top|summary|index|outline|dir|base|目录|总|入口|moc)", lowercase(file.name))
+SORT file.name ASC
+```

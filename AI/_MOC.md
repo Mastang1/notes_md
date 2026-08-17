@@ -16,11 +16,11 @@ WHERE file.name != this.file.name
 SORT file.name ASC
 ```
 
-### ⭐ 入口笔记
+### ⭐ 入口笔记（自动更新）
 
-- [[0-communication with AI]]
-- [[top]]
-- [[Summary]]
-- [[0-summary]]
-- [[0-第一个稍稍理解的模型训练概念]]
-- [[BASE]]
+```dataview
+LIST
+FROM "AI"
+WHERE file.name != this.file.name AND regexmatch("^(0[- ]|top|summary|index|outline|dir|base|目录|总|入口|moc)", lowercase(file.name))
+SORT file.name ASC
+```

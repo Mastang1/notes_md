@@ -16,7 +16,11 @@ WHERE file.name != this.file.name
 SORT file.name ASC
 ```
 
-### ⭐ 入口笔记
+### ⭐ 入口笔记（自动更新）
 
-- [[0-mcu总线]]
-- [[0-中断风暴 总线风暴]]
+```dataview
+LIST
+FROM "ARM"
+WHERE file.name != this.file.name AND regexmatch("^(0[- ]|top|summary|index|outline|dir|base|目录|总|入口|moc)", lowercase(file.name))
+SORT file.name ASC
+```
