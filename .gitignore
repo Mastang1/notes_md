@@ -1,0 +1,17 @@
+# Obsidian 运行时状态（每台机器不同）
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.trash/
+
+# 大体积媒体/文档不进 git（保留在本地，链接照常可用）
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.pdf
+
+# 系统/编辑器杂项
+.DS_Store
+Thumbs.db
+*.swp
+*~
