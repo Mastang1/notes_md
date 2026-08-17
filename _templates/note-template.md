@@ -22,3 +22,17 @@ related: []
 ## 未完成 / 待补充
 
 - [ ] 
+
+## 记忆卡片（可选，Spaced Repetition 语法）
+
+> 事实性知识点（定义/API/寄存器/易混淆点）做成卡片：`Ctrl+P` → `Spaced Repetition: Review flashcards` 复习。
+
+- 问题？:: 答案 #flashcards   （单行卡片）
+
+多行卡片：
+
+```
+问题？
+?
+答案 #flashcards
+```

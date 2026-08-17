@@ -14,6 +14,15 @@ cssclasses:
 - **附件文件**：`$= app.vault.getFiles().filter(f => f.path.startsWith('90-attachments/')).length` 个（图片/PDF/视频）
 - **含待办标记**：`$= dv.pages().where(p => /todo|⌛/i.test(p.file.name)).length` 篇
 
+## 🌱 状态分布（frontmatter status）
+
+```dataview
+TABLE length(rows) AS "笔记数"
+FROM ""
+WHERE status AND !contains(file.folder, "90-attachments")
+GROUP BY status
+```
+
 ## 🗂️ 各领域笔记分布
 
 ```dataview
@@ -45,7 +54,7 @@ LIMIT 10
 
 ## 🧠 复习队列（Spaced Repetition）
 
-> 在笔记里给需要记忆的知识点加 `#flashcards` 标签（写在卡片行内），然后在命令面板运行 **Spaced Repetition: Review flashcards** 即可开始间隔重复。
+> 使用方法见 [[00-复习指南|🧠 记忆复习指南]]。在笔记里给需要记忆的知识点加 `#flashcards` 标签（写在卡片行内），然后在命令面板运行 **Spaced Repetition: Review flashcards** 即可开始间隔重复。
 > 当前带卡片标记的笔记：
 
 ```dataview
