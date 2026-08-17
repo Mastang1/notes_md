@@ -1,3 +1,9 @@
+---
+tags:
+  - AI
+  - prompt
+---
+
 [DeepSeek]
 api_key = sk-3aafb4ba07b349dba16b22911255cd6a
 

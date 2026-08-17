@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 # Linux LDM（Device Driver Model）最顶层设计与 Platform Bus 分析
 
 > **分析对象**: Linux 6.6.99 内核源码

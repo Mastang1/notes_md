@@ -1,3 +1,10 @@
+---
+tags:
+  - OS
+  - Linux
+status: todo
+---
+
 
 你好！我是你的嵌入式全系统开发架构导师 Arch-ldm-rtt-mr。
 

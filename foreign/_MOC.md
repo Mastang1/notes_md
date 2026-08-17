@@ -1,3 +1,8 @@
+---
+tags:
+  - foreign
+---
+
 # foreign · MOC
 
 > 领域：外文/杂项

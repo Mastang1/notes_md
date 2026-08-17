@@ -1,3 +1,9 @@
+---
+tags:
+  - AI
+  - model-runtime-io
+---
+
 ### 1. kws Summary
 ① 新 Feature Tensor 与旧 Encoder Cache 一起进入 Encoder
 ② Encoder 输出若干新的声学时间帧，并更新声音历史 Cache

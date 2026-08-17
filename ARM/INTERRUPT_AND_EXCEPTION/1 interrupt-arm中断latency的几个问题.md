@@ -1,3 +1,9 @@
+---
+tags:
+  - ARM
+  - INTERRUPT-AND-EXCEPTION
+---
+
 
 这是一份基于 ARMv7-M 架构参考手册与 Cortex-M4 处理器技术参考手册（TRM）整理的技术笔记。我们将剔除冗余背景，从底层硬件逻辑和认知规律出发，逐一拆解你的问题。
 

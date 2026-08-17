@@ -1,3 +1,8 @@
+---
+tags:
+  - autosar
+---
+
 这是一个非常标准的 **AUTOSAR 基础软件（BSW）配置参数**定义，来自于 XDM 文件（通常由 EB Tresos 或 DaVinci 等配置工具读取）。
 
 根据你提供的 XML 片段，特别是 `DEFAULT="LLCE"` 和 `ORIGIN="NXP"`，这很明显是 **NXP S32G 系列芯片中 LLCE (Low Latency Communication Engine) 外设驱动**的一部分配置。

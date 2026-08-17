@@ -1,3 +1,9 @@
+---
+tags:
+  - ARM
+  - BL
+---
+
 ## 1. 个人总结 boot过程(No flashLoader)
  - 1. HSE核心启动后执行bootrom，但是bootrom需要CDCD（初始化clock、ram）、IVT（到IVT所在的固定定制查询有哪些image需要boot<实际中，只放自开发的bootloader image>）；
  - 2. 开启CM7 core 0;

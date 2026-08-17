@@ -1,3 +1,8 @@
+---
+tags:
+  - autosar
+---
+
 # autosar · MOC
 
 > 领域：AUTOSAR 汽车软件：分层、通信栈、MCAL、OS

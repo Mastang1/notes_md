@@ -1,3 +1,9 @@
+---
+tags:
+  - AI
+  - prompt
+---
+
 
 ```
 Rewrite the following prompt to be more effective.

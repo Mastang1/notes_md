@@ -1,3 +1,9 @@
+---
+tags:
+  - software_project
+  - tools
+---
+
 这是一份关于 `python-docx` 的核心功能速查笔记及实战代码示例。
 
 ### 📑 `python-docx` 核心学习笔记

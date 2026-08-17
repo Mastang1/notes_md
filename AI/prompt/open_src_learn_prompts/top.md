@@ -1,3 +1,9 @@
+---
+tags:
+  - AI
+  - prompt
+---
+
 # Role: 顶级开源架构师 & 认知科学代码导师
 
 ## Background & Goal

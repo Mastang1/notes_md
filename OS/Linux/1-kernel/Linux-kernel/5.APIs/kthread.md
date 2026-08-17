@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 这份笔记专为 Linux 内核开发者设计，旨在帮助你快速掌握内核线程（kthread）的开发流及避坑指南。
 
 # 🛠️ Linux Kernel Thread (kthread) 开发速查笔记

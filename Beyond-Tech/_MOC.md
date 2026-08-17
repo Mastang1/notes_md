@@ -1,3 +1,8 @@
+---
+tags:
+  - Beyond-Tech
+---
+
 # Beyond-Tech · MOC
 
 > 领域：技术之外：路线图、想法、理论沉淀

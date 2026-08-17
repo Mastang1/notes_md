@@ -1,3 +1,8 @@
+---
+tags:
+  - tool_chains
+---
+
 # WSL2 与 Docker：对象分层、Kernel / Userspace 与部署架构
 
 > [!abstract] 核心结论

@@ -1,3 +1,10 @@
+---
+tags:
+  - OS
+  - Linux
+status: todo
+---
+
 
 ## 1. 我的理解 _**(devtmpfs ram中是真实的inode集合;sysfs，kobject(inode的记录卡)/三大list_node(符号链接) )
 

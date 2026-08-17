@@ -1,3 +1,9 @@
+---
+tags:
+  - tool_chains
+  - yocto
+---
+
 >首先，我为你设计了一个“从青铜到王者”的 5 阶课程表（Topics）：
 
 - **Topic 1：概念重塑（心智模型）** —— 把 Yocto 想象成“中央厨房”，Recipe 就是“菜谱”。

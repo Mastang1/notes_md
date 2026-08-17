@@ -1,3 +1,8 @@
+---
+tags:
+  - software_project
+---
+
 
 # 软件架构设计文档规范 (ASPICE 4.0 SWE.2)
 

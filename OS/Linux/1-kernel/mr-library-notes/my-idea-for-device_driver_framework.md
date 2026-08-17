@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 ## 1. DESIGN： 上层统一API
  - uniq_register()
  - uniq_open(enum e_uart/e_can);return struct CAN 指针 p_dev;

@@ -1,3 +1,9 @@
+---
+tags:
+  - tool_chains
+  - yocto
+---
+
 > STAGING_DIR_TARGET: 各个组件依赖的recipe-sysroot
 
 ## 1. sysroot 机制

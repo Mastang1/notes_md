@@ -1,3 +1,10 @@
+---
+tags:
+  - AI
+  - motion-control-todo
+status: todo
+---
+
 
 ## 个人总结——关系
 _**1. 视觉模型获取类型及刚体信息；

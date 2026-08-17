@@ -1,3 +1,9 @@
+---
+tags:
+  - ethernet
+  - greatwall
+---
+
 这是一个非常好的提问。要深刻理解网络通信，区分 VPN (Virtual Private Network) 和 “飞机场” (通常指代基于 Shadowsocks, V2Ray, Trojan 等技术的代理服务) 的工作原理至关重要。
 
 它们最大的区别在于工作的网络层级不同：

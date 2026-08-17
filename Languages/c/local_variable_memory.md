@@ -1,3 +1,9 @@
+---
+tags:
+  - Languages
+  - c
+---
+
 
 # 问题：局部变量初始化值存在什么memory
 

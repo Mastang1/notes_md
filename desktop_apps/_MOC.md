@@ -1,3 +1,8 @@
+---
+tags:
+  - desktop_apps
+---
+
 # desktop_apps · MOC
 
 > 领域：桌面应用开发

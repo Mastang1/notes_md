@@ -1,3 +1,8 @@
+---
+tags:
+  - coding_knowledge
+---
+
 # coding_knowledge · MOC
 
 > 领域：编码规范与经验：Guard Clauses、线程菜单等

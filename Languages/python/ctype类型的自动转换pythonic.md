@@ -1,3 +1,9 @@
+---
+tags:
+  - Languages
+  - python
+---
+
 这种自动转换**只针对基础数据类型（Simple data types）**。
 
 - `c_int`, `c_short`, `c_long` -> Python `int`

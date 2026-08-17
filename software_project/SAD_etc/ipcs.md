@@ -1,3 +1,9 @@
+---
+tags:
+  - software_project
+  - SAD-etc
+---
+
 ### app - shm - os - hw
  - 具体架构设计参考 架构设计文档
 ### 为啥用双环QUEUE

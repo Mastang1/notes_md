@@ -1,3 +1,8 @@
+---
+tags:
+  - OS
+---
+
 # 1. 采用OS原生 Event Flag Group 事件标志组实现多通知OR方式读取、判断实现条件分支
 场景： 当work_thread 需要处于block status，wait forever for 通知；可以通过事件标志组来实现退出和业务逻辑；
 

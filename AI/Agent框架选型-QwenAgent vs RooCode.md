@@ -1,3 +1,8 @@
+---
+tags:
+  - AI
+---
+
 ~~🥇 Roo Code（VSCode）~~  
 ~~搭配本地 Qwen2.5-Coder 7B + OpenAI兼容API（Ollama / vLLM）~~
 

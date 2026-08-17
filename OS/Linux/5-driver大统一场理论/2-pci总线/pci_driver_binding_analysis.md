@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 # PCI Endpoint 驱动绑定与使用深度剖析（阶段 2·主线 C）
 
 > **目的**: 主线 A 扫描产出 `pci_dev`、主线 B 分配好 BAR，本文件讲最后一步：`pci_dev` 如何匹配到 `pci_driver` 并 probe，以及 EP 驱动如何用 BAR/中断/DMA。

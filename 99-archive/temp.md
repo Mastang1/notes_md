@@ -1,3 +1,9 @@
+---
+tags:
+  - archive
+status: archived
+---
+
 ```c
 struct sysfs_ops {
 

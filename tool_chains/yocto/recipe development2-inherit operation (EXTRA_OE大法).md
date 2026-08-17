@@ -1,3 +1,9 @@
+---
+tags:
+  - tool_chains
+  - yocto
+---
+
 欢迎回来。现在我们正式进入 **Topic 3：菜谱的三六九等（Recipe 类型）——揭秘 `inherit` 继承魔法**。
 
 在上一课中，我们知道了怎么通过显性重写 `do_compile` 和 `do_install` 来“手把手”教厨房炒菜。但如果你去翻看 Yocto 官方或者 NXP/TI 提供的 Recipe，你会发现很多上百兆的复杂开源库，它的 `.bb` 文件居然只有寥寥 5 行！连一句 `make` 都没写。

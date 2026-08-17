@@ -1,3 +1,8 @@
+---
+tags:
+  - test_etc
+---
+
 # test_etc · MOC
 
 > 领域：测试相关

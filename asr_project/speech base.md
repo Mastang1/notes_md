@@ -1,3 +1,8 @@
+---
+tags:
+  - asr_project
+---
+
 
 # 1. asr flow
 ![[Pasted image 20260630224538.png]]

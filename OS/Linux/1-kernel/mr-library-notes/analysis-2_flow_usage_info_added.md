@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 _**Summary: 结构上：实现三点核心功能，一个是实现链接；一个是通过把dev放在首地址实现扩展私有成员（不同dev的千人千面）；最后是把运行时的 operations 都注册到了指定的结构体中,并用xx_dev/xx_drv C文件进行赋值，用统一的指针指向，mr_dev_ops & mr_rv**_
 ![[Pasted image 20260506154456.png]]
 

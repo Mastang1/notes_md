@@ -1,3 +1,8 @@
+---
+tags:
+  - ethernet
+---
+
 # ethernet · MOC
 
 > 领域：以太网与网络：MAC/MII/PHY、长城平台

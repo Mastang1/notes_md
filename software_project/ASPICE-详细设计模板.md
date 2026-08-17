@@ -1,3 +1,8 @@
+---
+tags:
+  - software_project
+---
+
 # 软件详细设计说明书 (Software Detailed Design Specification)
 
 ## 1. 软件详细设计描述概述 (Overview of Software Detailed Design)

@@ -1,3 +1,9 @@
+---
+tags:
+  - soft_models
+  - 并发解决方案
+---
+
 
 _**理解、总结：
 1. 目的：_**1.绑定work function & parameters，**_

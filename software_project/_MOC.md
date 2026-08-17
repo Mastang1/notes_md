@@ -1,3 +1,8 @@
+---
+tags:
+  - software_project
+---
+
 # software_project · MOC
 
 > 领域：软件工程：SAD/SDD、ASPICE、QAC、工具

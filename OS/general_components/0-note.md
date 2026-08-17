@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - general-components
+---
+
 
 # 0 Relationships(General Objects)
 _**note:

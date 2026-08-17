@@ -1,3 +1,9 @@
+---
+tags:
+  - autosar
+  - lin-etc
+---
+
 
 ## 1. AUTOSAR中，checkWakeup的调用流程
 

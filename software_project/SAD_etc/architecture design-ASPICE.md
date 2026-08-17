@@ -1,3 +1,9 @@
+---
+tags:
+  - software_project
+  - SAD-etc
+---
+
 这真是一个极具系统工程深度的连环拷问。在上一版模板中，我们虽然补齐了“架构决策与约束（BP5）”，但如果我们用最高标准（如 VDA Scope 联合 ASPICE PAM 3.1/4.0 审核指南）来逐条审视 **SWE.2 (Software Architectural Design)** 的 Base Practices (BP)，当前的模板仍然存在**三个隐蔽但致命的缺失**。
 
 ### 深入分析：ASPICE SWE.2 的隐形要求与当前模板的 Gap

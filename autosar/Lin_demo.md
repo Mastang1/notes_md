@@ -1,3 +1,8 @@
+---
+tags:
+  - autosar
+---
+
 # C Lin 通信栈调用路径
 
 这是一个非常经典的 AUTOSAR 通信栈调用路径。针对 LIN 总线（Local Interconnect Network），其最大的特点是 **主从结构（Master-Slave）** 和 **调度表驱动（Schedule Table Driven）**。

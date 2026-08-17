@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 # PCI Core 扫描算法深度剖析（阶段 2·主线 A）
 
 > **目的**: 硬件心智模型说"枚举=挨家挨户读 Vendor ID"，本文件剖析 Linux 到底怎么写这段代码——从 `pci_host_probe` 一路钻进扫描内核。

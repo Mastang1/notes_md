@@ -1,3 +1,9 @@
+---
+tags:
+  - tool_chains
+  - yocto
+---
+
 ## 1. search in path
 路径规则：`build/tmp/work/<机器名>/<镜像配方名>/<版本号>/rootfs/`
 

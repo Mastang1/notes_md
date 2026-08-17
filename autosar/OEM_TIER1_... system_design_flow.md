@@ -1,3 +1,8 @@
+---
+tags:
+  - autosar
+---
+
 # 1. system_design_flow
 这是为您整理的关于 ARXML 在 AUTOSAR 开发流程（Methodology）中的详细应用笔记。这份笔记涵盖了从 OEM 系统设计到 Tier 1 代码生成的完整链路，并附带了详细的 Mermaid 流程图。
 

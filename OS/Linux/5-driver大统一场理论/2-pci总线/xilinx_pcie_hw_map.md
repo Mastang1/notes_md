@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 # Xilinx AXI PCIe IP 硬件-软件映射（阶段 1）
 
 > **目的**: 把阶段 0 的 PCIe 硬件心智模型，**逐一对到 `drivers/pci/controller/pcie-xilinx.c` 的寄存器与软件行为**，完成"由外到内"的最后一步。

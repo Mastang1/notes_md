@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - RTOS
+---
+
 
 这是一份为您整理的 RTOS 学习笔记，重点围绕 Mutex 与 Semaphore 的底层差异以及优先级反转的定义。
 

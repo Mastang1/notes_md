@@ -1,3 +1,8 @@
+---
+tags:
+  - autosar
+---
+
 在AUTOSAR标准（主要指Classic Platform）中，**CAN**和**LIN**驱动的初始化函数设计严格遵循BSW（基础软件）模块的配置变体（Configuration Variant）规则。
 
 这里的核心概念是**配置变体（Configuration Variant）**，它决定了配置数据是在编译时（Pre-compile）、链接时（Link-time）还是后构建时（Post-build）确定的。你提到的“开启precompile_support”通常对应于**Variant PC (Pre-compile)**。

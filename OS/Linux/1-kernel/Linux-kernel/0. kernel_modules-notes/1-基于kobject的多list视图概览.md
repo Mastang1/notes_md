@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 ## 1. 面向对象的底层依赖 kset、kobject、klist
 _**注：
 1.kset/kobject内部依赖侵入型list；

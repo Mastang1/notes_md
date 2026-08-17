@@ -1,3 +1,9 @@
+---
+tags:
+  - tool_chains
+  - yocto
+---
+
 
 这是一份为你量身定制的 Kbuild Makefile 心智模型与背诵笔记。
 

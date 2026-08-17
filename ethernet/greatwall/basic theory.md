@@ -1,3 +1,9 @@
+---
+tags:
+  - ethernet
+  - greatwall
+---
+
 # 0 最初的理解
 
 ```

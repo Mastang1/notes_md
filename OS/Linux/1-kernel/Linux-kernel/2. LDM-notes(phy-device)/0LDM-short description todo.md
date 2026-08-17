@@ -1,3 +1,10 @@
+---
+tags:
+  - OS
+  - Linux
+status: todo
+---
+
 
 **【源码与官方文档层面的证明】** 根据《Linux Device Drivers, Third Edition》（LDD3）的权威定义，整本书的**第 14 章就叫做 "The Linux Device Model"**。在这一章中，明确规定了 LDM 的四大顶级核心支柱，它们共同构建在 `kobject` 这个基础基类之上：
 

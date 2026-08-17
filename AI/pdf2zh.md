@@ -1,3 +1,8 @@
+---
+tags:
+  - AI
+---
+
 
 # 1. 设置 API Key
 $env:OPENAI_API_KEY="sk-您的DeepSeek的Key"

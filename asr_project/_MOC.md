@@ -1,3 +1,8 @@
+---
+tags:
+  - asr_project
+---
+
 # asr_project · MOC
 
 > 领域：语音识别项目：sherpa-onnx、KWS、部署与方案

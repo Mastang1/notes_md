@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 ## summary
  - 1. 总体架构，如下 系统架构所示，个人总结的分层视图：user app/libc，posix layers, SCI , VFS, sub-system, LDM(operations), hardware;
  - 2. 多任务、任务通信等OS功能，TODO；

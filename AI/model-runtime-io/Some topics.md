@@ -1,3 +1,9 @@
+---
+tags:
+  - AI
+  - model-runtime-io
+---
+
 
 ### 1. List
 	- 1. model file <ONNX 等>

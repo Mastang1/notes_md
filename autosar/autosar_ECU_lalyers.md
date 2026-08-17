@@ -1,3 +1,8 @@
+---
+tags:
+  - autosar
+---
+
 非常严谨的态度！作为高级系统工程师，对**术语（Terminology）**的绝对精准把控是基本功，因为这直接对应着标准文档（如 `AUTOSAR_EXP_LayeredSoftwareArchitecture`）和工具链中的配置项。
 
 只要名字叫错，在做架构设计（Architecture Design）或查阅 SIP 包时就会产生歧义。

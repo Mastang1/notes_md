@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 # RC 驱动 → PCI Core 心智模型（Q&A 摘要版）
 
 > **分析对象**: `drivers/pci/controller/pcie-xilinx.c` + `drivers/pci/probe.c`（Linux 6.6.99）

@@ -1,3 +1,10 @@
+---
+tags:
+  - OS
+  - Linux
+status: todo
+---
+
 
 
 _**个人理解笔记：

@@ -1,3 +1,10 @@
+---
+tags:
+  - OS
+  - Linux
+status: todo
+---
+
 ## 最完整的讲述[[Linux_VFS_Internals.pdf]]
 ## todo： 在cdev执行初始化、注册的过程中的阶段涉及的组件划分
 ## 0. _**从“一切皆文件”的VFS开始

@@ -1,3 +1,8 @@
+---
+tags:
+  - OS
+---
+
 # OS · MOC
 
 > 领域：操作系统：Linux 内核(LDM/CDEV/VFS)、u-boot、RTOS、并发与软模型

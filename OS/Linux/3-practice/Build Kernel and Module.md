@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 ## 1. build command
 
 ```shell

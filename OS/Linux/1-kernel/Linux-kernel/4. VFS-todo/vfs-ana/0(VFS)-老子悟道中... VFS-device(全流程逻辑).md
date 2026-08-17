@@ -1,3 +1,10 @@
+---
+tags:
+  - OS
+  - Linux
+status: todo
+---
+
 ## 1. VFS 是什么
 是一个 _**实现沙漏模型**_ 的内核模块,能通过通用的 _**open(file_path)**_ 接口，实现不同类型的file system的延迟绑定，最终实现file对象f_ops的路由赋值，实现 _**泛化**_ ；
 

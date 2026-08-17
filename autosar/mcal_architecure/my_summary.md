@@ -1,3 +1,9 @@
+---
+tags:
+  - autosar
+  - mcal-architecure
+---
+
 
 ## 1. 这是个驱动一般用的分层架构
 

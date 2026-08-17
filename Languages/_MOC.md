@@ -1,3 +1,8 @@
+---
+tags:
+  - Languages
+---
+
 # Languages · MOC
 
 > 领域：编程语言：C / Python / Shell 细节与实战

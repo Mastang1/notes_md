@@ -1,3 +1,8 @@
+---
+tags:
+  - AI
+---
+
 # AI · MOC
 
 > 领域：AI/LLM 开发：Agent框架、prompt工程、模型训练理解、MCP与LangGraph

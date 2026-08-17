@@ -1,3 +1,9 @@
+---
+tags:
+  - ARM
+  - INTERRUPT-AND-EXCEPTION
+---
+
 
 这是基于 ARMv7-M 架构手册与 FreeRTOS 官方内核设计文档的硬核解答。我们继续从底层逻辑和系统设计的角度直击本质。
 

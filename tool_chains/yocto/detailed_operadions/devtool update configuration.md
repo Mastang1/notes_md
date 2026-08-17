@@ -1,3 +1,9 @@
+---
+tags:
+  - tool_chains
+  - yocto
+---
+
 你抓住了 Yocto 现代工程流派的真正核心。
 
 在早期的 Yocto 开发中，工程师们被困在 Bitbake 严苛的沙箱（Sandbox）和繁琐的图层（Layer）结构中，手动写 `.bbappend`、手动比对 `.cfg` 碎片，稍有不慎就会被缓存机制（sstate-cache）坑得体无完肤。

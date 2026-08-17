@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - general-components
+---
+
 ## 1. 需要记得基础概念
 所谓IO，可以泛指一种需要wait的资源，类比RTOS的底层通信逻辑，可认为是Event的一种引申。
 ## 2. 简缩的逻辑

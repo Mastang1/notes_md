@@ -1,3 +1,8 @@
+---
+tags:
+  - tool_chains
+---
+
 ## makefile 的“列表”
 make 如何定义“列表”
 

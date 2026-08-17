@@ -1,3 +1,9 @@
+---
+tags:
+  - autosar
+  - lin-etc
+---
+
 # 1. 分清两者的使用对象
 ## ==0 基于Lin_sws及fw api进行driver开发==
 

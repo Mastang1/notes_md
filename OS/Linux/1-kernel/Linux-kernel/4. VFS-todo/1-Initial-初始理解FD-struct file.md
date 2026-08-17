@@ -1,3 +1,10 @@
+---
+tags:
+  - OS
+  - Linux
+status: todo
+---
+
 
 ### 核心目标 结构体 及其周边扩展（file及其数据下标 FD）
 

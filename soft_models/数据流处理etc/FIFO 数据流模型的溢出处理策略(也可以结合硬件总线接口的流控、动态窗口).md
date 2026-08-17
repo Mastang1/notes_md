@@ -1,3 +1,9 @@
+---
+tags:
+  - soft_models
+  - 数据流处理etc
+---
+
 ### 1. CPython 中的结构实现与三种溢出策略落地
 
 在 CPython 标准库中，处理生产者-消费者模型最核心的两个结构是 **`queue.Queue`**（线程安全的阻塞队列）和 **`collections.deque`**（基于 C 实现的双向链表，支持固定长度）。

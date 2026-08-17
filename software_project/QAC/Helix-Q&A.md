@@ -1,3 +1,9 @@
+---
+tags:
+  - software_project
+  - QAC
+---
+
 
 
 ### 笔记一：QAC 的本质与 Monitor 模式的边界

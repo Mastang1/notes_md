@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 这份**原始 `ranges` + 原始报错日志**把问题基本定死了。之前“只是缺少 Prefetchable range”还不够精确，真正的问题是：
 
 > **原始 DTS 用 `0x82000000` 声明了一个“32-bit PCI Memory Space”，却给了它接近 32GB 的 PCI 子地址范围；Hailo-8 的 64-bit Prefetchable BAR 最终被 Linux 分配到了 PCI Bus Address ≥ 4GB 的位置，超出了这个 32-bit PCI Memory Space 的语义范围。随后 BAR 虽然“分配成功”，但实际 MMIO 访问失败，Hailo probe 最终报 `Failed init pcie resources`。**

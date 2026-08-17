@@ -1,3 +1,8 @@
+---
+tags:
+  - autosar
+---
+
 # 1. configuration generator
 
 **EB Tresos 的 Module Plugin 并不是独家技术**，它是 AUTOSAR 标准中 **"BSW Module Description (BSWMD)"** 和 **"Code Generator"** 这一对概念的落地实现。

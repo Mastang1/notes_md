@@ -1,3 +1,8 @@
+---
+tags:
+  - soft_models
+---
+
 # soft_models · MOC
 
 > 领域：软硬件模型：数据流、并发方案、资源保护

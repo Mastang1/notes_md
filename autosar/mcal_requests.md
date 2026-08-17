@@ -1,3 +1,8 @@
+---
+tags:
+  - autosar
+---
+
 
 根据 `lin_request.txt` 文档内容，以下是整理好的需求列表笔记。需求编号（Custom ID）已按照字母和数字顺序升序排列，`Contents` 部分已翻译为中文。
 

@@ -1,3 +1,9 @@
+---
+tags:
+  - tool_chains
+  - yocto
+---
+
 tmp/deploy/rpm
 
 _**该部分包含：

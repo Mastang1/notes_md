@@ -1,3 +1,9 @@
+---
+tags:
+  - tool_chains
+  - git-gerrit
+---
+
 
 ### 1. 克隆master分支最新代码到发布路径
 ### 2.  执行命令 

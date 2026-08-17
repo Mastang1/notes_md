@@ -1,3 +1,8 @@
+---
+tags:
+  - coding_knowledge
+---
+
 ##### 当前C1的启动链路💚
  - 1. 打包阶段：通过blob-tool打包 DCD、BSE firmware、IVT、first_app(BootLoader.bin)生成blob.bin
  - 2. 应用打包阶段：使用app_packer工具，打包blob.bin 及soc几个核心的bin文件，大概是将启动地址放到了bootloader.bin的指定偏移地址，生成mip_bl_app.bin

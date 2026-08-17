@@ -1,3 +1,9 @@
+---
+tags:
+  - AI
+  - Langgraph-lib
+---
+
 ### 3. LangGraph 包有哪些核心模块（Modules）？
 
 LangGraph 的设计非常简洁，主要由以下几个核心组件构成：

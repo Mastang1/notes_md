@@ -1,3 +1,9 @@
+---
+tags:
+  - autosar
+  - mcal-architecure
+---
+
 # 用IPCS驱动代码作为demo，分析架构设计中的一些概念、界定方法
 ---
 

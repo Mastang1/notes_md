@@ -1,3 +1,9 @@
+---
+tags:
+  - Languages
+  - c
+---
+
 
 ---
 # WHY:

@@ -1,3 +1,8 @@
+---
+tags:
+  - development-theory
+---
+
 # development-theory · MOC
 
 > 领域：开发理论：规格、架构、抽象层次

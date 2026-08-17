@@ -1,3 +1,10 @@
+---
+tags:
+  - OS
+  - components
+status: todo
+---
+
 ##  1. todo my word
 
 

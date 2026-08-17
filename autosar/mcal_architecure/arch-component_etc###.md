@@ -1,3 +1,9 @@
+---
+tags:
+  - autosar
+  - mcal-architecure
+---
+
 # Description: 在架构设计定义中，对比说明框架图、组件图、模块区分，以及对component的详细剖析
 
 ----

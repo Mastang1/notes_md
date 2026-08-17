@@ -1,3 +1,9 @@
+---
+tags:
+  - OS
+  - Linux
+---
+
 todo：目前不了解具体的子设备注册、调用流程；不了解driver开发的接口等，可以对比cdev的operations提问
 _**个人总结：**_
 

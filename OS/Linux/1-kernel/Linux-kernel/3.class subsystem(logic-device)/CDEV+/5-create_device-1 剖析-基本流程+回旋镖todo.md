@@ -1,3 +1,10 @@
+---
+tags:
+  - OS
+  - Linux
+status: todo
+---
+
 _**个人理解：
 [[#二、 源码级拆解：`device_create` 做了什么？]]
 重点： device_add()：宏观结果——/sys/class/driver_name  &  /dev/driver_name**_

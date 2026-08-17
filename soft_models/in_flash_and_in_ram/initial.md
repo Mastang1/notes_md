@@ -1,3 +1,9 @@
+---
+tags:
+  - soft_models
+  - in-flash-and-in-ram
+---
+
 ### 现代 MCU 代码运行介质总结 (200字)
 
 在现代嵌入式 MCU 与 RTOS 架构中，代码（`.text`段）的运行介质主要分为**Flash就地执行（XIP）**与**RAM执行**两大阵营，其核心是容量、速度与功耗的博弈。

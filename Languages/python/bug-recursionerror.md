@@ -1,3 +1,9 @@
+---
+tags:
+  - Languages
+  - python
+---
+
 
 # 1. manager process多次运行test case出现异常
 ![[Pasted image 20260115185214.png]]

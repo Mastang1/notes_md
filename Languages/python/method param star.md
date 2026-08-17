@@ -1,3 +1,9 @@
+---
+tags:
+  - Languages
+  - python
+---
+
 使用 `*args` 和 `**kwargs` 是 Python 中最经典、最地道的“参数透传”（Parameter Forwarding）方式。这种方法的核心思想是**打包（Packing）与解包（Unpacking）**。
 
 下面为你详细拆解这种写法的工作原理、高阶用法以及它的优缺点。

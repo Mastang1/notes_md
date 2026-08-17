@@ -1,3 +1,9 @@
+---
+tags:
+  - software_project
+  - SAD-etc
+---
+
 
 ### 二、 优秀嵌入式架构知识笔记
 

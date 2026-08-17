@@ -1,3 +1,9 @@
+---
+tags:
+  - tool_chains
+  - yocto
+---
+
 ## 1. external build后clean local objects 测试这个命令有效
 ```shell
 do_install_append(){

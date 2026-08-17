@@ -1,3 +1,9 @@
+---
+tags:
+  - AI
+  - prompt
+---
+
 下面这套东西，不是某一个单一学派的“标准答案”，而是把认知科学、学习科学、教育心理学和教学设计中的高价值结论，压缩成一个更适合做 **LLM 教学系统** 的工程化综合框架。核心共识很稳定：人类理解陌生事物，不是靠一次性接收定义，而是靠 **把新信息挂到已有知识上、形成概念框架、控制工作记忆负荷、修正错误直觉、通过例子与检索练习稳固并迁移**。([National Academies](https://www.nationalacademies.org/read/9457/chapter/4 "Read \"How People Learn: Bridging Research and Practice\" at NAP.edu"))
 ---
 ### 前置概念，表征、图式、心智模型

@@ -1,5 +1,8 @@
 ---
 
+tags:
+  - autosar
+  - autosar-OS
 ---
 ---
 这份笔记整理了 **Trampoline OS** 的核心概念、开发流程、资源链接以及针对你 Cortex-M7 平台的适配要点。你可以直接复制到你的 Obsidian 或知识库中。

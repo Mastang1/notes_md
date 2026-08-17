@@ -1,3 +1,9 @@
+---
+tags:
+  - ARM
+  - INTERRUPT-AND-EXCEPTION
+---
+
 _**总结：
 1.LD将不同的类型的data放在不同的ram分区，避免masters之间的访问竞争；
 2.TCM中放中断代码，避免DMA总线风暴波及中断**_

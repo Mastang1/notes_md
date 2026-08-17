@@ -1,3 +1,9 @@
+---
+tags:
+  - tool_chains
+  - yocto
+---
+
 _**核心  场景流程：
 1.以defconfig为基线
 2.搜集提供的configuration碎片

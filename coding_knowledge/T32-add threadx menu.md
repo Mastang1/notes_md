@@ -1,3 +1,8 @@
+---
+tags:
+  - coding_knowledge
+---
+
 # T32 配置 ARM ThreadX 调试菜单指南
 
 ## 📂 核心文件与路径
