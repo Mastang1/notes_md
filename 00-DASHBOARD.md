@@ -74,7 +74,7 @@ SORT file.name ASC
 | 领域 | 入口 | 说明 |
 |---|---|---|
 | AI/LLM | [[AI/_MOC|AI]] | Agent、prompt 工程、模型训练理解 |
-| 操作系统 | [[OS/_MOC|OS]] | Linux 内核 LDM/CDEV/VFS、u-boot、RTOS（**LDM 金字塔教程 → [[OS/Linux/LDM|LDM.md]]**） |
+| 操作系统 | [[OS/_MOC|OS]] | Linux 内核 LDM/CDEV/VFS、u-boot、RTOS（**LDM 金字塔 → [[OS/Linux/LDM|LDM.md]]**；**用户态三分类 → [[用户态访问三分类-char-block-net|Char/Block/Net]]**） |
 | ARM | [[ARM/_MOC|ARM]] | 内存模型、中断、启动流程 |
 | AUTOSAR | [[autosar/_MOC|autosar]] | 分层、通信栈、MCAL |
 | 工具链 | [[tool_chains/_MOC|tool_chains]] | yocto、buildroot、git-gerrit |
