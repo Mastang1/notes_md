@@ -1,3 +1,5 @@
+相同的处理：都在tick中进行探测处理；
+---
 ## 1. Implement FreeRTOS
  - 核心组件： 插入缓存队列 + 有序List + daemon thread
  - 核心执行场景：用户定时，通过queue缓冲并唤醒daemon线程排序插入到list；更新全局最近唤醒时间点；然后tick中断中或者软中断中执行判断是否
