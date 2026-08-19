@@ -59,7 +59,7 @@ Daemon Callback
 
 ---
 
-## 2. ThreadX Software Timer
+## 2. ThreadX Software Timer(倍率+圈数)
 
 - **核心组件**：固定槽位的 **Timing Wheel（时间轮）**，默认 32 个槽 `0~31`。
 - 不建议称为“哈希表”，虽然计算方式类似取模映射，本质上是 **环形时间轮**。
