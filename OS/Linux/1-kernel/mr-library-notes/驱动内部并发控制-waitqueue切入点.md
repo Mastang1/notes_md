@@ -18,7 +18,7 @@ tags:
 
 ### 🏭 费曼图解：内核驱动“生产工具箱”全局架构映射
 
-```
+```mermaid
 graph TD
     subgraph UserSpace [用户空间 User Space]
         App["应用程序 (App)"]
