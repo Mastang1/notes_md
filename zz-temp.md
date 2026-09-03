@@ -13,3 +13,6 @@
 | `libgsthailotools`                                                             | 5.1.0     | tappas gstreamer 工具插件                                                                   |
 | `packagegroup-hailo-tappas`                                                    | 1.0       | 集合包                                                                                     |
 | `opencv`                                                                       | **4.4.0** | tappas 硬依赖（DL 已就位：opencv.git 3.3G / contrib 362M / 3rdparty 3.3G，4.4.0 各 SRCREV 均已校验存在） |
+
+*为啥每次屏蔽这逼玩意*
+BBMASK += "/work/sources/meta-alb/recipes-extended/opendds/"
