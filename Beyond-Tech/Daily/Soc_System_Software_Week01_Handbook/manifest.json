@@ -1,0 +1,77 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 5461,
+    "sha256": "8ac5b7e4d8ae83686ff2665edb388e4c350e92d7b7102e9402011d93b021ebe5"
+  },
+  {
+    "path": "chapters/ch01_physical_ubuntu_dev_host.md",
+    "bytes": 9654,
+    "sha256": "25373589ab5b7eecc8b4d92ddfe7cd93bdd9e9aa1bd6d2087102b05897db9822"
+  },
+  {
+    "path": "chapters/ch02_cross_compile_and_elf.md",
+    "bytes": 9030,
+    "sha256": "8599b2daa56eb33b71403ca488a690fef322410d3a68542d9e02bb128522dbb7"
+  },
+  {
+    "path": "chapters/ch03_imx6ull_mini_serial_and_network.md",
+    "bytes": 7795,
+    "sha256": "296c79cd73fca72526220c378c0f95ea3dabf002334a7fb7efe8b3e6973fbd07"
+  },
+  {
+    "path": "chapters/ch04_tftp_nfs_dev_loop.md",
+    "bytes": 6347,
+    "sha256": "a7ec808bb7b0f76f0cc948511f5061d2ba9c4839029a644909d7bc66bc8702e9"
+  },
+  {
+    "path": "chapters/ch05_zephyr_environment.md",
+    "bytes": 10226,
+    "sha256": "9cd39de781c12b60399c51ae1e3b4450c38ea076ddeb37e77faecdb0573b37fe"
+  },
+  {
+    "path": "chapters/ch06_f407_hardware_audit.md",
+    "bytes": 10832,
+    "sha256": "c424e226b9bcb322a52f48cd1be528dc66016f4c4f04279e8723ab4cbcea2616"
+  },
+  {
+    "path": "chapters/ch07_reproducibility_gate.md",
+    "bytes": 10777,
+    "sha256": "5eaeed3da2aed508d7ac2994a8fdd020a93338d254503a61fa899bf6cff80e3a"
+  },
+  {
+    "path": "labs/f407_board_audit_template.md",
+    "bytes": 1103,
+    "sha256": "b7f43386012beed5f9c246f292428fb1eaadf20f9d16001afd914904f5b8d2e7"
+  },
+  {
+    "path": "labs/hello.c",
+    "bytes": 87,
+    "sha256": "1daddd9518c387026f998f942d7731b7533187df7a495e652263e44906b40363"
+  },
+  {
+    "path": "references/Explorer_STM32F4_V2.2_SCH.pdf",
+    "bytes": 821450,
+    "sha256": "54ed8980cab93810fd0c90ea5f7a6296975cea724b013b9eb017ed731526c1f1"
+  },
+  {
+    "path": "references/README.md",
+    "bytes": 4237,
+    "sha256": "e4048d99af769587a6b14dc376bf943c00cc1f5d7d4d1512274d1708c4ad6aff"
+  },
+  {
+    "path": "tools/capture_host_baseline.sh",
+    "bytes": 871,
+    "sha256": "aa7d0d762bb8184a5f0e1624a57deaa284cb881e4d251628f73fef59c51e83a4"
+  },
+  {
+    "path": "tools/check_week1.sh",
+    "bytes": 1011,
+    "sha256": "e5a83ab7e1981bfed77d611642ef10ad2505912f251bf4e569b7950751b74632"
+  },
+  {
+    "path": "week01_plan_mapping.md",
+    "bytes": 877,
+    "sha256": "df4b11421400a750a9d7fa629acc786c7082c8a8e49aa4c9d8b946d06b3d8a50"
+  }
+]
