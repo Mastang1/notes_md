@@ -1,0 +1,6 @@
+board:
+  name: alientek_f407_explorer
+  full_name: ALIENTEK Explorer STM32F407
+  vendor: others
+  socs:
+    - name: stm32f407xx

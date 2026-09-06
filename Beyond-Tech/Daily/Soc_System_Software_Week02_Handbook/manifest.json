@@ -1,0 +1,122 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 2881,
+    "sha256": "d20e1771b109548ed5fab92b2e1d0cb004a48bbcd18a913b10c9105194f4f29b"
+  },
+  {
+    "path": "chapters/ch08_imx6ull_bsp_artifact_map.md",
+    "bytes": 7576,
+    "sha256": "f19914e0e46f10953b86dac887be04394adf12f6f0fca1a20275c98ded9f3d4c"
+  },
+  {
+    "path": "chapters/ch09_build_vendor_uboot.md",
+    "bytes": 6672,
+    "sha256": "d23988d5e1264facf50dfda1d2ab2b2df66add7928d0b8b9d2506b5fba134748"
+  },
+  {
+    "path": "chapters/ch10_build_kernel_dtb_modules.md",
+    "bytes": 6950,
+    "sha256": "f9bd7462e31839b8ba4d3fe9b817b5516326132aae81162f05447496bce3b256"
+  },
+  {
+    "path": "chapters/ch11_tftp_boot_kernel_dtb.md",
+    "bytes": 6271,
+    "sha256": "7da6aa580b548887891cce7f0b7d1648accd6afcabcc5bfc39f76d353bccb7fa"
+  },
+  {
+    "path": "chapters/ch12_remote_gdb_userspace.md",
+    "bytes": 7124,
+    "sha256": "bc1d6ae89b9cb1ba5709be3a177eb9fe4901c1640fd28f19a9a1cd8e26baf8e5"
+  },
+  {
+    "path": "chapters/ch13_create_zephyr_board.md",
+    "bytes": 5435,
+    "sha256": "1332169fe0acdf54b854ad151ff025e3b28f716413c54718d0133736eb676a08"
+  },
+  {
+    "path": "chapters/ch14_f407_bringup_and_week2_gate.md",
+    "bytes": 8103,
+    "sha256": "0c351dde1434daf36051bf8d744f77272f0c6202e629333059c7a941ed9d02be"
+  },
+  {
+    "path": "labs/gdb_demo/Makefile",
+    "bytes": 202,
+    "sha256": "53a3eb3c65846ff486636e5a3fd5b74ef139c555a6f40fa3be2c96f7fe1385b2"
+  },
+  {
+    "path": "labs/gdb_demo/README.md",
+    "bytes": 328,
+    "sha256": "6a210299a7f621b3121b828ae7ac572d97f6b783d17ee9c8bca4674f4a1d9320"
+  },
+  {
+    "path": "labs/gdb_demo/main.c",
+    "bytes": 407,
+    "sha256": "abb6f8de1dffb334f66c3a72f95dcc795e82449d9f3269c09157b4d59eaa2013"
+  },
+  {
+    "path": "references/Explorer_STM32F4_V2.2_SCH.pdf",
+    "bytes": 821450,
+    "sha256": "54ed8980cab93810fd0c90ea5f7a6296975cea724b013b9eb017ed731526c1f1"
+  },
+  {
+    "path": "references/README.md",
+    "bytes": 3182,
+    "sha256": "96ffa3487ce9d55e3bb98b1d3436f00bcb902c6ccfab635b6c938b7405b5a81f"
+  },
+  {
+    "path": "tools/capture_bsp_baseline.sh",
+    "bytes": 958,
+    "sha256": "48330025714fcb3be1ca1bb743748ef51e7c71aa603ad74bdba4aa81acfe2139"
+  },
+  {
+    "path": "tools/stage_kernel_to_tftp.sh",
+    "bytes": 450,
+    "sha256": "092df8d28e3b9e64bee3f73be928af58e1447507a3064bce2192a4b89a839c7f"
+  },
+  {
+    "path": "week02_plan_mapping.md",
+    "bytes": 425,
+    "sha256": "c6fc1dc3bdb8f37e4d8596320a921051b3da0c4975e5f569d070e2e4d5bfb6dc"
+  },
+  {
+    "path": "zephyr_app/CMakeLists.txt",
+    "bytes": 163,
+    "sha256": "2433f99773027214baa0818f6de932e06abbc1b57340b7c4303d71f154b8aaca"
+  },
+  {
+    "path": "zephyr_app/boards/others/alientek_f407_explorer/Kconfig.alientek_f407_explorer",
+    "bytes": 60,
+    "sha256": "c8236f61d71a0efa6b04a8c67b02888925f045f48c2e898795d7d6ee1a14e7b9"
+  },
+  {
+    "path": "zephyr_app/boards/others/alientek_f407_explorer/alientek_f407_explorer.dts",
+    "bytes": 1077,
+    "sha256": "2d629292a1245ec678671d516b43a93d6e882a27eb989d935d5ea26c451e6c36"
+  },
+  {
+    "path": "zephyr_app/boards/others/alientek_f407_explorer/alientek_f407_explorer_defconfig",
+    "bytes": 115,
+    "sha256": "510460c1cea42644457fdfc6c877087b9a7f22de7a30e779cb8fa5d84ea21f02"
+  },
+  {
+    "path": "zephyr_app/boards/others/alientek_f407_explorer/board.cmake",
+    "bytes": 119,
+    "sha256": "f03db17cb04fc7662b9af74eaef3687d11c0ea4f36ac90cb1f8c979e4edc6f5d"
+  },
+  {
+    "path": "zephyr_app/boards/others/alientek_f407_explorer/board.yml",
+    "bytes": 128,
+    "sha256": "1deb71ff3155540e392901fdb2c6efe3cf587e279e28d0d73e4014a1c6eee21c"
+  },
+  {
+    "path": "zephyr_app/prj.conf",
+    "bytes": 85,
+    "sha256": "c547f98f04b585ddcce424901cf78418c3861c20d2d055e0ddad9704697a42a7"
+  },
+  {
+    "path": "zephyr_app/src/main.c",
+    "bytes": 1200,
+    "sha256": "a0a4c0d823b4d970c88daa4ed30e5eb6f92773506b19a09d011df17802c55c2e"
+  }
+]
