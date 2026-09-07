@@ -11,15 +11,15 @@
 
 ## 章节
 
-| Day | Chapter | 任务 | 文档 |
-|---|---|---|---|
-| 1 | Ch.8 | 整理 BSP 源码、版本、工具链和产物路径 | [Open](chapters/ch08_imx6ull_bsp_artifact_map.md) |
-| 2 | Ch.9 | 编译 U-Boot，定位 `u-boot.imx` | [Open](chapters/ch09_build_vendor_uboot.md) |
-| 3 | Ch.10 | 编译 Kernel / DTB / modules | [Open](chapters/ch10_build_kernel_dtb_modules.md) |
-| 4 | Ch.11 | 用 TFTP 启动新 Kernel + DTB，不烧写 | [Open](chapters/ch11_tftp_boot_kernel_dtb.md) |
-| 5 | Ch.12 | `gdbserver + gdb-multiarch` 远程调试 | [Open](chapters/ch12_remote_gdb_userspace.md) |
-| 6 | Ch.13 | 创建 Explorer F407 out-of-tree Zephyr board | [Open](chapters/ch13_create_zephyr_board.md) |
-| 7 | Ch.14 | Clock + USART1 console + LED bring-up；Week 2 gate | [Open](chapters/ch14_f407_bringup_and_week2_gate.md) |
+| Day | Chapter | 任务                                                | 文档                                                   |
+| --- | ------- | ------------------------------------------------- | ---------------------------------------------------- |
+| 1   | Ch.8    | 整理 BSP 源码、版本、工具链和产物路径                             | [Open](chapters/ch08_imx6ull_bsp_artifact_map.md)    |
+| 2   | Ch.9    | 编译 U-Boot，定位 `u-boot.imx`                         | [Open](chapters/ch09_build_vendor_uboot.md)          |
+| 3   | Ch.10   | 编译 Kernel / DTB / modules                         | [Open](chapters/ch10_build_kernel_dtb_modules.md)    |
+| 4   | Ch.11   | 用 TFTP 启动新 Kernel + DTB，不烧写                       | [Open](chapters/ch11_tftp_boot_kernel_dtb.md)        |
+| 5   | Ch.12   | `gdbserver + gdb-multiarch` 远程调试                  | [Open](chapters/ch12_remote_gdb_userspace.md)        |
+| 6   | Ch.13   | 创建 Explorer F407 out-of-tree Zephyr board         | [Open](chapters/ch13_create_zephyr_board.md)         |
+| 7   | Ch.14   | Clock + USART1 console + LED bring-up；Week 2 gate | [Open](chapters/ch14_f407_bringup_and_week2_gate.md) |
 
 ## 可直接复制的实验文件
 
