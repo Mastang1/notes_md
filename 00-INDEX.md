@@ -15,7 +15,7 @@
 - [[coding_knowledge/_MOC|coding_knowledge]]
 - [[desktop_apps/_MOC|desktop_apps]]
 - [[development-theory/_MOC|development-theory]]
-- [[ethernet/_MOC|ethernet]]
+- [[ethernet and BUS protocols/_MOC|ethernet]]
 - [[foreign/_MOC|foreign]]
 - [[soft_models/_MOC|soft_models]]
 - [[software_project/_MOC|software_project]]
