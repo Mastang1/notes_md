@@ -144,7 +144,7 @@ CAN 使用 dominant `0`、recessive `1`。多个节点同时发送时，从 Iden
 
 # Stage 4：CAN 只有一片广播空间——需要 Logical Communication Channel
 
-真实系统通信并不只有一种：
+==真实系统通信并不只有一种：==
 - 异常事件
 - 正常周期/非周期参数
 - 指定节点消息
