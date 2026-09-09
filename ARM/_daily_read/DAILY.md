@@ -3,3 +3,10 @@
 >也就是，上来执行的是定义的 reset_handler 函数
 
 >所以，代码要想办法把reset_handler放到该地址；
+
+
+
+
+## 2. bootloader 跳转APP过程
+
+## 3. RTOS任务切换过程
