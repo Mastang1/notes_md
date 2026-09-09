@@ -1,10 +1,11 @@
 ## 1. cortexM 启动过程
->依赖机制说明：CPU 被设计为从地址4取指令执行(reset_handler 地址)，0 地址放的是 栈顶指针（地址）；然后，CPU执行指令，并执行栈操作；
+>依赖机制说明：CPU 被设计为从地址4取指令执行(reset_handler 地址)，0 地址放的是 栈顶指针（地址）；然后，CPU执行指令，并执行栈操作；_**注意：默认是这，Vtable其实地址可配，bootloader设计中会用到，因为bl和app需要两份向量表;也就是上电先读scb的指定寄存器，然后去执行代码；**
 >也就是，上来执行的是定义的 reset_handler 函数
 
 >所以，代码开发中要想办法把reset_handler放到该地址；
 >编译器编译后代码分为 text/data/BSS等段，Startup代码中把 isr_vector 作为中断向量表的段；
 >由Linker读取link.ld文件实现各个段的排序。比如从片上flash启动（0x08000000）时候，link文件将向量表存储在flash起始位置。
+>（链接器把各目标文件的输入节收集为输出节，为它们分配 VMA/LMA，解析符号和重定位，并生成 ELF 映像）
 
 >但是data需要存储在flash，同时运行时候在ram，所以采用_>RAM AT > FLASH_方式：data段的符号地址从0x20000000开始，但是实际存储在flash；
 >BSS段：未初始化的全局或者局部静态变量，只用占位，不必占用flash空间；
