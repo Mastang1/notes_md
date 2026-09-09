@@ -55,7 +55,7 @@
 
 **手册依据**：Cortex-M4 Generic User Guide，第 2 章；CMSIS-Core Overview；RM0090，第 1～3 章。[^cm4dug][^cmsis][^rm0090]
 
-## Q2：Cortex-M4 有哪些核心寄存器？调用函数时各做什么？
+## Q2：Cortex-M4 有哪些核心寄存器？调用函数时各做什么？*
 
 **回答**：`R0-R12` 为通用寄存器；`R13` 是 SP，物理上对应 MSP/PSP；`R14` 是 LR；`R15` 是 PC。`xPSR` 由 APSR、IPSR、EPSR 的视图组成。异常屏蔽和执行控制使用 `PRIMASK`、`BASEPRI`、`FAULTMASK`、`CONTROL`。按 AAPCS32，`r0-r3` 用于参数和结果且由调用者保存；`r4-r8、r10、r11、SP` 由被调用者保持，`r9` 的角色由平台约定，`r12` 是临时寄存器，`LR` 保存返回地址。
 
@@ -65,9 +65,10 @@
 
 **手册依据**：PM0214 §2.1；AAPCS32 §6.1。[^pm0214][^aapcs]
 
-## Q3：Thread mode、Handler mode、特权级是什么关系？
+## Q3：Thread mode、Handler mode、特权级是什么关系？*
+>总结：俩模式：一个中断/异常；一个就是normal；然后这两种运行模式，可以设置特权级，主要是线程模式可以特权级；
 
-**回答**：复位后处理器处于特权 Thread mode。所有异常处理程序运行在特权 Handler mode；普通程序运行在 Thread mode，可由 `CONTROL.nPRIV` 选择特权或非特权。非特权 Thread mode 不能直接清除 `nPRIV` 恢复特权，通常要通过 `SVC` 进入特权异常处理。`CONTROL.SPSEL` 在 Thread mode 选择 MSP 或 PSP；Handler mode 始终使用 MSP。
+**回答**：复位后处理器处于特权 Thread mode。所有异常处理程序运行在特权 Handler mode；普通程序运行在 Thread mode，可由 `CONTROL.nPRIV` 选择特权或非特权。非特权 Thread mode 不能直接清除 `nPRIV` 恢复特权，通常要通过 `SVC` 进入特权异常处理。`CONTROL.SPSEL` 在 **Thread mode 选择 MSP 或 PSP**；Handler mode 始终使用 MSP。
 
 **工程用途**：RTOS 常让内核运行特权态、用户任务运行非特权态，并用 MPU 限制任务可访问区域。
 
@@ -75,7 +76,7 @@
 
 **手册依据**：PM0214 §2.2、§2.3；CMSIS Core Register Access。[^pm0214][^cmsis-reg]
 
-## Q4：MSP 和 PSP 为什么要设计成两个栈？
+## Q4：MSP 和 PSP 为什么要设计成两个栈？no
 
 **回答**：MSP 是复位后的默认栈，也是 Handler mode 使用的栈；PSP 仅供 Thread mode 使用。两个栈使异常/内核栈与线程/任务栈隔离。异常入栈时使用被打断上下文当时选中的栈；进入 Handler 后执行代码使用 MSP。异常返回时，`EXC_RETURN` 编码决定返回到 Thread/Handler、使用 MSP/PSP，以及是否恢复浮点扩展栈帧。
 
@@ -95,7 +96,8 @@
 
 **手册依据**：PM0214 §2.1.3、§2.3.3；Armv7-M ARM 的 EPSR/T 位和异常向量定义。[^pm0214][^armv7m]
 
-## Q6：Cortex-M 的 4GB 地址空间怎样分区？
+## Q6：Cortex-M 的 4GB 地址空间怎样分区？**
+>思考：启动流程
 
 **回答**：Armv7-M 定义统一 32 位地址空间及默认内存属性：代码区从 `0x00000000` 开始，SRAM 区从 `0x20000000` 开始，外设区从 `0x40000000` 开始，系统控制空间位于 `0xE0000000` 附近。具体哪个物理存储器映射到这些范围，由芯片实现决定。STM32F407 的主 Flash 位于 `0x08000000`，SRAM 从 `0x20000000` 开始，启动时还会把选中的启动存储器别名映射到 `0x00000000`。
 
@@ -147,7 +149,7 @@
 
 **手册依据**：PM0214 §4.2、`AIRCR.PRIGROUP`；CMSIS NVIC API。[^pm0214][^cmsis-nvic]
 
-## Q11：高抢占优先级能否打断低优先级 ISR？同抢占级呢？
+## Q11：高抢占优先级能否打断低优先级 ISR？同抢占级呢？同pending*
 
 **回答**：当前未被屏蔽且新异常的 group priority 更高时，可以抢占。group priority 相同不能彼此抢占，即使 subpriority 不同；subpriority 只在处理器要从多个 pending 异常中选择下一个时生效。NMI 和 HardFault 有固定的特殊优先级关系，不受普通可配置优先级规则完全支配。
 
@@ -157,7 +159,7 @@
 
 **手册依据**：PM0214 §2.3.6、§4.2；Cortex-M4 Generic User Guide，Exception model。[^pm0214][^cm4dug]
 
-## Q12：NVIC 的 enable、pending、active 分别表示什么？
+## Q12：NVIC 的 enable、pending、active 分别表示什么？***
 
 **回答**：enable 决定外部中断是否可被处理；pending 表示中断请求已挂起；active 表示处理器正在服务该异常。它们是不同状态，禁用 IRQ 不等于清除 pending。CMSIS 分别提供 `NVIC_EnableIRQ`、`NVIC_Set/ClearPendingIRQ`、`NVIC_GetActive`。许多外设还有自己的状态标志和中断使能位，NVIC 清 pending 不能替代清外设源标志。
 
@@ -167,7 +169,7 @@
 
 **手册依据**：CMSIS NVIC API；PM0214 §4.3 NVIC 寄存器。[^cmsis-nvic][^pm0214]
 
-## Q13：异常进入时硬件自动压栈什么？
+## Q13：异常进入时硬件自动压栈什么？*
 
 **回答**：基本异常栈帧包含 `R0-R3、R12、LR、PC、xPSR`。处理器更新 LR 为特殊的 `EXC_RETURN`，取向量表入口并进入 Handler mode。根据 FPU 状态和惰性压栈配置，可能还有扩展浮点栈帧。软件编译器生成的 ISR 序言还可能保存其他被调用者保存寄存器，这部分不是硬件基本栈帧。
 
