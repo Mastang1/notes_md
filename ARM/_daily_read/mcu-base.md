@@ -187,15 +187,7 @@
 
 **手册依据**：Cortex-M4 Generic User Guide，Exception model；Cortex-M4 TRM，NVIC functional description。[^cm4dug][^cm4trm]
 
-## Q15：STM32 EXTI 的“中断模式”和“事件模式”有什么区别？
-
-**回答**：这是 STM32 外设概念，不是 Cortex-M 通用概念。以 STM32F407 为例，边沿检测由 `EXTI_RTSR/FTSR` 配置；`EXTI_IMR` 允许中断请求送往 NVIC；`EXTI_EMR` 允许事件请求。中断路径让 CPU 进入 ISR；事件路径可参与唤醒或触发芯片内部事件机制，不等价于执行 ISR。pending 状态通过 `EXTI_PR` 按手册规定清除。
-
-**记忆**：**IMR 路径找 NVIC/ISR，EMR 路径发事件；两者可同时开。**
-
-**手册依据**：RM0090，External interrupt/event controller (EXTI) 章节。[^rm0090]
-
-## Q16：ISR 中“不能做什么”？
+## Q16：ISR 中“不能做什么”？（耗时/挂起任务的操作）
 
 **回答**：架构没有“禁止调用某个 C 函数”的清单，真正约束是确定性、可重入性和上下文。ISR 应避免：无界阻塞；等待只能由较低/相同优先级中断推进的条件；长循环和大块复制；不可重入库；普通互斥锁；大栈对象；在 M7 上遗漏 DMA/Cache 同步。共享数据要用合适的原子操作、临界区或无锁队列。
 
@@ -205,15 +197,6 @@
 
 **手册依据**：Armv7-M 异常模型给出执行上下文；具体库的可重入性必须查工具链库手册。[^armv7m]
 
-## Q17：为什么 ISR 中调用 `delay()` 经常死锁？
-
-**回答**：若 `delay()` 等待 SysTick 递增，而当前 ISR 的抢占优先级高于或等于 SysTick，SysTick 不能执行，等待条件永远不变化。即便 SysTick 能抢占，长时间占用 ISR 仍会放大其他中断延迟。忙等型短延时不会因 tick 停止而必然死锁，但仍阻塞处理器并破坏实时性。
-
-**解决**：ISR 记录时间戳/设置状态/投递事件，主循环或任务根据 deadline 执行；硬实时短脉冲优先用定时器输出比较/PWM。
-
-**记忆**：**中断里等 tick，tick 又进不来，就是自己等自己。**
-
-**手册依据**：PM0214 的异常抢占规则和 SysTick 章节；CMSIS SysTick API。[^pm0214][^cmsis-systick]
 
 ## Q18：ISR 修改、主循环读取的变量为什么常用 `volatile`？
 
@@ -230,15 +213,8 @@ void IRQ_Handler(void) { flag = 1U; }
 
 **手册依据**：Arm Compiler Language Reference 的 volatile 语义；Armv7-M ARM 的访问原子性和内存顺序。[^armclang][^armv7m]
 
-## Q19：PRIMASK、BASEPRI、FAULTMASK 有什么区别？
 
-**回答**：`PRIMASK=1` 阻止所有可配置优先级异常，NMI 和 HardFault 仍可激活；`BASEPRI!=0` 屏蔽优先级数值不高于阈值紧急程度的异常，即屏蔽“同等或更低逻辑优先级”的可配置异常；`FAULTMASK=1` 屏蔽除 NMI 外的所有异常。Cortex-M0/M0+ 没有 BASEPRI/FAULTMASK。临界区通常优先用 BASEPRI 保留最高优先级响应，而不是长时间全局关中断。
-
-**记忆**：**PRIMASK 一刀切普通中断；BASEPRI 留急诊；FAULTMASK 几乎全封。**
-
-**手册依据**：CMSIS Core Register Access；PM0214 §2.2.1。[^cmsis-reg][^pm0214]
-
-## Q20：修改中断屏蔽或系统控制寄存器后为什么常见 `DSB/ISB`？
+## Q20：修改中断屏蔽或系统控制寄存器后为什么常见 `DSB/ISB`？***查todo
 
 **回答**：`DMB` 保证显式内存访问的观察顺序；`DSB` 等待此前显式内存访问完成；`ISB` 刷新流水线，使后续指令在新上下文下重新取指。修改 MPU、Cache、向量/系统控制、进入低功耗等场景，手册常要求特定 barrier 序列。barrier 不是 Cache clean/invalidate，也不是 C 语言层面的互斥锁。
 
@@ -332,7 +308,7 @@ $$f_{SYSCLK}=f_{VCOout}/PLLP$$
 
 **手册依据**：RM0090 Embedded Flash memory interface 与 PWR；DS8626 AC characteristics。[^rm0090][^ds8626]
 
-## Q29：WFI、WFE、SEV 和 `SLEEPDEEP` 是什么关系？
+## Q29：WFI、WFE、SEV 和 `SLEEPDEEP` 是什么关系？todo 功耗
 
 **回答**：`WFI` 等待合格中断，`WFE` 等待事件，`SEV` 产生事件。`SCB->SCR.SLEEPDEEP=0` 时进入普通 Sleep；置 1 时，具体 MCU 电源控制逻辑可进入 deep sleep 对应的 Stop/Standby。WFE 受事件寄存器状态影响，常见的 `SEV; WFE; WFE` 序列用于先清理旧事件再真正等待，但是否适用要结合并发设计。
 
