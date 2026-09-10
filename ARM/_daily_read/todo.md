@@ -1,5 +1,5 @@
 ### 理解
-> **场景本质： _给一个系统不同的 Event作为输入，该系统根据自己的State，做出不同的Actions
+> **场景本质： _给一个系统不同的 Event作为输入，该系统根据自己的State，做出不同的Actions, 并执行状态的跃迁（State Transition）；
 
 ```c
 /*
