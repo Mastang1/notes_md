@@ -53,10 +53,10 @@
       
     
 
-|**状态(行) \ 事件(列)**|**EV_A (事件 A)**|**EV_B (事件 B)**|
-|---|---|---|
-|**ST_IDLE (空闲)**|`{ST_RUN, do_start}`|`{ST_ERROR, do_err}`|
-|**ST_RUN (运行)**|`{ST_RUN, ignore}`|`{ST_STOP, do_stop}`|
+| **状态(行) \ 事件(列)** | **EV_A (事件 A)**      | **EV_B (事件 B)**      |
+| ----------------- | -------------------- | -------------------- |
+| **ST_IDLE (空闲)**  | `{ST_RUN, do_start}` | `{ST_ERROR, do_err}` |
+| **ST_RUN (运行)**   | `{ST_RUN, ignore}`   | `{ST_STOP, do_stop}` |
 
 - **UML 序列图**：
     
