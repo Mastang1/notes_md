@@ -149,18 +149,18 @@ flowchart TD
 
 当前功能组成应按“核心、开发、产物、质量”理解：
 
-| 层面 | 主要组成 | 解决的问题 |
-|---|---|---|
-| 核心执行 | BitBake 2.18 | 元数据解析、Provider/版本选择、依赖图、并行调度、签名与 sstate |
-| 核心元数据 | OpenEmbedded-Core `meta` | 基础 recipe、class、QEMU machine、distro 默认机制 |
-| 参考配置 | `meta-yocto/meta-poky`、`meta-yocto-bsp` | Poky 参考发行版和参考 BSP |
-| 环境管理 | `bitbake-setup`、`oe-init-build-env` | 获取仓库、创建 build、生成配置、初始化 shell |
-| 开发工具 | `devtool`、`recipetool`、`bitbake-layers`、VS Code 扩展、Toaster | 新增/修改 recipe、Layer 管理、可视化和 IDE 工作流 |
-| 构建复用 | stamps、task signatures、sstate、hash equivalence | 增量构建、共享缓存、判断什么必须重建 |
-| 产品产物 | RPM/IPK/DEB、RootFS、Wic、SDK/eSDK、包仓库 | 安装包、烧写镜像和应用开发工具链 |
-| 运行与测试 | QEMU、`runqemu`、`testimage`、oe-selftest | 构建后启动和自动验证 |
-| 合规与安全 | license manifest、SPDX SBOM、CVE/VEX、QA classes | 许可证、安全、可追踪性和输出质量 |
-| 权限模拟 | Pseudo | 无需 root 即可生成正确 UID/GID 的 RootFS |
+| 层面    | 主要组成                                                       | 解决的问题                                    |
+| ----- | ---------------------------------------------------------- | ---------------------------------------- |
+| 核心执行  | BitBake 2.18                                               | 元数据解析、Provider/版本选择、依赖图、并行调度、签名与 sstate  |
+| 核心元数据 | OpenEmbedded-Core `meta`                                   | 基础 recipe、class、QEMU machine、distro 默认机制 |
+| 参考配置  | `meta-yocto/meta-poky`、`meta-yocto-bsp`                    | Poky 参考发行版和参考 BSP                        |
+| 环境管理  | `bitbake-setup`、`oe-init-build-env`                        | 获取仓库、创建 build、生成配置、初始化 shell             |
+| 开发工具  | `devtool`、`recipetool`、`bitbake-layers`、VS Code 扩展、Toaster | 新增/修改 recipe、Layer 管理、可视化和 IDE 工作流       |
+| 构建复用  | stamps、task signatures、sstate、hash equivalence             | 增量构建、共享缓存、判断什么必须重建                       |
+| 产品产物  | RPM/IPK/DEB、RootFS、Wic、SDK/eSDK、包仓库                        | 安装包、烧写镜像和应用开发工具链                         |
+| 运行与测试 | QEMU、`runqemu`、`testimage`、oe-selftest                     | 构建后启动和自动验证                               |
+| 合规与安全 | license manifest、SPDX SBOM、CVE/VEX、QA classes              | 许可证、安全、可追踪性和输出质量                         |
+| 权限模拟  | Pseudo                                                     | 无需 root 即可生成正确 UID/GID 的 RootFS          |
 
 上述组成及职责可由[官方组件概览](https://docs.yoctoproject.org/6.0/overview-manual/yp-intro.html#components-and-tools)和[Yocto 6.0 Release Notes](https://docs.yoctoproject.org/6.0/migration-guides/release-notes-6.0.html)交叉核对。
 
