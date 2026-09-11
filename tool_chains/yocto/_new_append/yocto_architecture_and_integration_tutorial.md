@@ -54,18 +54,18 @@ Yocto Project 不是一个可以直接安装的软件，也不是 Ubuntu 那样�
 
 对嵌入式 C 工程师，可以把它理解成一台“操作系统编译器”：
 
-| Yocto 概念 | 类比 C/MCU 工程 | 实际作用 |
-|---|---|---|
-| BitBake | 编译器驱动程序 + 任务调度器 | 解析元数据、建立依赖图、运行任务 |
-| Recipe `.bb` | 一个组件的构建描述 | 描述软件来源、依赖、配置、编译、安装和打包 |
-| Class `.bbclass` | 通用库/构建框架 | 抽取 CMake、内核、镜像、systemd 等公共逻辑 |
-| Layer `meta-*` | 可叠加的软件平台模块 | 隔离 BSP、发行版策略、中间件、产品应用 |
-| `MACHINE` | 板级工程/芯片后端 | 选择 CPU、ABI、内核、设备树、启动件等硬件能力 |
-| `DISTRO` | 平台级编译策略 | 选择 libc、init、包格式、安全和全局软件策略 |
-| Image recipe | 产品固件配置 | 定义目标系统最终安装哪些功能和软件包 |
-| Package | `.o`/库产物的产品化类比 | recipe 生成的 RPM/IPK/DEB，是 RootFS 的输入 |
-| RootFS | 已链接的运行时目录树 | 包管理器把所选 package 安装到目标根目录 |
-| Image | 可烧写固件 | 将 RootFS 转换成 ext4、wic、tar、squashfs 等 |
+| Yocto 概念         | 类比 C/MCU 工程     | 实际作用                                 |
+| ---------------- | --------------- | ------------------------------------ |
+| BitBake          | 编译器驱动程序 + 任务调度器 | 解析元数据、建立依赖图、运行任务                     |
+| Recipe `.bb`     | 一个组件的构建描述       | 描述软件来源、依赖、配置、编译、安装和打包                |
+| Class `.bbclass` | 通用库/构建框架        | 抽取 CMake、内核、镜像、systemd 等公共逻辑         |
+| Layer `meta-*`   | 可叠加的软件平台模块      | 隔离 BSP、发行版策略、中间件、产品应用                |
+| `MACHINE`        | 板级工程/芯片后端       | 选择 CPU、ABI、内核、设备树、启动件等硬件能力           |
+| `DISTRO`         | 平台级编译策略         | 选择 libc、init、包格式、安全和全局软件策略           |
+| Image recipe     | 产品固件配置          | 定义目标系统最终安装哪些功能和软件包                   |
+| Package          | `.o`/库产物的产品化类比  | recipe 生成的 RPM/IPK/DEB，是 RootFS 的输入  |
+| RootFS           | 已链接的运行时目录树      | 包管理器把所选 package 安装到目标根目录             |
+| Image            | 可烧写固件           | 将 RootFS 转换成 ext4、wic、tar、squashfs 等 |
 
 核心因果关系是：
 
