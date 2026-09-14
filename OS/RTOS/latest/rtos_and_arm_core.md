@@ -5,12 +5,12 @@
 
 ## 1. 总：RTOS 看 Cortex-M7，只需要先抓住这四组
 
-| 组 | 关键寄存器/异常 | RTOS 作用 |
-|---|---|---|
-| 线程上下文 | `R0-R12`、`PSP`、`LR`、`PC`、`xPSR` | 保存/恢复线程执行现场 |
-| 临界区 | `PRIMASK`、`BASEPRI`、`IPSR` | 保护内核数据，区分 Thread/ISR |
-| 调度 | `ICSR.PENDSVSET`、PendSV priority | 请求并真正执行线程切换 |
-| 时基/入口 | `SysTick`、`VTOR`、`MSP` | tick、异常入口、系统栈 |
+| 组     | 关键寄存器/异常                         | RTOS 作用              |
+| ----- | -------------------------------- | -------------------- |
+| 线程上下文 | `R0-R12`、`PSP`、`LR`、`PC`、`xPSR`  | 保存/恢复线程执行现场          |
+| 临界区   | `PRIMASK`、`BASEPRI`、`IPSR`       | 保护内核数据，区分 Thread/ISR |
+| 调度    | `ICSR.PENDSVSET`、PendSV priority | 请求并真正执行线程切换          |
+| 时基/入口 | `SysTick`、`VTOR`、`MSP`           | tick、异常入口、系统栈        |
 
 核心运行模型：
 
