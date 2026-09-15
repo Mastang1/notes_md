@@ -15,9 +15,12 @@ tags:
 - **App_M7 (如 Cortex-M7_0/1/2)**：跑业务的，完全开放，跑 Autosar、你的裸机代码，或者用来跑 Flashloader 烧写 Flash。
 
 ##### 当前C1的启动链路💚
-> _阶段1: 打包为blob,然后根据bootloader协议打包blob和images为最终image
-> 阶段2.1: ==通过boot ROM加载flashloader.bin,==接收images(bootlader/apps)写入到指定介质;
-> 阶段2.2: 跳转到bootloader,bootloader依次启动其他images;
+> 他妈垃圾
+> 1. 打包BL、DCD等；
+> 2. 打包apps + BL；BL 之后是apps，存储了apps的SP 及Entry；
+> 3. bootROM，接收并在Core0运行flashloader.bin，通信接收image到指定地址；
+> 4. flashloader.bin指定跳转到bl，执行ram初始化，数据拷贝，分别在固定偏移地址读取各个核心的SP + Entry，然后执行reset；
+>
 
  - 1. 打包阶段：通过blob-tool打包 DCD、BSE firmware、IVT、first_app(BootLoader.bin)生成blob.bin
  - 2. 应用打包阶段：使用app_packer工具，打包blob.bin 及soc几个核心的bin文件，大概是将启动地址放到了bootloader.bin的指定偏移地址，生成mip_bl_app.bin
