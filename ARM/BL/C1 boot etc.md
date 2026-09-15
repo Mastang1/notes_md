@@ -16,7 +16,7 @@ tags:
 
 ##### 当前C1的启动链路💚
 > _阶段1: 打包为blob,然后根据bootloader协议打包blob和images为最终image
-> 阶段2.1: 通过boot ROM加载flashloader.bin,接收images(bootlader/apps)写入到指定介质;
+> 阶段2.1: ==通过boot ROM加载flashloader.bin,==接收images(bootlader/apps)写入到指定介质;
 > 阶段2.2: 跳转到bootloader,bootloader依次启动其他images;
 
  - 1. 打包阶段：通过blob-tool打包 DCD、BSE firmware、IVT、first_app(BootLoader.bin)生成blob.bin
