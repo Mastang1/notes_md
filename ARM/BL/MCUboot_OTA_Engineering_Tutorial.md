@@ -1,4 +1,4 @@
-# STM32F407 + MCUboot OTA 工程实战与面试教程
+#  MCUboot OTA 工程实战与面试教程
 
 > **定位**：面向已经理解 Cortex-M 启动、向量表、Linker Script、Flash 擦写、Bootloader 跳转，并理解 XMODEM 等传输协议的 MCU 工程师。  
 > **目标**：1 周在 STM32F407 上跑通“旧 APP → 下载新镜像 → 重启升级 → 新 APP → 未确认自动回滚/确认后永久运行”；第 2 周把源码主线和面试问题讲清楚。  
