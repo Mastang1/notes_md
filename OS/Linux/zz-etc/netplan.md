@@ -1,8 +1,9 @@
-Netplan 在设计上遵循了**前端声明与后端渲染解耦**（Declarative Frontend & Backend Rendering）的架构理念。
+Netplan 在设计上遵循了
+_**前端声明与后端渲染解耦**_（Declarative Frontend & Backend Rendering）的架构理念。
 
   
 
-在系统启动（Boot）以及用户执行 `netplan apply` 时，Netplan 本质上是一个**代码生成器**（Generator），它将高层 YAML 文件翻译为底层的 `systemd-networkd` 或 `NetworkManager` 配置文件，最终由后端守护进程调用 Linux 内核 Netlink 接口完成网络配置。
+==在系统启动（Boot）以及用户执行 `netplan apply` 时，Netplan 本质上是一个**代码生成器**（Generator），它将高层 YAML 文件翻译为底层的 `systemd-networkd` 或 `NetworkManager` 配置文件，最终由后端守护进程调用 Linux 内核 Netlink 接口完成网络配置。==
 
   
 
@@ -10,13 +11,8 @@ Netplan 在设计上遵循了**前端声明与后端渲染解耦**（Declarative
 
 在 Linux 系统启动早期（Early Boot Phase），`systemd` 会在网络服务启动之前触发 **System Generators**。Netplan 通过 `/lib/systemd/system-generators/netplan-generator` 挂载到该流程中：
 
-  
-
 代码段
-
-```mermaid
-
-```
+![[Pasted image 20260928144801.png]]
 
 ### 二、 用户手动执行 `netplan apply` 的动态触发流程
 
