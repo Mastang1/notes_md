@@ -1,0 +1,13 @@
+## 1. 组成
+ - 插件化工具（install、uninstall）
+ - 动态加载卸载 test cases
+ - 测试管理
+	 - 多线程监测
+	 - daemon进程
+	 - 命令行交互
+	 - client 接口及implements
+	 - 测试引擎
+		 - loader - manager process server
+		 - runner
+		 - recorder
+		 - report（接口及实现<html/excel>）
