@@ -3,12 +3,12 @@
 
 ## 1. 核心四大功能模块
 
-|**功能模块**|**核心职责**|**依赖的关键技术/组件**|
-|---|---|---|
-|**1. 显存与渲染管理**<br><br>  <br>  <br><br>_(Data Path)_|负责 GPU/ display 控制器所需的显存分配、虚拟内存映射、CPU/GPU 缓存一致性同步以及算力命令队列调度。|**GEM** (Graphics Execution Manager)<br><br>  <br>  <br><br>**TTM** (针对独立显卡 VRAM)|
-|**2. 显示管道管理**<br><br>  <br>  <br><br>_(Control Path)_|负责显示分辨率、刷新率设置、时序生成（HSYNC/VSYNC）、多图层硬件 Alpha 合成与缩放。|**KMS** (Kernel Mode Setting)<br><br>  <br>  <br><br>**Atomic KMS** 状态机|
-|**3. 接口与协议转换**<br><br>  <br>  <br><br>_(Output Path)_|负责将像素流转码为标准协议信号（HDMI TMDS、DP SST/MST、VGA 模拟信号等），处理 HPD 热插拔与 EDID 读取。|**Connector / Bridge / Panel** 辅助框架<br><br>  <br>  <br><br>DDC (I2C) / HDCP|
-|**4. 跨设备零拷贝**<br><br>  <br>  <br><br>_(Buffer Sharing)_|实现 GEM Buffer 在 GPU 渲染器、VPU 硬件解码器、Camera 与 Display 驱动之间的跨设备零拷贝共享。|**DMA-BUF / PRIME** 机制|
+| **功能模块**                                                | **核心职责**                                                             | **依赖的关键技术/组件**                                                                    |
+| ------------------------------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **1. 显存与渲染管理**<br><br>  <br>  <br><br>_(Data Path)_     | 负责 GPU/ display 控制器所需的显存分配、虚拟内存映射、CPU/GPU 缓存一致性同步以及算力命令队列调度。         | **GEM** (Graphics Execution Manager)<br><br>  <br>  <br><br>**TTM** (针对独立显卡 VRAM) |
+| **2. 显示管道管理**<br><br>  <br>  <br><br>_(Control Path)_   | 负责显示分辨率、刷新率设置、时序生成（HSYNC/VSYNC）、多图层硬件 Alpha 合成与缩放。                   | **KMS** (Kernel Mode Setting)<br><br>  <br>  <br><br>**Atomic KMS** 状态机           |
+| **3. 接口与协议转换**<br><br>  <br>  <br><br>_(Output Path)_   | 负责将像素流转码为标准协议信号（HDMI TMDS、DP SST/MST、VGA 模拟信号等），处理 HPD 热插拔与 EDID 读取。 | **Connector / Bridge / Panel** 辅助框架<br><br>  <br>  <br><br>DDC (I2C) / HDCP       |
+| **4. 跨设备零拷贝**<br><br>  <br>  <br><br>_(Buffer Sharing)_ | 实现 GEM Buffer 在 GPU 渲染器、VPU 硬件解码器、Camera 与 Display 驱动之间的跨设备零拷贝共享。    | **DMA-BUF / PRIME** 机制                                                            |
 
 ## 2. DRM 架构分层视图
 
