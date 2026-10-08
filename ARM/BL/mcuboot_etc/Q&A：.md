@@ -114,9 +114,9 @@ MCUboot 并不是操作系统，它与 APP 之间**不是**“父进程与子进
 
 ### 总结对照表
 
-| 维度 | Flash 原位执行 (XIP) | RAM 加载执行 (Ramload) |
-| :--- | :--- | :--- |
-| **MCUboot 机制** | 校验后直接跳转到 Primary Slot 的 Flash 地址 | 校验后将镜像由 Flash 拷贝至 RAM 再跳转 |
-| **执行速度** | 受 Flash 访问等待周期（Wait State）限制 | **零等待周期**，达 CPU 最高理论性能 |
-| **RAM 占用** | 仅占用 APP 的 `.data` 和 `.bss` 及 Stack/Heap | 需额外占用能**完整容纳整个 `.text` 代码段**的 RAM |
+| 维度                    | Flash 原位执行 (XIP)                             | RAM 加载执行 (Ramload)                               |
+| :-------------------- | :------------------------------------------- | :----------------------------------------------- |
+| **MCUboot 机制**        | 校验后直接跳转到 Primary Slot 的 Flash 地址             | 校验后将镜像由 Flash 拷贝至 RAM 再跳转                        |
+| **执行速度**              | 受 Flash 访问等待周期（Wait State）限制                 | **零等待周期**，达 CPU 最高理论性能                           |
+| **RAM 占用**            | 仅占用 APP 的 `.data` 和 `.bss` 及 Stack/Heap      | 需额外占用能**完整容纳整个 `.text` 代码段**的 RAM                |
 | **Bootloader RAM 回收** | **100% 回收**（跳转后 Bootloader RAM 空间全部被 APP 覆盖） | **100% 回收**（Bootloader 原 RAM 空间被 APP 拿去当代码段或数据段） |
