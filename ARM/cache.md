@@ -5,7 +5,7 @@
 ## 一、 Cache 基础架构与核心工作机制
 
 ### 1. 核心概念与术语
-* **Linefill（行填充）**：当 CPU 访问内存发生 **Cache Miss（未命中）** 时，总线接口单元（Bus Interface Unit）或 Cache 控制器会发起一次突发传输（Burst Transfer），将主存中以 **Cache Line（缓存行，现代高性能 MCU 通常为 32 字节）** 为单位的对齐数据块批量加载到 Cache 阵列中。
+* **Linefill（行填充）**：当 CPU 访问内存发生 ==🔴**Cache Miss（未命中）** 时，总线接口单元（Bus Interface Unit）或 Cache 控制器会发起一次突发传输（Burst Transfer）==，将主存中以 **Cache Line（缓存行，现代高性能 MCU 通常为 32 字节）** 为单位的对齐数据块批量加载到 Cache 阵列中。
 * **局部性原理**：
   * **时间局部性**：当前被访问的数据在不久的将来极大概率再次被访问。
   * **空间局部性**：当前被访问的数据地址附近的内存单元很快也会被访问。
