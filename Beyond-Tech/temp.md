@@ -7,7 +7,7 @@
 >2. driver的实现，是用通道的queue保存了该衣服架信息，执行遍历该通道queue就知道哪些通道发送了数据，且可以找到memory，然后再在收端push数据到pool的bd ring；
 >3. **Channel queue 初始为空队列；Pool queue初始化后是包含了多个buffer地址信息的满队列；场景流程是：选取一个合适的bd>buffer, 写payload，pop 该BD并push到 channel队列（这俩过程是copy操作）；接收端pop from Channel Queue；然后 user process in callback， 最后push BD到Pool queue，完成闭环；
 >4. DMA BD ring，是固定链式bd数组，不执行pop、push操作，由双方执行ownership检查实现数据的归属判断；
->5. ipcs的提供chan'n'ne'l
+>5. ipcs的提供channel queue的实现，方便用于多级消息的zero-copy 传递。
 6. 遵循 架构设计、接口设计、详细设计的流程
 7. 内存流转图
 8. 理论模型
