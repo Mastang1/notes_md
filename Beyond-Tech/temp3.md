@@ -1,268 +1,875 @@
-前面没有直接回答你的技术问题。下面给出基于真实硬件和 Linux 源码的实现。
+# wolfBoot 核心源码与知识点笔记（STM32F407 配置）
 
-选用 Intel I210 PCIe 千兆网卡，硬件手册为 Intel Document 333016-011，Linux 驱动为 `drivers/net/ethernet/intel/igb/igb_main.c`。
+  
 
-![](https://www.google.com/s2/favicons?domain=https://cdrdv2-public.intel.com&sz=32)
+> 目标配置：`ARCH=ARM`、`TARGET=stm32f4`、`SIGN=ED25519`、`HASH=SHA256`、`IMAGE_HEADER_SIZE=256`、`WOLFBOOT_SECTOR_SIZE=0x20000`、`VTOR=1`、`DEBUG=1`。
 
-Intel CDRD
+> 分区布局（`config/flash-map.csv`）：BOOT `0x08020000`（0x40000）、UPDATE `0x08060000`（0x40000）、SWAP `0x080A0000`（0x20000）；wolfBoot 自身 `0x08000000` 起。
 
-+2
+> 芯片：STM32F407ZGT6，Cortex-M4（ARMv7-M），1MiB 单 Bank Flash，外部 HSE 8MHz，PLL 168MHz。
 
-## 1. DMA 接收的真实硬件流程
+> 所有路径均为 `vendor/wolfBoot` 下的相对路径，行号对应本快照源码。
 
-接收路径：Ethernet → I210 DMA → PCIe → Host DDR → MSI-X → ISR → NAPI
+  
 
-这里必须区分三个动作：
+---
 
-1. 驱动预先分配 DDR Buffer、建立 DMA 映射并填写 RX Descriptor。DMA Engine 根据描述符中的地址决定数据写到哪里。
-    
-2. DMA Engine 自主搬运数据。I210 通过 PCIe 向主机内存写入报文，然后更新描述符完成标志 `DD`。CPU 不负责逐字节搬运。
-    
-3. CPU 收到中断后执行底半部。ISR 只安排 NAPI Poll，真正的收包、数据处理、缓冲区回收由 Poll 完成。
-    
+  
 
-I210 手册 §7.1.4.5 和 §8.10 规定了描述符 Ring、Head/Tail 以及硬件所有权机制。特别注意：不能仅凭 RDH 判断 DMA 是否完成，应以内存中描述符的 DD 状态为依据。
+## 第 1 章　总体流程认知
 
-![](https://www.google.com/s2/favicons?domain=https://cdrdv2-public.intel.com&sz=32)
+  
 
-Intel CDRD
+### 1.1 源码路径地图（按本配置实际参与编译的文件）
 
-+1
-
-## 2. I210 DMA IP：寄存器、描述符和缓冲区
-
-I210 每个 RX Descriptor 为 16 Bytes。驱动使用以下寄存器管理接收队列：
-
-|寄存器|Queue 0 地址|功能|
-|---|---|---|
-|`RDBAL/RDBAH`|`0xC000/0xC004`|Descriptor Ring 的 64 位 DMA 地址|
-|`RDLEN`|`0xC008`|Descriptor Ring 总字节数|
-|`RDH`|`0xC010`|硬件维护的接收 Head|
-|`RDT`|`0xC018`|驱动提交可用 Descriptor 的 Tail|
-|`RXDCTL`|`0xC028`|队列使能、预取和写回阈值|
-|`SRRCTL`|`0xC00C`|描述符类型、RX Buffer 大小|
-
-地址及寄存器定义来自 Intel 手册 §8.10。Ring 要求 128 Bytes 对齐，`RDLEN` 必须为 128 的整数倍。
-
-![](https://www.google.com/s2/favicons?domain=https://cdrdv2-public.intel.com&sz=32)
-
-Intel CDRD
-
-+1
-
-一个 RX Descriptor 的本质是：
-
-```
-Host DDR
-┌──────────────────────────────────────┐
-│ RX Descriptor Ring（DMA coherent）   │
-│ Desc[0] → Buffer[0] DMA Address      │
-│ Desc[1] → Buffer[1] DMA Address      │
-│ Desc[2] → Buffer[2] DMA Address      │
-└──────────────────────────────────────┘
-             │
-             ▼
-┌──────────────────────────────────────┐
-│ RX Buffer（DMA streaming mapping）   │
-│ Buffer[0]: 接收到的 Ethernet Frame   │
-│ Buffer[1]: 接收到的 Ethernet Frame   │
-└──────────────────────────────────────┘
-```
-
-这里选用 `igb` 实际采用的 Advanced One-Buffer Descriptor 模式：设备接收完成后写回 `length`、`status_error` 等字段。官方 Linux `igb_clean_rx_irq()` 使用非零 `length` 判断是否有已完成的描述符，随后通过 `dma_rmb()` 确保读取其他写回字段的顺序。
-
-![](https://www.google.com/s2/favicons?domain=https://code.googlesource.com&sz=32)
-
-Git at Google
-
-+1
-
-## 3. C Demo：实际驱动中的 DMA → ISR → NAPI 核心
-
-下面是从 Linux `igb` 驱动精简出来的代码。使用源码已有的结构体、宏和辅助函数，省略了 PCI 枚举、MAC/PHY 初始化、TX、XDP 等不相关部分。它是可对照真实驱动阅读和改造的核心片段，不是独立可加载的完整 PCIe 驱动。
-
-第一部分：初始化 DMA Ring，向硬件提交 RX Buffer
+  
 
 ```
 
-/* 依赖 igb_main.c、igb.h 中的类型和硬件宏 */
+vendor/wolfBoot/
 
-/* Descriptor Ring 在真实驱动中这样分配：
- * ring->desc = dma_alloc_coherent(ring->dev, ring->size,
- *                                 &ring->dma, GFP_KERNEL);
- */
+├── src/
 
-static void demo_setup_rx(struct igb_adapter *adapter,
-                          struct igb_ring *ring)
-{
-    struct e1000_hw *hw = &adapter->hw;
-    int q = ring->reg_idx;
-    u64 base = ring->dma;
-    u32 ctl;
+│   ├── boot_arm.c        ← 启动向量 + isr_reset + do_boot（ARMv7-M 分支）
 
-    /* 1. 配置前关闭 RX 队列 */
-    wr32(E1000_RXDCTL(q), 0);
+│   ├── loader.c          ← main()：hal_init → spi_flash_probe → wolfBoot_start
 
-    /* 2. 告知 DMA Engine 描述符 Ring 的 DMA 地址 */
-    wr32(E1000_RDBAL(q), lower_32_bits(base));
-    wr32(E1000_RDBAH(q), upper_32_bits(base));
-    wr32(E1000_RDLEN(q),
-         ring->count * sizeof(union e1000_adv_rx_desc));
+│   ├── libwolfboot.c     ← 分区状态/TLV/版本/trigger/success/Flash 访问封装
 
-    wr32(E1000_RDH(q), 0);
-    wr32(E1000_RDT(q), 0);
+│   ├── image.c           ← wolfBoot_open_image / verify_integrity / verify_authenticity
 
-    /* 3. 配置 Advanced One-Buffer Descriptor */
-    igb_setup_srrctl(adapter, ring);
+│   ├── update_flash.c    ← wolfBoot_start 状态机 + wolfBoot_update + swap_and_final_erase
 
-    /* 4. 启用描述符获取/写回单元 */
-    ctl = IGB_RX_PTHRESH |
-          (IGB_RX_HTHRESH << 8) |
-          (IGB_RX_WTHRESH << 16) |
-          E1000_RXDCTL_QUEUE_ENABLE;
+│   ├── keystore.c        ← keygen 生成的授权公钥表（本配置 ED25519 一把）
 
-    wr32(E1000_RXDCTL(q), ctl);
+│   ├── string.c          ← 裸机 memcpy/memset/memcmp（Flash/RAM 搬运会调用）
 
-    /* 5. 在实际驱动完成接收单元初始化后：
-     * 分配/映射 RX Pages，填充 Descriptor，
-     * 最后通过 RDT 将缓冲区交给硬件。
-     */
-    igb_alloc_rx_buffers(ring, ring->count - 1);
-}
-```
+│   └── delta.c           ← delta update（本配置默认 CFLAGS 加 -DDELTA_UPDATES，预留）
 
-关键不是 CPU 将数据复制到 Buffer，而是 `igb_alloc_rx_buffers()` 完成三个动作：
+├── hal/
 
-```
-/* 实际驱动核心语句，其他代码省略 */
+│   ├── stm32f4.c         ← hal_init / hal_prepare_boot / clock_pll_on/off / flash_* / wait states
 
-/* 建立设备可以使用的 DMA 映射 */
-dma = dma_map_page_attrs(dev, page, 0, page_size,
-                         DMA_FROM_DEVICE, attrs);
+│   └── uart/uart_drv_stm32f4.c ←（APP 端用，wolfBoot 自身 DEBUG_UART=0 默认不编进来）
 
-/* 设置描述符中的 DMA 目标地址 */
-rx_desc->read.pkt_addr = cpu_to_le64(dma + offset);
+├── include/
 
-/* 保证描述符写入完成后再通知硬件 */
-dma_wmb();
-writel(next_to_use, rx_ring->tail);
-```
+│   ├── image.h           ← struct wolfBoot_image、sanity/verification 宏、TLV 常量
 
-随后 DMA Engine 从 Ring 读取 Descriptor，获得 Buffer 的 DMA Address，经 PCIe 写入报文数据。
+│   ├── loader.h          ← IMAGE_SIGNATURE_SIZE（Ed25519=64）、wolfBoot_start 声明
 
-![](https://www.google.com/s2/favicons?domain=https://code.googlesource.com&sz=32)
+│   ├── hal.h             ← HAL 接口（hal_init/hal_flash_*/hal_prepare_boot 等）
 
-Git at Google
+│   ├── hooks.h           ← wolfBoot_hook_preinit/postinit（本配置未启用）
 
-+2
+│   └── wolfboot/wolfboot.h ← APP 公共 API：wolfBoot_success/update_trigger/current_firmware_version
 
-第二部分：硬中断只调度底半部，NAPI 负责实际收包
+└── test-app/
+
+    ├── app_stm32f4.c     ← 测试 APP main：时钟/Timer/UART/收包循环 → wolfBoot_update_trigger
+
+    ├── startup_arm.c     ← APP 侧启动（isr_reset，链接在 0x08020000）
+
+    ├── timer.c / led.c   ← APP 外设演示
+
+    └── libwolfboot.o     ← APP 也链一份 libwolfboot（调 wolfBoot_* API 用）
 
 ```
 
-/* 精简自 igb_msix_ring() */
-static irqreturn_t demo_msix_irq(int irq, void *data)
-{
-    struct igb_q_vector *q = data;
+  
 
-    /* 不在 ISR 中遍历 RX Descriptor */
-    napi_schedule(&q->napi);
+> 被条件编译**排除**（本配置未启用，读代码时先折叠）：`tpm.c`、`uart_flash.c`、`encrypt.c`、`pkcs11_*.c`、`wolfhsm_*.c`、`stage1/`、`x86/`、`aarch64`/`riscv`/`ppc` 等其它架构的 `boot_*.c`、`disk*.c`、`elf.c`、`fdt.c`、`gpt.c`、`multiboot.c`。
 
-    return IRQ_HANDLED;
-}
+  
 
-/* 精简自 igb_poll()：只保留 RX 路径 */
-static int demo_rx_poll(struct napi_struct *napi, int budget)
-{
-    struct igb_q_vector *q =
-        container_of(napi, struct igb_q_vector, napi);
+### 1.2 关键功能节点与函数接口速查
 
-    /* 清理 DMA 完成的描述符，批量处理报文 */
-    int done = igb_clean_rx_irq(q, budget);
+  
 
-    if (done < budget) {
-        if (napi_complete_done(napi, done))
-            igb_ring_irq_enable(q);
-    }
+| 阶段 | 函数 | 文件:行 | 作用 |
 
-    return done;
-}
+|------|------|---------|------|
+
+| 复位入口 | `isr_reset` → `isr_reset_c` | `src/boot_arm.c:263` | 复制 `.data`、清 `.bss`、`mpu_init()`、调 `main()` |
+
+| C 入口 | `main` | `src/loader.c:110` | `hal_init()`→`spi_flash_probe()`→`wolfBoot_start()`（TPM/UART_FLASH/FIPS 本配置不走） |
+
+| HAL 初始化 | `hal_init` | `hal/stm32f4.c:362` | `clock_pll_on(0)`→168MHz、5 wait states、可选 `spi_init` |
+
+| 状态机入口 | `wolfBoot_start` | `src/update_flash.c:1697` | 读 BOOT/UPDATE 状态、恢复中断的 final erase、走更新或直接认证 BOOT |
+
+| 状态读 | `wolfBoot_get_partition_state` | `src/libwolfboot.c:796` | 从分区尾部 trailer 读状态字节 |
+
+| 状态写 | `wolfBoot_set_partition_state` | `src/libwolfboot.c:739` | 擦状态扇区尾部再写（写前擦整 Sector） |
+
+| 恢复收尾 | `wolfBoot_swap_and_final_erase(1)` | `src/update_flash.c:488` | 探测 `WOLFBOOT_MAGIC_TRAIL`，恢复被中断的最终擦除 |
+
+| 升级主流程 | `wolfBoot_update(fallback_allowed)` | `src/update_flash.c:1046` | 开 UPDATE/BOOT → 校验类型/容量/Hash/签名/版本 → 逐块交换 |
+
+| 镜像视图 | `wolfBoot_open_image` | `src/image.c:1770` | 解析 256B 头、TLV、算 `fw_base`/`fw_size` |
+
+| 完整性 | `wolfBoot_verify_integrity` | `src/image.c:1961` | 按 HEADER_HASH TLV 重算 SHA256 比对 |
+
+| 真实性 | `wolfBoot_verify_authenticity` | `src/image.c:2647` | 公钥 hint 查 keystore → Ed25519 验签 |
+
+| 跳转 APP | `do_boot(app_offset)` | `src/boot_arm.c:532` | Armv7-M：关 MPU→设 VTOR→取 MSP→跳 entry（带 Thumb 位） |
+
+| APP 触发 | `wolfBoot_update_trigger` | `src/libwolfboot.c:893` | 擦 UPDATE 尾扇区写 `IMG_STATE_UPDATING` |
+
+| APP 确认 | `wolfBoot_success` | `src/libwolfboot.c:964` | 把 BOOT 状态从 `TESTING` 改 `SUCCESS` |
+
+| HAL 收尾 | `hal_prepare_boot` | `hal/stm32f4.c:371` | `WOLFBOOT_RESTORE_CLOCK=1` 时 `clock_pll_off()` 降回 HSI |
+
+  
+
+### 1.3 压缩版全流程伪代码（本配置实际必经路径）
+
+  
+
 ```
 
-实际的 `igb_clean_rx_irq()` 中，最值得关注的是下面这条执行链：
+;; ============ ARMv7-M 复位（wolfBoot 向量表 @ 0x08000000）============
+
+isr_reset():                      ; boot_arm.c:263
+
+    copy .data  flash(_stored_data) -> RAM(_start_data.._end_data)
+
+    zero .bss   _start_bss.._end_bss
+
+    mpu_init()
+
+    main()                        ; tail-call
+
+  
+
+;; ============ wolfBoot C 入口 ============
+
+main():                           ; loader.c:110（无 LOADER_MAIN/TPM/UART_FLASH/FIPS）
+
+    hal_init():                  ;   clock_pll_on(0): HSE→PLL→SYSCLK=168MHz, 5 wait states
+
+    spi_flash_probe()
+
+    wolfBoot_start():            ;   ── 不返回，失败则 wolfBoot_panic ──
+
+      bootState   = get_partition_state(PART_BOOT)    ; 可能 -1（空 trailer）
+
+      updateState = get_partition_state(PART_UPDATE)
+
+      resumedFinalErase = wolfBoot_swap_and_final_erase(1)  ; 恢复中断的最终擦除
+
+      if bootState == TESTING:
+
+          wolfBoot_update(1)                            ; 回滚：用 UPDATE 里的旧版恢复
+
+      elif updateState == UPDATING:
+
+          wolfBoot_update(0)                            ; 正常升级：验证 UPDATE 后交换
+
+      ;; —— 认证 BOOT ——
+
+      bootRet = wolfBoot_open_image(&boot, PART_BOOT)
+
+      if bootRet >= 0:
+
+          bootRet = wolfBoot_verify_integrity(&boot)     ; 重算 SHA256 比头里的摘要
+
+      if bootRet >= 0:
+
+          bootRet = wolfBoot_verify_authenticity(&boot)  ; keystore 找公钥 → Ed25519 验签
+
+      if bootRet < 0:                                    ; BOOT 非法
+
+          if wolfBoot_update(1) < 0:  wolfBoot_panic()   ; 紧急恢复失败 → 死
+
+          wolfBoot_open_image(&boot, PART_BOOT)          ; 恢复成功再 open+verify 一次
+
+          (verify_integrity(&boot) || verify_authenticity(&boot)) || wolfBoot_panic()
+
+      hal_prepare_boot()                                 ; 可选降回 HSI
+
+      do_boot(boot.fw_base)                              ; 跳 APP @ 0x08020100
+
+  
+
+;; ============ wolfBoot_update（升级/回滚，被上面三处调用）============
+
+wolfBoot_update(fallback_allowed):               ; update_flash.c:1046
+
+    open UPDATE; open BOOT
+
+    if open UPDATE 失败: fw_size = wolfBoot_swap_update_size()   ; 从 SWAP 恢复头
+
+    verify 类型/容量/Hash/签名
+
+    if !fallback_allowed && upd_ver <= cur_ver: return -1       ; 拒同版/降级
+
+    for each sector in [0 .. fw_size):           ; 逐块交换（备份模式）
+
+        BOOT[block] → SWAP                        ; wolfBoot_copy_sector
+
+        UPDATE[block] → BOOT                     ; 写新块到 BOOT
+
+        SWAP[old] → UPDATE                       ; 旧块挪到 UPDATE
+
+        mark block UPDATED
+
+    wolfBoot_swap_and_final_erase(0)            ; 收尾：清状态扇区、写 TESTING
+
+    return 0
+
+  
+
+;; ============ 跳进 APP 后（独立程序，链接在 0x08020000）============
+
+app main():                                      ; test-app/app_stm32f4.c
+
+    时钟/Timer/UART(115200) 初始化
+
+    while time_elapsed==0: WFI()
+
+    version = wolfBoot_current_firmware_version()
+
+    if (version & 1)==0:  wolfBoot_success()     ; 偶数版（v1/v2）调确认
+
+    UART 收包循环：
+
+        收到整包 → 写 UPDATE 分区 → 收齐后
+
+        wolfBoot_update_trigger()               ; 标记 UPDATING
+
+    while(1);                                     ; 等 watchdog/reset 重启进 wolfBoot_update(0)
 
 ```
 
-/* 1. 读取 DMA 写回的完成信息 */
-rx_desc = IGB_RX_DESC(rx_ring, rx_ring->next_to_clean);
-size = le16_to_cpu(rx_desc->wb.upper.length);
+  
 
-if (!size)
-    break;                 /* 还没完成 */
+### 1.4 UML 序列图
 
-/* 2. 确保后续读取不会越过完成状态检查 */
-dma_rmb();
+  
 
-/* 3. 获取接收 Buffer，并同步 DMA 数据供 CPU 使用 */
-rx_buffer = igb_get_rx_buffer(rx_ring, size, &pgcnt);
-/* 内部调用 dma_sync_single_range_for_cpu() */
+#### 图 1-1　冷启动：从复位到跳进 APP（正常路径）
 
-/* 4. 构建 skb，处理多 Descriptor 报文、错误等 */
-// igb_build_skb() / igb_construct_skb() ...
+  
 
-/* 5. 将完整报文送入 Linux 网络栈 */
-napi_gro_receive(&q_vector->napi, skb);
+```mermaid
 
-/* 6. 回收缓冲区后批量补充 Descriptor */
-// igb_alloc_rx_buffers(rx_ring, cleaned_count);
+sequenceDiagram
+
+    autonumber
+
+    participant CPU as Cortex-M4
+
+    participant VEC as 向量表@0x08000000
+
+    participant BOOT as boot_arm.c
+
+    participant LOAD as loader.c
+
+    participant HAL as hal/stm32f4.c
+
+    participant FSM as update_flash.c<br/>wolfBoot_start
+
+    participant IMG as image.c
+
+    participant CR as keystore/wolfCrypt
+
+    participant APP as APP@0x08020000
+
+  
+
+    CPU->>VEC: 取 MSP=*0x08000000<br/>取 Reset=*0x08000004(|1 Thumb)
+
+    VEC->>BOOT: isr_reset()
+
+    BOOT->>BOOT: copy .data / zero .bss / mpu_init()
+
+    BOOT->>LOAD: main()
+
+    LOAD->>HAL: hal_init()
+
+    HAL->>HAL: clock_pll_on(0)<br/>HSE 8MHz→PLL→168MHz, 5 ws
+
+    LOAD->>LOAD: spi_flash_probe()
+
+    LOAD->>FSM: wolfBoot_start()
+
+    FSM->>FSM: wolfBoot_swap_and_final_erase(1)<br/>(恢复被中断的最终擦除)
+
+    FSM->>FSM: get_partition_state(BOOT/UPDATE)
+
+    alt BOOT==TESTING
+
+        FSM->>FSM: wolfBoot_update(1) 回滚
+
+    else UPDATE==UPDATING
+
+        FSM->>FSM: wolfBoot_update(0) 升级
+
+    end
+
+    FSM->>IMG: wolfBoot_open_image(&boot, PART_BOOT)
+
+    IMG-->>FSM: boot.fw_base=0x08020100, fw_size
+
+    FSM->>IMG: wolfBoot_verify_integrity(&boot)
+
+    IMG->>IMG: 重算 SHA256 比头摘要
+
+    IMG-->>FSM: 0 (sha_ok=1)
+
+    FSM->>IMG: wolfBoot_verify_authenticity(&boot)
+
+    IMG->>CR: keystore 查公钥 hint → Ed25519 验签
+
+    CR-->>IMG: ok
+
+    IMG-->>FSM: 0 (signature_ok=1)
+
+    FSM->>HAL: hal_prepare_boot()<br/>(RESTORE_CLOCK=1 时降回 HSI)
+
+    FSM->>BOOT: do_boot(boot.fw_base)
+
+    BOOT->>BOOT: mpu_off / VTOR=0x08020100 / 取 MSP / 跳 entry
+
+    BOOT->>APP: 控制权移交
+
+    APP->>APP: 时钟/Timer/UART/收包循环...
+
 ```
 
-上述第 4、6 步是展示真实调用位置的摘要，并非可单独编译的连续函数体。真实 `igb` 驱动同时处理多描述符报文、XDP、时间戳、VLAN 和页复用；补充 Buffer 时使用 `dma_sync_single_range_for_device()`，再调用 `dma_wmb()` 和 `writel(RDT)`。
+  
 
-![](https://www.google.com/s2/favicons?domain=https://code.googlesource.com&sz=32)
+#### 图 1-2　APP 触发的正常升级（v1→v2）
 
-Git at Google
+  
 
-+2
+```mermaid
 
-## 4. UML 执行序列图：完整接收时序
+sequenceDiagram
 
-Linux Network StackNAPI Poll / SoftIRQCPU ISRI210 RX DMAHost DDRLinux igb DriverLinux Network StackNAPI Poll / SoftIRQCPU ISRI210 RX DMAHost DDRLinux igb Driver#chatgpt-mermaid-_r_14p_{font-family:-apple-system-body,ui-sans-serif,-apple-system,system-ui,"Segoe UI",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";font-size:16px;fill:rgb(237, 237, 237);}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#chatgpt-mermaid-_r_14p_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#chatgpt-mermaid-_r_14p_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#chatgpt-mermaid-_r_14p_ .error-icon{fill:rgb(48, 48, 48);}#chatgpt-mermaid-_r_14p_ .error-text{fill:rgb(237, 237, 237);stroke:rgb(237, 237, 237);}#chatgpt-mermaid-_r_14p_ .edge-thickness-normal{stroke-width:1px;}#chatgpt-mermaid-_r_14p_ .edge-thickness-thick{stroke-width:3.5px;}#chatgpt-mermaid-_r_14p_ .edge-pattern-solid{stroke-dasharray:0;}#chatgpt-mermaid-_r_14p_ .edge-thickness-invisible{stroke-width:0;fill:none;}#chatgpt-mermaid-_r_14p_ .edge-pattern-dashed{stroke-dasharray:3;}#chatgpt-mermaid-_r_14p_ .edge-pattern-dotted{stroke-dasharray:2;}#chatgpt-mermaid-_r_14p_ .marker{fill:rgb(175, 175, 175);stroke:rgb(175, 175, 175);}#chatgpt-mermaid-_r_14p_ .marker.cross{stroke:rgb(175, 175, 175);}#chatgpt-mermaid-_r_14p_ svg{font-family:-apple-system-body,ui-sans-serif,-apple-system,system-ui,"Segoe UI",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";font-size:16px;}#chatgpt-mermaid-_r_14p_ p{margin:0;}#chatgpt-mermaid-_r_14p_ .actor{stroke:rgb(31, 78, 148);fill:rgb(9, 23, 44);stroke-width:1;}#chatgpt-mermaid-_r_14p_ rect.actor.outer-path[data-look="neo"]{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#chatgpt-mermaid-_r_14p_ rect.note[data-look="neo"]{stroke:rgb(58, 132, 63);fill:rgb(48, 48, 48);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#chatgpt-mermaid-_r_14p_ text.actor>tspan{fill:rgb(237, 237, 237);stroke:none;}#chatgpt-mermaid-_r_14p_ .actor-line{stroke:rgb(175, 175, 175);}#chatgpt-mermaid-_r_14p_ .innerArc{stroke-width:1.5;stroke-dasharray:none;}#chatgpt-mermaid-_r_14p_ .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:rgb(175, 175, 175);}#chatgpt-mermaid-_r_14p_ .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:rgb(175, 175, 175);}#chatgpt-mermaid-_r_14p_ [id$="-arrowhead"] path{fill:rgb(175, 175, 175);stroke:rgb(175, 175, 175);}#chatgpt-mermaid-_r_14p_ .sequenceNumber{fill:#505050;}#chatgpt-mermaid-_r_14p_ [id$="-sequencenumber"]{fill:rgb(175, 175, 175);}#chatgpt-mermaid-_r_14p_ [id$="-crosshead"] path{fill:rgb(175, 175, 175);stroke:rgb(175, 175, 175);}#chatgpt-mermaid-_r_14p_ .messageText{fill:rgb(237, 237, 237);stroke:none;}#chatgpt-mermaid-_r_14p_ .labelBox{stroke:rgba(255, 255, 255, 0.15);fill:rgb(0, 0, 0);filter:none;}#chatgpt-mermaid-_r_14p_ .labelText,#chatgpt-mermaid-_r_14p_ .labelText>tspan{fill:rgb(237, 237, 237);stroke:none;}#chatgpt-mermaid-_r_14p_ .loopText,#chatgpt-mermaid-_r_14p_ .loopText>tspan{fill:rgb(237, 237, 237);stroke:none;}#chatgpt-mermaid-_r_14p_ .sectionTitle,#chatgpt-mermaid-_r_14p_ .sectionTitle>tspan{fill:rgb(237, 237, 237);stroke:none;}#chatgpt-mermaid-_r_14p_ .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:rgba(255, 255, 255, 0.15);fill:rgba(255, 255, 255, 0.15);}#chatgpt-mermaid-_r_14p_ .note{stroke:rgb(58, 132, 63);fill:rgb(48, 48, 48);}#chatgpt-mermaid-_r_14p_ .noteText,#chatgpt-mermaid-_r_14p_ .noteText>tspan{fill:rgb(237, 237, 237);stroke:none;font-weight:normal;}#chatgpt-mermaid-_r_14p_ .activation0{fill:rgb(48, 48, 48);stroke:hsl(0, 0%, 8.8235294118%);}#chatgpt-mermaid-_r_14p_ .activation1{fill:rgb(48, 48, 48);stroke:hsl(0, 0%, 8.8235294118%);}#chatgpt-mermaid-_r_14p_ .activation2{fill:rgb(48, 48, 48);stroke:hsl(0, 0%, 8.8235294118%);}#chatgpt-mermaid-_r_14p_ .actorPopupMenu{position:absolute;}#chatgpt-mermaid-_r_14p_ .actorPopupMenuPanel{position:absolute;fill:rgb(9, 23, 44);box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);filter:drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));}#chatgpt-mermaid-_r_14p_ .actor-man circle,#chatgpt-mermaid-_r_14p_ line{fill:rgb(9, 23, 44);stroke-width:2px;}#chatgpt-mermaid-_r_14p_ g rect.rect{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));stroke:rgb(31, 78, 148);}#chatgpt-mermaid-_r_14p_ .node .neo-node{stroke:rgb(31, 78, 148);}#chatgpt-mermaid-_r_14p_ [data-look="neo"].node rect,#chatgpt-mermaid-_r_14p_ [data-look="neo"].cluster rect,#chatgpt-mermaid-_r_14p_ [data-look="neo"].node polygon{stroke:url(#chatgpt-mermaid-_r_14p_-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#chatgpt-mermaid-_r_14p_ [data-look="neo"].swimlane.cluster rect{filter:none;}#chatgpt-mermaid-_r_14p_ [data-look="neo"].node path{stroke:url(#chatgpt-mermaid-_r_14p_-gradient);stroke-width:1px;}#chatgpt-mermaid-_r_14p_ [data-look="neo"].node .outer-path{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#chatgpt-mermaid-_r_14p_ [data-look="neo"].node .neo-line path{stroke:rgb(31, 78, 148);filter:none;}#chatgpt-mermaid-_r_14p_ [data-look="neo"].node circle{stroke:url(#chatgpt-mermaid-_r_14p_-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#chatgpt-mermaid-_r_14p_ [data-look="neo"].node circle .state-start{fill:#000000;}#chatgpt-mermaid-_r_14p_ [data-look="neo"].icon-shape .icon{fill:url(#chatgpt-mermaid-_r_14p_-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#chatgpt-mermaid-_r_14p_ [data-look="neo"].icon-shape .icon-neo path{stroke:url(#chatgpt-mermaid-_r_14p_-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#chatgpt-mermaid-_r_14p_ :root{--mermaid-font-family:-apple-system-body,ui-sans-serif,-apple-system,system-ui,"Segoe UI",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";}初始化阶段可以开始读取 RX Descriptor硬件自主接收阶段，CPU 不搬运报文MAC 收到 Ethernet Frame中断上半部ISR 结束，返回中断底半部保持 NAPI 调度，继续批量处理alt[本轮处理量小于 budget，且完成轮询][达到 budget]dma_alloc_coherent() 分配 Descriptor Ring1dma_map_page() 映射 RX Buffer2填入各 Descriptor 的 Buffer DMA Address3MMIO 配置 RDBAL/RDBAH/RDLEN4配置 RXDCTL、SRRCTL5dma_wmb() + 更新 RDT6PCIe Memory Read 获取 RX Descriptor7PCIe Memory Write 报文到 RX Buffer8Descriptor Write-back (Length / Status)9MSI-X 接收中断10napi_schedule()11读取 Descriptor 的完成信息12dma_rmb()13dma_sync_single_range_for_cpu()14有效 RX Buffer 数据15构建 skb + napi_gro_receive()16补充 / 复用 Buffer17dma_wmb() + writel(RDT)18重新使能队列中断19
+    autonumber
 
-这里的 ISR 与 NAPI 交接还有一个重要细节：接收中断应在 NAPI Poll 期间保持屏蔽，直至轮询完成，再解除屏蔽。`igb` 的 MSI-X 路径配合 I210 扩展中断的自动屏蔽机制工作，因此 ISR 中不必每次显式写 `EIMC`。
+    participant APP as APP v1
 
-![](https://www.google.com/s2/favicons?domain=https://kernel.googlesource.com&sz=32)
+    participant LIB as libwolfboot.c
 
-Git at Google
+    participant HAL as hal/stm32f4.c
 
-+2
+    participant FSM as update_flash.c<br/>wolfBoot_update(0)
 
-## 5. 这套流程的几个关键点
+    participant IMG as image.c
 
-- DMA Controller 不一定是独立 IP。 I210 的 RX DMA Engine 就集成在网卡中；PCIe 负责承载其 DMA Memory Read/Write 事务。
-    
-- Descriptor Ring 与 Data Buffer 是两个不同对象。 前者告诉硬件数据写到哪里，后者是真正的数据存储空间。Descriptor 通常使用 coherent DMA，RX Buffer 通常使用 streaming DMA。
-    
-- 中断不等于一个报文完成。 一个中断可能对应多个已经完成的 RX Descriptor；中断还可能经过 moderation 合并。
-    
-- 需要两类同步。 `dma_rmb()/dma_wmb()` 主要保证 DMA 相关内存访问顺序；`dma_sync_*()` 负责 streaming DMA 映射在 CPU 与设备之间的可见性和所有权切换。不能简单地互相替代。
-    
-- NAPI 不等同于普通 workqueue。 Linux 网络驱动的默认 NAPI Poll 通常运行于 SoftIRQ 上下文，也支持 threaded NAPI 模式。
-    
-    ![](https://www.google.com/s2/favicons?domain=https://cdn.kernel.org&sz=32)
-    
-    The Linux Kernel documentation
-    
-    +1
-    
+    participant F as 内部 Flash
 
-## 官方手册和源码入口
+  
 
-1. [Intel I210 Datasheet v3.7](https://cdrdv2-public.intel.com/333016/333016%20-%20I210_Datasheet_v_3_7.pdf?utm_source=chatgpt.com)：重点阅读 §7.1.4（Receive Descriptors）、§7.3（Interrupts）、§8.10（RX Registers）。
-    
-2. [Linux igb_main.c](https://github.com/torvalds/linux/blob/master/drivers/net/ethernet/intel/igb/igb_main.c?utm_source=chatgpt.com)：按 `igb_configure_rx_ring()` → `igb_alloc_rx_buffers()` → `igb_msix_ring()` → `igb_poll()` → `igb_clean_rx_irq()` 的顺序阅读。
-    
-3. [Linux DMA API HOWTO](https://docs.kernel.org/core-api/dma-api-howto.html?utm_source=chatgpt.com)：重点核对 coherent、streaming、DMA 映射方向和 cache 同步要求。
-    
+    APP->>APP: UART 收包 → 写 UPDATE@0x08060000
 
-最终心智模型： CPU 负责准备描述符和回收资源；DMA Engine 负责 PCIe 数据传输；Descriptor Write-back 负责传递完成状态；ISR 负责触发处理；NAPI 负责批量消费数据并归还 Buffer。这个模型可以迁移到多数基于 Descriptor Ring 的 PCIe NIC、FPGA DMA 和高速通信控制器。
+    APP->>LIB: wolfBoot_update_trigger()
+
+    LIB->>F: 擦 UPDATE 尾扇区，写 IMG_STATE_UPDATING
+
+    Note over APP: reset（watchdog/手动）后由 wolfBoot_start 调用
+
+    APP->>FSM: wolfBoot_update(0)
+
+    FSM->>IMG: open UPDATE / open BOOT
+
+    IMG-->>FSM: update.fw_base, boot.fw_base
+
+    FSM->>IMG: verify_integrity(UPDATE)
+
+    FSM->>IMG: verify_authenticity(UPDATE)
+
+    FSM->>FSM: upd_ver > cur_ver ? 否则拒（无 ALLOW_DOWNGRADE）
+
+    loop 逐 sector block
+
+        FSM->>F: BOOT[block] → SWAP（备份）
+
+        FSM->>F: UPDATE[block] → BOOT（写新块）
+
+        FSM->>F: SWAP[old] → UPDATE（旧块挪走）
+
+        FSM->>F: 标记 block UPDATED
+
+    end
+
+    FSM->>LIB: wolfBoot_swap_and_final_erase(0)
+
+    LIB->>F: 清状态扇区，BOOT 标 IMG_STATE_TESTING
+
+    FSM->>FSM: do_boot(boot.fw_base) → APP v2
+
+    Note over APP: APP v2 偶数版，业务自检后调 wolfBoot_success()
+
+    APP->>LIB: wolfBoot_success()
+
+    LIB->>F: BOOT: TESTING→SUCCESS
+
+```
+
+  
+
+#### 图 1-3　断电恢复与不确认回滚（v2→v3 不确认）
+
+  
+
+```mermaid
+
+sequenceDiagram
+
+    autonumber
+
+    participant WD as 复位/watchdog
+
+    participant FSM as wolfBoot_start
+
+    participant SFE as swap_and_final_erase
+
+    participant UPD as wolfBoot_update
+
+    participant F as 内部 Flash
+
+  
+
+    Note over F: v2 已 SUCCESS，UPDATE 存 v3，trigger 后某次复位
+
+    WD->>FSM: reset
+
+    FSM->>SFE: swap_and_final_erase(1)<br/>探测 WOLFBOOT_MAGIC_TRAIL
+
+    alt 上次断在最终擦除中
+
+        SFE->>F: 恢复最终擦除/暂存块/TESTING 状态
+
+    end
+
+    FSM->>FSM: BOOT==TESTING ? 否（v2 已 SUCCESS）
+
+    FSM->>FSM: UPDATE==UPDATING ? 是（v3 trigger 过）
+
+    FSM->>UPD: wolfBoot_update(0)
+
+    UPD->>F: 校验 v3 → 逐块交换 → BOOT=v3(TESTING), UPDATE=v2
+
+    FSM->>F: do_boot → APP v3
+
+    Note over F: v3 奇数版，业务不调 wolfBoot_success()<br/>BOOT 停留在 TESTING
+
+    WD->>FSM: 再次复位（v3 未确认）
+
+    FSM->>FSM: BOOT==TESTING ? 是
+
+    FSM->>UPD: wolfBoot_update(1)<br/>fallback_allowed=1：允许恢复旧版
+
+    UPD->>F: 用 UPDATE 里的 v2 恢复 BOOT → v2
+
+    FSM->>FSM: 认定未确认回滚后 BOOT=SUCCESS<br/>避免反复试 v3
+
+    FSM->>F: do_boot → APP v2
+
+```
+
+  
+
+### 1.5 组件构成认知（一句话职责）
+
+  
+
+- **`boot_arm.c`**：CRT runtime（`.data`/`.bss`/MPU）+ `do_boot` 跳转；CPU 复位的最低层。
+
+- **`loader.c`**：`main`，按本配置只做 `hal_init`+`spi_flash_probe`+`wolfBoot_start`；条件分支多但 STM32F407 走最简路径。
+
+- **`update_flash.c`**：启动状态机 `wolfBoot_start` + 更新/回滚 `wolfBoot_update` + 断电恢复 `swap_and_final_erase`。**wolfBoot 的核心大脑**。
+
+- **`image.c`**：把 Flash 上的字节变成"可接受的镜像视图"——open/integrity/authenticity。安全策略的执行点。
+
+- **`libwolfboot.c`**：分区 trailer、TLV、版本、`trigger`/`success`、Flash 访问的封装层，APP 和 Bootloader 共用。
+
+- **`hal/stm32f4.c`**：RCC/FLASH/SPI 寄存器细节，把抽象的 `hal_flash_erase(addr,len)` 翻译成 STM32 Sector 操作。
+
+- **`keystore.c` + wolfCrypt（`lib/wolfssl/`）**：信任根（公钥表）+ 算法（`ed25519.c`/`sha256.c`）。Bootloader 只持有公钥，不存私钥。
+
+- **`test-app/app_stm32f4.c`**：业务侧 demo，演示"收包→写 UPDATE→trigger→等复位"和"偶数版调 success"。
+
+  
+
+> 三个角色分工：**算法库**保证数学正确；**Bootloader** 保证"何时验、验什么、验失败是否仍跳转、断电能否恢复"；**发布系统**保证"谁能签"。三者缺一都可能出问题。
+
+  
+
+---
+
+  
+
+## 第 2 章　详细代码阅读指导
+
+  
+
+> 推荐阅读顺序按"复位入口 → 状态机 → 镜像校验 → 跳转 → 升级/回滚 → APP 侧"层层深入。每节给出**文件:行**、**读代码要回答的问题**、**本配置注意点**。
+
+> 调试时配合 `notes/note_debug.md` 的断点表，断在对应函数后用 `info args`/`p var` 验证本节描述。
+
+  
+
+### 2.1 `src/boot_arm.c` — 复位与跳转（先读这层，建立"裸机入口"直觉）
+
+  
+
+**关键函数与行号：**
+
+- `isr_reset` / `isr_reset_c`（行 263）：向量表第 0/1 项之外的 C 复位入口。
+
+- `do_boot(const uint32_t *app_offset)`（行 532）：跳 APP。
+
+- `mpu_init` / `mpu_off`（行 132 / 183）：MPU 区域配置。
+
+  
+
+**读代码要回答：**
+
+1. `.data` 从哪里复制到哪里？链接脚本里 `_stored_data`/`_start_data`/`_end_data` 的值是多少？（看 `test-app/ARM-stm32f4.ld` 或 `include/wolfboot/polyfill.ld`，wolfBoot 自身用 `ARM.ld`）
+
+2. `.bss` 清零范围由谁决定？为什么不能少？
+
+3. `do_boot` 对 STM32F407（`__ARM_FEATURE_CMSE` 未定义、非 Cortex-R5/M23/M33/M55）走哪一支？→ **Armv6/v7 分支（行 614-635）**：`mpu_off()` → `VTOR = app_offset` → `app_end_stack = *app_offset`（栈顶）→ `app_entry = *(app_offset+1)`（Reset 向量，带 Thumb 位）→ `msr msp` → `mov pc, app_entry`。
+
+4. 为什么要先 `VTOR=` 再取 MSP？因为 APP 的向量表就在 `app_offset` 处，栈顶是第 0 个字、Reset 是第 1 个字（带 Thumb 位 `|1`）。
+
+  
+
+**本配置注意点：**
+
+- STM32F407 是 Cortex-M4（ARMv7-M），**不**走 `CORTEX_M33/M55/M23` 的 `blxns` 分支，也不走 `CORTEX_R5`。
+
+- `WOLFBOOT_NO_MPU` 未定义 → `mpu_init/off` 实际编译进来（静态实现，6 个硬件断点之外 MPU 不占断点）。
+
+- `VTOR=1`（配置里开了）→ `NO_VTOR` 未定义 → `do_boot` 会写 `SCB->VTOR`（`0xE000ED08`）。
+
+  
+
+### 2.2 `src/loader.c` — C 入口 `main`（搞清"本配置实际走哪些分支"）
+
+  
+
+**关键函数与行号：**
+
+- `main(void)`（行 110，本配置走这一支，不是 `loader_main` 也不是 `TARGET_sim` 的 `main(int argc,...)`）。
+
+  
+
+**读代码要回答：**
+
+1. 哪些 `#ifdef` 在本配置下为真？→ `HAVE_FIPS` 否、`TARGET_sim` 否、`WOLFBOOT_LOADER_MAIN` 否、`RAM_CODE` 否、`UART_FLASH` 否（`DEBUG_UART=0` 不等于开 UART_FLASH）、`WOLFBOOT_TPM` 否、`WOLFCRYPT_SECURE_MODE` 否、`WOLFBOOT_HOOK_LOADER_*` 否。
+
+2. 所以本配置 `main` 实际执行的就是：`hal_init()` → `spi_flash_probe()` → `wolfBoot_start()` → `wolfBoot_panic()`。中间一大堆 `#ifdef` 块全部折叠掉。
+
+3. 为什么末尾还有 `wolfBoot_panic()`？因为 `wolfBoot_start` 声明为不返回；正常路径里它最终 `do_boot` 跳走，万一认证全失败又恢复不出来，会走到 panic。
+
+  
+
+**本配置注意点：**
+
+- 不要把 `loader_main` 当入口——那是 `WOLFBOOT_LOADER_MAIN` 的分支，本配置没定义。查 `build/boot-symbols.txt` 确认只有 `main`。
+
+- `spi_flash_probe()` 在 STM32F407（无外部 SPI Flash）基本是空操作，但会走一遍；不影响后续。
+
+  
+
+### 2.3 `src/update_flash.c` — `wolfBoot_start` 状态机（核心，重点读）
+
+  
+
+**关键函数与行号：**
+
+- `wolfBoot_start`（行 1697，`RAMFUNCTION`）：每次复位的总调度。
+
+- `wolfBoot_update(fallback_allowed)`（行 1046，`RAMFUNCTION`，`static`）：升级/回滚。
+
+- `wolfBoot_swap_and_final_erase(resume)`（行 488，`RAMFUNCTION`，`static`）：断电恢复收尾。
+
+- `wolfBoot_copy_sector` / `wolfBoot_backup_last_boot_sector`（`docs/source-functions.md` 给出行 278 / 394）：逐块搬运。
+
+  
+
+**`wolfBoot_start` 读代码要回答：**
+
+1. 三个状态机入口条件分别什么含义？
+
+   - `bootState == IMG_STATE_TESTING`：上次启动的 BOOT 还没被 APP 确认 → 走 `wolfBoot_update(1)` 回滚（把 UPDATE 里的旧版恢复回 BOOT）。
+
+   - `updateState == IMG_STATE_UPDATING`：APP 已经 `wolfBoot_update_trigger()` 过 → 走 `wolfBoot_update(0)` 正常升级。
+
+   - 两者都不是 → 直接认证当前 BOOT。
+
+2. 为什么先调 `wolfBoot_swap_and_final_erase(1)` 再判状态？→ 防止"上次断在最终擦除阶段"，必须先把状态恢复到一致才能正确判断。
+
+3. 认证 BOOT 失败（`bootRet < 0`）后的兜底路径：`wolfBoot_update(1)` 紧急恢复；恢复成功后**再 open+verify 一次** BOOT（行 1822-1825），因为 BOOT 内容已被 update 改写。第二次再失败才 `wolfBoot_panic()`。
+
+4. `IMG_STATE_*` 常量值在 `include/wolfboot/wolfboot.h`：`NEW`、`UPDATING`、`TESTING`、`SUCCESS`、`FINAL_FLAGS` 等。
+
+  
+
+**本配置注意点：**
+
+- `WOLFBOOT_SELF_UPDATE_MONOLITHIC` 未定义 → 走备份模式（双分区 + SWAP），`DISABLE_BACKUP` 未定义。
+
+- `RAMFUNCTION` 宏把这些函数放到 RAM 段（`__attribute__((section(".ramfunc")))`）——因为擦写同 Bank Flash 时不能从 Flash 取指。STM32F407 单 Bank，擦写时这些代码必须在 RAM 里跑。链接脚本里 `.ramfunc` 段的 LMA 在 Flash、VMA 在 RAM，`isr_reset` 复制 `.data` 时顺带把它们拷到 RAM。
+
+- `wolfBoot_update(0)` 内部会拒同版/降级（无 `ALLOW_DOWNGRADE`），所以 v1→v1 或 v2→v1 正常路径会被拒；`wolfBoot_update(1)` 才允许 fallback。
+
+  
+
+### 2.4 `src/image.c` — 镜像校验三道门（open / integrity / authenticity）
+
+  
+
+**关键函数与行号：**
+
+- `wolfBoot_open_image`（行 1770）→ `wolfBoot_open_image_address`（行 1585）：解析头、建视图。
+
+- `wolfBoot_verify_integrity`（行 1961）：重算 SHA256 比头里的 `HEADER_HASH`。
+
+- `wolfBoot_verify_authenticity`（行 2647）：查 keystore + Ed25519 验签。
+
+- `keyslot_CT_hint_matches`（行 2971）/ `keyslot_id_by_sha`（行 2993）：公钥 hint 匹配。
+
+  
+
+**读代码要回答：**
+
+1. `struct wolfBoot_image`（`include/image.h`）里有哪些字段？→ `hdr`（头基址）、`fw_base`（去掉 256B 头后的代码基址）、`fw_size`、`part`、`hdr_ok`/`sha_ok`/`signature_ok` 三个标志位。这是**运行期视图**，不是磁盘格式。
+
+2. `wolfBoot_open_image` 做了哪些 sanity 检查？→ magic、头大小、`fw_base = image + IMAGE_HEADER_SIZE`、`fw_size` 从 TLV 取、范围不越过分区。
+
+3. `wolfBoot_verify_integrity` 为什么不是简单地 `sha256(fw)`？→ 它按 HEADER 里记录的 hash 类型 TLV 重新算，再和 TLV 里的摘要比；本配置是 SHA256。
+
+4. `wolfBoot_verify_authenticity` 怎么找公钥？→ 头里有公钥 hint（公钥本身的 hash），用 `keyslot_CT_hint_matches` 在 `keystore.c` 的公钥表里找匹配 slot；找到后检查该 slot 是否被授权用于当前分区（本配置只有一把 ED25519 key，授权给 BOOT 和 UPDATE）。然后调 wolfCrypt `wc_ed25519_verify_msg` 验签。
+
+5. 验签失败会怎样？→ `signature_ok=0`，返回负值；调用方（`wolfBoot_start`）据此走兜底。
+
+  
+
+**本配置注意点：**
+
+- Ed25519 验签内部用 SHA512，所以编译会链 `lib/wolfssl/wolfcrypt/src/sha512.c`——**这不是镜像摘要换成了 SHA512**，而是 Ed25519 算法本身依赖 SHA512。
+
+- `SPMATH=1` 影响 sp_int 的内存分配策略，不影响验签结果。
+
+- `IMAGE_HEADER_SIZE=256`：头 256B 里放 magic + 版本 + TLV（hash、签名、公钥 hint、img_type 等），代码从 `+256` 开始。所以 BOOT 代码基址 `fw_base = 0x08020000 + 0x100 = 0x08020100`，APP 向量表就在这。
+
+  
+
+### 2.5 `src/libwolfboot.c` — 分区状态、TLV、trigger/success（共享层）
+
+  
+
+**关键函数与行号：**
+
+- `get_partition_state`（行 687，`RAMFUNCTION`，`static`）/ `set_partition_state`（行 693）：读写分区尾部 trailer 的状态字节。
+
+- `wolfBoot_get_partition_state`（行 796）/ `wolfBoot_set_partition_state`（行 739）：对外的加锁包装。
+
+- `wolfBoot_update_trigger`（行 893）：APP 调，标记 UPDATE 为 UPDATING。
+
+- `wolfBoot_success`（行 964）：APP 调，把 BOOT 从 TESTING 改 SUCCESS。
+
+- `wolfBoot_find_header`（行 1358）：TLV 遍历。
+
+- `wolfBoot_get_blob_version`（行 1581）：从 TLV 取版本号。
+
+  
+
+**读代码要回答：**
+
+1. 状态字节在 Flash 的哪个位置？→ 每个分区末尾 `WOLFBOOT_PARTITION_SIZE - 1` 处（trailer 区），`SECTOR_FLAGS_SIZE = WOLFBOOT_SECTOR_SIZE - (4+1)`：MAGIC(4B) + PART_FLAG(1B)。所以写一个状态字节前要先擦**整个状态 Sector**（128KiB），这就是 `set_partition_state` 会擦扇区的原因。
+
+2. `wolfBoot_update_trigger` 具体改了什么？→ 擦 UPDATE 尾扇区，写 `IMG_STATE_UPDATING`。注意它**不**校验 UPDATE 内容，只标记"请求升级"；真正校验发生在下次复位 `wolfBoot_update(0)`。
+
+3. `wolfBoot_success` 为什么要先读再写？→ 只在 BOOT 当前是 `TESTING` 时才改 `SUCCESS`；已经 SUCCESS 的不重复写（避免无谓擦写）。
+
+4. `wolfBoot_find_header` 的 TLV 格式？→ 每个 TLV：`type(2B) | len(2B) | value`，遍历到 `HDR_END` 或长度溢出停止。常见 type：`HDR_VERSION`、`HDR_IMG_TYPE`、`HDR_SHA256`（摘要）、`HDR_SIGNATURE`、`HDR_PUBKEY`（hint）。
+
+  
+
+**本配置注意点：**
+
+- APP（`test-app/`）和 Bootloader 都链 `libwolfboot.o`——所以 `wolfBoot_update_trigger`/`wolfBoot_success` 既能在 APP 里调（APP 调），也能在 Bootloader 里调（内部状态机用）。这是"共享层"的含义。
+
+- `wolfBoot_current_firmware_version()`（行 1768 附近）就是 `wolfBoot_get_blob_version(wolfBoot_get_image_from_part(PART_BOOT))`，APP 用它判断自己是奇数版还是偶数版。
+
+- `RAMFUNCTION` 同样适用于这些状态操作——擦写同 Bank Flash 时不能从 Flash 执行。
+
+  
+
+### 2.6 `hal/stm32f4.c` — HAL 寄存器细节（把抽象地址翻译成 STM32 Sector）
+
+  
+
+**关键函数与行号：**
+
+- `hal_init`（行 362）：`clock_pll_on(0)` + 可选 `spi_init`。
+
+- `clock_pll_on(powersave)`（行 283）：HSE 8MHz → PLL → 168MHz；5 wait states；APB1 ÷4、APB2 ÷2。
+
+- `clock_pll_off`（行 264）：切回 HSI，给 APP 一个干净时钟域（`WOLFBOOT_RESTORE_CLOCK=1` 时用）。
+
+- `flash_set_waitstates`（行 139）：写 `FLASH_ACR`。
+
+- `hal_flash_unlock` / `hal_flash_lock` / `hal_flash_erase` / `hal_flash_write` / `flash_wait_complete`（`docs/source-functions.md` 给出行）：FLASH KEYR 解锁、SNB 选 Sector、STRT 启动、轮询 `BSY`。
+
+- `hal_prepare_boot`（行 371）：`WOLFBOOT_RESTORE_CLOCK=1` 时 `clock_pll_off()`。
+
+  
+
+**读代码要回答：**
+
+1. STM32F407 Flash 几何？→ 行 108-120：S0~3 各 16KB、S4 64KB、S5~11 各 128KB，共 1MiB。本配置 BOOT 在 `0x08020000`（S5 起），UPDATE `0x08060000`（S6 起），SWAP `0x080A0000`（S8 起），wolfBoot 自身 `0x08000000`~`0x0801FFFF`（S0~S4，含分区表/状态？不，wolfBoot 代码只占 S0~S4 的前面，`0x08020000` 才是 BOOT）。
+
+2. `hal_flash_erase(addr, len)` 怎么把绝对地址映射到 Sector？→ 用 `flash_sector[]` 表二分/线性找覆盖 `addr..addr+len` 的 Sector，逐个 `SER|SNB|STRT`。注意**不能擦任意 4KB**，最小粒度是 Sector（16KB 起）。
+
+3. `flash_wait_complete` 是忙等待还是中断？→ 轮询 `FLASH_SR_BSY`；`WOLFBOOT_RESTORE_CLOCK` 期间如果还在 168MHz，wait states 必须先设好。
+
+4. `hal_flash_write` 的写粒度？→ 按 `FLASH_CR_PROGRAM_*`（x8/x16/x32/x64），STM32F407 是 32-bit 并行 Flash，写以字/双字为单位。
+
+  
+
+**本配置注意点：**
+
+- 板级 overlay（探索者）只改 `flash_waitstates=5`（168MHz@2.7-3.6V），物理 Flash 几何沿用官方。
+
+- `WOLFBOOT_RESTORE_CLOCK=1`（配置里开了）→ `hal_prepare_boot` 会 `clock_pll_off`，所以 APP 进来时是 HSI 8MHz，APP 自己再重新配 PLL。这避免了"APP 假设时钟已配好"的隐式依赖。
+
+- 单 Bank：擦写 BOOT 时**不能同时从 BOOT 取指**——这就是 `wolfBoot_update` 系列要 `RAMFUNCTION` 的根本原因。
+
+  
+
+### 2.7 `test-app/app_stm32f4.c` — APP 侧（看业务如何配合 Bootloader）
+
+  
+
+**关键函数与行号：**
+
+- `main`（约行 240 起，`TARGET_stm32f4` 分支）：时钟/Timer/UART 初始化 → `time_elapsed` 等 → 偶数版调 `wolfBoot_success()` → UART 收包循环 → 收齐调 `wolfBoot_update_trigger()`。
+
+- `wolfBoot_current_firmware_version()`：读自己版本号。
+
+  
+
+**读代码要回答：**
+
+1. APP 为什么 `if ((version & 0x01) == 0) wolfBoot_success()`？→ demo 约定：偶数版（v1/v2）= "健康"，调 `wolfBoot_success` 把 BOOT 从 TESTING 改 SUCCESS，下次复位就稳定运行它；奇数版（v3）= "故意不确认"，留给 watchdog 复位触发回滚演示。
+
+2. UART 收包协议是什么？→ `0xA5 0x5A` 起帧，`len(4B) | seq(4B) | payload | ?`，每 256B 一页写 UPDATE（`dst = UPDATE_ADDR + offset`，按 Sector 边界 `hal_flash_erase`）。收齐 `next_seq >= tot_len` 后调 `wolfBoot_update_trigger()` 然后 `while(1)` 等复位。
+
+3. APP 调 `wolfBoot_update_trigger` 之后做什么？→ **什么都不做，等复位**。Bootloader 在下次复位时才真正执行 `wolfBoot_update(0)`。这是"触发与执行分离"。
+
+  
+
+**本配置注意点：**
+
+- 默认 `USE_UART3`，本配置 `.config` 加了 `CFLAGS_EXTRA=-DUSE_UART1`，所以 APP 走 UART1（PA9/PA10，探索者板上接的口）。`notes/note_debug.md` 故障表里的"串口无输出查 PA9/PA10"就来自这。
+
+- APP 链接在 `0x08020000`（BOOT 分区起点），它的 `isr_reset`/向量表也在那。wolfBoot 的 `do_boot` 把 `VTOR=0x08020100`（跳过 256B 头）后跳 APP 的 Reset。
+
+  
+
+### 2.8 `wolfBoot_update` 逐块交换细节（断电安全的精髓）
+
+  
+
+读 `wolfBoot_update`（行 1046）和 `wolfBoot_swap_and_final_erase`（行 488）时重点理解这套"BOOT↔UPDATE 逐块对换 + SWAP 临时备份"为什么断电安全：
+
+  
+
+1. **逐块**（`WOLFBOOT_SECTOR_SIZE=128KB` 为单位）：每次只动一个 block，写完立刻标记该 block `UPDATED`（sector nibble）。断电后下次复位看 nibble 就知道哪些 block 已完成，跳过它们。
+
+2. **三步对换**：`BOOT[i] → SWAP`（备份旧块）→ `UPDATE[i] → BOOT`（新块就位）→ `SWAP[old] → UPDATE`（旧块挪到 UPDATE，为下次回滚留底）。三步都用 `wolfBoot_copy_sector`。
+
+3. **最终擦除**（`swap_and_final_erase`）：所有 block 换完后，还要清掉状态扇区的旧标记、把 BOOT 标 `TESTING`、把 UPDATE 留旧版。这步如果断电，`WOLFBOOT_MAGIC_TRAIL` 标记能让下次复位认出"中断在最终擦除"，重新进入恢复。
+
+4. **第一块含头**：交换第一块后 BOOT/UPDATE 的 256B 头就互换了，所以源码在换第一块后会**重新 `wolfBoot_open_image`** 调整 `fw_size` 和剩余范围（行 133 附近 docs 提到）。不要拿函数入口时的两个结构体大小一直推到底。
+
+  
+
+**读代码要回答：**
+
+1. `SECT_FLAG_NEW` / `SECT_FLAG_SWAPPING` / `SECT_FLAG_BACKUP` / `SECT_FLAG_UPDATED` 这些 nibble 状态在哪个函数被读/写？→ `get_update_sector_flags` / `set_update_sector_flags`（`libwolfboot.c`，行见 `docs/source-functions.md`）。
+
+2. 为什么 `wolfBoot_update(1)`（fallback）能恢复旧版而 `wolfBoot_update(0)` 不能？→ `fallback_allowed=1` 时跳过"upd_ver > cur_ver"的版本检查（行 1095 之后的版本比较分支），允许用 UPDATE 里较旧的镜像恢复 BOOT。
+
+3. `wolfBoot_swap_update_size`（行 967 附近）干嘛用？→ 当 `wolfBoot_open_image(UPDATE)` 失败（头被擦了，可能断在中途），从 SWAP 里恢复 `fw_size`。
+
+  
+
+### 2.9 `src/keystore.c` + `lib/wolfssl/wolfcrypt/` — 信任根与算法
+
+  
+
+**读代码要回答：**
+
+1. `keystore.c` 是谁生成的？→ `build.sh` 调 `tools/keytools/keygen --ed25519 -g wolfboot_signing_private_key.der` 生成私钥，再生成 `src/keystore.c`（公钥表）。本配置一把 ED25519 key，授权 BOOT 和 UPDATE。
+
+2. Bootloader 持有公钥还是私钥？→ **只有公钥**（`keystore.c` 里是公钥）。私钥 `wolfboot_signing_private_key.der` 留在主机侧 `tools/keytools/sign` 签名用，**不进设备**。
+
+3. Ed25519 验签调用链？→ `wolfBoot_verify_authenticity` → `keyslot_id_by_sha` 找公钥 → `wc_ed25519_verify_msg`（`lib/wolfssl/wolfcrypt/src/ed25519.c`）→ 内部 `wc_Sha512`（`sha512.c`）。
+
+4. 为什么镜像摘要用 SHA256 但验签链 SHA512？→ 镜像完整性（`verify_integrity`）用配置 `HASH=SHA256`；Ed25519 算法规范内部用 SHA512，两者独立。
+
+  
+
+---
+
+  
+
+## 第 3 章　关键知识点速查（面试/复习向）
+
+  
+
+| 知识点 | 一句话 | 深入位置 |
+
+|--------|--------|----------|
+
+| **双分区 + SWAP** | BOOT/UPDATE 两份镜像 + 一个 SWAP 备份区；升级时逐块对换，断电可恢复 | `update_flash.c` 状态机 + flash-map |
+
+| **断电安全** | 靠 sector nibble 标记 + `WOLFBOOT_MAGIC_TRAIL` + 恢复入口 `swap_and_final_erase(1)` | `update_flash.c:488` |
+
+| **三道门** | open（头/范围）→ integrity（SHA256）→ authenticity（Ed25519 验签） | `image.c:1770/1961/2647` |
+
+| **信任根** | 设备只存公钥（keystore.c）；私钥在主机签名工具，不进设备 | `tools/keytools/keygen`+`sign` |
+
+| **版本策略** | 正常 `wolfBoot_update(0)` 拒同版/降级；回滚 `wolfBoot_update(1)` 允许 fallback | `update_flash.c:1046` |
+
+| **触发与执行分离** | APP 调 `wolfBoot_update_trigger` 只标记 UPDATING；真正交换在下次复位 Bootloader 里 | `libwolfboot.c:893` |
+
+| **确认机制** | APP 业务自检后调 `wolfBoot_success` 把 BOOT 从 TESTING 改 SUCCESS；不确认则回滚 | `libwolfboot.c:964` |
+
+| **RAMFUNCTION** | 擦写同 Bank Flash 时不能从 Flash 取指，关键函数放 RAM 段 | `.ramfunc` + `isr_reset` 复制 |
+
+| **跳转不重定位** | `do_boot` 只设 `VTOR`+`MSP` 后跳 entry；APP 必须链接在固定地址（0x08020000） | `boot_arm.c:532` Armv7-M 分支 |
+
+| **头格式** | 256B 头 = magic + 版本 + TLV（hash/签名/公钥hint/img_type）；代码从 +256 开始 | `include/image.h` |
+
+| **签名不加密** | 签名保证真实性和完整性，不保密；Flash 里 APP 是明文 | 配置无 `EXT_ENCRYPTED` |
+
+| **时钟移交** | `WOLFBOOT_RESTORE_CLOCK=1` → `hal_prepare_boot` 降回 HSI，APP 自己重配 PLL | `stm32f4.c:371` |
+
+  
+
+---
+
+  
+
+## 附：相关文档与本笔记的关系
+
+  
+
+- `notes/note_debug.md`：**怎么调试**（断点表、流程、源文件打不开修复）。
+
+- 本笔记 `notes/note_source_code.md`：**源码在做什么、怎么读**（流程、函数地图、知识点）。
+
+- `docs/01-build.md` ~ `docs/06-reading.md`：项目自带的中文教程（构建/调试/需求/静态/动态/阅读），更全面但更长。
+
+- `docs/source-functions.md`：所有源函数的行号索引，本笔记的"文件:行"多来自这里，可直接跳转。
