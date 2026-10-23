@@ -1,3 +1,6 @@
+![[Pasted image 20261023173026.png|656]]
+
+
 在实际商业产品（如基于瑞芯微 Rockchip、全志 Allwinner、高通 Qualcomm、恩智浦 NXP、海思等 SoC 的 Linux/Android 平台）中，MIPI 摄像头绝非像普通 UVC 摄像头那样简单 `open("/dev/video0")` 就能自动输出高质量图像。
 
   
