@@ -110,7 +110,7 @@ notes_md_work/
 - 诊断栈（Diagnostic Stack）
 - MCAL IO/Drivers
 
-### **LLM协议详解** ([`AI/0_top_protocol.md`](AI/0_top_protocol.md))
+### **LLM协议详解** ([`AI/0_top_protocol.md`](about_llm.md))
 深入分析LLM交互的核心JSON结构：
 - Request/Response JSON关键字段详解
 - OpenAI协议 vs Ollama协议对比
@@ -157,7 +157,7 @@ notes_md_work/
 3. 查看 [`EB-tresos-generator/`](EB-tresos-generator/) 学习工具链使用
 
 ### 对于AI/LLM开发者
-1. 阅读 [`AI/0_top_protocol.md`](AI/0_top_protocol.md) 掌握LLM协议基础
+1. 阅读 [`AI/0_top_protocol.md`](about_llm.md) 掌握LLM协议基础
 2. 学习 [`AI/MCP.md`](AI/MCP.md) 了解MCP架构
 3. 查看 [`AI/layers-function/`](AI/layers-function/) 理解AI应用分层
 
