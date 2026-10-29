@@ -4,11 +4,9 @@
 .trash/
 
 # 大体积媒体/文档不进 git（保留在本地，链接照常可用）
-*.mp4
 *.avi
 *.mkv
 *.mov
-*.pdf
 
 # 系统/编辑器杂项
 .DS_Store
