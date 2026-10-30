@@ -1,6 +1,0 @@
----
-tags:
-  - development-theory
----
-
-# TODO:
