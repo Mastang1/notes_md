@@ -27,3 +27,30 @@
 |P2|NG|Node Guarding|节点守护|早期的从站保活机制，由主站发送RTR远程帧轮询从站状态，现已被Heartbeat取代|
 |P2|RTR|Remote Transmission Request|远程传输请求|CAN链路层远程帧标志位，CANopen中仅用于旧版节点守护或按需请求RTR型TPDO|
 |P2|CoE|CANopen over EtherCAT|基于EtherCAT的CANopen|在工业以太网EtherCAT上直接复用CANopen对象字典、SDO邮箱与PDO映射的协议层|
+
+## Function ID & node ID
+```c
+#include <stdint.h>
+
+/* CANopen 标准预定义连接集功能码 (4-bit Function Code) */
+#define FUNC_NMT            0x00U  /* 0000b: 网络管理 (最高优先级) */
+#define FUNC_SYNC_EMCY      0x01U  /* 0001b: 同步帧(Node=0) / 紧急报文(Node=1..127) */
+#define FUNC_TIME           0x02U  /* 0010b: 时间戳 */
+#define FUNC_TPDO1          0x03U  /* 0011b: 发送型过程数据对象1 (Slave -> Master) */
+#define FUNC_RPDO1          0x04U  /* 0100b: 接收型过程数据对象1 (Master -> Slave) */
+#define FUNC_TSDO           0x0BU  /* 1011b: SDO服务端应答 (0x580 + NodeID) */
+#define FUNC_RSDO           0x0CU  /* 1100b: SDO客户端请求 (0x600 + NodeID) */
+#define FUNC_HEARTBEAT      0x0EU  /* 1110b: 心跳与Boot-up (0x700 + NodeID) */
+
+/* 构造 11-bit COB-ID 与反向解析宏 */
+#define MAKE_COBID(func, node_id)  ((uint16_t)(((func) & 0x0FU) << 7) | ((node_id) & 0x7FU))
+#define GET_FUNC_CODE(cob_id)      ((uint8_t)(((cob_id) >> 7) & 0x0FU))
+#define GET_NODE_ID(cob_id)        ((uint8_t)((cob_id) & 0x7FU))
+
+/* 示例：当 Node 2 同时触发过流紧急告警与 SDO 参数应答时：
+ * EMCY COB-ID = MAKE_COBID(0x01, 0x02) = 0x082 (二进制: 000 1000 0010b)
+ * TSDO COB-ID = MAKE_COBID(0x0B, 0x02) = 0x582 (二进制: 101 1000 0010b)
+ * 在 CAN 链路层仲裁的第 10 位 (MSB)，0x082 输出显性位 '0'，瞬间击败 0x582 的隐性位 '1'！
+ */
+```
+
